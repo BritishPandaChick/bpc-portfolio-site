@@ -1,0 +1,14 @@
+/*
+Theme Name:     BritishPandaChick Child
+Description:    Child theme for BritishPandaChick portfolio site
+Author:         OCchicka08
+Template:       make
+
+(optional values you can add: Theme URI, Author URI, Version, License, License URI, Tags, Text Domain)
+*/
+
+.builder-section {
+position: relative;
+margin-bottom: 0px;
+margin-bottom: 0rem;
+}
