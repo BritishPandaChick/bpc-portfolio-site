@@ -81,13 +81,19 @@ class TTFMAKE_Builder_Base {
 	 * @return void
 	 */
 	public function add_meta_boxes() {
+		global $current_screen;
+		
+		if ( method_exists( $current_screen, 'is_block_editor' ) && $current_screen->is_block_editor() ) {
+			return;
+		}
+
 		foreach ( ttfmake_get_post_types_supporting_builder() as $name ) {
 			$builder_metabox_label = esc_html__( 'Page Builder', 'make' );
 
 			if ( 'page' !== $name ) {
 				$builder_metabox_label = esc_html__( 'Post Builder', 'make' );
 			}
-
+			
 			add_meta_box(
 				'ttfmake-builder',
 				$builder_metabox_label,

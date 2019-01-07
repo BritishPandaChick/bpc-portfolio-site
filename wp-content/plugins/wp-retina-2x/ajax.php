@@ -381,14 +381,15 @@ class Meow_WR2X_Ajax {
 
 		try {
 			$tmpf = $this->check_get_ajax_uploaded_file();
-			$image = wp_get_image_editor( $tmpf );
+			$ftype = wp_check_filetype( $_POST['filename'] );
+			$image = wp_get_image_editor( $tmpf, array ( 'mime_type' => $ftype['type'] ) );
 			$size = $image->get_size();
 
 			// Halve the size of the uploaded image
 			if ( $size['width'] >= $size['height'] ) $image->resize( round($size['width'] * .5), null );
 			else $image->resize( null, round($size['height'] * .5) );
 			$image->set_quality( get_option('wr2x_quality', 90) );
-			$halved = $image->save( $tmpf . 'H' );
+			$halved = $image->save( $tmpf . 'H', $ftype['type'] );
 			if ( !$halved ) throw new Exception( "Failed to halve the uploaded image" );
 			if ( is_wp_error($halved) ) throw new Exception( $halved->get_error_message() );
 
@@ -400,7 +401,6 @@ class Meow_WR2X_Ajax {
 
 			// Register the file as a new attachment
 			$attachTo = 0; // TODO Support specifying which post the media attach to
-			$ftype = wp_check_filetype( $uploaded['file'] );
 			$attachment = array (
 				'post_mime_type' => $ftype['type'],
 				'post_parent' => $attachTo,
