@@ -1,7 +1,7 @@
 <?php
-require_once('wfDB.php');
-require_once('wfUtils.php');
-require_once('wfBrowscap.php');
+require_once(dirname(__FILE__) . '/wfDB.php');
+require_once(dirname(__FILE__) . '/wfUtils.php');
+require_once(dirname(__FILE__) . '/wfBrowscap.php');
 class wfLog {
 	public $canLogHit = true;
 	private $effectiveUserID = 0;
@@ -702,7 +702,7 @@ class wfLog {
 			header('Retry-After: ' . $secsToGo);
 		}
 		$customText = wpautop(wp_strip_all_tags(wfConfig::get('blockCustomText', '')));
-		require_once('wf503.php');
+		require_once(dirname(__FILE__) . '/wf503.php');
 		exit();
 	}
 	private function redirect($URL){
@@ -1056,12 +1056,14 @@ class wfUserIPRange {
  */
 class wfAdminUserMonitor {
 
+	protected $currentAdminList = array();
+
 	public function isEnabled() {
 		$options = wfScanner::shared()->scanOptions();
 		$enabled = $options['scansEnabled_suspiciousAdminUsers'];
 		if ($enabled && is_multisite()) {
 			if (!function_exists('wp_is_large_network')) {
-				require_once ABSPATH . WPINC . '/ms-functions.php';
+				require_once(ABSPATH . WPINC . '/ms-functions.php');
 			}
 			$enabled = !wp_is_large_network('sites') && !wp_is_large_network('users');
 		}
@@ -1073,7 +1075,11 @@ class wfAdminUserMonitor {
 	 */
 	public function createInitialList() {
 		$admins = $this->getCurrentAdmins();
-		wfConfig::set_ser('adminUserList', $admins);
+		$adminUserList = array();
+		foreach ($admins as $id => $user) {
+			$adminUserList[$id] = 1;
+		}
+		wfConfig::set_ser('adminUserList', $adminUserList);
 	}
 
 	/**
@@ -1135,53 +1141,57 @@ class wfAdminUserMonitor {
 	}
 
 	/**
+	 * @param bool $forceReload
 	 * @return array
 	 */
-	public function getCurrentAdmins() {
-		require_once ABSPATH . WPINC . '/user.php';
-		if (is_multisite()) {
-			if (function_exists("get_sites")) {
-				$sites = get_sites(array(
-					'network_id' => null,
+	public function getCurrentAdmins($forceReload = false) {
+		if (empty($this->currentAdminList) || $forceReload) {
+			require_once(ABSPATH . WPINC . '/user.php');
+			if (is_multisite()) {
+				if (function_exists("get_sites")) {
+					$sites = get_sites(array(
+						'network_id' => null,
+					));
+				}
+				else {
+					$sites = wp_get_sites(array(
+						'network_id' => null,
+					));
+				}
+			} else {
+				$sites = array(array(
+					'blog_id' => get_current_blog_id(),
 				));
 			}
-			else {
-				$sites = wp_get_sites(array(
-					'network_id' => null,
-				));
-			}
-		} else {
-			$sites = array(array(
-				'blog_id' => get_current_blog_id(),
-			));
-		}
 
-		// not very efficient, but the WordPress API doesn't provide a good way to do this.
-		$admins = array();
-		foreach ($sites as $siteRow) {
-			$siteRowArray = (array) $siteRow;
-			$user_query = new WP_User_Query(array(
-				'blog_id' => $siteRowArray['blog_id'],
-				'role'    => 'administrator',
-			));
-			$users = $user_query->get_results();
-			if (is_array($users)) {
-				/** @var WP_User $user */
-				foreach ($users as $user) {
-					$admins[$user->ID] = 1;
+			// not very efficient, but the WordPress API doesn't provide a good way to do this.
+			$this->currentAdminList = array();
+			foreach ($sites as $siteRow) {
+				$siteRowArray = (array) $siteRow;
+				$user_query = new WP_User_Query(array(
+					'blog_id' => $siteRowArray['blog_id'],
+					'role'    => 'administrator',
+				));
+				$users = $user_query->get_results();
+				if (is_array($users)) {
+					/** @var WP_User $user */
+					foreach ($users as $user) {
+						$this->currentAdminList[$user->ID] = $user;
+					}
+				}
+			}
+
+			// Add any super admins that aren't also admins on a network
+			$superAdmins = get_super_admins();
+			foreach ($superAdmins as $userLogin) {
+				$user = get_user_by('login', $userLogin);
+				if ($user) {
+					$this->currentAdminList[$user->ID] = $user;
 				}
 			}
 		}
 
-		// Add any super admins that aren't also admins on a network
-		$superAdmins = get_super_admins();
-		foreach ($superAdmins as $userLogin) {
-			$user = get_user_by('login', $userLogin);
-			if ($user) {
-				$admins[$user->ID] = 1;
-			}
-		}
-		return $admins;
+		return $this->currentAdminList;
 	}
 
 	public function getLoggedAdmins() {
@@ -1994,7 +2004,7 @@ class wfErrorLogHandler {
 		static $processedFolders = array(); //Protection for endless loops caused by symlinks
 		if (is_file($path)) {
 			$file = basename($path);
-			if (preg_match('#(?:error_log(\-\d+)?$|\.log$)#i', $file)) {
+			if (preg_match('#(?:^php_errorlog$|error_log(\-\d+)?$|\.log$)#i', $file)) {
 				return array($path => is_readable($path));
 			}
 			return array();
@@ -2023,6 +2033,8 @@ class wfErrorLogHandler {
 	public static function outputErrorLog($path) {
 		$errorLogs = self::getErrorLogs();
 		if (!isset($errorLogs[$path])) { //Only allow error logs we've identified
+			global $wp_query;
+			$wp_query->set_404();
 			status_header(404);
 			nocache_headers();
 			

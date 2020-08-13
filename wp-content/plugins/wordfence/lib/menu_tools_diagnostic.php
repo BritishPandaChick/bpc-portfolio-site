@@ -39,8 +39,9 @@ if (!isset($sendingDiagnosticEmail)) {
 					</div>
 					<div id="sendByEmailDiv" class="wf-add-bottom">
 						<span class="wf-nowrap">
-							<input class="wf-btn wf-btn-primary" type="submit" id="sendByEmail" value="Send Report by Email"/>
-							<input class="wf-btn wf-btn-default" type="button" id="expandAllDiagnostics" value="Expand All Diagnostics"/>
+							<input class="wf-btn wf-btn-primary wf-btn-sm" type="submit" id="exportDiagnostics" value="Export"/>
+							<input class="wf-btn wf-btn-primary wf-btn-sm" type="submit" id="sendByEmail" value="Send Report by Email"/>
+							<input class="wf-btn wf-btn-default wf-btn-sm" type="button" id="expandAllDiagnostics" value="Expand All Diagnostics"/>
 						</span>
 					</div>
 				</div>
@@ -566,9 +567,10 @@ if (!isset($sendingDiagnosticEmail)) {
 						if (is_array($values)) {
 							foreach ($values as $cron_job => $v) {
 								if (is_numeric($timestamp)) {
+									$overdue = ((time() - 1800) > $timestamp);
 									?>
-									<tr>
-										<td><?php echo esc_html(date('r', $timestamp)) ?></td>
+									<tr<?php echo $overdue ? ' class="wf-overdue-cron"' : ''; ?>>
+										<td><?php echo esc_html(date('r', $timestamp)) . ($overdue ? ' <strong>(' . __('Overdue', 'wordfence') . ')</strong>' : '') ?></td>
 										<td><?php echo esc_html($cron_job) ?></td>
 									</tr>
 									<?php

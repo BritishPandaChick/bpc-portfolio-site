@@ -49,9 +49,16 @@ class wfScan {
 			self::status(4, 'info', "Cron test received and message printed");
 			exit();
 		}
-		/* ----------Starting cronkey check -------- */
+		
 		self::status(4, 'info', "Scan engine received request.");
 		
+		/* ----------Starting signature check -------- */
+		self::status(4, 'info', "Verifying start request signature.");
+		if (!isset($_GET['signature']) || !wfScanEngine::verifyStartSignature($_GET['signature'], isset($_GET['isFork']) ? wfUtils::truthyToBoolean($_GET['isFork']) : false, isset($_GET['scanMode']) ? $_GET['scanMode'] : '', isset($_GET['cronKey']) ? $_GET['cronKey'] : '', isset($_GET['remote']) ? wfUtils::truthyToBoolean($_GET['remote']) : false)) {
+			self::errorExit(__('The signature on the request to start a scan is invalid. Please try again.', 'wordfence'));
+		}
+		
+		/* ----------Starting cronkey check -------- */
 		self::status(4, 'info', "Fetching stored cronkey for comparison.");
 		$expired = false;
 		$storedCronKey = self::storedCronKey($expired);
@@ -249,6 +256,16 @@ class wfScan {
 			$peakMemory = self::logPeakMemory();
 			self::status(2, 'info', "Wordfence used " . wfUtils::formatBytes($peakMemory - self::$peakMemAtStart) . " of memory for scan. Server peak memory usage was: " . wfUtils::formatBytes($peakMemory));
 			self::status(2, 'error', "Scan terminated with error: " . $e->getMessage());
+
+			if (preg_match('/The Wordfence API key you\'re using is already being used by: (\S*?) /', $e->getMessage(), $matches)) {
+				wordfence::alert(__('Wordfence scan failed because of license site URL conflict', 'wordfence'), sprintf(__(<<<MSG
+The Wordfence scan has failed because the Wordfence API key you're using is already being used by: %s
+
+If you have changed your blog URL, please sign-in to Wordfence, purchase a new key or reset an existing key, and then enter that key on this site's Wordfence Options page.
+MSG
+					, 'wordfence'), $matches[1]), false);
+			}
+
 			exit();
 		}
 		catch (Exception $e) {

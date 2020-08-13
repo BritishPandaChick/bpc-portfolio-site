@@ -18,16 +18,11 @@ class WPSEO_Link_Storage implements WPSEO_Installable {
 	const TABLE_NAME = 'yoast_seo_links';
 
 	/**
+	 * An instance of the database proxy class.
+	 *
 	 * @var WPSEO_Database_Proxy
 	 */
 	protected $database_proxy;
-
-	/**
-	 * @deprecated 7.4
-	 *
-	 * @var null|string
-	 */
-	protected $table_prefix;
 
 	/**
 	 * Initializes the database table.
@@ -58,17 +53,17 @@ class WPSEO_Link_Storage implements WPSEO_Installable {
 	 */
 	public function install() {
 		return $this->database_proxy->create_table(
-			array(
+			[
 				'id bigint(20) unsigned NOT NULL AUTO_INCREMENT',
 				'url varchar(255) NOT NULL',
 				'post_id bigint(20) unsigned NOT NULL',
 				'target_post_id bigint(20) unsigned NOT NULL',
 				'type VARCHAR(8) NOT NULL',
-			),
-			array(
+			],
+			[
 				'PRIMARY KEY (id)',
 				'KEY link_direction (post_id, type)',
-			)
+			]
 		);
 	}
 
@@ -96,7 +91,7 @@ class WPSEO_Link_Storage implements WPSEO_Installable {
 			WPSEO_Link_Table_Accessible::set_inaccessible();
 		}
 
-		$links = array();
+		$links = [];
 		foreach ( $results as $link ) {
 			$links[] = WPSEO_Link_Factory::get_link( $link->url, $link->target_post_id, $link->type );
 		}
@@ -113,7 +108,7 @@ class WPSEO_Link_Storage implements WPSEO_Installable {
 	 * @return void
 	 */
 	public function save_links( $post_id, array $links ) {
-		array_walk( $links, array( $this, 'save_link' ), $post_id );
+		array_walk( $links, [ $this, 'save_link' ], $post_id );
 	}
 
 	/**
@@ -125,8 +120,8 @@ class WPSEO_Link_Storage implements WPSEO_Installable {
 	 */
 	public function cleanup( $post_id ) {
 		$is_deleted = $this->database_proxy->delete(
-			array( 'post_id' => $post_id ),
-			array( '%d' )
+			[ 'post_id' => $post_id ],
+			[ '%d' ]
 		);
 
 		if ( $is_deleted === false ) {
@@ -147,13 +142,13 @@ class WPSEO_Link_Storage implements WPSEO_Installable {
 	 */
 	protected function save_link( WPSEO_Link $link, $link_key, $post_id ) {
 		$inserted = $this->database_proxy->insert(
-			array(
+			[
 				'url'            => $link->get_url(),
 				'post_id'        => $post_id,
 				'target_post_id' => $link->get_target_post_id(),
 				'type'           => $link->get_type(),
-			),
-			array( '%s', '%d', '%d', '%s' )
+			],
+			[ '%s', '%d', '%d', '%s' ]
 		);
 
 		if ( $inserted === false ) {
