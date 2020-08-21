@@ -84,7 +84,7 @@ add_action('wbcr/factory/pages/impressive/print_all_notices', function ($plugin,
 	echo '<div class="alert alert-warning wbcr-factory-warning-notice wtitan-get-plugins-scanner__notice"><p><span class="dashicons dashicons-plugins-checked"></span> ' . $notice_text . '</p></div>';
 	//$obj->printWarningNotice($notice_text);
 
-	/** @var \Wbcr_Factory431_Plugin $plugin */ /** @var \Wbcr_FactoryPages431_ImpressiveThemplate $obj */
+	/** @var \Wbcr_Factory432_Plugin $plugin */ /** @var \Wbcr_FactoryPages432_ImpressiveThemplate $obj */
 	/*if ( ( \WBCR\Titan\Plugin::app()->premium->is_activate() ) || ( $plugin->getPluginName() != \WBCR\Titan\Plugin::app()->getPluginName() ) || $obj->id == 'license' ) {
 		return;
 	}

@@ -11,7 +11,7 @@ class Backup extends Base
      * The id of the page in the admin menu.
      *
      * Mainly used to navigate between pages.
-     * @see   FactoryPages431_AdminPage
+     * @see   FactoryPages432_AdminPage
      *
      * @since 1.0.0
      * @var string
@@ -63,7 +63,7 @@ class Backup extends Base
      *
      * @return void
      * @since 1.0.0
-     * @see   Wbcr_FactoryPages431_AdminPage
+     * @see   Wbcr_FactoryPages432_AdminPage
      *
      */
     public function assets( $scripts, $styles )

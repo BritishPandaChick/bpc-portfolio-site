@@ -52,7 +52,7 @@ class Firewall_Settings extends Base {
 	/**
 	 * WBCR\Page\Settings constructor.
 	 *
-	 * @param \Wbcr_Factory431_Plugin $plugin
+	 * @param \Wbcr_Factory432_Plugin $plugin
 	 *
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 *
@@ -73,7 +73,7 @@ class Firewall_Settings extends Base {
 	 *
 	 * @return void
 	 * @since 6.2
-	 * @see   Wbcr_FactoryPages431_AdminPage
+	 * @see   Wbcr_FactoryPages432_AdminPage
 	 *
 	 */
 	public function assets( $scripts, $styles ) {

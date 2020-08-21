@@ -63,15 +63,15 @@ $whlp_plugin_info = array(
 
 	// FRAMEWORK MODULES
 	'load_factory_modules' => array(
-		array('libs/factory/bootstrap', 'factory_bootstrap_432', 'admin'),
-		array('libs/factory/forms', 'factory_forms_429', 'admin'),
-		array('libs/factory/pages', 'factory_pages_431', 'admin'),
-		array('libs/factory/clearfy', 'factory_clearfy_223', 'all'),
+		array('libs/factory/bootstrap', 'factory_bootstrap_433', 'admin'),
+		array('libs/factory/forms', 'factory_forms_430', 'admin'),
+		array('libs/factory/pages', 'factory_pages_432', 'admin'),
+		array('libs/factory/clearfy', 'factory_clearfy_224', 'all'),
 		array('libs/factory/adverts', 'factory_adverts_000', 'admin')
 	)
 );
 
-$whlp_compatibility = new Wbcr_Factory431_Requirements(__FILE__, array_merge($whlp_plugin_info, array(
+$whlp_compatibility = new Wbcr_Factory432_Requirements(__FILE__, array_merge($whlp_plugin_info, array(
 	'plugin_already_activate' => defined('WHLP_PLUGIN_ACTIVE'),
 	'required_php_version' => '5.4',
 	'required_wp_version' => '4.2.0',

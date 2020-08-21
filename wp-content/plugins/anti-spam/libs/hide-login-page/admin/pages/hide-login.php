@@ -11,13 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class WHLP_HideLoginPage extends Wbcr_FactoryClearfy223_PageBase {
+class WHLP_HideLoginPage extends Wbcr_FactoryClearfy224_PageBase {
 
 	/**
 	 * The id of the page in the admin menu.
 	 *
 	 * Mainly used to navigate between pages.
-	 * @see FactoryPages431_AdminPage
+	 * @see FactoryPages432_AdminPage
 	 *
 	 * @since 1.0.0
 	 * @var string
@@ -57,7 +57,7 @@ class WHLP_HideLoginPage extends Wbcr_FactoryClearfy223_PageBase {
 	public $current_plugin = '';
 
 	/**
-	 * @param Wbcr_Factory431_Plugin $plugin
+	 * @param Wbcr_Factory432_Plugin $plugin
 	 */
 	public function __construct( $plugin ) {
 		$this->menu_title                  = __( 'Hide Login Page', 'hide-login-page' );
@@ -138,7 +138,7 @@ class WHLP_HideLoginPage extends Wbcr_FactoryClearfy223_PageBase {
 	 *
 	 * @return void
 	 * @since 1.0.0
-	 * @see Wbcr_FactoryPages431_AdminPage
+	 * @see Wbcr_FactoryPages432_AdminPage
 	 *
 	 */
 	public function assets( $scripts, $styles ) {
@@ -187,10 +187,10 @@ class WHLP_HideLoginPage extends Wbcr_FactoryClearfy223_PageBase {
 	 * We register notifications for some actions
 	 *
 	 * @param $notices
-	 * @param Wbcr_Factory431_Plugin $plugin
+	 * @param Wbcr_Factory432_Plugin $plugin
 	 *
 	 * @return array
-	 * @see libs\factory\pages\themplates\FactoryPages431_ImpressiveThemplate
+	 * @see libs\factory\pages\themplates\FactoryPages432_ImpressiveThemplate
 	 */
 	public function actionNotices( $notices ) {
 
@@ -428,8 +428,8 @@ class WHLP_HideLoginPage extends Wbcr_FactoryClearfy223_PageBase {
 			return site_url( 'wp-login.php' );
 		}
 
-		if ( WbcrFactoryClearfy223_Helpers::isPermalink() ) {
-			return WbcrFactoryClearfy223_Helpers::userTrailingslashit( home_url( '/' ) . $login_path );
+		if ( WbcrFactoryClearfy224_Helpers::isPermalink() ) {
+			return WbcrFactoryClearfy224_Helpers::userTrailingslashit( home_url( '/' ) . $login_path );
 		} else {
 			return add_query_arg( $login_path, null, site_url() );
 		}

@@ -8,14 +8,14 @@ jQuery(document).ready(function ($) {
             timeout = 5000;
         }
 
-        if (typeof $ === 'undefined' || typeof $.wbcr_factory_clearfy_223 === 'undefined') {
+        if (typeof $ === 'undefined' || typeof $.wbcr_factory_clearfy_224 === 'undefined') {
             return;
         }
 
-        var noticeId = $.wbcr_factory_clearfy_223.app.showNotice(message, type);
+        var noticeId = $.wbcr_factory_clearfy_224.app.showNotice(message, type);
         if (timeout > 0) {
             setTimeout(function () {
-                $.wbcr_factory_clearfy_223.app.hideNotice(noticeId);
+                $.wbcr_factory_clearfy_224.app.hideNotice(noticeId);
             }, timeout);
         }
     }

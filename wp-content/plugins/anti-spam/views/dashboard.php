@@ -15,7 +15,7 @@ if ( is_array( $data ) ) {
  * @var \WBCR\Titan\SiteChecker $sites
  * @var \WBCR\Titan\Antispam $antispam
  * @var array $scanner
- * @var Wbcr_Factory431_Plugin $this_plugin
+ * @var Wbcr_Factory432_Plugin $this_plugin
  * @var string $check_content
  */
 

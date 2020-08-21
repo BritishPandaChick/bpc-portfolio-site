@@ -14,17 +14,17 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @copyright (c) 2020 Creative Motion
  * @version       1.0
  */
-class Base extends \Wbcr_FactoryClearfy223_PageBase {
+class Base extends \Wbcr_FactoryClearfy224_PageBase {
 
 	/**
 	 * Scanner page constructor.
 	 *
-	 * @param \Wbcr_Factory431_Plugin $plugin
+	 * @param \Wbcr_Factory432_Plugin $plugin
 	 *
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 *
 	 */
-	public function __construct( \Wbcr_Factory431_Plugin $plugin ) {
+	public function __construct( \Wbcr_Factory432_Plugin $plugin ) {
 		parent::__construct( $plugin );
 		$this->menuIcon = WTITAN_PLUGIN_URL . '/admin/assets/img/titan-icon.png';
 	}
@@ -96,7 +96,7 @@ class Base extends \Wbcr_FactoryClearfy223_PageBase {
 			$page_url = $args[0];
 		}
 
-		$page_url = apply_filters( 'wbcr_factory_pages_431_imppage_rating_widget_url', $page_url, $this->plugin->getPluginName(), $this->getResultId() );
+		$page_url = apply_filters( 'wbcr_factory_pages_432_imppage_rating_widget_url', $page_url, $this->plugin->getPluginName(), $this->getResultId() );
 
 		?>
         <div class="wbcr-factory-sidebar-widget">
