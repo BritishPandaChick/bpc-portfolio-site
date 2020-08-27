@@ -2,7 +2,7 @@
 Contributors: kungtiger
 Requires at least: 3.5
 Tested up to: 5.3
-Stable tag: 1.14.7
+Stable tag: 1.15.1
 Requires PHP: 5.3
 Requires at least: 5.2
 Tags: color, customizer, editor, gutenberg, palette, picker, tinymce
@@ -15,6 +15,8 @@ Manage a site-wide central color palette for an uniform look'n'feel! Supports th
 
 This plugin allows you to manage a site-wide central color palette for an uniform look'n'feel. The palette of the new block editor and the Theme Customizer are supported, as well as the classic editor. You can define this central color palette through the settings menu. All plugins that make use of WordPress' color picker can benefit from this plugin as well.
 
+This plugin supports a multi-site setup of WordPress.
+
 Also this plugin replaces the color picker for choosing a text or background color found inside the classic editor with a bigger and customizable color grid.
 
 For an easy migration between WordPress installations you can export and import your palette settings and colors.
@@ -25,14 +27,17 @@ Central Color Palette supports these plugins and themes:
 - [Advanced Custom Fields](https://www.advancedcustomfields.com/)
 - [Astra Theme](https://wpastra.com)
 - [Beaver Builder](https://www.wpbeaverbuilder.com)
-- [Elementor](https://wordpress.org/plugins/elementor)
+- [Elementor 2](https://wordpress.org/plugins/elementor)
 - [FontPress](https://lcweb.it/fontpress)
 - [GeneratePress Premium](https://generatepress.com/premium)
 - [Hestia Theme](https://wordpress.org/themes/hestia)
 - [Neve Theme](https://wordpress.org/themes/neve)
 - [Mega Max Menu](https://www.megamenu.com/)
 - [OceanWP](https://oceanwp.org)
+- [Oxygen](https://oxygenbuilder.com)
 - [Page Builder Framework](https://wp-pagebuilderframework.com)
+
+Please not that Elementor 3 is currently **not** supported due to its new color management.
 
 == API Documentation ==
 
@@ -78,46 +83,57 @@ Please [contact me](http://wordpress.org/support/plugin/kt-tinymce-color-grid) a
 
 == Changelog ==
 
+= 1.15 =
+Fix: Broken version check for Elementor 2
+
+= 1.15 =
+- Added: WordPress multisite support
+- Added: CSS variable names can now be set for each color
+- Added: Color names as hover/title to OceanWP, Astra and GeneratePress color pickers
+- Added: Selector to scope CSS variables can now be set for exports
+- Added: Support for Oxygen Site Builder
+- Fix: Untranslatable string
+
 = 1.14.7 =
 Added option to add global variables to the dashboard
 
 = 1.14.6 =
-- Fixed broken integration for Astra Theme
-- Added transparency to Astra Theme
-- Fixed broken integration for GeneratePress
+- Added: Transparency to Astra Theme
+- Fix: Broken integration for Astra Theme
+- Fix: broken integration for GeneratePress
 
 = 1.14.5 =
-Fixed broken integration for Advanced Custom Fields (thanks to @webprom and @stk_jj)
+Fix: Broken integration for Advanced Custom Fields (thanks to @webprom and @stk_jj)
 
 = 1.14.4 =
-Fixed broken integration for Elementor 2.9 (thanks to @blackeye0013)
+Fix: Broken integration for Elementor 2.9 (thanks to @blackeye0013)
 
 = 1.14.3 =
-Fixed missing percentage characters for HSL exports
+Fix: Missing percentage characters for HSL exports
 
 = 1.14.2 =
-- Fixed support for Elementor's new color picker
-- Added support for [Suki Theme](https://sukiwp.com/)
-- Fixed broken sprintf for alpha checkboxes
+- Added: Support for [Suki Theme](https://sukiwp.com/)
+- Fixed: Support for Elementor's new color picker
+- Fixed: Broken sprintf for alpha checkboxes
 
 = 1.14.1 =
-Added color formats to CSS/SCSS based exports
+Added: Color formats to CSS/SCSS based exports
 
 = 1.14 =
-- Added support for [Advanced Custom Fields](https://www.advancedcustomfields.com)
-- Added support for [Mega Max Menu](https://www.megamenu.com)
-- Added option for global CSS variables
-- Added export type for CSS variables
-- Added color types
-- Updated CSS to match WP 5.3
+- Added: Support for [Advanced Custom Fields](https://www.advancedcustomfields.com)
+- Added: Support for [Mega Max Menu](https://www.megamenu.com)
+- Added: Option for global CSS variables
+- Added: Export type for CSS variables
+- Added: Color types
+- Fix: CSS to match WP 5.3
 
 = 1.13.11 =
-Added support for FontPress
+Added: Support for FontPress
 
 = 1.13.10 =
-- Added "Clear Color" cell to the picker of the classic editor when only using the palette
-- Fixed unset variable warning when saving an empty palette (thanks to @cadiz)
-- Fixed syntax error for older PHP versions
+- Added: "Clear Color" cell to the picker of the classic editor when only using the palette
+- Fix: Unset variable warning when saving an empty palette (thanks to @cadiz)
+- Fix: Syntax error for older PHP versions
 
 = 1.13.9 =
 Classic Editor: Added an option to add a missing "Clear Color" cell to the picker when only using the palette
@@ -278,6 +294,12 @@ Fixes an error when using more than one TinyMCE
 Initial release.
 
 == Upgrade Notice ==
+
+= 1.15.1 =
+Fixes broken Elementor 2 integration
+
+= 1.15 =
+Adds WordPress multisite support, CSS variable names, color names to Astra, OceanWP and GeneratePress color pickers and a scope for CSS variable exports can now be set
 
 = 1.14.7 =
 Global CSS variables can now be added to the dashboard as well
