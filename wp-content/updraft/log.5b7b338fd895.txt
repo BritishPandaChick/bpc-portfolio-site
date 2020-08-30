@@ -1,0 +1,228 @@
+0000.003 (0) Opened log file at time: Sun, 30 Aug 2020 20:50:20 +0000 on http://localhost/bpcportfolio
+0000.156 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.26 WP: 5.5 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 51.7M | 22M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.266 (0) Free space on disk containing Updraft's temporary directory: 743284.2 MB
+0000.716 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_commentmeta.table.gz
+0000.861 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_comments.table.gz
+0000.931 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_links.table.gz
+0000.993 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_options.table.gz
+0001.029 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_postmeta.table.gz
+0001.084 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_posts.table.gz
+0001.119 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_smush_dir_images.table.gz
+0001.229 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_termmeta.table.gz
+0001.296 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_terms.table.gz
+0001.357 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_term_relationships.table.gz
+0001.384 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_term_taxonomy.table.gz
+0001.402 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_usermeta.table.gz
+0001.406 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_users.table.gz
+0001.410 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_wfblockediplog.table.gz
+0001.475 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_wfblocks7.table.gz
+0001.496 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_wfconfig.table.gz
+0001.554 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_wfcrawlers.table.tmp.gz
+0001.562 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_yoast_seo_links.table.gz
+0001.587 (0) Deleting old temporary file: backup_2020-08-27-0205_BritishPandaChick_fc64e72defe7-db-table-wp_yoast_seo_meta.table.gz
+0001.780 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0001.878 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0002.492 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1598508339, seconds_ago=312283)
+0002.982 (0) Semaphore (fd, wp_options) was stuck, set lock time to 2020-08-30 20:50:23
+0003.095 (0) Semaphore (fd, wp_options) reset to 1
+0003.206 (0) Set semaphore last lock (fd) time to 2020-08-30 20:50:23
+0003.281 (0) Semaphore lock (fd) complete
+0003.607 (0) Backup run: resumption=0, nonce=5b7b338fd895, file_nonce=5b7b338fd895 begun at=1598820620 (3s ago), job type=backup
+0003.937 (0) Scheduling a resumption (1) after 300 seconds (1598820924) in case this run gets aborted
+0004.492 (0) Checking if we have a zip executable available
+0004.737 (0) Creation of backups of directories: beginning
+0005.231 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0038.160 (0) Total entities for the zip file: 854 directories, 5082 files (0 skipped as non-modified), 66.9 MB
+0039.305 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0041.063 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 100 files added (on-disk size: 146.9 KB)
+0042.046 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 200 files added (on-disk size: 146.9 KB)
+0042.272 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 300 files added (on-disk size: 146.9 KB)
+0043.135 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 400 files added (on-disk size: 146.9 KB)
+0043.371 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 500 files added (on-disk size: 146.9 KB)
+0043.973 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (6.4 MB, 500 (501) files added so far); re-opening (prior size: 146.9 KB)
+0057.187 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 600 files added (on-disk size: 2223.1 KB)
+0058.321 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 700 files added (on-disk size: 2223.1 KB)
+0058.832 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/chunk-googlesitekit-adminbar-7bc82ce2559c24c046ce.js
+0058.914 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/chunk-googlesitekit-setup-wizard-b9d2c95d51997246bd53.js
+0059.152 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/chunk-googlesitekit-setup-wizard-proxy-48adf52bf605d60b5c05.js
+0059.454 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/chunk-googlesitekit-setup-wrapper-e19cadd3c7b2f1498278.js
+0059.776 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-activation.js
+0059.953 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-admin.js
+0060.166 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-adminbar-loader.js
+0060.275 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-api.js
+0060.403 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-dashboard-details.js
+0060.541 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-dashboard-splash.js
+0060.641 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-dashboard.js
+0060.735 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-data.js
+0060.785 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-datastore-forms.js
+0060.885 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-datastore-site.js
+0061.202 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-datastore-user.js
+0061.293 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-module.js
+0061.435 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-modules-adsense.js
+0061.550 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-modules-analytics.js
+0061.648 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-modules-optimize.js
+0061.852 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-modules-pagespeed-insights.js
+0061.950 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-modules-search-console.js
+0062.507 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-modules-tagmanager.js
+0062.960 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-modules.js
+0063.288 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-settings.js
+0063.816 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-vendor.js
+0063.914 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-widgets.js
+0064.175 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-wp-dashboard.js
+0064.360 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/pagead2.ads.js
+0064.441 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/vendors~chunk-googlesitekit-adminbar-ebed61d97952a2b9549f.js
+0064.576 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/vendors~chunk-googlesitekit-setup-wizard-proxy-e9831ef9c579fde1908e.js
+0064.834 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.4 MB, 225 (726) files added so far); re-opening (prior size: 2223.1 KB)
+0081.912 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 800 files added (on-disk size: 2721.5 KB)
+0082.452 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 900 files added (on-disk size: 2721.5 KB)
+0082.672 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 1000 files added (on-disk size: 2721.5 KB)
+0083.187 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 1100 files added (on-disk size: 2721.5 KB)
+0083.888 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 1200 files added (on-disk size: 2721.5 KB)
+0084.092 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.6 MB, 5082 files batched, 501 (1227) added so far); re-opening (prior size: 2721.5 KB)
+0086.092 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 1300 files added (on-disk size: 3342 KB)
+0086.291 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 1400 files added (on-disk size: 3342 KB)
+0087.762 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 1500 files added (on-disk size: 3342 KB)
+0088.224 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 1600 files added (on-disk size: 3342 KB)
+0088.462 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 1700 files added (on-disk size: 3342 KB)
+0089.124 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (3.4 MB, 474 (1701) files added so far); re-opening (prior size: 3342 KB)
+0104.835 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 1800 files added (on-disk size: 4406.8 KB)
+0105.021 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 1900 files added (on-disk size: 4406.8 KB)
+0105.315 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 2000 files added (on-disk size: 4406.8 KB)
+0106.029 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 2100 files added (on-disk size: 4406.8 KB)
+0106.313 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 2200 files added (on-disk size: 4406.8 KB)
+0106.450 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (18.5 MB, 5082 files batched, 501 (2202) added so far); re-opening (prior size: 4406.8 KB)
+0144.784 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 2300 files added (on-disk size: 9590.6 KB)
+0145.381 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 2400 files added (on-disk size: 9590.6 KB)
+0145.575 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 2500 files added (on-disk size: 9590.6 KB)
+0145.893 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 2600 files added (on-disk size: 9590.6 KB)
+0146.131 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 2700 files added (on-disk size: 9590.6 KB)
+0146.292 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.8 MB, 5082 files batched, 501 (2703) added so far); re-opening (prior size: 9590.6 KB)
+0170.651 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 2800 files added (on-disk size: 10294.4 KB)
+0170.939 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 2900 files added (on-disk size: 10294.4 KB)
+0171.111 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 3000 files added (on-disk size: 10294.4 KB)
+0171.486 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 3100 files added (on-disk size: 10294.4 KB)
+0171.599 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/activity-report-widget.1596638737.css
+0171.725 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/diff.1596638737.css
+0171.863 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/dt_table.1596638737.css
+0172.019 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/fullLog.1596638737.css
+0172.136 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/iptraf.1596638737.css
+0172.358 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/jquery-ui-timepicker-addon.1596638737.css
+0172.569 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/jquery-ui.min.1596638737.css
+0172.691 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/jquery-ui.structure.min.1596638737.css
+0172.935 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/jquery-ui.theme.min.1596638737.css
+0173.078 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/main.1596638737.css
+0173.245 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/phpinfo.1596638737.css
+0173.495 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/wf-adminbar.1596638737.css
+0173.740 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/wf-colorbox.1596638737.css
+0173.921 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/wf-font-awesome.1596638737.css
+0174.208 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/wf-global.1596638737.css
+0174.310 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/wf-ionicons.1596638737.css
+0174.410 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/wf-onboarding.1596638737.css
+0174.485 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/wf-roboto-font.1596638737.css
+0174.576 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/wfselect2.min.1596638737.css
+0174.687 (0) File has vanished from underneath us; dropping: plugins/wordfence/css/wordfenceBox.1596638737.css
+0174.795 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (3.1 MB, 412 (3115) files added so far); re-opening (prior size: 10294.4 KB)
+0197.607 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/admin.1596638737.js
+0197.971 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/admin.ajaxWatcher.1596638737.js
+0198.274 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/admin.liveTraffic.1596638737.js
+0198.581 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/Chart.bundle.min.1596638737.js
+0199.033 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/date.1596638737.js
+0199.458 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/jquery-ui-timepicker-addon.1596638737.js
+0199.904 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/jquery.colorbox-min.1596638737.js
+0200.161 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/jquery.colorbox.1596638737.js
+0200.627 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/jquery.dataTables.min.1596638737.js
+0200.961 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/jquery.qrcode.min.1596638737.js
+0201.493 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/jquery.tmpl.min.1596638737.js
+0201.945 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/jquery.tools.min.1596638737.js
+0202.267 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/knockout-3.3.0.1596638737.js
+0202.520 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/wfdashboard.1596638737.js
+0202.909 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/wfdropdown.1596638737.js
+0203.073 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/wfglobal.1596638737.js
+0203.341 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/wfpopover.1596638737.js
+0203.519 (0) File has vanished from underneath us; dropping: plugins/wordfence/js/wfselect2.min.1596638737.js
+0204.087 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.5 MB, 61 (3176) files added so far); re-opening (prior size: 11222.8 KB)
+0205.698 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 3200 files added (on-disk size: 11691.2 KB)
+0206.723 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 3300 files added (on-disk size: 11691.2 KB)
+0207.533 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/css/admin-global.1596638737.css
+0207.990 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/css/admin.1596638737.css
+0208.847 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/css/colorbox.1596638737.css
+0209.323 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/css/font-awesome.1596638737.css
+0209.834 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/css/ionicons.1596638737.css
+0210.420 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/css/jquery-ui-timepicker-addon.1596638737.css
+0211.112 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/css/jquery-ui.min.1596638737.css
+0211.543 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/css/jquery-ui.structure.min.1596638737.css
+0211.865 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/css/jquery-ui.theme.min.1596638737.css
+0212.519 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/css/login.1596638737.css
+0213.305 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (6 MB, 149 (3325) files added so far); re-opening (prior size: 11691.2 KB)
+0222.708 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/js/admin-global.1596638737.js
+0223.365 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/js/admin.1596638737.js
+0223.690 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/js/jquery-ui-timepicker-addon.1596638737.js
+0223.869 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/js/jquery.colorbox.1596638737.js
+0224.159 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/js/jquery.colorbox.min.1596638737.js
+0224.690 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/js/jquery.qrcode.min.1596638737.js
+0224.920 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/js/jquery.tmpl.min.1596638737.js
+0225.092 (0) File has vanished from underneath us; dropping: plugins/wordfence/modules/login-security/js/login.1596638737.js
+0225.384 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 11 (3336) files added so far); re-opening (prior size: 14100.3 KB)
+0226.088 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 3400 files added (on-disk size: 14145.2 KB)
+0226.341 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 3500 files added (on-disk size: 14145.2 KB)
+0226.564 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 3600 files added (on-disk size: 14145.2 KB)
+0226.752 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 3700 files added (on-disk size: 14145.2 KB)
+0227.137 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 3800 files added (on-disk size: 14145.2 KB)
+0227.282 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (3 MB, 5082 files batched, 501 (3837) added so far); re-opening (prior size: 14145.2 KB)
+0242.755 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 3900 files added (on-disk size: 15278.2 KB)
+0243.169 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 4000 files added (on-disk size: 15278.2 KB)
+0243.461 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 4100 files added (on-disk size: 15278.2 KB)
+0243.651 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 4200 files added (on-disk size: 15278.2 KB)
+0243.938 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 4300 files added (on-disk size: 15278.2 KB)
+0244.122 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (8 MB, 5082 files batched, 501 (4338) added so far); re-opening (prior size: 15278.2 KB)
+0263.201 (0) The scheduled resumption is within 45 seconds - will reschedule
+0263.426 (0) Rescheduling resumption 1: moving to 345 seconds from now (1598821228)
+0263.731 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 300 + 45 = 345
+0264.128 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 4400 files added (on-disk size: 17701.5 KB)
+0264.349 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 4500 files added (on-disk size: 17701.5 KB)
+0264.652 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 4600 files added (on-disk size: 17701.5 KB)
+0265.345 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 4700 files added (on-disk size: 17701.5 KB)
+0268.503 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.7 MB, 363 (4701) files added so far); re-opening (prior size: 17701.5 KB)
+0297.947 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 4800 files added (on-disk size: 18228.3 KB)
+0298.178 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-plugins.zip.tmp: 4900 files added (on-disk size: 18228.3 KB)
+0308.011 (0) Created plugins zip (0) - 20742.6 KB in 302.1 s (68.7 KB/s) (sha1: f7866ee96ea29ea6a9fb0a8035a1c64eec72d5ac, sha256: 0e0baa4d0966c0b80fdc08d28b7032d77d24ba7beb635e1b9573afcedfd5a607)
+0308.503 (0) Beginning creation of dump of themes (split every: 400 MB)
+0311.147 (0) Total entities for the zip file: 86 directories, 367 files (0 skipped as non-modified), 7.9 MB
+0311.276 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0311.723 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-themes.zip.tmp: 100 files added (on-disk size: 11.7 KB)
+0312.105 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-themes.zip.tmp: 200 files added (on-disk size: 11.7 KB)
+0312.277 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-themes.zip.tmp: 300 files added (on-disk size: 11.7 KB)
+0317.747 (0) The time we have been running (317.4) is approaching the resumption interval (345) - increasing resumption interval to 348
+0318.937 (0) Created themes zip (0) - 3986.4 KB in 10.3 s (386.1 KB/s) (sha1: 25fffbf3d9956e13e3b29f791f73f40ffee34dbf, sha256: 4295d4d0f0b5a6a8e83a05a7a10259ff11e259cc4c17e14c87002464a899e385)
+0319.277 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0319.361 (0) Looking for candidates to backup in: C:\xampp\htdocs\bpcportfolio/wp-content/uploads
+0319.567 (0) finding files: .htaccess: adding to list (1)
+0319.645 (0) finding files: 2016: adding to list (2)
+0319.744 (0) finding files: 2017: adding to list (3)
+0319.787 (0) finding files: 2018: adding to list (4)
+0319.844 (0) finding files: 2019: adding to list (5)
+0319.974 (0) finding files: 2020: adding to list (6)
+0320.099 (0) finding files: wtitan-logger: adding to list (7)
+0320.212 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0322.862 (0) Total entities for the zip file: 34 directories, 825 files (0 skipped as non-modified), 62.4 MB
+0323.236 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0324.188 (0) The time we have been running (323.7) is approaching the resumption interval (348) - increasing resumption interval to 354
+0324.408 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-uploads.zip.tmp: 100 files added (on-disk size: 3.9 KB)
+0324.748 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (26.9 MB, 825 files batched, 196 (197) added so far); re-opening (prior size: 3.9 KB)
+0335.220 (0) The time we have been running (334.5) is approaching the resumption interval (354) - increasing resumption interval to 365
+0335.376 (0) A useful amount of data was added after this amount of zip processing: 11.6 s (normalised: 10.8 s, rate: 2367.5 KB/s)
+0335.648 (0) Performance is good - will increase the amount of data we attempt to batch (time=11.647151947021, normalised_time=10.813192938914, max_time=335.52450108528, data points known=1, old_max_bytes=26214400, new_max_bytes=209715200)
+0336.086 (0) The time we have been running (335.7) is approaching the resumption interval (365) - increasing resumption interval to 366
+0336.708 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-uploads.zip.tmp: 200 files added (on-disk size: 27608.7 KB)
+0337.402 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-uploads.zip.tmp: 300 files added (on-disk size: 27608.7 KB)
+0339.329 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (11.4 MB, 115 (312) files added so far); re-opening (prior size: 27608.7 KB)
+0348.955 (0) The time we have been running (348.2) is approaching the resumption interval (366) - increasing resumption interval to 379
+0350.828 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-uploads.zip.tmp: 400 files added (on-disk size: 39263 KB)
+0351.949 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (4.1 MB, 89 (401) files added so far); re-opening (prior size: 39263 KB)
+0360.977 (0) The time we have been running (360.4) is approaching the resumption interval (379) - increasing resumption interval to 391
+0364.413 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.2 MB, 7 (408) files added so far); re-opening (prior size: 43510.2 KB)
+0370.900 (0) The time we have been running (368.8) is approaching the resumption interval (391) - increasing resumption interval to 399
+0372.303 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-uploads.zip.tmp: 500 files added (on-disk size: 43756.3 KB)
+0372.501 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-uploads.zip.tmp: 600 files added (on-disk size: 43756.3 KB)
+0372.836 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-uploads.zip.tmp: 700 files added (on-disk size: 43756.3 KB)
+0373.037 (0) Zip: backup_2020-08-30-1650_BritishPandaChick_5b7b338fd895-uploads.zip.tmp: 800 files added (on-disk size: 43756.3 KB)
