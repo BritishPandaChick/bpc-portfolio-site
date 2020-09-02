@@ -491,3 +491,39 @@
 2101.971 (2) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
 2102.715 (2) Google Drive: quota usage: used=35.7 MB, total=15360 MB, available=15324.3 MB
 2103.374 (2) Google Drive: backup_2020-09-02-0053_BritishPandaChick_830ef2a12609-db.gz: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+2164.011 (2) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+2164.135 (2) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+2164.196 (2) Number of backup sets in history: 6; groups (db): 1
+2164.234 (2) Examining (for databases) backup set with group_id=0, nonce=9cd586d4a172, datestamp=1599023672 (Sep 02 2020 05:14:32)
+2164.295 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+2164.324 (2) Examining (for databases) backup set with group_id=0, nonce=830ef2a12609, datestamp=1599022426 (Sep 02 2020 04:53:46)
+2164.324 (2) This backup set is the backup set just made, so will not be deleted.
+2164.324 (2) Examining (for databases) backup set with group_id=0, nonce=d314ed92c6c3, datestamp=1598905179 (Aug 31 2020 20:19:39)
+2164.324 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+2164.324 (2) Examining (for databases) backup set with group_id=0, nonce=5b7b338fd895, datestamp=1598820620 (Aug 30 2020 20:50:20)
+2164.324 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+2164.324 (2) Examining (for databases) backup set with group_id=0, nonce=fc64e72defe7, datestamp=1598508337 (Aug 27 2020 06:05:37)
+2164.324 (2) Examining (for databases) backup set with group_id=0, nonce=f608b4436d39, datestamp=1598418534 (Aug 26 2020 05:08:54)
+2164.324 (2) This backup set remains non-empty (f=0/d=1); will retain in history
+2164.395 (2) Number of backup sets in history: 6; groups (files): 1
+2164.484 (2) Examining (for files) backup set with nonce=9cd586d4a172, datestamp=1599023672 (Sep 02 2020 05:14:32)
+2164.484 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+2164.601 (2) Examining (for files) backup set with nonce=830ef2a12609, datestamp=1599022426 (Sep 02 2020 04:53:46)
+2164.601 (2) This backup set is the backup set just made, so will not be deleted.
+2164.673 (2) This backup set is the backup set just made, so will not be deleted.
+2164.673 (2) This backup set is the backup set just made, so will not be deleted.
+2164.673 (2) This backup set is the backup set just made, so will not be deleted.
+2164.673 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+2164.748 (2) Examining (for files) backup set with nonce=d314ed92c6c3, datestamp=1598905179 (Aug 31 2020 20:19:39)
+2164.748 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+2164.749 (2) Examining (for files) backup set with nonce=5b7b338fd895, datestamp=1598820620 (Aug 30 2020 20:50:20)
+2164.749 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+2164.749 (2) Examining (for files) backup set with nonce=fc64e72defe7, datestamp=1598508337 (Aug 27 2020 06:05:37)
+2164.749 (2) This backup set remains non-empty (f=1/d=0); will retain in history
+2164.803 (2) Examining (for files) backup set with nonce=f608b4436d39, datestamp=1598418534 (Aug 26 2020 05:08:54)
+2164.803 (2) This backup set remains non-empty (f=0/d=1); will retain in history
+2164.828 (2) Retain: saving new backup history (sets now: 6) and finishing retain operation
+2164.978 (2) Resume backup (830ef2a12609, 2): finish run
+2165.056 (2) There were errors in the uploads, so the 'resume' event is remaining scheduled
+2165.156 (2) No email will/can be sent - the user has not configured an email address.
+2165.247 (2) The backup has not finished; a resumption is scheduled
