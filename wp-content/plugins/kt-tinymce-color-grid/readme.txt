@@ -2,7 +2,7 @@
 Contributors: kungtiger
 Requires at least: 3.5
 Tested up to: 5.3
-Stable tag: 1.15.1
+Stable tag: 1.15.2
 Requires PHP: 5.3
 Requires at least: 5.2
 Tags: color, customizer, editor, gutenberg, palette, picker, tinymce
@@ -83,7 +83,10 @@ Please [contact me](http://wordpress.org/support/plugin/kt-tinymce-color-grid) a
 
 == Changelog ==
 
-= 1.15 =
+= 1.15.2 =
+Fix: per blog options overwrite each other in multisite setup
+
+= 1.15.1 =
 Fix: Broken version check for Elementor 2
 
 = 1.15 =
@@ -294,6 +297,9 @@ Fixes an error when using more than one TinyMCE
 Initial release.
 
 == Upgrade Notice ==
+
+= 1.15.2 =
+Fixes broken multisite palettes
 
 = 1.15.1 =
 Fixes broken Elementor 2 integration

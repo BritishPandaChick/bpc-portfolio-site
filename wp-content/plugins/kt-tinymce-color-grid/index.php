@@ -4,7 +4,7 @@
  * Plugin Name: Central Color Palette
  * Plugin URI: https://wordpress.org/plugins/kt-tinymce-color-grid
  * Description: Manage a site-wide central color palette for an uniform look'n'feel! Supports the new block editor, theme customizer and many themes and plugins.
- * Version: 1.15.1
+ * Version: 1.15.2
  * Author: Daniel Menzies
  * Author URI: http://profiles.wordpress.org/kungtiger
  * License: GPL2
@@ -13,7 +13,7 @@
  */
 
 if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
-    define('KT_CENTRAL_PALETTE', '1.15.1');
+    define('KT_CENTRAL_PALETTE', '1.15.2');
     define('KT_CENTRAL_PALETTE_DIR', plugin_dir_path(__FILE__));
     define('KT_CENTRAL_PALETTE_URL', plugin_dir_url(__FILE__));
     define('KT_CENTRAL_PALETTE_BASENAME', plugin_basename(__FILE__));
@@ -131,6 +131,8 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
             }
             $this->is_active_for_network = is_plugin_active_for_network(KT_CENTRAL_PALETTE_BASENAME);
 
+            define('KT_CENTRAL_PALETTE_MULTISITE', $this->is_active_for_network);
+
             add_action('plugins_loaded', array($this, 'init_l10n'));
             add_action('after_setup_theme', array($this, 'init_integrations'), 999);
             add_filter('plugin_action_links', array($this, 'add_action_link'), 10, 2);
@@ -138,6 +140,18 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
             add_action($this->is_active_for_network ? 'network_admin_menu' : 'admin_menu', array($this, 'add_settings_page'));
 
             $this->update_plugin();
+        }
+
+        public function get_option($name, $fallback = null) {
+            return KT_CENTRAL_PALETTE_MULTISITE ? get_site_option($name, $fallback) : get_option($name, $fallback);
+        }
+
+        public function set_option($name, $value) {
+            return KT_CENTRAL_PALETTE_MULTISITE ? update_site_option($name, $value) : update_option($name, $value);
+        }
+
+        public function delete_option($name) {
+            return KT_CENTRAL_PALETTE_MULTISITE ? delete_site_option($name) : delete_option($name);
         }
 
         /**
@@ -178,7 +192,7 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
          * @since 1.6
          */
         protected function update_plugin() {
-            $version = get_site_option(self::ACTIVE_VERSION, 0);
+            $version = $this->get_option(self::ACTIVE_VERSION, 0);
             if ($version == KT_CENTRAL_PALETTE) {
                 return;
             }
@@ -188,12 +202,12 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
                     case 0:
                         $version = 16;
 
-                        $sets = get_site_option('kt_color_grid_sets', array());
+                        $sets = get_option('kt_color_grid_sets', array());
                         if ($sets) {
                             foreach ($sets as &$set) {
                                 $set[0] = str_replace('#', '', $set[0]);
                             }
-                            update_site_option('kt_color_grid_sets', $sets);
+                            update_option('kt_color_grid_sets', $sets);
                         }
                         break;
 
@@ -201,15 +215,15 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
                     case 161:
                         $version = 170;
 
-                        if (get_site_option('kt_color_grid_custom')) {
-                            update_site_option('kt_color_grid_visual', '1');
+                        if (get_option('kt_color_grid_custom')) {
+                            update_option('kt_color_grid_visual', '1');
                         }
-                        $sets = get_site_option('kt_color_grid_sets', array());
+                        $sets = get_option('kt_color_grid_sets', array());
                         if ($sets) {
-                            update_site_option('kt_color_grid_palette', $sets);
+                            update_option('kt_color_grid_palette', $sets);
                         }
-                        delete_site_option('kt_color_grid_custom');
-                        delete_site_option('kt_color_grid_sets');
+                        delete_option('kt_color_grid_custom');
+                        delete_option('kt_color_grid_sets');
                         break;
 
                     case 170:
@@ -223,12 +237,12 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
                     case 193:
                         $version = 1100;
 
-                        $palette = get_site_option('kt_color_grid_palette', array());
+                        $palette = get_option('kt_color_grid_palette', array());
                         $_palette = array();
                         foreach ($palette as $set) {
                             $_palette[] = array($set[0], 100, $set[1]);
                         }
-                        update_site_option('kt_color_grid_palette', $_palette);
+                        update_option('kt_color_grid_palette', $_palette);
                         break;
 
                     case 1100:
@@ -243,7 +257,7 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
                     case '1.12.6':
                         $version = '1.13';
 
-                        $palette = (array) get_site_option('kt_color_grid_palette');
+                        $palette = (array) get_option('kt_color_grid_palette');
                         $_palette = array();
                         $index = 1;
                         $status = 1;
@@ -257,14 +271,14 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
                             $_palette[] = compact('color', 'alpha', 'name', 'index', 'status');
                             $index++;
                         }
-                        update_site_option('kt_color_grid_palette', $_palette);
+                        update_option('kt_color_grid_palette', $_palette);
 
                         $alpha = 'kt_color_grid_alpha';
-                        if (get_site_option($alpha)) {
-                            update_site_option('kt_color_grid_oceanwp_alpha', 1);
-                            update_site_option('kt_color_grid_gp_alpha', 1);
+                        if (get_option($alpha)) {
+                            update_option('kt_color_grid_oceanwp_alpha', 1);
+                            update_option('kt_color_grid_gp_alpha', 1);
                         }
-                        delete_site_option($alpha);
+                        delete_option($alpha);
 
                         # re-render for new data formats
                         $this->render_map();
@@ -283,17 +297,17 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
                         $version = '1.13.10';
 
                         # re-render for obligatory "reset color"
-                        if (get_site_option('kt_color_grid_type') == 'palette') {
+                        if (get_option('kt_color_grid_type') == 'palette') {
                             $this->render_map();
                         }
-                        delete_site_option('kt_color_grid_mce_reset');
+                        delete_option('kt_color_grid_mce_reset');
                         break;
 
                     case '1.13.10':
                     case '1.13.11':
                         $version = '1.14';
 
-                        $palette = (array) get_site_option('kt_color_grid_palette');
+                        $palette = (array) get_option('kt_color_grid_palette');
                         $_palette = array();
                         foreach ($palette as $set) {
                             if (!$set) {
@@ -304,7 +318,7 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
                             $set['type'] = 1; // hex
                             $_palette[] = $set;
                         }
-                        update_site_option('kt_color_grid_palette', $_palette);
+                        update_option('kt_color_grid_palette', $_palette);
                         break;
 
                     case '1.14';
@@ -315,10 +329,10 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
                     case '1.14.5';
                         $version = '1.14.6';
 
-                        update_site_option('kt_color_grid_astra_theme', 1);
+                        update_option('kt_color_grid_astra_theme', 1);
 
                         if ($this->supports('generatepress')) {
-                            update_site_option('kt_color_grid_gp', 1);
+                            update_option('kt_color_grid_gp', 1);
                         }
 
                         break;
@@ -326,7 +340,7 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
                     case '1.14.7':
                         $version = '1.15';
 
-                        $palette = (array) get_site_option('kt_color_grid_palette');
+                        $palette = (array) get_option('kt_color_grid_palette');
                         $_palette = array();
                         foreach ($palette as $set) {
                             if (!$set) {
@@ -336,14 +350,14 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
                             $set['variable'] = $this->get_css_class_name($set);
                             $_palette[] = $set;
                         }
-                        update_site_option('kt_color_grid_palette', $_palette);
+                        $this->set_option('kt_color_grid_palette', $_palette);
                         break;
 
                     default:
                         $version = KT_CENTRAL_PALETTE;
                 }
             }
-            update_site_option(self::ACTIVE_VERSION, KT_CENTRAL_PALETTE);
+            $this->set_option(self::ACTIVE_VERSION, KT_CENTRAL_PALETTE);
         }
 
         /**
@@ -393,7 +407,7 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
             add_action('after_wp_tiny_mce', array($this, 'print_tinymce_style'));
 
             $iris_integration = array($this, 'iris_integration');
-            $integrate_customizer = get_site_option(self::CUSTOMIZER);
+            $integrate_customizer = $this->get_option(self::CUSTOMIZER);
             if ($integrate_customizer) {
                 add_action('admin_enqueue_scripts', array($this, 'iris_enqueue_script'));
                 add_action('admin_print_scripts', $iris_integration, 999);
@@ -402,12 +416,12 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
                 add_action('customize_controls_print_footer_scripts', $iris_integration, 999);
             }
 
-            if ($this->supports('acf') && get_site_option(self::ACF)) {
+            if ($this->supports('acf') && $this->get_option(self::ACF)) {
                 add_action('admin_enqueue_scripts', array($this, 'iris_enqueue_script'));
                 add_action('acf/admin_print_scripts', $iris_integration, 999);
             }
 
-            if ($this->supports('suki_theme') && get_site_option(self::SUKI_THEME)) {
+            if ($this->supports('suki_theme') && $this->get_option(self::SUKI_THEME)) {
                 add_action('suki/admin/dashboard/content', array($this, 'suki_hide_color_module'), 11);
                 add_action('customize_register', array($this, 'suki_remove_color_section'), 11);
                 for ($i = 1; $i < 9; $i++) {
@@ -415,14 +429,14 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
                 }
             }
 
-            if (get_site_option(self::CSS_VARS)) {
+            if ($this->get_option(self::CSS_VARS)) {
                 add_action('wp_print_styles', array($this, 'print_global_css_variables'));
             }
-            if (get_site_option(self::CSS_ADMIN_VARS)) {
+            if ($this->get_option(self::CSS_ADMIN_VARS)) {
                 add_action('admin_print_styles', array($this, 'print_global_css_variables'));
             }
 
-            if ($this->supports('elementor') && get_site_option(self::ELEMENTOR)) {
+            if ($this->supports('elementor') && $this->get_option(self::ELEMENTOR)) {
                 add_filter('elementor/editor/localize_settings', array($this, 'elementor_integration'), 100);
                 if (version_compare(ELEMENTOR_VERSION, '2.8', '<')) {
                     add_action('elementor/editor/after_enqueue_scripts', array($this, 'elementor_styles'));
@@ -431,22 +445,22 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
                 }
             }
 
-            if ($this->supports('generatepress') && get_site_option(self::GENERATEPRESS)) {
+            if ($this->supports('generatepress') && $this->get_option(self::GENERATEPRESS)) {
                 add_filter('generate_default_color_palettes', array($this, 'generatepress_integration'));
                 add_action('admin_enqueue_scripts', array($this, 'iris_enqueue_script'));
             }
 
-            if ($this->supports('oceanwp') && get_site_option(self::OCEANWP)) {
+            if ($this->supports('oceanwp') && $this->get_option(self::OCEANWP)) {
                 add_filter('ocean_default_color_palettes', array($this, 'oceanwp_integration'));
                 add_action('admin_enqueue_scripts', array($this, 'iris_enqueue_script'));
             }
 
-            if ($this->supports('beaverbuilder') && get_site_option(self::BEAVERBUILDER)) {
+            if ($this->supports('beaverbuilder') && $this->get_option(self::BEAVERBUILDER)) {
                 add_filter('fl_builder_color_presets', array($this, 'beaver_integration'));
                 add_action('wp_enqueue_scripts', array($this, 'beaver_style'));
             }
 
-            if ($this->supports('gutenberg') && get_site_option(self::GUTENBERG)) {
+            if ($this->supports('gutenberg') && $this->get_option(self::GUTENBERG)) {
                 $this->integrate_gutenberg();
             }
 
@@ -454,20 +468,20 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
                 add_filter('hestia_accent_color_palette', array($this, 'hestia_integration'));
             }
 
-            if ($this->supports('fontpress') && get_site_option(self::FONTPRESS)) {
+            if ($this->supports('fontpress') && $this->get_option(self::FONTPRESS)) {
                 add_action('admin_enqueue_scripts', array($this, 'fontpress_enqueue_scripts'));
             }
 
-            if ($this->supports('megamaxmenu') && get_site_option(self::MEGAMAXMENU)) {
+            if ($this->supports('megamaxmenu') && $this->get_option(self::MEGAMAXMENU)) {
                 add_filter('megamenu_spectrum_localisation', array($this, 'megamaxmenu_integration'));
             }
 
-            if ($this->supports('astra') && get_site_option(self::ASTRA_THEME)) {
+            if ($this->supports('astra') && $this->get_option(self::ASTRA_THEME)) {
                 add_filter('astra_color_palettes', array($this, 'astra_integration'));
                 add_action('admin_enqueue_scripts', array($this, 'iris_enqueue_script'));
             }
 
-            if ($this->supports('oxygen_vsb') && get_site_option(self::OXYGEN_VSB)) {
+            if ($this->supports('oxygen_vsb') && $this->get_option(self::OXYGEN_VSB)) {
                 add_filter('pre_option_oxygen_vsb_global_colors', array($this, 'oxygen_vsb_integration'));
                 add_action('wp_enqueue_scripts', array($this, 'oxygen_vsb_enqueue_scripts'));
             }
@@ -595,7 +609,7 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
         protected function integrate_gutenberg() {
             $palette = $this->get_gutenberg_palette();
             if ($palette) {
-                if (get_site_option(self::GUTENBERG_MERGE)) {
+                if ($this->get_option(self::GUTENBERG_MERGE)) {
                     $existing_palette = get_theme_support('editor-color-palette');
                     if (is_array($existing_palette)) {
                         $palette = array_merge(reset($existing_palette), $palette);
@@ -603,7 +617,7 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
                 }
 
                 // 8 is just after wp_print_styles, 99 just before wp_custom_css_cb
-                $priority = get_site_option(self::GUTENBERG_FORCE) ? 99 : 8;
+                $priority = $this->get_option(self::GUTENBERG_FORCE) ? 99 : 8;
 
                 add_theme_support('editor-color-palette', $palette);
                 add_action('wp_head', array($this, 'print_gutenberg_style'), $priority);
@@ -625,7 +639,7 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
             }
 
             $debug = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG;
-            $force = get_site_option(self::GUTENBERG_FORCE) ? ' !important' : '';
+            $force = $this->get_option(self::GUTENBERG_FORCE) ? ' !important' : '';
 
             print '<style id="kt_central_palette_gutenberg_css" type="text/css">';
             foreach ($palette as $set) {
@@ -710,7 +724,7 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
 
             $_palette = $options['_palette'];
             if (!is_array($_palette)) {
-                $_palette = (array) get_site_option(self::PALETTE);
+                $_palette = (array) $this->get_option(self::PALETTE);
             }
 
             $palette = array();
@@ -784,7 +798,7 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
             if ($merge_threshold !== false) {
                 $palette = $this->merge_palette($palette, $merge_threshold);
             }
-            update_site_option(self::PALETTE, $palette);
+            $this->set_option(self::PALETTE, $palette);
             $this->render_map();
             return $palette;
         }
@@ -852,7 +866,7 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
          */
         public function generatepress_integration($palette) {
             return $this->get_colors(array(
-                        'alpha' => $this->supports('generatepress-premium') && get_site_option(self::GENERATEPRESS_ALPHA),
+                        'alpha' => $this->supports('generatepress-premium') && $this->get_option(self::GENERATEPRESS_ALPHA),
                         '_name' => true,
                         'default' => $palette,
             ));
@@ -866,7 +880,7 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
          */
         public function oceanwp_integration($palette) {
             return $this->get_colors(array(
-                        'alpha' => get_site_option(self::OCEANWP_ALPHA),
+                        'alpha' => $this->get_option(self::OCEANWP_ALPHA),
                         '_name' => true,
                         'default' => $palette,
             ));
@@ -934,7 +948,7 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
 
         public function astra_integration($palette) {
             return $this->get_colors(array(
-                        '_force_alpha' => get_site_option(self::ASTRA_ALPHA),
+                        '_force_alpha' => $this->get_option(self::ASTRA_ALPHA),
                         '_name' => true,
                         'default' => $palette,
             ));
@@ -1020,10 +1034,10 @@ if (typeof jQuery != "undefined") {
          * @since 1.12.3 Change css selector
          */
         public function print_tinymce_style() {
-            if (get_site_option(self::TYPE, self::DEFAULT_TYPE) == 'default') {
+            if ($this->get_option(self::TYPE, self::DEFAULT_TYPE) == 'default') {
                 return;
             }
-            $map = get_site_option(self::MAP);
+            $map = $this->get_option(self::MAP);
             if (!is_array($map) || !$map['rows']) {
                 return;
             }
@@ -1052,12 +1066,12 @@ if (typeof jQuery != "undefined") {
             // does JSON encoding for us, so we return an array.
             // For any other id we asume a classic editor and return a string.
 
-            $type = get_site_option(self::TYPE, self::DEFAULT_TYPE);
+            $type = $this->get_option(self::TYPE, self::DEFAULT_TYPE);
             if ($type == 'default') {
                 return $init;
             }
 
-            $mce = get_site_option(self::MAP);
+            $mce = $this->get_option(self::MAP);
             if (is_array($mce) && $mce['rows']) {
                 if ($id != 'editor') {
                     $map = array_map('esc_js', $mce['map']);
@@ -1265,7 +1279,7 @@ if (typeof jQuery != "undefined") {
                 'kt_gutenberg_force' => self::GUTENBERG_FORCE,
             );
             foreach ($booleans as $field => $option) {
-                update_site_option($option, $this->get_request($field) ? '1' : false);
+                $this->set_option($option, $this->get_request($field) ? '1' : false);
             }
 
             $palette_saved = $this->save_palette();
@@ -1274,8 +1288,8 @@ if (typeof jQuery != "undefined") {
                 $type = 'default';
                 $visual = '';
             }
-            update_site_option(self::TYPE, $type);
-            update_site_option(self::VISUAL, $visual);
+            $this->set_option(self::TYPE, $type);
+            $this->set_option(self::VISUAL, $visual);
 
             $lumas = array('linear') + $this->get_luma_transformations('ids');
 
@@ -1291,7 +1305,7 @@ if (typeof jQuery != "undefined") {
             if ($clamps < 4 || $clamps > 18) {
                 $clamps = self::DEFAULT_CLAMPS;
             }
-            update_site_option(self::CLAMPS, $clamps);
+            $this->set_option(self::CLAMPS, $clamps);
 
             list($error, $action) = $this->handle_backup($action);
 
@@ -1315,7 +1329,7 @@ if (typeof jQuery != "undefined") {
          */
         protected function save_palette() {
             $palette = array();
-            $next_index = get_site_option(self::NEXT_INDEX, 1);
+            $next_index = $this->get_option(self::NEXT_INDEX, 1);
             $data = (array) $this->get_request('kt_palette');
             if (isset($data['hex']) && is_array($data['hex'])) {
                 foreach ($data['hex'] as $i => $hex) {
@@ -1340,8 +1354,8 @@ if (typeof jQuery != "undefined") {
                     $palette[] = compact('color', 'hex', 'name', 'variable', 'alpha', 'index', 'status', 'type');
                 }
             }
-            update_site_option(self::NEXT_INDEX, $next_index);
-            update_site_option(self::PALETTE, $palette);
+            $this->set_option(self::NEXT_INDEX, $next_index);
+            $this->set_option(self::PALETTE, $palette);
             return count($palette) > 0;
         }
 
@@ -1486,7 +1500,7 @@ if (typeof jQuery != "undefined") {
             $names = array_keys($this->default_options());
             foreach ($names as $name) {
                 if (isset($options[$name])) {
-                    update_site_option($name, $options[$name]);
+                    $this->set_option($name, $options[$name]);
                 }
             }
             return 'ok';
@@ -1509,8 +1523,8 @@ if (typeof jQuery != "undefined") {
          * @return array
          */
         protected function merge_palette($palette, $threshold = .25) {
-            $next_index = get_site_option(self::NEXT_INDEX, 1);
-            $current_palette = (array) get_site_option(self::PALETTE);
+            $next_index = $this->get_option(self::NEXT_INDEX, 1);
+            $current_palette = (array) $this->get_option(self::PALETTE);
             if ($threshold === true) {
                 $threshold = .25;
             }
@@ -1573,7 +1587,7 @@ if (typeof jQuery != "undefined") {
                 $inactives[] = $current;
             }
             $palette = array_merge($inactives, $palette);
-            update_site_option(self::NEXT_INDEX, $next_index);
+            $this->set_option(self::NEXT_INDEX, $next_index);
             return $palette;
         }
 
@@ -1814,7 +1828,7 @@ if (typeof jQuery != "undefined") {
 
             $options = $this->default_options($parts);
             foreach ($options as $name => $default) {
-                $options[$name] = get_site_option($name, $default);
+                $options[$name] = $this->get_option($name, $default);
             }
 
             $json = json_encode($options);
@@ -1921,7 +1935,7 @@ if (typeof jQuery != "undefined") {
         protected function set($key, $constrain, $option, $default) {
             $value = $this->get_request($key, $default);
             $value = in_array($value, $constrain) ? $value : $default;
-            update_site_option($option, $value);
+            $this->set_option($option, $value);
             return $value;
         }
 
@@ -1930,7 +1944,7 @@ if (typeof jQuery != "undefined") {
          * @since 1.7
          */
         protected function render_map() {
-            switch (get_site_option(self::TYPE, self::DEFAULT_TYPE)) {
+            switch ($this->get_option(self::TYPE, self::DEFAULT_TYPE)) {
                 case 'palette':
                     $map = $this->render_palette();
                     break;
@@ -1942,7 +1956,7 @@ if (typeof jQuery != "undefined") {
                     break;
                 default: return;
             }
-            update_site_option(self::MAP, $map);
+            $this->set_option(self::MAP, $map);
         }
 
         /**
@@ -1953,7 +1967,7 @@ if (typeof jQuery != "undefined") {
         protected function chunk_palette($_palette = null) {
             $palette = array();
             list($rows, $cols) = $this->get_map_size();
-            if (get_site_option(self::VISUAL)) {
+            if ($this->get_option(self::VISUAL)) {
                 $palette = $this->get_palette(array(
                     'status' => self::COLOR_ACTIVE,
                     'chunk' => $rows,
@@ -1969,33 +1983,33 @@ if (typeof jQuery != "undefined") {
          * @return array [rows, cols]
          */
         protected function get_map_size() {
-            switch (get_site_option(self::TYPE, self::DEFAULT_TYPE)) {
+            switch ($this->get_option(self::TYPE, self::DEFAULT_TYPE)) {
                 case 'palette':
                     $count = 1 + count($this->get_palette(array(
                                         'status' => self::COLOR_ACTIVE,
                     )));
 
-                    if ('even' == get_site_option(self::SPREAD, self::DEFAULT_SPREAD)) {
+                    if ('even' == $this->get_option(self::SPREAD, self::DEFAULT_SPREAD)) {
                         $cols = ceil(sqrt($count));
                         $rows = ceil($count / $cols);
                         return array($rows, $cols);
                     }
 
-                    $fixed = get_site_option(self::CLAMPS, self::DEFAULT_CLAMPS);
+                    $fixed = $this->get_option(self::CLAMPS, self::DEFAULT_CLAMPS);
                     $dynamic = ceil($count / $fixed);
-                    if ('cols' == get_site_option(self::CLAMP, self::DEFAULT_CLAMP)) {
+                    if ('cols' == $this->get_option(self::CLAMP, self::DEFAULT_CLAMP)) {
                         return array($dynamic, $fixed);
                     }
                     return array($fixed, $dynamic);
 
                 case 'rainbow':
-                    $rows = get_site_option(self::ROWS, self::DEFAULT_ROWS);
-                    $cols = get_site_option(self::COLS, self::DEFAULT_COLS);
+                    $rows = $this->get_option(self::ROWS, self::DEFAULT_ROWS);
+                    $cols = $this->get_option(self::COLS, self::DEFAULT_COLS);
                     return array($rows, $cols);
 
                 case 'block':
-                    $size = get_site_option(self::SIZE, self::DEFAULT_SIZE);
-                    $blocks = get_site_option(self::BLOCKS, self::DEFAULT_BLOCKS);
+                    $size = $this->get_option(self::SIZE, self::DEFAULT_SIZE);
+                    $blocks = $this->get_option(self::BLOCKS, self::DEFAULT_BLOCKS);
                     return array($size * self::GROUPS, $size * $blocks / self::GROUPS);
             }
             return array(self::TINYMCE_ROWS, self::TINYMCE_COLS);
@@ -2062,9 +2076,9 @@ if (typeof jQuery != "undefined") {
          * @return array
          */
         protected function render_blocks() {
-            $blocks = get_site_option(self::BLOCKS, self::DEFAULT_BLOCKS);
-            $size = get_site_option(self::SIZE, self::DEFAULT_SIZE);
-            $axis = get_site_option(self::AXIS, self::DEFAULT_AXIS);
+            $blocks = $this->get_option(self::BLOCKS, self::DEFAULT_BLOCKS);
+            $size = $this->get_option(self::SIZE, self::DEFAULT_SIZE);
+            $axis = $this->get_option(self::AXIS, self::DEFAULT_AXIS);
             $pattern = strtr($axis, array(
                 'r' => '%1$s',
                 'g' => '%2$s',
@@ -2111,7 +2125,7 @@ if (typeof jQuery != "undefined") {
             }
 
             $map = array();
-            $type = get_site_option(self::LUMA, self::DEFAULT_LUMA);
+            $type = $this->get_option(self::LUMA, self::DEFAULT_LUMA);
             for ($row = 0; $row < $rows; $row++) {
                 $this->add_row_to_map($map, $palette, $row);
 
@@ -2279,15 +2293,15 @@ if (typeof jQuery != "undefined") {
          * @since 1.9
          */
         public function print_grid_metabox() {
-            $_type = get_site_option(self::TYPE, self::DEFAULT_TYPE);
-            $_cols = get_site_option(self::COLS, self::DEFAULT_COLS);
-            $_rows = get_site_option(self::ROWS, self::DEFAULT_ROWS);
-            $_blocks = get_site_option(self::BLOCKS, self::DEFAULT_BLOCKS);
-            $_size = get_site_option(self::SIZE, self::DEFAULT_SIZE);
-            $_axis = get_site_option(self::AXIS, self::DEFAULT_AXIS);
-            $_spread = get_site_option(self::SPREAD, self::DEFAULT_SPREAD);
-            $_clamp = get_site_option(self::CLAMP, self::DEFAULT_CLAMP);
-            $_clamps = get_site_option(self::CLAMPS, self::DEFAULT_CLAMPS);
+            $_type = $this->get_option(self::TYPE, self::DEFAULT_TYPE);
+            $_cols = $this->get_option(self::COLS, self::DEFAULT_COLS);
+            $_rows = $this->get_option(self::ROWS, self::DEFAULT_ROWS);
+            $_blocks = $this->get_option(self::BLOCKS, self::DEFAULT_BLOCKS);
+            $_size = $this->get_option(self::SIZE, self::DEFAULT_SIZE);
+            $_axis = $this->get_option(self::AXIS, self::DEFAULT_AXIS);
+            $_spread = $this->get_option(self::SPREAD, self::DEFAULT_SPREAD);
+            $_clamp = $this->get_option(self::CLAMP, self::DEFAULT_CLAMP);
+            $_clamps = $this->get_option(self::CLAMPS, self::DEFAULT_CLAMPS);
 
             $luma_map = array(
                 'linear' => __('Linear', 'kt-tinymce-color-grid'),
@@ -2321,7 +2335,7 @@ if (typeof jQuery != "undefined") {
             $luma = '';
             if (count($luma_map) > 1) {
                 $luma_label = esc_html__('Luma', 'kt-tinymce-color-grid');
-                $current_luma = get_site_option(self::LUMA, self::DEFAULT_LUMA);
+                $current_luma = $this->get_option(self::LUMA, self::DEFAULT_LUMA);
                 $luma = $this->selectbox('kt_luma', $luma_map, $current_luma);
                 $luma = "
   <label for='kt_luma'>$luma_label</label>$luma";
@@ -2375,11 +2389,11 @@ if (typeof jQuery != "undefined") {
          * @since 1.9
          */
         public function print_palette_metabox() {
-            $_type = get_site_option(self::TYPE, self::DEFAULT_TYPE);
-            $_visual = get_site_option(self::VISUAL);
-            $_customizer = get_site_option(self::CUSTOMIZER);
-            $_css_vars = get_site_option(self::CSS_VARS);
-            $_css_admin_vars = get_site_option(self::CSS_ADMIN_VARS);
+            $_type = $this->get_option(self::TYPE, self::DEFAULT_TYPE);
+            $_visual = $this->get_option(self::VISUAL);
+            $_customizer = $this->get_option(self::CUSTOMIZER);
+            $_css_vars = $this->get_option(self::CSS_VARS);
+            $_css_admin_vars = $this->get_option(self::CSS_ADMIN_VARS);
             if ($_type == 'palette') {
                 $_visual = true;
             }
@@ -2408,9 +2422,9 @@ if (typeof jQuery != "undefined") {
     </p>";
             $has_gutenberg = $this->supports('gutenberg');
             if ($has_gutenberg) {
-                $_gutenberg = get_site_option(self::GUTENBERG);
-                $_gutenberg_merge = get_site_option(self::GUTENBERG_MERGE);
-                $_gutenberg_force = get_site_option(self::GUTENBERG_FORCE);
+                $_gutenberg = $this->get_option(self::GUTENBERG);
+                $_gutenberg_merge = $this->get_option(self::GUTENBERG_MERGE);
+                $_gutenberg_force = $this->get_option(self::GUTENBERG_FORCE);
                 $gutenberg_checked = $_gutenberg ? ' checked="checked"' : '';
                 $gutenberg_merge_checked = $_gutenberg_merge ? ' checked="checked"' : '';
                 $gutenberg_force_checked = $_gutenberg_force ? ' checked="checked"' : '';
@@ -2478,7 +2492,7 @@ if (typeof jQuery != "undefined") {
                 usort($supported_integrations, array($this, 'sort_interations'));
                 foreach ($supported_integrations as $integration) {
                     list($id, $option_name, $label, $hint) = $integration;
-                    $is_active = get_site_option($option_name);
+                    $is_active = $this->get_option($option_name);
                     $checked = $is_active ? ' checked="checked"' : '';
                     $has_alpha = isset($alpha_channel[$id]);
                     $has_hint = $hint !== '';
@@ -2493,7 +2507,7 @@ if (typeof jQuery != "undefined") {
                     $alpha_checkbox = '';
                     if ($has_alpha || $has_hint) {
                         if ($has_alpha) {
-                            $alpha = get_site_option($alpha_channel[$id]);
+                            $alpha = $this->get_option($alpha_channel[$id]);
                             $checked = $alpha ? ' checked="checked"' : '';
                             $alpha_checkbox = sprintf('
       <input type="checkbox" id="kt_%1$s_alpha" name="kt_%1$s_alpha" tabindex="10" value="1"%2$s />

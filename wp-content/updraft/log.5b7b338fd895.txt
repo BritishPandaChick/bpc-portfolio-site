@@ -965,3 +965,11 @@
 116049.911 (7) There were errors in the uploads, so the 'resume' event is remaining scheduled
 116050.012 (7) No email will/can be sent - the user has not configured an email address.
 116050.044 (7) The backup has not finished; a resumption is scheduled
+0000.000 (8) Opened log file at time: Wed, 02 Sep 2020 04:54:49 +0000 on http://localhost/bpcportfolio
+0000.164 (8) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.26 WP: 5.5 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 49.7M | 18M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.297 (8) Free space on disk containing Updraft's temporary directory: 742925.6 MB
+0000.650 (8) This backup task (5b7b338fd895) is either complete or began over 2 days ago: ending (1599022489.4302, ) (existing jobdata keys: )
+0000.000 (8) Opened log file at time: Wed, 02 Sep 2020 05:07:47 +0000 on http://localhost/bpcportfolio
+0000.207 (8) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.26 WP: 5.5.1 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 49.8M | 8M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.306 (8) Free space on disk containing Updraft's temporary directory: 742934.3 MB
+0000.475 (8) This backup task (5b7b338fd895) is either complete or began over 2 days ago: ending (1599023267.5147, ) (existing jobdata keys: )
