@@ -3,8 +3,8 @@
 /*
  * Plugin Name: Central Color Palette
  * Plugin URI: https://wordpress.org/plugins/kt-tinymce-color-grid
- * Description: Manage a site-wide central color palette for an uniform look'n'feel! Supports the new block editor, theme customizer and many themes and plugins.
- * Version: 1.15.2
+ * Description: Manage a site-wide central color palette for a uniform look'n'feel! Supports the new block editor, theme customizer and many themes and plugins.
+ * Version: 1.15.3
  * Author: Daniel Menzies
  * Author URI: http://profiles.wordpress.org/kungtiger
  * License: GPL2
@@ -13,7 +13,7 @@
  */
 
 if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
-    define('KT_CENTRAL_PALETTE', '1.15.2');
+    define('KT_CENTRAL_PALETTE', '1.15.3');
     define('KT_CENTRAL_PALETTE_DIR', plugin_dir_path(__FILE__));
     define('KT_CENTRAL_PALETTE_URL', plugin_dir_url(__FILE__));
     define('KT_CENTRAL_PALETTE_BASENAME', plugin_basename(__FILE__));
@@ -865,10 +865,17 @@ if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
          * @return array
          */
         public function generatepress_integration($palette) {
-            return $this->get_colors(array(
-                        'alpha' => $this->supports('generatepress-premium') && $this->get_option(self::GENERATEPRESS_ALPHA),
-                        '_name' => true,
-                        'default' => $palette,
+            if (doing_action('customize_register')) {
+                // for GeneratePress_Alpha_Color_Customize_Control
+                return $this->get_colors(array(
+                            'alpha' => $this->supports('generatepress-premium') && $this->get_option(self::GENERATEPRESS_ALPHA),
+                            'default' => $palette,
+                ));
+            }
+
+            return $palette = $this->get_colors(array(
+                'default' => $palette,
+                '_name' => true,
             ));
         }
 

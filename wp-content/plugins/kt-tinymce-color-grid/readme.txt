@@ -2,14 +2,14 @@
 Contributors: kungtiger
 Requires at least: 3.5
 Tested up to: 5.3
-Stable tag: 1.15.2
+Stable tag: 1.15.3
 Requires PHP: 5.3
 Requires at least: 5.2
 Tags: color, customizer, editor, gutenberg, palette, picker, tinymce
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Manage a site-wide central color palette for an uniform look'n'feel! Supports the new block editor, Theme Customizer and many themes and plugins.
+Manage a site-wide central color palette for a uniform look'n'feel! Supports the new block editor, Theme Customizer and many themes and plugins.
 
 == Description ==
 
@@ -82,6 +82,9 @@ Please [contact me](http://wordpress.org/support/plugin/kt-tinymce-color-grid) a
 4. Legacy support for the classic editor
 
 == Changelog ==
+
+= 1.15.3 =
+Fix: Broken palette integration for GeneratePress
 
 = 1.15.2 =
 Fix: per blog options overwrite each other in multisite setup
@@ -297,6 +300,9 @@ Fixes an error when using more than one TinyMCE
 Initial release.
 
 == Upgrade Notice ==
+
+= 1.15.3 =
+Fixes broken palette integration for GeneratePress
 
 = 1.15.2 =
 Fixes broken multisite palettes
