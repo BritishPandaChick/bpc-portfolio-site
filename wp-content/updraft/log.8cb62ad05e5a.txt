@@ -657,3 +657,30 @@
 87263.436 (3) There were errors in the uploads, so the 'resume' event is remaining scheduled
 87263.766 (3) No email will/can be sent - the user has not configured an email address.
 87263.858 (3) The backup has not finished; a resumption is scheduled
+87665.544 (4) Opened log file at time: Sun, 06 Sep 2020 20:24:33 +0000 on http://localhost/bpcportfolio
+87665.600 (4) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.28 WP: 5.5.1 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 48.4M | 6M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+87665.678 (4) Free space on disk containing Updraft's temporary directory: 738601 MB
+87665.855 (4) Backup run: resumption=4, nonce=8cb62ad05e5a, file_nonce=8cb62ad05e5a begun at=1599336207 (87666s ago), job type=backup, previous check-in=7.4s
+87665.988 (4) Scheduling a resumption (5) after 651 seconds (1599424524) in case this run gets aborted
+87666.164 (4) Checking if we have a zip executable available
+87666.254 (4) Creation of backups of directories: already finished
+87666.287 (4) Saving backup status to database (elements: 8)
+87666.487 (4) Database dump (WordPress DB): Creation was completed already
+87666.700 (4) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+87667.196 (4) backup_2020-09-05-1603_BritishPandaChick_8cb62ad05e5a-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+87667.253 (4) backup_2020-09-05-1603_BritishPandaChick_8cb62ad05e5a-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+87667.317 (4) backup_2020-09-05-1603_BritishPandaChick_8cb62ad05e5a-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+87667.375 (4) backup_2020-09-05-1603_BritishPandaChick_8cb62ad05e5a-others.zip: others: This file has not yet been successfully uploaded: will queue
+87667.427 (4) backup_2020-09-05-1603_BritishPandaChick_8cb62ad05e5a-db.gz: db: This file has already been successfully uploaded
+87667.497 (4) Saving backup history. Total backup size: Unknown
+87667.684 (4) Requesting upload of the files that have not yet been successfully uploaded (4)
+87668.216 (4) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+87668.363 (4) Beginning dispatch of backup to remote (googledrive) (instance identifier s-ab688618d721c81baf85d6e6f7d3cc78)
+87669.569 (4) Google Drive: quota usage: used=34.4 MB, total=15360 MB, available=15325.6 MB
+87669.872 (4) Google Drive: backup_2020-09-05-1603_BritishPandaChick_8cb62ad05e5a-plugins.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+87670.175 (4) Google Drive: backup_2020-09-05-1603_BritishPandaChick_8cb62ad05e5a-plugins.zip: upload already began; attempting to resume from byte 1835007
+87730.389 (4) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+87730.490 (4) An error condition has occurred for the first time during this job
+87731.110 (4) Google Drive: quota usage: used=34.4 MB, total=15360 MB, available=15325.6 MB
+87731.178 (4) Google Drive: backup_2020-09-05-1603_BritishPandaChick_8cb62ad05e5a-themes.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+87734.107 (4) Googledrive chunked upload: 21.3 % uploaded (1048576)
