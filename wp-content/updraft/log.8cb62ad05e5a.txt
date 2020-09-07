@@ -684,3 +684,48 @@
 87731.110 (4) Google Drive: quota usage: used=34.4 MB, total=15360 MB, available=15325.6 MB
 87731.178 (4) Google Drive: backup_2020-09-05-1603_BritishPandaChick_8cb62ad05e5a-themes.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
 87734.107 (4) Googledrive chunked upload: 21.3 % uploaded (1048576)
+87794.295 (4) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+87795.309 (4) Google Drive: quota usage: used=34.4 MB, total=15360 MB, available=15325.6 MB
+87795.628 (4) Google Drive: backup_2020-09-05-1603_BritishPandaChick_8cb62ad05e5a-uploads.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+87796.480 (4) Google Drive: backup_2020-09-05-1603_BritishPandaChick_8cb62ad05e5a-uploads.zip: upload already began; attempt to resume did not succeed (HTTP code: 404)
+87804.317 (4) Google Drive: ERROR: upload error (Google_Service_Exception): Error calling PUT https://www.googleapis.com/upload/drive/v2/files?uploadType=resumable&upload_id=ABg5-UyGLKIOsXuOEOnAd_RFp7jhDABLFIv8xi0KwOYdLDszTAjqXvWm5jJYGD3s7dafHFKGvEW8Vr8uo622PtOyanaZS3pIkQ: (404)  (line: 110, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\Http\REST.php)
+87865.283 (4) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+87867.105 (4) Google Drive: quota usage: used=34.4 MB, total=15360 MB, available=15325.6 MB
+87867.283 (4) Google Drive: backup_2020-09-05-1603_BritishPandaChick_8cb62ad05e5a-others.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+87928.276 (4) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+87928.711 (4) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+87928.901 (4) Number of backup sets in history: 5; groups (db): 1
+87929.122 (4) Examining (for databases) backup set with group_id=0, nonce=1823202f7bdd, datestamp=1599421827 (Sep 06 2020 19:50:27)
+87929.421 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+87929.521 (4) Examining (for databases) backup set with group_id=0, nonce=8cb62ad05e5a, datestamp=1599336207 (Sep 05 2020 20:03:27)
+87929.521 (4) This backup set is the backup set just made, so will not be deleted.
+87929.521 (4) Examining (for databases) backup set with group_id=0, nonce=5aa823edfcc9, datestamp=1599194321 (Sep 04 2020 04:38:41)
+87929.521 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+87929.521 (4) Examining (for databases) backup set with group_id=0, nonce=9cd586d4a172, datestamp=1599023672 (Sep 02 2020 05:14:32)
+87929.522 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+87929.522 (4) Examining (for databases) backup set with group_id=0, nonce=830ef2a12609, datestamp=1599022426 (Sep 02 2020 04:53:46)
+87929.522 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+87929.522 (4) Number of backup sets in history: 5; groups (files): 1
+87929.588 (4) Examining (for files) backup set with nonce=1823202f7bdd, datestamp=1599421827 (Sep 06 2020 19:50:27)
+87929.588 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+87929.665 (4) Examining (for files) backup set with nonce=8cb62ad05e5a, datestamp=1599336207 (Sep 05 2020 20:03:27)
+87929.665 (4) This backup set is the backup set just made, so will not be deleted.
+87929.776 (4) This backup set is the backup set just made, so will not be deleted.
+87929.777 (4) This backup set is the backup set just made, so will not be deleted.
+87929.777 (4) This backup set is the backup set just made, so will not be deleted.
+87929.777 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+87929.887 (4) Examining (for files) backup set with nonce=5aa823edfcc9, datestamp=1599194321 (Sep 04 2020 04:38:41)
+87929.887 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+87929.888 (4) Examining (for files) backup set with nonce=9cd586d4a172, datestamp=1599023672 (Sep 02 2020 05:14:32)
+87929.888 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+87929.888 (4) Examining (for files) backup set with nonce=830ef2a12609, datestamp=1599022426 (Sep 02 2020 04:53:46)
+87929.888 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+87929.888 (4) Retain: saving new backup history (sets now: 5) and finishing retain operation
+87930.176 (4) Resume backup (8cb62ad05e5a, 4): finish run
+87930.341 (4) There were errors in the uploads, so the 'resume' event is remaining scheduled
+87930.664 (4) No email will/can be sent - the user has not configured an email address.
+87930.731 (4) The backup has not finished; a resumption is scheduled
+173817.013 (5) Opened log file at time: Mon, 07 Sep 2020 20:20:24 +0000 on http://localhost/bpcportfolio
+173817.903 (5) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.28 WP: 5.5.1 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 48.4M | 50M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+173818.649 (5) Free space on disk containing Updraft's temporary directory: 743026.9 MB
+173818.991 (5) This backup task (8cb62ad05e5a) is either complete or began over 2 days ago: ending (1599510023.8705, 1599336207) (existing jobdata keys: resume_interval, job_type, jobstatus, backup_time, job_time_ms, service, split_every, maxzipbatch, job_file_entities, option_cache, uploaded_lastreset, one_shot, followsups_allowed, backup_database, backup_files, runs_started, current_resumption, binzip, filecreating_substatus, files_enumerated_at, warnings, run_times, useful_checkin, sha1-plugins0, sha256-plugins0, sha1-themes0, sha256-themes0, sha1-uploads0, sha256-uploads0, sha1-others0, sha256-others0, backup_files_array, binsqldump, dbcreating_substatus, sha1-db0, sha256-db0, uploading_substatus, googledrive-s-ab688618d721c81baf85d6e6f7d3cc78, uploaded_aba92c17e7a68347569c46f6c8c6e469, uploaded_googledrive-s-ab688618d721c81baf85d6e6f7d3cc78-aba92c17e7a68347569c46f6c8c6e469, prune)
