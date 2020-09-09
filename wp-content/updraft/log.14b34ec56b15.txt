@@ -808,3 +808,7 @@
 31290.644 (6) Google Drive: quota usage: used=39.1 MB, total=15360 MB, available=15320.9 MB
 31290.782 (6) Google Drive: backup_2020-09-07-1625_BritishPandaChick_14b34ec56b15-plugins.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
 31291.078 (6) Google Drive: backup_2020-09-07-1625_BritishPandaChick_14b34ec56b15-plugins.zip: upload already began; attempting to resume from byte 6291455
+0000.000 (7) Opened log file at time: Wed, 09 Sep 2020 04:44:04 +0000 on http://localhost/bpcportfolio
+0000.224 (7) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.28 WP: 5.5.1 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 48.9M | 50M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.401 (7) Free space on disk containing Updraft's temporary directory: 739772.6 MB
+0000.797 (7) This backup task (14b34ec56b15) is either complete or began over 2 days ago: ending (1599626643.9633, ) (existing jobdata keys: )
