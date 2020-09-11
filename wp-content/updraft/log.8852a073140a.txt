@@ -640,3 +640,71 @@
 85539.366 (4) There were errors in the uploads, so the 'resume' event is remaining scheduled
 85539.450 (4) No email will/can be sent - the user has not configured an email address.
 85539.476 (4) The backup has not finished; a resumption is scheduled
+171729.282 (5) Opened log file at time: Fri, 11 Sep 2020 04:50:39 +0000 on http://localhost/bpcportfolio
+171729.391 (5) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.29 WP: 5.5.1 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 47.2M | 48M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+171729.471 (5) Free space on disk containing Updraft's temporary directory: 729773.6 MB
+171729.581 (5) Backup run: resumption=5, nonce=8852a073140a, file_nonce=8852a073140a begun at=1599628109 (171730s ago), job type=backup, previous check-in=75.5s
+171729.634 (5) Long time past since expected resumption time: approx expected=1599714242.8, now=1599799839.1, diff=85596.3
+171729.693 (5) [Warning] Your website is visited infrequently and UpdraftPlus is not getting the resources it hoped for; please read this page: https://updraftplus.com/faqs/why-am-i-getting-warnings-about-my-site-not-having-enough-visitors/
+171729.859 (5) Scheduling a resumption (6) after 662 seconds (1599800501) in case this run gets aborted
+171730.260 (5) Checking if we have a zip executable available
+171730.342 (5) Creation of backups of directories: already finished
+171730.550 (5) Saving backup status to database (elements: 8)
+171731.500 (5) Database dump (WordPress DB): Creation was completed already
+171731.730 (5) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+171731.930 (5) backup_2020-09-09-0108_BritishPandaChick_8852a073140a-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+171732.011 (5) backup_2020-09-09-0108_BritishPandaChick_8852a073140a-themes.zip: themes: This file has already been successfully uploaded
+171732.110 (5) backup_2020-09-09-0108_BritishPandaChick_8852a073140a-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+171732.186 (5) backup_2020-09-09-0108_BritishPandaChick_8852a073140a-others.zip: others: This file has already been successfully uploaded
+171732.228 (5) backup_2020-09-09-0108_BritishPandaChick_8852a073140a-db.gz: db: This file has already been successfully uploaded
+171732.320 (5) Saving backup history. Total backup size: Unknown
+171732.419 (5) Requesting upload of the files that have not yet been successfully uploaded (2)
+171732.761 (5) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+171732.888 (5) Beginning dispatch of backup to remote (googledrive) (instance identifier s-ab688618d721c81baf85d6e6f7d3cc78)
+171736.562 (5) Google Drive: quota usage: used=50.2 MB, total=15360 MB, available=15309.8 MB
+171736.615 (5) Google Drive: backup_2020-09-09-0108_BritishPandaChick_8852a073140a-plugins.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+171797.269 (5) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+171797.312 (5) An error condition has occurred for the first time during this job
+171797.972 (5) Google Drive: quota usage: used=50.2 MB, total=15360 MB, available=15309.8 MB
+171798.089 (5) Google Drive: backup_2020-09-09-0108_BritishPandaChick_8852a073140a-uploads.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+171858.810 (5) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+171859.096 (5) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+171859.163 (5) Number of backup sets in history: 5; groups (db): 1
+171859.250 (5) Examining (for databases) backup set with group_id=0, nonce=8852a073140a, datestamp=1599628109 (Sep 09 2020 05:08:29)
+171859.339 (5) This backup set is the backup set just made, so will not be deleted.
+171859.339 (5) Examining (for databases) backup set with group_id=0, nonce=1a8b73b1cc58, datestamp=1599626526 (Sep 09 2020 04:42:06)
+171859.339 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+171859.405 (5) Examining (for databases) backup set with group_id=0, nonce=14b34ec56b15, datestamp=1599510330 (Sep 07 2020 20:25:30)
+171859.406 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+171859.406 (5) Examining (for databases) backup set with group_id=0, nonce=1823202f7bdd, datestamp=1599421827 (Sep 06 2020 19:50:27)
+171859.406 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+171859.406 (5) Examining (for databases) backup set with group_id=0, nonce=8cb62ad05e5a, datestamp=1599336207 (Sep 05 2020 20:03:27)
+171859.406 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+171859.407 (5) Number of backup sets in history: 5; groups (files): 1
+171859.547 (5) Examining (for files) backup set with nonce=8852a073140a, datestamp=1599628109 (Sep 09 2020 05:08:29)
+171859.547 (5) This backup set is the backup set just made, so will not be deleted.
+171859.672 (5) This backup set is the backup set just made, so will not be deleted.
+171859.672 (5) This backup set is the backup set just made, so will not be deleted.
+171859.672 (5) This backup set is the backup set just made, so will not be deleted.
+171859.672 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+171859.994 (5) Examining (for files) backup set with nonce=1a8b73b1cc58, datestamp=1599626526 (Sep 09 2020 04:42:06)
+171859.994 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+171859.994 (5) Examining (for files) backup set with nonce=14b34ec56b15, datestamp=1599510330 (Sep 07 2020 20:25:30)
+171859.994 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+171859.994 (5) Examining (for files) backup set with nonce=1823202f7bdd, datestamp=1599421827 (Sep 06 2020 19:50:27)
+171859.994 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+171859.994 (5) Examining (for files) backup set with nonce=8cb62ad05e5a, datestamp=1599336207 (Sep 05 2020 20:03:27)
+171859.994 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+171859.994 (5) Retain: saving new backup history (sets now: 5) and finishing retain operation
+171860.052 (5) Resume backup (8852a073140a, 5): finish run
+171860.271 (5) There were errors in the uploads, so the 'resume' event is remaining scheduled
+171860.366 (5) No email will/can be sent - the user has not configured an email address.
+171860.449 (5) The backup has not finished; a resumption is scheduled
+0000.000 (6) Opened log file at time: Fri, 11 Sep 2020 05:01:42 +0000 on http://localhost/bpcportfolio
+0000.059 (6) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.29 WP: 5.5.1 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 47.2M | 6M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.120 (6) Free space on disk containing Updraft's temporary directory: 729777 MB
+0000.176 (6) This backup task (8852a073140a) is either complete or began over 2 days ago: ending (1599800502.3174, ) (existing jobdata keys: )
+0000.000 (6) Opened log file at time: Fri, 11 Sep 2020 05:02:48 +0000 on http://localhost/bpcportfolio
+0000.064 (6) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.29 WP: 5.5.1 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 47.2M | 6M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.375 (6) Free space on disk containing Updraft's temporary directory: 729775.2 MB
+0000.425 (6) This backup task (8852a073140a) is either complete or began over 2 days ago: ending (1599800568.5586, ) (existing jobdata keys: )
