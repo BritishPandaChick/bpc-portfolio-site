@@ -461,3 +461,51 @@
 1412.033 (2) Google Drive: backup_2020-09-11-0051_BritishPandaChick_148fabbd19de-themes.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
 1417.493 (2) Googledrive chunked upload: 21.3 % uploaded (1048576)
 1423.951 (2) Googledrive chunked upload: 42.6 % uploaded (2097152)
+1488.780 (2) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+1490.366 (2) Google Drive: quota usage: used=45.2 MB, total=15360 MB, available=15314.8 MB
+1491.176 (2) Google Drive: backup_2020-09-11-0051_BritishPandaChick_148fabbd19de-uploads.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+1491.611 (2) Google Drive: backup_2020-09-11-0051_BritishPandaChick_148fabbd19de-uploads.zip: upload already began; attempting to resume from byte 3145727
+1494.028 (2) Googledrive chunked upload: 5.6 % uploaded (4194304)
+1554.638 (2) Google Drive: Upload error: Operation timed out after 59999 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+1555.471 (2) Google Drive: quota usage: used=45.2 MB, total=15360 MB, available=15314.8 MB
+1555.734 (2) Google Drive: backup_2020-09-11-0051_BritishPandaChick_148fabbd19de-others.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+1556.100 (2) Google Drive: backup_2020-09-11-0051_BritishPandaChick_148fabbd19de-others.zip: upload already began; attempting to resume from byte 1835007
+1558.409 (2) Googledrive chunked upload: 100 % uploaded (1835008)
+1559.585 (2) Google Drive: OK: Archive backup_2020-09-11-0051_BritishPandaChick_148fabbd19de-others.zip uploaded in 3.69 seconds
+1559.729 (2) Recording as successfully uploaded: backup_2020-09-11-0051_BritishPandaChick_148fabbd19de-others.zip
+1560.146 (2) Deleting local file: backup_2020-09-11-0051_BritishPandaChick_148fabbd19de-others.zip: OK
+1560.806 (2) Google Drive: quota usage: used=47.6 MB, total=15360 MB, available=15312.4 MB
+1561.227 (2) Google Drive: backup_2020-09-11-0051_BritishPandaChick_148fabbd19de-db.gz: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+1623.269 (2) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+1623.922 (2) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+1624.796 (2) Number of backup sets in history: 5; groups (db): 1
+1624.984 (2) Examining (for databases) backup set with group_id=0, nonce=7ff3203ceb42, datestamp=1599800933 (Sep 11 2020 05:08:53)
+1625.186 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+1625.306 (2) Examining (for databases) backup set with group_id=0, nonce=148fabbd19de, datestamp=1599799912 (Sep 11 2020 04:51:52)
+1625.306 (2) This backup set is the backup set just made, so will not be deleted.
+1625.306 (2) Examining (for databases) backup set with group_id=0, nonce=8852a073140a, datestamp=1599628109 (Sep 09 2020 05:08:29)
+1625.306 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+1625.306 (2) Examining (for databases) backup set with group_id=0, nonce=1a8b73b1cc58, datestamp=1599626526 (Sep 09 2020 04:42:06)
+1625.306 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+1625.307 (2) Examining (for databases) backup set with group_id=0, nonce=14b34ec56b15, datestamp=1599510330 (Sep 07 2020 20:25:30)
+1625.307 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+1625.307 (2) Number of backup sets in history: 5; groups (files): 1
+1625.406 (2) Examining (for files) backup set with nonce=7ff3203ceb42, datestamp=1599800933 (Sep 11 2020 05:08:53)
+1625.406 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+1625.555 (2) Examining (for files) backup set with nonce=148fabbd19de, datestamp=1599799912 (Sep 11 2020 04:51:52)
+1625.556 (2) This backup set is the backup set just made, so will not be deleted.
+1625.753 (2) This backup set is the backup set just made, so will not be deleted.
+1625.753 (2) This backup set is the backup set just made, so will not be deleted.
+1625.754 (2) This backup set is the backup set just made, so will not be deleted.
+1625.754 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+1625.872 (2) Examining (for files) backup set with nonce=8852a073140a, datestamp=1599628109 (Sep 09 2020 05:08:29)
+1625.872 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+1625.873 (2) Examining (for files) backup set with nonce=1a8b73b1cc58, datestamp=1599626526 (Sep 09 2020 04:42:06)
+1625.873 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+1625.873 (2) Examining (for files) backup set with nonce=14b34ec56b15, datestamp=1599510330 (Sep 07 2020 20:25:30)
+1625.873 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+1625.874 (2) Retain: saving new backup history (sets now: 5) and finishing retain operation
+1626.328 (2) Resume backup (148fabbd19de, 2): finish run
+1626.560 (2) There were errors in the uploads, so the 'resume' event is remaining scheduled
+1626.795 (2) No email will/can be sent - the user has not configured an email address.
+1626.993 (2) The backup has not finished; a resumption is scheduled
