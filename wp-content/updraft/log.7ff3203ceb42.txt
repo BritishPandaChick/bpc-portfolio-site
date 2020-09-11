@@ -392,3 +392,6 @@
 0740.041 (1) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
 0740.426 (1) Google Drive: quota usage: used=47.6 MB, total=15360 MB, available=15312.4 MB
 0740.497 (1) Google Drive: backup_2020-09-11-0108_BritishPandaChick_7ff3203ceb42-uploads.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+0800.984 (1) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+0801.363 (1) Google Drive: quota usage: used=47.6 MB, total=15360 MB, available=15312.4 MB
+0801.416 (1) Google Drive: backup_2020-09-11-0108_BritishPandaChick_7ff3203ceb42-others.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
