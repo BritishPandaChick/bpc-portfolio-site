@@ -395,3 +395,39 @@
 0800.984 (1) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
 0801.363 (1) Google Drive: quota usage: used=47.6 MB, total=15360 MB, available=15312.4 MB
 0801.416 (1) Google Drive: backup_2020-09-11-0108_BritishPandaChick_7ff3203ceb42-others.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+0862.023 (1) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+0862.368 (1) Google Drive: quota usage: used=47.6 MB, total=15360 MB, available=15312.4 MB
+0862.549 (1) Google Drive: backup_2020-09-11-0108_BritishPandaChick_7ff3203ceb42-db.gz: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+0922.965 (1) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+0923.085 (1) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+0923.147 (1) Number of backup sets in history: 5; groups (db): 1
+0923.207 (1) Examining (for databases) backup set with group_id=0, nonce=7ff3203ceb42, datestamp=1599800933 (Sep 11 2020 05:08:53)
+0923.279 (1) This backup set is the backup set just made, so will not be deleted.
+0923.279 (1) Examining (for databases) backup set with group_id=0, nonce=148fabbd19de, datestamp=1599799912 (Sep 11 2020 04:51:52)
+0923.279 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0923.329 (1) Examining (for databases) backup set with group_id=0, nonce=8852a073140a, datestamp=1599628109 (Sep 09 2020 05:08:29)
+0923.329 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0923.329 (1) Examining (for databases) backup set with group_id=0, nonce=1a8b73b1cc58, datestamp=1599626526 (Sep 09 2020 04:42:06)
+0923.329 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0923.329 (1) Examining (for databases) backup set with group_id=0, nonce=14b34ec56b15, datestamp=1599510330 (Sep 07 2020 20:25:30)
+0923.329 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0923.329 (1) Number of backup sets in history: 5; groups (files): 1
+0923.390 (1) Examining (for files) backup set with nonce=7ff3203ceb42, datestamp=1599800933 (Sep 11 2020 05:08:53)
+0923.390 (1) This backup set is the backup set just made, so will not be deleted.
+0923.456 (1) This backup set is the backup set just made, so will not be deleted.
+0923.457 (1) This backup set is the backup set just made, so will not be deleted.
+0923.457 (1) This backup set is the backup set just made, so will not be deleted.
+0923.457 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0923.484 (1) Examining (for files) backup set with nonce=148fabbd19de, datestamp=1599799912 (Sep 11 2020 04:51:52)
+0923.485 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0923.485 (1) Examining (for files) backup set with nonce=8852a073140a, datestamp=1599628109 (Sep 09 2020 05:08:29)
+0923.485 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0923.485 (1) Examining (for files) backup set with nonce=1a8b73b1cc58, datestamp=1599626526 (Sep 09 2020 04:42:06)
+0923.485 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0923.485 (1) Examining (for files) backup set with nonce=14b34ec56b15, datestamp=1599510330 (Sep 07 2020 20:25:30)
+0923.485 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0923.485 (1) Retain: saving new backup history (sets now: 5) and finishing retain operation
+0923.540 (1) Resume backup (7ff3203ceb42, 1): finish run
+0923.595 (1) There were errors in the uploads, so the 'resume' event is remaining scheduled
+0923.685 (1) No email will/can be sent - the user has not configured an email address.
+0923.712 (1) The backup has not finished; a resumption is scheduled
