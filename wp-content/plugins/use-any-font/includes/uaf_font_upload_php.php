@@ -10,7 +10,7 @@
 <p align="right"><input type="button" name="open_add_font" onClick="open_add_font();" class="button-primary" value="Add Fonts" /><br/></p>
 
 <div id="font-upload" style="display:none;">
-	<form action="admin.php?page=uaf_settings_page" id="open_add_font_form" method="post" enctype="multipart/form-data">
+	<form action="admin.php?page=uaf_settings_page" id="open_add_font_form_php" method="post" enctype="multipart/form-data">
     	<table class="uaf_form">
         	<tr>
             	<td width="175">Font Name</td>
@@ -48,23 +48,6 @@
 
 <?php include('uaf_uploaded_font_list.php'); ?>
 
-<script>
-	function open_add_font(){
-		jQuery('#font-upload').toggle('fast');
-	}
-
-    jQuery('#open_add_font_form').submit(function(){
-        breakValidation = false;
-        jQuery('#open_add_font_form .uaf_required').each(function(){
-            if(!jQuery(this).val()){
-                jQuery(this).focus();
-                breakValidation = true;
-                return false;
-            }
-        });    
-        if(breakValidation){return false;}
-    });
-</script>
 <br/>
 </td>
 </tr>

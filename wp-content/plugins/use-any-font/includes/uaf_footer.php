@@ -206,9 +206,9 @@ if (isset($_POST['test_server']) || empty($server_status)){
                 <tr>
                 	<td>
                     <ul class="uaf_list">
-                    	<li><a href="http://goo.gl/NYtZsX" target="_blank">Setup Instructions</a></li>
+                    	<li><a href="https://dineshkarki.com.np/use-any-font/instructions" target="_blank">Setup Instructions</a></li>
                         <li><a href="https://wordpress.org/support/plugin/use-any-font/" target="_blank">Support Forum</a></li>
-                        <li><a href="http://goo.gl/MKg7VS" target="_blank">Rectify My Problem / Contact Us</a></li>
+                        <li><a href="https://dineshkarki.com.np/contact" target="_blank">Rectify My Problem / Contact Us</a></li>
                         <li><a href="https://bit.ly/2wYjOyj" target="_blank">Download Free Fonts</a></li>
                     </ul>
                     </td>

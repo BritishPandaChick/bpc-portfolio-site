@@ -1,5 +1,11 @@
 <?php
 // DEFAULT WORDPRESS EDITOR
+$uaf_disbale_editor_font_list_value = get_option('uaf_disbale_editor_font_list');
+if ($uaf_disbale_editor_font_list_value != 1):
+	add_filter('mce_buttons_2', 'wp_editor_fontsize_filter');
+	add_filter('tiny_mce_before_init', 'uaf_mce_before_init' );
+endif;
+
 function uaf_mce_before_init( $init_array ) {
 	$theme_advanced_fonts = '';
 	$fontsData		= uaf_get_uploaded_font_data();

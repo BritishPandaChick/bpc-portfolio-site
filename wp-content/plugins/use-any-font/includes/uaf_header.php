@@ -40,20 +40,3 @@
                 </tbody>
             </table>
             <br/>
-<script>
-function uaf_lite_api_key_generate(){	
-	jQuery.ajax({url: "<?php echo uaf_get_server_url().'/uaf_convertor/generate_lite_key.php'; ?>",
-	beforeSend : function(){
-		jQuery('#uaf_api_key_generate').val('Generating...');
-	},
-	error: function(){
-		jQuery('#uaf_api_key_generate').val(' Error ! ');		
-	},
-	success: function(result){
-        var dataReturn 	= JSON.parse(result);
-		key 			= dataReturn.key;
-		jQuery('#uaf_api_key').val(key);
-		jQuery('#uaf_api_key_generate').val('Click Verify to Complete');
-    }});
-}
-</script>

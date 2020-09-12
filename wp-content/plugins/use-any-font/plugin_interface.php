@@ -2,16 +2,11 @@
 include('includes/uaf_trigger_actions.php');
 
 add_action('admin_menu', 'uaf_create_menu');
-add_action("admin_print_styles", 'adminCsslibs');
+add_action("admin_print_styles", 'uaf_admin_css');
+add_action("admin_enqueue_scripts", 'uaf_admin_js');
 add_action('wp_enqueue_scripts', 'uaf_client_css');
 add_action('plugins_loaded', 'uaf_update_check');
 add_action('init', 'uaf_editor_setup');
-
-$uaf_disbale_editor_font_list_value = get_option('uaf_disbale_editor_font_list');
-if ($uaf_disbale_editor_font_list_value != 1):
-	add_filter('mce_buttons_2', 'wp_editor_fontsize_filter');
-	add_filter('tiny_mce_before_init', 'uaf_mce_before_init' );
-endif;
 
 function uaf_client_css() {
 	$uaf_upload 	= wp_upload_dir();
@@ -21,7 +16,13 @@ function uaf_client_css() {
 	wp_enqueue_style( 'uaf_client_css' );
 }
 
-function adminCsslibs(){
+function uaf_admin_js() {
+	echo '<script type="text/javascript">uaf_get_server_url = "'.uaf_get_server_url().'";</script>';
+	wp_register_script( 'uaf-admin-js', plugins_url('use-any-font/js/uaf_admin.js'), array('jquery'), false, true );
+	wp_enqueue_script( 'uaf-admin-js' );
+}
+
+function uaf_admin_css(){
 	$uaf_upload 	= wp_upload_dir();
 	$uaf_upload_url = set_url_scheme($uaf_upload['baseurl']);
 	$uaf_upload_url = $uaf_upload_url . '/useanyfont/';
@@ -37,6 +38,7 @@ function uaf_create_menu() {
 }
 
 function uaf_activate(){
+	add_option('uaf_install_date',date('Y-m-d'));
 	uaf_create_folder(); // CREATE FOLDER
 	uaf_write_css(); //rewrite css when plugin is activated after update or somethingelse......
 }

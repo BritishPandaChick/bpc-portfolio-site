@@ -11,7 +11,7 @@
 <p align="right"><input type="button" name="open_add_font" onClick="open_add_font();" class="button-primary" value="Add Fonts" /><br/></p>
 
 <div id="font-upload" style="display:none;">
-	<form action="admin.php?page=uaf_settings_page" id="open_add_font_form" method="post" enctype="multipart/form-data">
+	<form action="admin.php?page=uaf_settings_page" id="open_add_font_form_js" method="post" enctype="multipart/form-data">
     	<table class="uaf_form">
         	<tr>
             	<td width="175">Font Name</td>
@@ -55,69 +55,3 @@
 </tbody>
 </table>
 <br/>
-<script>
-
-function open_add_font(){
-    jQuery('#font-upload').toggle('fast');
-}   
-
-jQuery('#open_add_font_form').submit(function(e){
-    
-    e.preventDefault();
-
-    breakValidation = false;
-    jQuery('#open_add_font_form .uaf_required').each(function(){
-        if(!jQuery(this).val()){            
-            jQuery(this).focus();
-            breakValidation = true;
-            return false;
-        }
-    });
-
-    if(breakValidation){return false;}
-    
-	jQuery.ajax( {
-      url: '<?php echo uaf_get_server_url(); ?>/uaf_convertor/convert.php',
-      type: 'POST',
-      data: new FormData( this ),
-      processData: false,
-      contentType: false,
-	  beforeSend : function(){
-			 jQuery('#submit-uaf-font').attr('disabled',true);
-			 jQuery('#font_upload_message').attr('class','ok');
-			 jQuery('#font_upload_message').html('Uploading Font. It might take few mins based on your font file size.');
-		  },
-	  success: function(data, textStatus, jqXHR) 
-        {
-            var dataReturn = JSON.parse(data);
-			status = dataReturn.global.status;
-			msg	   = dataReturn.global.msg;
-			
-			if (status == 'error'){
-				jQuery('#font_upload_message').attr('class',status);
-				jQuery('#font_upload_message').html(msg);
-			} else {
-				woffStatus = dataReturn.woff.status;
-				woff2Status = dataReturn.woff2.status;
-				if (woffStatus == 'ok' && woff2Status == 'ok'){
-					jQuery('#convert_response').val(data);
-					jQuery('#font_upload_message').attr('class','ok');
-					jQuery('#font_upload_message').html('Font Conversion Complete. Finalizing...');
-					jQuery('#submit-uaf-font').attr('disabled',false);
-					jQuery('#fontfile').remove();
-					e.currentTarget.submit();
-				} else {
-					jQuery('#font_upload_message').attr('class','error');
-					jQuery('#font_upload_message').html('Problem converting font to woff/woff2 formats. Please contact support.');
-				}
-			}			
-        },
-	   error: function(jqXHR, textStatus, errorThrown) 
-        {
-            jQuery('#font_upload_message').attr('class','error');
-			jQuery('#font_upload_message').html('Unexpected Error Occured.');
-			jQuery('#submit-uaf-font').attr('disabled',false);
-        }	
-    });
-  });
-</script>
