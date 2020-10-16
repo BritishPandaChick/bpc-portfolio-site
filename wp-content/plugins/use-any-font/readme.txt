@@ -3,7 +3,7 @@ Contributors: dnesscarkey
 Tags: custom fonts, font embed, font uploader, typography, install font 
 Requires at least: 3.0
 Tested up to: 5.5.1
-Stable tag: 5.11.4
+Stable tag: 5.11.5
 
 Embed any custom font using font uploader and assign to elements. Upload font in 1 format and other needed formats are auto converted even woff2.
 
@@ -142,6 +142,9 @@ Please do write us after integration and we will add it in our supported list.
 1. Screenshot #6. Assign fonts to custom elements.
 
 == Changelog ==
+
+= 5.11.5 =
+* Remove optional option from font display property
 
 = 5.11.4 =
 * Move js code to single file to avoid conflicts.

@@ -88,7 +88,6 @@ if (isset($_POST['test_server']) || empty($server_status)){
                             <option value="block" <?php echo $GLOBALS['uaf_font_display_property'] == "block"?'selected=selected':''; ?>>block</option>
                             <option value="swap" <?php echo $GLOBALS['uaf_font_display_property'] == "swap"?'selected=selected':''; ?>>swap</option>
                             <option value="fallback" <?php echo $GLOBALS['uaf_font_display_property'] == "fallback"?'selected=selected':''; ?>>fallback</option>
-                            <option value="optional" <?php echo $GLOBALS['uaf_font_display_property'] == "optional"?'selected=selected':''; ?>>optional</option>
                         </select>
                         Font Display Property                        
                     </td>

@@ -4,7 +4,7 @@
  * Plugin Name: Central Color Palette
  * Plugin URI: https://wordpress.org/plugins/kt-tinymce-color-grid
  * Description: Manage a site-wide central color palette for a uniform look'n'feel! Supports the new block editor, theme customizer and many themes and plugins.
- * Version: 1.15.3
+ * Version: 1.15.4
  * Author: Daniel Menzies
  * Author URI: http://profiles.wordpress.org/kungtiger
  * License: GPL2
@@ -13,7 +13,7 @@
  */
 
 if (defined('ABSPATH') && !class_exists('kt_Central_Palette')) {
-    define('KT_CENTRAL_PALETTE', '1.15.3');
+    define('KT_CENTRAL_PALETTE', '1.15.4');
     define('KT_CENTRAL_PALETTE_DIR', plugin_dir_path(__FILE__));
     define('KT_CENTRAL_PALETTE_URL', plugin_dir_url(__FILE__));
     define('KT_CENTRAL_PALETTE_BASENAME', plugin_basename(__FILE__));
@@ -1898,7 +1898,7 @@ if (typeof jQuery != "undefined") {
 
             foreach ($palette as $set) {
                 $color = $this->get_css_export_color($set, $color_format);
-                $name = $prefix . $set['name'] . $suffix;
+                $name = $prefix . $set['variable'] . $suffix;
                 if ($compat) {
                     $lines[] = $this->sprintf($args['compat'], $name, $set['hex'], $color);
                 } else {

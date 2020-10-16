@@ -926,7 +926,7 @@ final class OAuth_Client {
 	 * @return bool
 	 */
 	private function supports_file_verification() {
-		$home_path = wp_parse_url( home_url(), PHP_URL_PATH );
+		$home_path = wp_parse_url( $this->context->get_canonical_home_url(), PHP_URL_PATH );
 
 		return ( ! $home_path || '/' === $home_path );
 	}
@@ -1050,6 +1050,9 @@ final class OAuth_Client {
 		$this->user_options->delete( self::OPTION_REDIRECT_URL );
 		$this->user_options->delete( self::OPTION_AUTH_SCOPES );
 		$this->user_options->delete( self::OPTION_ADDITIONAL_AUTH_SCOPES );
+
+		$this->access_token  = '';
+		$this->refresh_token = '';
 	}
 
 	/**

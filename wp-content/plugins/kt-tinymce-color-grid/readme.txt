@@ -2,7 +2,7 @@
 Contributors: kungtiger
 Requires at least: 3.5
 Tested up to: 5.3
-Stable tag: 1.15.3
+Stable tag: 1.15.4
 Requires PHP: 5.3
 Requires at least: 5.2
 Tags: color, customizer, editor, gutenberg, palette, picker, tinymce
@@ -82,6 +82,9 @@ Please [contact me](http://wordpress.org/support/plugin/kt-tinymce-color-grid) a
 4. Legacy support for the classic editor
 
 == Changelog ==
+
+= 1.15.4 =
+Fix: wrong CSS class/variable names for CSS/SCSS exports
 
 = 1.15.3 =
 Fix: Broken palette integration for GeneratePress
@@ -300,6 +303,9 @@ Fixes an error when using more than one TinyMCE
 Initial release.
 
 == Upgrade Notice ==
+
+= 1.15.4 =
+Fixes incorrect class and variable names for CSS/SCC exports
 
 = 1.15.3 =
 Fixes broken palette integration for GeneratePress
