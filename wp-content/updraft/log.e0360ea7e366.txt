@@ -1,0 +1,487 @@
+0000.003 (0) Opened log file at time: Fri, 23 Oct 2020 05:08:48 +0000 on http://localhost/bpcportfolio
+0000.182 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.31 WP: 5.5.1 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 49.3M | 10M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.360 (0) Free space on disk containing Updraft's temporary directory: 738221.9 MB
+0001.692 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0001.924 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0002.457 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1603343358, seconds_ago=86372)
+0003.608 (0) Set semaphore last lock (fd) time to 2020-10-23 05:08:52
+0003.807 (0) Semaphore lock (fd) complete
+0005.286 (0) Backup run: resumption=0, nonce=e0360ea7e366, file_nonce=e0360ea7e366 begun at=1603429728 (5s ago), job type=backup
+0005.841 (0) Scheduling a resumption (1) after 600 seconds (1603430334) in case this run gets aborted
+0006.093 (0) Checking if we have a zip executable available
+0006.380 (0) Creation of backups of directories: beginning
+0007.289 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0117.555 (0) Total entities for the zip file: 890 directories, 5251 files (0 skipped as non-modified), 70.5 MB
+0118.181 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0119.036 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 100 files added (on-disk size: 152.8 KB)
+0119.286 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 200 files added (on-disk size: 152.8 KB)
+0119.501 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 300 files added (on-disk size: 152.8 KB)
+0119.934 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 400 files added (on-disk size: 152.8 KB)
+0120.186 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 500 files added (on-disk size: 152.8 KB)
+0120.314 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (6.5 MB, 5251 files batched, 501 (502) added so far); re-opening (prior size: 152.8 KB)
+0135.090 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 600 files added (on-disk size: 2392.4 KB)
+0135.375 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 700 files added (on-disk size: 2392.4 KB)
+0135.535 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 800 files added (on-disk size: 2392.4 KB)
+0135.672 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 900 files added (on-disk size: 2392.4 KB)
+0135.803 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 1000 files added (on-disk size: 2392.4 KB)
+0135.893 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (7.5 MB, 5251 files batched, 501 (1003) added so far); re-opening (prior size: 2392.4 KB)
+0142.665 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 1100 files added (on-disk size: 4464.5 KB)
+0143.082 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 1200 files added (on-disk size: 4464.5 KB)
+0143.295 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 1300 files added (on-disk size: 4464.5 KB)
+0143.596 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 1400 files added (on-disk size: 4464.5 KB)
+0143.777 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 1500 files added (on-disk size: 4464.5 KB)
+0143.966 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.6 MB, 5251 files batched, 501 (1504) added so far); re-opening (prior size: 4464.5 KB)
+0183.816 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 1600 files added (on-disk size: 5063 KB)
+0184.677 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 1700 files added (on-disk size: 5063 KB)
+0185.299 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 1800 files added (on-disk size: 5063 KB)
+0185.804 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 1900 files added (on-disk size: 5063 KB)
+0186.388 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 2000 files added (on-disk size: 5063 KB)
+0186.686 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (5.8 MB, 497 (2001) files added so far); re-opening (prior size: 5063 KB)
+0223.525 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 2100 files added (on-disk size: 7053.9 KB)
+0223.748 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 2200 files added (on-disk size: 7053.9 KB)
+0223.973 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 2300 files added (on-disk size: 7053.9 KB)
+0224.472 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 2400 files added (on-disk size: 7053.9 KB)
+0224.614 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 2500 files added (on-disk size: 7053.9 KB)
+0224.701 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (16.6 MB, 5251 files batched, 501 (2502) added so far); re-opening (prior size: 7053.9 KB)
+0244.012 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 2600 files added (on-disk size: 11454.1 KB)
+0244.351 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 2700 files added (on-disk size: 11454.1 KB)
+0244.579 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 2800 files added (on-disk size: 11454.1 KB)
+0244.909 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 2900 files added (on-disk size: 11454.1 KB)
+0245.106 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 3000 files added (on-disk size: 11454.1 KB)
+0245.301 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.6 MB, 5251 files batched, 501 (3003) added so far); re-opening (prior size: 11454.1 KB)
+0281.097 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 3100 files added (on-disk size: 12340.3 KB)
+0281.620 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 3200 files added (on-disk size: 12340.3 KB)
+0281.921 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 3300 files added (on-disk size: 12340.3 KB)
+0282.355 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 3400 files added (on-disk size: 12340.3 KB)
+0282.985 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 3500 files added (on-disk size: 12340.3 KB)
+0283.251 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (10.7 MB, 5251 files batched, 501 (3504) added so far); re-opening (prior size: 12340.3 KB)
+0317.256 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 3600 files added (on-disk size: 16690.6 KB)
+0317.704 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 3700 files added (on-disk size: 16690.6 KB)
+0318.201 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 3800 files added (on-disk size: 16690.6 KB)
+0318.447 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 3900 files added (on-disk size: 16690.6 KB)
+0318.838 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 4000 files added (on-disk size: 16690.6 KB)
+0318.977 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (3.1 MB, 5251 files batched, 501 (4005) added so far); re-opening (prior size: 16690.6 KB)
+0339.777 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 4100 files added (on-disk size: 17858.9 KB)
+0340.247 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 4200 files added (on-disk size: 17858.9 KB)
+0340.513 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 4300 files added (on-disk size: 17858.9 KB)
+0340.703 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 4400 files added (on-disk size: 17858.9 KB)
+0340.946 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 4500 files added (on-disk size: 17858.9 KB)
+0341.189 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (8.7 MB, 5251 files batched, 501 (4506) added so far); re-opening (prior size: 17858.9 KB)
+0372.229 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 4600 files added (on-disk size: 20513.3 KB)
+0372.720 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 4700 files added (on-disk size: 20513.3 KB)
+0373.200 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 4800 files added (on-disk size: 20513.3 KB)
+0373.631 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 4900 files added (on-disk size: 20513.3 KB)
+0374.066 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 5000 files added (on-disk size: 20513.3 KB)
+0374.384 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.3 MB, 5251 files batched, 501 (5007) added so far); re-opening (prior size: 20513.3 KB)
+0405.500 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 5100 files added (on-disk size: 21405.7 KB)
+0406.329 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip.tmp: 5200 files added (on-disk size: 21405.7 KB)
+0449.919 (0) Created plugins zip (0) - 24032.2 KB in 441.5 s (54.4 KB/s) (sha1: 6d262f39f6d122253610deeeec161d88fbe1dacf, sha256: 68b48c2e546132dcb58ed8f42ab4f45150eb71e048902a51312452d620c90f60)
+0450.651 (0) Beginning creation of dump of themes (split every: 400 MB)
+0460.001 (0) Total entities for the zip file: 117 directories, 483 files (0 skipped as non-modified), 9.6 MB
+0460.374 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0460.947 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-themes.zip.tmp: 100 files added (on-disk size: 16.1 KB)
+0461.370 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-themes.zip.tmp: 200 files added (on-disk size: 16.1 KB)
+0461.705 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-themes.zip.tmp: 300 files added (on-disk size: 16.1 KB)
+0462.020 (0) Zip: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-themes.zip.tmp: 400 files added (on-disk size: 16.1 KB)
+0482.027 (0) Created themes zip (0) - 4812.6 KB in 31.3 s (154 KB/s) (sha1: 8ea3e4db4597023585fcbb143c12d2dcb5397e3a, sha256: d989fe3cca29d97c2a4bf41c0c735ee68fc426adbcf5e09d0884012f77cd06b5)
+0482.281 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0482.385 (0) Looking for candidates to backup in: C:\xampp\htdocs\bpcportfolio/wp-content/uploads
+0482.467 (0) finding files: .htaccess: adding to list (1)
+0482.717 (0) finding files: 2020: adding to list (2)
+0482.883 (0) finding files: elementor: adding to list (3)
+0483.128 (0) finding files: useanyfont: adding to list (4)
+0483.191 (0) finding files: wtitan-logger: adding to list (5)
+0483.261 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0485.175 (0) Total entities for the zip file: 9 directories, 69 files (0 skipped as non-modified), 10.4 MB
+0485.395 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.4 MB, 18 (18) files added so far); re-opening (prior size: 0 KB)
+0489.804 (0) Created uploads zip (0) - 10646.2 KB in 6.4 s (1651.7 KB/s) (sha1: ed135d59f44b71f7c3753244e2731b8207da2dca, sha256: 2525f6d9a3fb75aed7f899b65577150a8e0ecc8de7171ef58cdd0d695991c1a4)
+0490.220 (0) Beginning backup of other directories found in the content directory (index: 0)
+0490.340 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0490.445 (0) Looking for candidates to backup in: C:\xampp\htdocs\bpcportfolio/wp-content
+0490.598 (0) finding files: index.php: adding to list (1)
+0490.719 (0) finding files: plugins: skipping: this is the plugins directory
+0490.818 (0) finding files: themes: skipping: this is the themes directory
+0490.940 (0) finding files: updraft: skipping: this is the updraft directory
+0491.270 (0) finding files: upgrade: skipping: excluded by options
+0491.336 (0) finding files: uploads: skipping: this is the uploads directory
+0491.450 (0) finding files: wflogs: adding to list (2)
+0491.702 (0) Total entities for the zip file: 1 directories, 11 files (0 skipped as non-modified), 5.4 MB
+0494.741 (0) Created others zip (0) - 2482.1 KB in 3.2 s (779.3 KB/s) (sha1: 88a577460d057e83524bae34473d88020c266297, sha256: d745bf3ce52ca0aeaba7df2fdc720c2ca07c60a18fe0db8e0f6bf1e39d86ef6b)
+0494.973 (0) Saving backup status to database (elements: 8)
+0495.128 (0) Beginning creation of database dump (WordPress DB)
+0495.157 (0) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+0495.837 (0) Table wp_options: Total expected rows (approximate): 307
+0496.097 (0) Table wp_options: Rows added in this batch (next record: 2147): 311 in 0.10 seconds
+0496.784 (0) Table wp_options: finishing file(s) (2, 57.6 KB)
+0497.291 (0) Table wp_users: Total expected rows (approximate): 1
+0497.461 (0) Table wp_users: Rows added in this batch (next record: 3): 1 in 0.05 seconds
+0497.770 (0) Table wp_users: finishing file(s) (2, 0.6 KB)
+0498.031 (0) Table wp_usermeta: Total expected rows (approximate): 31
+0498.411 (0) Table wp_usermeta: Rows added in this batch (next record: 138): 31 in 0.16 seconds
+0498.567 (0) Table wp_usermeta: finishing file(s) (2, 2.5 KB)
+0498.638 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0498.695 (0) Table wp_commentmeta: Rows added in this batch (next record: -1): 0 in 0.03 seconds
+0498.858 (0) Table wp_commentmeta: finishing file(s) (2, 0.4 KB)
+0498.917 (0) Table wp_comments: Total expected rows (approximate): 1
+0499.053 (0) Table wp_comments: Rows added in this batch (next record: 1): 1 in 0.08 seconds
+0499.920 (0) Table wp_comments: finishing file(s) (2, 0.7 KB)
+0500.254 (0) Table wp_links: Total expected rows (approximate): 0
+0500.334 (0) Table wp_links: Rows added in this batch (next record: -1): 0 in 0.01 seconds
+0500.498 (0) Table wp_links: finishing file(s) (2, 0.5 KB)
+0501.107 (0) Table wp_postmeta: Total expected rows (approximate): 170
+0501.343 (0) Table wp_postmeta: Rows added in this batch (next record: 2502): 171 in 0.10 seconds
+0501.702 (0) Table wp_postmeta: finishing file(s) (2, 10.6 KB)
+0501.773 (0) Table wp_posts: Total expected rows (approximate): 66
+0502.180 (0) Table wp_posts: Rows added in this batch (next record: 135): 81 in 0.35 seconds
+0502.717 (0) Table wp_posts: finishing file(s) (2, 20.2 KB)
+0502.841 (0) Table wp_term_relationships: Total expected rows (approximate): 5
+0502.910 (0) Table wp_term_relationships: Rows added in this batch (next record: 4): 7 in 0.02 seconds
+0503.494 (0) Table wp_term_relationships: finishing file(s) (2, 0.4 KB)
+0503.821 (0) Table wp_term_taxonomy: Total expected rows (approximate): 2
+0504.187 (0) Table wp_term_taxonomy: Rows added in this batch (next record: 4): 3 in 0.03 seconds
+0504.614 (0) Table wp_term_taxonomy: finishing file(s) (2, 0.5 KB)
+0505.090 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0505.365 (0) Table wp_termmeta: Rows added in this batch (next record: -1): 0 in 0.07 seconds
+0506.070 (0) Table wp_termmeta: finishing file(s) (2, 0.4 KB)
+0506.440 (0) Table wp_terms: Total expected rows (approximate): 0
+0506.529 (0) Table wp_terms: Rows added in this batch (next record: 4): 3 in 0.03 seconds
+0506.997 (0) Table wp_terms: finishing file(s) (2, 0.4 KB)
+0507.099 (0) Table wp_smush_dir_images: Total expected rows (approximate): 0
+0507.216 (0) Table wp_smush_dir_images: Rows added in this batch (next record: -1): 0 in 0.04 seconds
+0507.847 (0) Table wp_smush_dir_images: finishing file(s) (2, 0.5 KB)
+0508.183 (0) Table wp_wfblockediplog: Total expected rows (approximate): 0
+0508.289 (0) Table wp_wfblockediplog: Rows added in this batch (next record: 0): 0 in 0.02 seconds
+0509.018 (0) Table wp_wfblockediplog: finishing file(s) (2, 0.4 KB)
+0509.311 (0) Table wp_wfblocks7: Total expected rows (approximate): 0
+0509.476 (0) Table wp_wfblocks7: Rows added in this batch (next record: -1): 0 in 0.08 seconds
+0509.893 (0) Table wp_wfblocks7: finishing file(s) (2, 0.4 KB)
+0510.428 (0) Table wp_wfconfig: Total expected rows (approximate): 251
+0511.246 (0) Table wp_wfconfig: Rows added in this batch (next record: 1000): 252 in 0.57 seconds
+0511.777 (0) Table wp_wfconfig: finishing file(s) (2, 409.4 KB)
+0512.103 (0) Table wp_wfcrawlers: Total expected rows (approximate): 0
+0512.342 (0) Table wp_wfcrawlers: Rows added in this batch (next record: 0): 0 in 0.09 seconds
+0512.628 (0) Table wp_wfcrawlers: finishing file(s) (2, 0.3 KB)
+0513.932 (0) Table wp_wffilechanges: Total expected rows (approximate): 0
+0514.151 (0) Table wp_wffilechanges: Rows added in this batch (next record: 0): 0 in 0.02 seconds
+0514.934 (0) Table wp_wffilechanges: finishing file(s) (2, 0.3 KB)
+0515.319 (0) Table wp_wffilemods: Total expected rows (approximate): 518
+0516.396 (0) Table wp_wffilemods: Rows added in this batch (next record: 1000): 528 in 0.82 seconds
+0516.725 (0) Table wp_wffilemods: finishing file(s) (2, 55.8 KB)
+0516.990 (0) Table wp_wfhits: Total expected rows (approximate): 22
+0517.451 (0) Table wp_wfhits: Rows added in this batch (next record: 89): 23 in 0.20 seconds
+0517.894 (0) Table wp_wfhits: finishing file(s) (2, 1.3 KB)
+0518.766 (0) Table wp_wfhoover: Total expected rows (approximate): 0
+0518.896 (0) Table wp_wfhoover: Rows added in this batch (next record: -1): 0 in 0.01 seconds
+0519.826 (0) Table wp_wfhoover: finishing file(s) (2, 0.3 KB)
+0520.889 (0) Table wp_wfissues: Total expected rows (approximate): 0
+0521.172 (0) Table wp_wfissues: Rows added in this batch (next record: -1): 0 in 0.14 seconds
+0521.835 (0) Table wp_wfissues: finishing file(s) (2, 0.4 KB)
+0523.136 (0) Table wp_wfknownfilelist: Total expected rows (approximate): 19513
+0527.009 (0) Table wp_wfknownfilelist: Rows added in this batch (next record: 20002): 20002 in 3.45 seconds
+0527.926 (0) Table wp_wfknownfilelist: finishing file(s) (2, 419.5 KB)
+0528.090 (0) Table wp_wflivetraffichuman: Total expected rows (approximate): 0
+0528.269 (0) Table wp_wflivetraffichuman: Rows added in this batch (next record: 0): 0 in 0.10 seconds
+0529.261 (0) Table wp_wflivetraffichuman: finishing file(s) (2, 0.3 KB)
+0529.464 (0) Table wp_wflocs: Total expected rows (approximate): 1
+0529.811 (0) Table wp_wflocs: Rows added in this batch (next record: 0): 0 in 0.26 seconds
+0530.126 (0) Table wp_wflocs: finishing file(s) (2, 0.4 KB)
+0530.329 (0) Table wp_wflogins: Total expected rows (approximate): 54
+0530.479 (0) Table wp_wflogins: Rows added in this batch (next record: 89): 89 in 0.07 seconds
+0531.273 (0) Table wp_wflogins: finishing file(s) (2, 2.1 KB)
+0531.564 (0) Table wp_wfls_2fa_secrets: Total expected rows (approximate): 0
+0532.052 (0) Table wp_wfls_2fa_secrets: Rows added in this batch (next record: -1): 0 in 0.35 seconds
+0532.498 (0) Table wp_wfls_2fa_secrets: finishing file(s) (2, 0.4 KB)
+0532.764 (0) Table wp_wfls_settings: Total expected rows (approximate): 17
+0533.128 (0) Table wp_wfls_settings: Rows added in this batch (next record: 1000): 19 in 0.29 seconds
+0533.433 (0) Table wp_wfls_settings: finishing file(s) (2, 0.8 KB)
+0533.789 (0) Table wp_wfnotifications: Total expected rows (approximate): 3
+0534.011 (0) Table wp_wfnotifications: Rows added in this batch (next record: 1000): 10 in 0.12 seconds
+0534.578 (0) Table wp_wfnotifications: finishing file(s) (2, 0.7 KB)
+0535.101 (0) Table wp_wfpendingissues: Total expected rows (approximate): 0
+0535.391 (0) Table wp_wfpendingissues: Rows added in this batch (next record: -1): 0 in 0.02 seconds
+0535.926 (0) Table wp_wfpendingissues: finishing file(s) (2, 0.4 KB)
+0536.197 (0) Table wp_wfreversecache: Total expected rows (approximate): 1
+0536.705 (0) Table wp_wfreversecache: Rows added in this batch (next record: 0): 0 in 0.35 seconds
+0537.259 (0) Table wp_wfreversecache: finishing file(s) (2, 0.3 KB)
+0538.414 (0) Table wp_wfsnipcache: Total expected rows (approximate): 0
+0538.560 (0) Table wp_wfsnipcache: Rows added in this batch (next record: -1): 0 in 0.01 seconds
+0538.824 (0) Table wp_wfsnipcache: finishing file(s) (2, 0.4 KB)
+0539.022 (0) Table wp_wfstatus: Total expected rows (approximate): 963
+0540.030 (0) Table wp_wfstatus: Rows added in this batch (next record: 2273): 963 in 0.78 seconds
+0540.876 (0) Table wp_wfstatus: finishing file(s) (2, 14.7 KB)
+0541.628 (0) Table wp_wftrafficrates: Total expected rows (approximate): 0
+0542.106 (0) Table wp_wftrafficrates: Rows added in this batch (next record: 0): 0 in 0.30 seconds
+0542.415 (0) Table wp_wftrafficrates: finishing file(s) (2, 0.3 KB)
+0542.816 (0) Table wp_yoast_indexable: Total expected rows (approximate): 41
+0543.222 (0) Table wp_yoast_indexable: Rows added in this batch (next record: 89): 41 in 0.32 seconds
+0543.767 (0) Table wp_yoast_indexable: finishing file(s) (2, 4.1 KB)
+0543.978 (0) Table wp_yoast_indexable_hierarchy: Total expected rows (approximate): 4
+0544.369 (0) Table wp_yoast_indexable_hierarchy: Rows added in this batch (next record: 24): 5 in 0.11 seconds
+0544.616 (0) Table wp_yoast_indexable_hierarchy: finishing file(s) (2, 0.4 KB)
+0545.375 (0) Table wp_yoast_migrations: Total expected rows (approximate): 17
+0545.761 (0) Table wp_yoast_migrations: Rows added in this batch (next record: 18): 18 in 0.08 seconds
+0546.444 (0) Table wp_yoast_migrations: finishing file(s) (2, 0.6 KB)
+0547.782 (0) Table wp_yoast_primary_term: Total expected rows (approximate): 0
+0548.045 (0) Table wp_yoast_primary_term: Rows added in this batch (next record: 1): 1 in 0.05 seconds
+0548.818 (0) Table wp_yoast_primary_term: finishing file(s) (2, 0.5 KB)
+0549.419 (0) Table wp_yoast_seo_links: Total expected rows (approximate): 2
+0549.605 (0) Table wp_yoast_seo_links: Rows added in this batch (next record: 17): 2 in 0.02 seconds
+0550.489 (0) Table wp_yoast_seo_links: finishing file(s) (2, 0.6 KB)
+0550.932 (0) Table wp_yoast_seo_meta: Total expected rows (approximate): 7
+0551.031 (0) Table wp_yoast_seo_meta: Rows added in this batch (next record: 37): 9 in 0.01 seconds
+0551.872 (0) Table wp_yoast_seo_meta: finishing file(s) (2, 0.4 KB)
+0552.589 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_options.table.tmpr2148.gz (1/40): adding to final database dump
+0552.763 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_options.table.gz (2/40): adding to final database dump
+0552.828 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_users.table.tmpr4.gz (3/40): adding to final database dump
+0552.974 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_users.table.gz (4/40): adding to final database dump
+0553.162 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_usermeta.table.tmpr139.gz (5/40): adding to final database dump
+0553.331 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_usermeta.table.gz (6/40): adding to final database dump
+0553.450 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_commentmeta.table.tmpr0.gz (7/40): adding to final database dump
+0553.745 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_commentmeta.table.gz (8/40): adding to final database dump
+0553.800 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_comments.table.tmpr2.gz (9/40): adding to final database dump
+0553.930 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_comments.table.gz (10/40): adding to final database dump
+0554.052 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_links.table.tmpr0.gz (11/40): adding to final database dump
+0554.431 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_links.table.gz (12/40): adding to final database dump
+0554.620 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_postmeta.table.tmpr2503.gz (13/40): adding to final database dump
+0554.856 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_postmeta.table.gz (14/40): adding to final database dump
+0555.274 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_posts.table.tmpr136.gz (15/40): adding to final database dump
+0555.387 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_posts.table.gz (16/40): adding to final database dump
+0555.507 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_term_relationships.table.tmpr5.gz (17/40): adding to final database dump
+0555.595 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_term_relationships.table.gz (18/40): adding to final database dump
+0555.792 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_term_taxonomy.table.tmpr5.gz (19/40): adding to final database dump
+0555.901 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_term_taxonomy.table.gz (20/40): adding to final database dump
+0555.985 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_termmeta.table.tmpr0.gz (21/40): adding to final database dump
+0556.040 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_termmeta.table.gz (22/40): adding to final database dump
+0556.264 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_terms.table.tmpr5.gz (23/40): adding to final database dump
+0556.381 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_terms.table.gz (24/40): adding to final database dump
+0556.650 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_smush_dir_images.table.tmpr0.gz (25/40): adding to final database dump
+0556.810 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_smush_dir_images.table.gz (26/40): adding to final database dump
+0557.015 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfblockediplog.table.tmpr1.gz (27/40): adding to final database dump
+0557.268 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfblockediplog.table.gz (28/40): adding to final database dump
+0557.526 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfblocks7.table.tmpr0.gz (29/40): adding to final database dump
+0557.826 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfblocks7.table.gz (30/40): adding to final database dump
+0557.892 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfconfig.table.tmpr1001.gz (31/40): adding to final database dump
+0558.020 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfconfig.table.gz (32/40): adding to final database dump
+0558.092 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfcrawlers.table.tmpr1.gz (33/40): adding to final database dump
+0558.143 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfcrawlers.table.gz (34/40): adding to final database dump
+0558.214 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wffilechanges.table.tmpr1.gz (35/40): adding to final database dump
+0558.281 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wffilechanges.table.gz (36/40): adding to final database dump
+0558.946 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wffilemods.table.tmpr1001.gz (37/40): adding to final database dump
+0559.130 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wffilemods.table.gz (38/40): adding to final database dump
+0559.302 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfhits.table.tmpr90.gz (39/40): adding to final database dump
+0559.494 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfhits.table.gz (40/40): adding to final database dump
+0559.556 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfhoover.table.tmpr0.gz (41/40): adding to final database dump
+0559.690 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfhoover.table.gz (42/40): adding to final database dump
+0559.856 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfissues.table.tmpr0.gz (43/40): adding to final database dump
+0559.929 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfissues.table.gz (44/40): adding to final database dump
+0560.001 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfknownfilelist.table.tmpr20003.gz (45/40): adding to final database dump
+0560.160 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfknownfilelist.table.gz (46/40): adding to final database dump
+0560.273 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wflivetraffichuman.table.tmpr1.gz (47/40): adding to final database dump
+0560.343 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wflivetraffichuman.table.gz (48/40): adding to final database dump
+0560.474 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wflocs.table.tmpr1.gz (49/40): adding to final database dump
+0560.536 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wflocs.table.gz (50/40): adding to final database dump
+0560.594 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wflogins.table.tmpr90.gz (51/40): adding to final database dump
+0560.644 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wflogins.table.gz (52/40): adding to final database dump
+0560.722 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfls_2fa_secrets.table.tmpr0.gz (53/40): adding to final database dump
+0560.802 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfls_2fa_secrets.table.gz (54/40): adding to final database dump
+0560.867 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfls_settings.table.tmpr1001.gz (55/40): adding to final database dump
+0560.988 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfls_settings.table.gz (56/40): adding to final database dump
+0561.055 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfnotifications.table.tmpr1001.gz (57/40): adding to final database dump
+0561.185 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfnotifications.table.gz (58/40): adding to final database dump
+0561.421 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfpendingissues.table.tmpr0.gz (59/40): adding to final database dump
+0561.796 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfpendingissues.table.gz (60/40): adding to final database dump
+0561.966 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfreversecache.table.tmpr1.gz (61/40): adding to final database dump
+0562.232 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfreversecache.table.gz (62/40): adding to final database dump
+0562.318 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfsnipcache.table.tmpr0.gz (63/40): adding to final database dump
+0562.543 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfsnipcache.table.gz (64/40): adding to final database dump
+0562.597 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfstatus.table.tmpr2274.gz (65/40): adding to final database dump
+0562.695 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wfstatus.table.gz (66/40): adding to final database dump
+0562.776 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wftrafficrates.table.tmpr1.gz (67/40): adding to final database dump
+0562.887 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_wftrafficrates.table.gz (68/40): adding to final database dump
+0563.140 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_yoast_indexable.table.tmpr90.gz (69/40): adding to final database dump
+0563.313 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_yoast_indexable.table.gz (70/40): adding to final database dump
+0563.459 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_yoast_indexable_hierarchy.table.tmpr25.gz (71/40): adding to final database dump
+0563.661 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_yoast_indexable_hierarchy.table.gz (72/40): adding to final database dump
+0563.717 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_yoast_migrations.table.tmpr19.gz (73/40): adding to final database dump
+0563.803 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_yoast_migrations.table.gz (74/40): adding to final database dump
+0563.940 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_yoast_primary_term.table.tmpr2.gz (75/40): adding to final database dump
+0564.031 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_yoast_primary_term.table.gz (76/40): adding to final database dump
+0564.119 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_yoast_seo_links.table.tmpr18.gz (77/40): adding to final database dump
+0564.423 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_yoast_seo_links.table.gz (78/40): adding to final database dump
+0564.484 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_yoast_seo_meta.table.tmpr38.gz (79/40): adding to final database dump
+0564.512 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db-table-wp_yoast_seo_meta.table.gz (80/40): adding to final database dump
+0564.789 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db.gz: finished writing out complete database file (992 KB)
+0565.101 (0) Total database tables backed up: 40 (backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db.gz, size: 1024733, sha1: e9fc5e401764e86a1efc5bfc1c20097ffe5a7235, sha256: bcf8fba37e926bc6dcd98daf2037e0c0efcfbd68972cb4f9efb7268fca2ab131)
+0565.281 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0565.424 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0565.602 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0565.732 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-others.zip: others: This file has not yet been successfully uploaded: will queue
+0565.867 (0) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db.gz: db: This file has not yet been successfully uploaded: will queue
+0566.081 (0) Saving backup history. Total backup size: 42 MB
+0566.259 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0566.673 (0) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0566.816 (0) Beginning dispatch of backup to remote (googledrive) (instance identifier s-ab688618d721c81baf85d6e6f7d3cc78)
+0568.138 (0) Google Drive: quota usage: used=52.3 MB, total=15360 MB, available=15307.7 MB
+0568.178 (0) Google Drive: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+0571.436 (0) The time we have been running (570.7) is approaching the resumption interval (600) - increasing resumption interval to 601
+0571.856 (0) The scheduled resumption is within 45 seconds - will reschedule
+0572.183 (0) Rescheduling resumption 1: moving to 646 seconds from now (1603430946)
+0572.344 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 601 + 45 = 646
+0572.416 (0) Googledrive chunked upload: 4.3 % uploaded (1048576)
+0632.521 (0) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+0632.599 (0) An error condition has occurred for the first time during this job
+0632.939 (0) Google Drive: quota usage: used=52.3 MB, total=15360 MB, available=15307.7 MB
+0633.061 (0) Google Drive: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-themes.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+0635.629 (0) The time we have been running (635.5) is approaching the resumption interval (646) - increasing resumption interval to 666
+0635.724 (0) Googledrive chunked upload: 21.3 % uploaded (1048576)
+0695.843 (0) Google Drive: Upload error: Operation timed out after 59999 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+0696.327 (0) Google Drive: quota usage: used=52.3 MB, total=15360 MB, available=15307.7 MB
+0696.514 (0) Google Drive: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-uploads.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+0757.369 (0) Google Drive: Upload error: Operation timed out after 59999 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+0758.169 (0) Google Drive: quota usage: used=52.3 MB, total=15360 MB, available=15307.7 MB
+0758.418 (0) Google Drive: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-others.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+0819.006 (0) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+0819.461 (0) Google Drive: quota usage: used=52.3 MB, total=15360 MB, available=15307.7 MB
+0819.514 (0) Google Drive: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db.gz: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+0824.030 (0) The time we have been running (823.3) is approaching the resumption interval (666) - increasing resumption interval to 854
+0824.289 (0) Googledrive chunked upload: 100 % uploaded
+0824.758 (0) Google Drive: OK: Archive backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db.gz uploaded in 5.17 seconds
+0824.945 (0) Recording as successfully uploaded: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db.gz
+0825.499 (0) Deleting local file: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db.gz: OK
+0825.964 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+0826.134 (0) Number of backup sets in history: 6; groups (db): 1
+0826.340 (0) Examining (for databases) backup set with group_id=0, nonce=e0360ea7e366, datestamp=1603429728 (Oct 23 2020 05:08:48)
+0826.507 (0) This backup set is the backup set just made, so will not be deleted.
+0826.507 (0) Examining (for databases) backup set with group_id=0, nonce=a80bc833df93, datestamp=1603343356 (Oct 22 2020 05:09:16)
+0826.507 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0826.684 (0) Examining (for databases) backup set with group_id=0, nonce=5bea011fe09d, datestamp=1603257160 (Oct 21 2020 05:12:40)
+0826.685 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0826.685 (0) Examining (for databases) backup set with group_id=0, nonce=e47115b66ab5, datestamp=1603170563 (Oct 20 2020 05:09:23)
+0826.685 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0826.685 (0) Examining (for databases) backup set with group_id=0, nonce=cff8ea3f1fa3, datestamp=1603138019 (Oct 19 2020 20:06:59)
+0826.685 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0826.685 (0) Examining (for databases) backup set with group_id=0, nonce=3dc62108923c, datestamp=1603051615 (Oct 18 2020 20:06:55)
+0826.685 (0) 1603051615: db: this set includes a database (backup_2020-10-18-1606_BritishPandaChick_3dc62108923c-db.gz); db count is now 5
+0826.685 (0) 1603051615: db: over retain limit (5); will delete this database
+0826.685 (0) Delete file: backup_2020-10-18-1606_BritishPandaChick_3dc62108923c-db.gz, service=googledrive
+0828.302 (0) Google Drive: backup_2020-10-18-1606_BritishPandaChick_3dc62108923c-db.gz: Deletion successful
+0829.833 (0) The time we have been running (829) is approaching the resumption interval (854) - increasing resumption interval to 859
+0830.554 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0830.695 (0) Number of backup sets in history: 6; groups (files): 1
+0830.828 (0) Examining (for files) backup set with nonce=e0360ea7e366, datestamp=1603429728 (Oct 23 2020 05:08:48)
+0831.020 (0) This backup set is the backup set just made, so will not be deleted.
+0831.144 (0) This backup set is the backup set just made, so will not be deleted.
+0831.145 (0) This backup set is the backup set just made, so will not be deleted.
+0831.145 (0) This backup set is the backup set just made, so will not be deleted.
+0831.145 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0831.249 (0) Examining (for files) backup set with nonce=a80bc833df93, datestamp=1603343356 (Oct 22 2020 05:09:16)
+0831.249 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0831.250 (0) Examining (for files) backup set with nonce=5bea011fe09d, datestamp=1603257160 (Oct 21 2020 05:12:40)
+0831.250 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0831.251 (0) Examining (for files) backup set with nonce=e47115b66ab5, datestamp=1603170563 (Oct 20 2020 05:09:23)
+0831.251 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0831.251 (0) Examining (for files) backup set with nonce=cff8ea3f1fa3, datestamp=1603138019 (Oct 19 2020 20:06:59)
+0831.252 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0831.252 (0) Examining (for files) backup set with nonce=3dc62108923c, datestamp=1603051615 (Oct 18 2020 20:06:55)
+0831.252 (0) plugins: over retain limit (5); will delete this file entity
+0831.252 (0) themes: over retain limit (5); will delete this file entity
+0831.252 (0) uploads: over retain limit (5); will delete this file entity
+0831.252 (0) others: over retain limit (5); will delete this file entity
+0831.253 (0) Delete file: backup_2020-10-18-1606_BritishPandaChick_3dc62108923c-plugins.zip, service=googledrive
+0831.387 (0) Deleting local copy (backup_2020-10-18-1606_BritishPandaChick_3dc62108923c-plugins.zip)
+0831.695 (0) Delete file: backup_2020-10-18-1606_BritishPandaChick_3dc62108923c-themes.zip, service=googledrive
+0831.959 (0) Deleting local copy (backup_2020-10-18-1606_BritishPandaChick_3dc62108923c-themes.zip)
+0832.135 (0) Delete file: backup_2020-10-18-1606_BritishPandaChick_3dc62108923c-uploads.zip, service=googledrive
+0832.395 (0) Deleting local copy (backup_2020-10-18-1606_BritishPandaChick_3dc62108923c-uploads.zip)
+0832.532 (0) Delete file: backup_2020-10-18-1606_BritishPandaChick_3dc62108923c-others.zip, service=googledrive
+0833.753 (0) Google Drive: backup_2020-10-18-1606_BritishPandaChick_3dc62108923c-others.zip: Deletion successful
+0833.885 (0) Google Drive: backup_2020-10-18-1606_BritishPandaChick_3dc62108923c-plugins.zip: Deletion failed: file was not found
+0834.135 (0) Google Drive: backup_2020-10-18-1606_BritishPandaChick_3dc62108923c-themes.zip: Deletion failed: file was not found
+0834.434 (0) Google Drive: backup_2020-10-18-1606_BritishPandaChick_3dc62108923c-uploads.zip: Deletion failed: file was not found
+0835.260 (0) The time we have been running (834.7) is approaching the resumption interval (859) - increasing resumption interval to 865
+0835.500 (0) This backup set is now empty; will remove from history
+0835.664 (0) Deleting log file (log.3dc62108923c.txt)
+0835.889 (0) Retain: saving new backup history (sets now: 5) and finishing retain operation
+0837.141 (0) Resume backup (e0360ea7e366, 0): finish run
+0837.972 (0) Decremented the semaphore (fd) by 1
+0838.530 (0) Semaphore (fd) unlocked
+0838.623 (0) There were errors in the uploads, so the 'resume' event is remaining scheduled
+0838.951 (0) Rescheduling resumption 1: moving to 60 seconds from now (1603430627)
+0839.399 (0) No email will/can be sent - the user has not configured an email address.
+0839.694 (0) The backup has not finished; a resumption is scheduled
+142308.943 (1) Opened log file at time: Sat, 24 Oct 2020 20:40:37 +0000 on http://localhost/bpcportfolio
+142310.021 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.31 WP: 5.5.1 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 49.4M | 50M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+142313.993 (1) Free space on disk containing Updraft's temporary directory: 737943.9 MB
+142317.828 (1) Backup run: resumption=1, nonce=e0360ea7e366, file_nonce=e0360ea7e366 begun at=1603429728 (142318s ago), job type=backup, previous check-in=834.7s
+142319.128 (1) Long time past since expected resumption time: approx expected=1603431433, now=1603572035.9, diff=140602.9
+142321.345 (1) [Warning] Your website is visited infrequently and UpdraftPlus is not getting the resources it hoped for; please read this page: https://updraftplus.com/faqs/why-am-i-getting-warnings-about-my-site-not-having-enough-visitors/
+142322.233 (1) Scheduling a resumption (2) after 865 seconds (1603572915) in case this run gets aborted
+142323.818 (1) Checking if we have a zip executable available
+142324.009 (1) Creation of backups of directories: already finished
+142324.479 (1) Saving backup status to database (elements: 8)
+142326.153 (1) Database dump (WordPress DB): Creation was completed already
+142327.530 (1) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+142329.084 (1) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+142330.124 (1) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+142330.815 (1) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+142332.500 (1) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-others.zip: others: This file has not yet been successfully uploaded: will queue
+142332.846 (1) backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-db.gz: db: This file has already been successfully uploaded
+142333.140 (1) Saving backup history. Total backup size: Unknown
+142334.572 (1) Requesting upload of the files that have not yet been successfully uploaded (4)
+142335.303 (1) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+142336.163 (1) Beginning dispatch of backup to remote (googledrive) (instance identifier s-ab688618d721c81baf85d6e6f7d3cc78)
+142348.084 (1) Google Drive: quota usage: used=49.3 MB, total=15360 MB, available=15310.7 MB
+142348.932 (1) Google Drive: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+142350.143 (1) Google Drive: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-plugins.zip: upload already began; attempt to resume did not succeed (HTTP code: 404)
+142411.957 (1) Google Drive: Upload error: Operation timed out after 60023 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+142412.298 (1) An error condition has occurred for the first time during this job
+142412.807 (1) Google Drive: quota usage: used=49.3 MB, total=15360 MB, available=15310.7 MB
+142413.015 (1) Google Drive: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-themes.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+142413.423 (1) Google Drive: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-themes.zip: upload already began; attempt to resume did not succeed (HTTP code: 404)
+142474.198 (1) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+142474.596 (1) Google Drive: quota usage: used=49.3 MB, total=15360 MB, available=15310.7 MB
+142474.796 (1) Google Drive: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-uploads.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+142535.563 (1) Google Drive: Upload error: Operation timed out after 60000 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+142536.111 (1) Google Drive: quota usage: used=49.3 MB, total=15360 MB, available=15310.7 MB
+142536.246 (1) Google Drive: backup_2020-10-23-0108_BritishPandaChick_e0360ea7e366-others.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+142598.380 (1) Google Drive: Upload error: Operation timed out after 59999 milliseconds with 0 bytes received (line: 117, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\IO\Curl.php)
+142598.518 (1) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+142598.636 (1) Number of backup sets in history: 5; groups (db): 1
+142598.750 (1) Examining (for databases) backup set with group_id=0, nonce=e0360ea7e366, datestamp=1603429728 (Oct 23 2020 05:08:48)
+142598.850 (1) This backup set is the backup set just made, so will not be deleted.
+142598.850 (1) Examining (for databases) backup set with group_id=0, nonce=a80bc833df93, datestamp=1603343356 (Oct 22 2020 05:09:16)
+142598.850 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+142599.001 (1) Examining (for databases) backup set with group_id=0, nonce=5bea011fe09d, datestamp=1603257160 (Oct 21 2020 05:12:40)
+142599.001 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+142599.001 (1) Examining (for databases) backup set with group_id=0, nonce=e47115b66ab5, datestamp=1603170563 (Oct 20 2020 05:09:23)
+142599.001 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+142599.002 (1) Examining (for databases) backup set with group_id=0, nonce=cff8ea3f1fa3, datestamp=1603138019 (Oct 19 2020 20:06:59)
+142599.002 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+142599.002 (1) Number of backup sets in history: 5; groups (files): 1
+142599.172 (1) Examining (for files) backup set with nonce=e0360ea7e366, datestamp=1603429728 (Oct 23 2020 05:08:48)
+142599.172 (1) This backup set is the backup set just made, so will not be deleted.
+142599.324 (1) This backup set is the backup set just made, so will not be deleted.
+142599.324 (1) This backup set is the backup set just made, so will not be deleted.
+142599.325 (1) This backup set is the backup set just made, so will not be deleted.
+142599.325 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+142599.427 (1) Examining (for files) backup set with nonce=a80bc833df93, datestamp=1603343356 (Oct 22 2020 05:09:16)
+142599.427 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+142599.535 (1) Examining (for files) backup set with nonce=5bea011fe09d, datestamp=1603257160 (Oct 21 2020 05:12:40)
+142599.535 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+142599.535 (1) Examining (for files) backup set with nonce=e47115b66ab5, datestamp=1603170563 (Oct 20 2020 05:09:23)
+142599.535 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+142599.535 (1) Examining (for files) backup set with nonce=cff8ea3f1fa3, datestamp=1603138019 (Oct 19 2020 20:06:59)
+142599.535 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+142599.536 (1) Retain: saving new backup history (sets now: 5) and finishing retain operation
+142599.664 (1) Resume backup (e0360ea7e366, 1): finish run
+142600.666 (1) There were errors in the uploads, so the 'resume' event is remaining scheduled
+142600.843 (1) No email will/can be sent - the user has not configured an email address.
+142600.958 (1) The backup has not finished; a resumption is scheduled
+0000.000 (2) Opened log file at time: Sat, 24 Oct 2020 20:55:42 +0000 on http://localhost/bpcportfolio
+0000.065 (2) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.31 WP: 5.5.1 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 49.4M | 6M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.128 (2) Free space on disk containing Updraft's temporary directory: 737543.5 MB
+0000.236 (2) This backup task (e0360ea7e366) is either complete or began over 2 days ago: ending (1603572942.8618, ) (existing jobdata keys: )
+0000.000 (2) Opened log file at time: Sat, 24 Oct 2020 20:58:48 +0000 on http://localhost/bpcportfolio
+0000.085 (2) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.31 WP: 5.5.1 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 50.1M | 14M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.152 (2) Free space on disk containing Updraft's temporary directory: 737565.6 MB
+0000.251 (2) This backup task (e0360ea7e366) is either complete or began over 2 days ago: ending (1603573128.6721, ) (existing jobdata keys: )
