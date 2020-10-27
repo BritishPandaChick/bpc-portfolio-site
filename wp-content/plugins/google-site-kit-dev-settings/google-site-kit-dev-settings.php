@@ -11,7 +11,7 @@
  * Plugin Name: Site Kit by Google Dev Settings
  * Plugin URI:  https://sitekit.withgoogle.com
  * Description: Development utility adding an advanced Settings screen for Site Kit plugin configuration.
- * Version:     0.3.0
+ * Version:     0.4.0
  * Author:      Google
  * Author URI:  https://opensource.google.com/
  * License:     Apache License 2.0
@@ -33,7 +33,7 @@ function googlesitekit_dev_settings_load() {
 	}
 
 	define( 'GOOGLESITEKITDEVSETTINGS_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
-	define( 'GOOGLESITEKITDEVSETTINGS_VERSION', '0.3.0' );
+	define( 'GOOGLESITEKITDEVSETTINGS_VERSION', '0.4.0' );
 
 	$src_dir = plugin_dir_path( __FILE__ ) . 'src/';
 

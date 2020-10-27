@@ -74,6 +74,7 @@ class Setting {
 	 * Gets sub settings that the setting should contain.
 	 *
 	 * @since 0.1.0
+	 * @since 0.4.0 The search_console_property_id setting was added.
 	 *
 	 * @return array List of associative setting definition arrays.
 	 */
@@ -83,6 +84,13 @@ class Setting {
 				'id'          => 'site_url',
 				'title'       => __( 'Custom Site URL', 'google-site-kit-dev-settings' ),
 				'description' => __( 'This will override your actual site URL, causing Site Kit to request and display insights for the site URL you enter here.', 'google-site-kit-dev-settings' ),
+				'section'     => 'general',
+				'class'       => 'regular-text code',
+			),
+			array(
+				'id'          => 'search_console_property_id',
+				'title'       => __( 'Custom Search Console Property ID', 'google-site-kit-dev-settings' ),
+				'description' => __( 'By default, if you provide a <strong>Custom Site URL</strong> above, the Search Console property to use will be based on that URL. For more custom scenarios (e.g. when using a domain property), you can use this field to override this behavior with a fully custom Search Console property.', 'google-site-kit-dev-settings' ),
 				'section'     => 'general',
 				'class'       => 'regular-text code',
 			),

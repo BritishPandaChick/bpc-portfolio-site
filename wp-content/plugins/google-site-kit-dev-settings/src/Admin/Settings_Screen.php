@@ -176,7 +176,15 @@ class Settings_Screen {
 					if ( ! empty( $sub_setting['description'] ) ) {
 						?>
 						<p id="<?php echo esc_attr( Setting::OPTION_NAME . '-' . $sub_setting['id'] . '-description' ); ?>" class="description">
-							<?php echo esc_html( $sub_setting['description'] ); ?>
+							<?php
+							echo wp_kses(
+								$sub_setting['description'],
+								array(
+									'strong' => array(),
+									'em'     => array(),
+								)
+							);
+							?>
 						</p>
 						<?php
 					}

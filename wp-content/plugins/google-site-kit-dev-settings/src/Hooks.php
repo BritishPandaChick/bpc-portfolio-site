@@ -88,5 +88,20 @@ class Hooks {
 				1
 			);
 		}
+
+		// Modify Search Console property ID if configured, to override value
+		// sent by the authentication proxy.
+		add_filter(
+			'option_googlesitekit_search-console_settings',
+			function( $settings ) {
+				$option = $this->setting->get();
+				if ( ! empty( $option['search_console_property_id'] ) ) {
+					$settings['propertyID'] = $option['search_console_property_id'];
+				} elseif ( ! empty( $option['site_url'] ) ) {
+					$settings['propertyID'] = trailingslashit( $option['site_url'] );
+				}
+				return $settings;
+			}
+		);
 	}
 }
