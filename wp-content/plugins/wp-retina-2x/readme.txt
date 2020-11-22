@@ -1,26 +1,38 @@
-=== WP Retina 2x ===
+=== Perfect Images + Retina ===
 Contributors: TigrouMeow
-Tags: retina, images, image, responsive, lazysizes, lazy, attachment, media, files, iphone, ipad, high-dpi
+Tags: retina, images, replace, regenerate, sizes, lazysizes, high-dpi
 Donate link: https://commerce.coinbase.com/checkout/d047546a-77a8-41c8-9ea9-4a950f61832f
-Requires at least: 4.4
-Tested up to: 5.3
-Requires PHP: 7.0
-Stable tag: 5.6.1
+Requires at least: 5.0
+Tested up to: 5.5
+Requires PHP: 5.6
+Stable tag: 6.1.0
 
-Make your website look beautiful and crisp on modern displays by creating and displaying retina images. WP 4.4+ is also supported and enhanced.
+Retina, Replace Images, Regenerate Thumbnails, Image Sizes Management, Image Threshold and more.
 
 == Description ==
 
-This plugin does two things: it creates the image files required by the High-DPI devices and it displays them to your visitors accordingly. Your website will look beautiful and crisp on every device! The retina images will be generated for you automatically (though you can also do it manually) and served to the retina devices. The concept of retina images for full-size images is also a very unique feature which is only provided by this plugin (which is why it became unique). More information and tutorial available on the [official website](https://meowapps.com/plugin/wp-retina-2x/).
+Originally, this plugin only took care of one thing: Retina Images. But with time, WordPress installs became more and more complex, and it was decided that this plugin should help you more with your images. Here are the main features.
 
-=== Retina Methods ===
-It supports different methods to serve the images to your visitors. Why? Depending on the theme and plugins you are using (and also the way you use images in your website), not all the methods can work. Ideally, I would recommend using the Responsive Images method, then if it doesn't work, the PictureFill method (which covers normally most cases). Retina.js should be the fallback method. There are more methods than this with their specific options.
+* Retina Images
+* Image Sizes Management
+* Disable Image Threshold
+* Regenerate Thumbnails
+* Replace Images
 
-=== Plug & Play ===
-With a well-made theme and website, this plugin doesn't require normally any specific set-up. All the defaults settings are fine. Works with multi-site and many kinds of installs.
+=== Retina Images ===
+The plugin creates the image files required by the High-DPI devices and it displays them to your visitors accordingly. Your website will look beautiful and crisp on every device! The retina images will be generated for you automatically (though you can also do it manually) and served to the retina devices. The concept of retina images for full-size images is also a very unique feature which is only provided by this plugin (which is why it became unique). More information and tutorial available on the [official website](https://meowapps.com/plugin/wp-retina-2x/).
 
-=== Responsive Images ===
-WP has support for Responsive Images and this plugin handles this nicely by adding the retina images in the src-set created by WordPress. The HTML for the images not handled by WP 4.4 (outside posts) will also be handled by the plugin (pick "Picturefill" method for this). The plugin also provides an option to disable the 'Medium Large' created by WordPress which is actually not useful (it's a hack basically), this plugin does it better.
+=== Image Sizes Management ===
+In WordPress, it's impossible to actually know which sizes are set up by your whole system and even less to control them. With Perfect Images, you will be able to disable the sizes you do not want. Also, in the Dashboard, you will be able to check which are the sizes created for each of your media entries. For example, this will allow you to disable the medium_large, 1536x1536, and 2048x2048 sizes which are now created by WordPress automatically and useless in most cases.
+
+=== Disable Image Threshold ===
+Maybe you noticed that, sometimes, you had files suffixed with "-scaled" at the end of their filenames. This is because WordPress resizes big images automatically, and it doesn't give you the choice. Perfect Images gives you control over this feature.
+
+=== Regenerate Thumbnails ===
+Every time your registered sizes are changed, you need to regenerate your thumbnails. Since Perfect Images does a lot with image sizes, this is a feature which had to be built. Of course, it supports bulk actions.
+
+=== Replace Images ===
+If you wish to replace an image by another one, you can do it very quickly and easily with this plugin.
 
 === Optimized ===
 The plugin is very fast and optimized. It doesn't create anything in the database.
@@ -39,10 +51,40 @@ The plugin cannot inject CSS to handles the images added through CSS, that's bot
 
 == Changelog ==
 
+= 6.1.0 =
+* Fix: PictureFill was not being ran, the Responsive Images method was instead.
+
+= 6.0.8 =
+* Fix: Avoid crashing the Retina Dashboard when there are no Retina images at all.
+
+= 6.0.7 =
+* Update: Much better dashboard.
+* Fix: Upload New Retina Image.
+* Add: Dashboard search.
+* Add: Ignore button.
+* Update: Upload in directly in the dashboard.
+
+= 6.0.5 =
+* Add: Implementation of Easy IO (CDN + Image Optimization).
+* Add: Versioning for images, when they are replaced (that helps CDNs to refresh themselves).
+
+= 6.0.4 =
+* Fix: The dashboard was crashing when a non-image was being shown.
+* Update: Removed the unused code from the plugin.
+* Update: Optimized the way data is loaded in the dashboard. 
+
+= 6.0.3 =
+* Fix: The API wasn't accessible anymore.
+* Fix: Lazysizes was only working with PictureFill.
+* Fix: Avoid the JS of common admin to load more than once.
+
+= 6.0.2 =
+* Update: A lot of new features: Image Sizes Management, Disable Image Threshold, Regenerate Thumbnails, Replace Images.
+* Update: Completely new UI for the Dashboard and the Settings.
+
 = 5.6.1 =
 * Update: Lazysize from 5.1.1 to 5.2.2.
 * Update: PHP Simple Dom updated to 1.9.1.
-* Info: This is (probably) the last release before a major release in which the whole UI will be re-coded (and everything will be much better and faster). In order to make sure you will be happy with this new release, I made a survey using Google Forms. Please visit it [here](https://forms.gle/wv2tgaEYTKTcDZBA6). Thanks a lot :)
 
 = 5.6.0 =
 * Add: Option to remove the image size threshold (which is set to 2560 since WordPress 5.3). 
@@ -201,7 +243,7 @@ The plugin cannot inject CSS to handles the images added through CSS, that's bot
 * Change: different way of getting the temporary folder to write files (might help in a few cases).
 
 = 3.1.0 =
-* Add: Lazy-loading option for PictureFill (Pro).
+* Add: Lazy-loading option for PictureFill.
 * Fix: For the Pro users having the IXR_client error.
 * Fix: Plugin now works even behind a proxy.
 * Fix: Little UI bug while uploading a new image.
