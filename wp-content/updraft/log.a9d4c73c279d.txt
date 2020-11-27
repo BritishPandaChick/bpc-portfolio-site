@@ -151,3 +151,7 @@
 0452.196 (0) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
 0453.612 (0) Table wp_options: Total expected rows (approximate): 319
 0455.578 (0) Table wp_options: Rows added in this batch (next record: 2956): 322 in 1.83 seconds
+384526.583 (1) Opened log file at time: Fri, 27 Nov 2020 05:13:20 +0000 on http://localhost/bpcportfolio
+384526.722 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.36 WP: 5.5.3 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 50.6M | 52M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+384526.826 (1) Free space on disk containing Updraft's temporary directory: 726434.3 MB
+384526.920 (1) This backup task (a9d4c73c279d) is either complete or began over 2 days ago: ending (1606454000.023, 1606069473) (existing jobdata keys: resume_interval, job_type, jobstatus, backup_time, job_time_ms, service, split_every, maxzipbatch, job_file_entities, option_cache, uploaded_lastreset, one_shot, followsups_allowed, backup_database, backup_files, runs_started, current_resumption, binzip, filecreating_substatus, files_enumerated_at, warnings, run_times, useful_checkin, sha1-plugins0, sha256-plugins0, sha1-themes0, sha256-themes0, sha1-uploads0, sha256-uploads0, sha1-others0, sha256-others0, backup_files_array, binsqldump, dbcreating_substatus)
