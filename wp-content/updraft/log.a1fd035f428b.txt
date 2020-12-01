@@ -1,0 +1,93 @@
+0000.012 (0) Opened log file at time: Tue, 01 Dec 2020 07:53:03 +0000 on http://localhost/bpcportfolio
+0001.204 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.41 WP: 5.5.3 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 50.7M | 52M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0001.868 (0) Free space on disk containing Updraft's temporary directory: 732119.8 MB
+0003.050 (0) Deleting old log file: log.2d5507892180.txt
+0005.438 (0) Deleting old log file: log.ce926278e101.txt
+0005.970 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0006.617 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0009.314 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1606069478, seconds_ago=739712)
+0010.085 (0) Semaphore (fd, wp_options) was stuck, set lock time to 2020-12-01 07:53:12
+0010.581 (0) Semaphore (fd, wp_options) reset to 1
+0012.132 (0) Set semaphore last lock (fd) time to 2020-12-01 07:53:15
+0012.912 (0) Semaphore lock (fd) complete
+0014.578 (0) Backup run: resumption=0, nonce=a1fd035f428b, file_nonce=a1fd035f428b begun at=1606809183 (14s ago), job type=backup
+0016.352 (0) Scheduling a resumption (1) after 300 seconds (1606809499) in case this run gets aborted
+0018.368 (0) Checking if we have a zip executable available
+0019.361 (0) Creation of backups of directories: beginning
+0021.011 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0223.253 (0) Total entities for the zip file: 925 directories, 5325 files (0 skipped as non-modified), 70.9 MB
+0224.110 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0226.906 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 100 files added (on-disk size: 158.3 KB)
+0227.208 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 200 files added (on-disk size: 158.3 KB)
+0227.498 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 300 files added (on-disk size: 158.3 KB)
+0227.960 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 400 files added (on-disk size: 158.3 KB)
+0228.266 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 500 files added (on-disk size: 158.3 KB)
+0228.939 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 600 files added (on-disk size: 158.3 KB)
+0229.288 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 700 files added (on-disk size: 158.3 KB)
+0229.472 (0) File has vanished from underneath us; dropping: plugins/disable-comments/assets/disable-comments.js
+0229.668 (0) File has vanished from underneath us; dropping: plugins/disable-comments/assets/disable-comments.js.map
+0229.788 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (7.7 MB, 726 (727) files added so far); re-opening (prior size: 158.3 KB)
+0263.683 (0) File has vanished from underneath us; dropping: plugins/disable-comments/includes/comments-template.php
+0264.005 (0) File has vanished from underneath us; dropping: plugins/disable-comments/includes/settings-page.php
+0264.273 (0) File has vanished from underneath us; dropping: plugins/disable-comments/includes/tools-page.php
+0264.438 (0) File has vanished from underneath us; dropping: plugins/disable-comments/src/disable-comments.js
+0264.604 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 800 files added (on-disk size: 2779.5 KB)
+0264.859 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 900 files added (on-disk size: 2779.5 KB)
+0265.271 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 1000 files added (on-disk size: 2779.5 KB)
+0265.569 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 1100 files added (on-disk size: 2779.5 KB)
+0265.847 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (6.1 MB, 374 (1101) files added so far); re-opening (prior size: 2779.5 KB)
+0279.512 (0) The time we have been running (278.6) is approaching the resumption interval (300) - increasing resumption interval to 309
+0280.117 (0) The scheduled resumption is within 45 seconds - will reschedule
+0280.447 (0) Rescheduling resumption 1: moving to 354 seconds from now (1606809817)
+0280.890 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 309 + 45 = 354
+0281.109 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 1200 files added (on-disk size: 4462.1 KB)
+0281.320 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 1300 files added (on-disk size: 4462.1 KB)
+0281.526 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 1400 files added (on-disk size: 4462.1 KB)
+0281.830 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 1500 files added (on-disk size: 4462.1 KB)
+0282.047 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 1600 files added (on-disk size: 4462.1 KB)
+0282.301 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 1700 files added (on-disk size: 4462.1 KB)
+0282.509 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 1800 files added (on-disk size: 4462.1 KB)
+0282.768 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 1900 files added (on-disk size: 4462.1 KB)
+0283.176 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 2000 files added (on-disk size: 4462.1 KB)
+0283.425 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 2100 files added (on-disk size: 4462.1 KB)
+0283.645 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (13.6 MB, 5325 files batched, 1001 (2102) added so far); re-opening (prior size: 4462.1 KB)
+0367.171 (0) The time we have been running (365.2) is approaching the resumption interval (354) - increasing resumption interval to 396
+0370.589 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 2200 files added (on-disk size: 8613.5 KB)
+0371.640 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 2300 files added (on-disk size: 8613.5 KB)
+0372.491 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 2400 files added (on-disk size: 8613.5 KB)
+0373.322 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (9.6 MB, 299 (2401) files added so far); re-opening (prior size: 8613.5 KB)
+0405.289 (0) The time we have been running (404.6) is approaching the resumption interval (396) - increasing resumption interval to 435
+0405.982 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 2500 files added (on-disk size: 11220.7 KB)
+0406.270 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 2600 files added (on-disk size: 11220.7 KB)
+0406.795 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 2700 files added (on-disk size: 11220.7 KB)
+0406.979 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 2800 files added (on-disk size: 11220.7 KB)
+0407.242 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 2900 files added (on-disk size: 11220.7 KB)
+0407.476 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 3000 files added (on-disk size: 11220.7 KB)
+0407.722 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 3100 files added (on-disk size: 11220.7 KB)
+0407.947 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 3200 files added (on-disk size: 11220.7 KB)
+0408.280 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 3300 files added (on-disk size: 11220.7 KB)
+0408.702 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 3400 files added (on-disk size: 11220.7 KB)
+0408.898 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (11.3 MB, 1000 (3401) files added so far); re-opening (prior size: 11220.7 KB)
+0457.143 (0) The time we have been running (455.7) is approaching the resumption interval (435) - increasing resumption interval to 486
+0458.651 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 3500 files added (on-disk size: 16027.4 KB)
+0458.849 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 3600 files added (on-disk size: 16027.4 KB)
+0459.043 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 3700 files added (on-disk size: 16027.4 KB)
+0459.276 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 3800 files added (on-disk size: 16027.4 KB)
+0459.499 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 3900 files added (on-disk size: 16027.4 KB)
+0459.807 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 4000 files added (on-disk size: 16027.4 KB)
+0460.210 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 4100 files added (on-disk size: 16027.4 KB)
+0460.420 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 4200 files added (on-disk size: 16027.4 KB)
+0460.687 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 4300 files added (on-disk size: 16027.4 KB)
+0460.840 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (10.8 MB, 900 (4301) files added so far); re-opening (prior size: 16027.4 KB)
+0498.814 (0) The time we have been running (498.4) is approaching the resumption interval (486) - increasing resumption interval to 529
+0499.202 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 4400 files added (on-disk size: 19315.7 KB)
+0499.373 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 4500 files added (on-disk size: 19315.7 KB)
+0499.654 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 4600 files added (on-disk size: 19315.7 KB)
+0499.856 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 4700 files added (on-disk size: 19315.7 KB)
+0500.038 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 4800 files added (on-disk size: 19315.7 KB)
+0500.220 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 4900 files added (on-disk size: 19315.7 KB)
+0500.513 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 5000 files added (on-disk size: 19315.7 KB)
+0500.808 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 5100 files added (on-disk size: 19315.7 KB)
+0501.004 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 5200 files added (on-disk size: 19315.7 KB)
+0501.270 (0) Zip: backup_2020-12-01-0253_BritishPandaChick_a1fd035f428b-plugins.zip.tmp: 5300 files added (on-disk size: 19315.7 KB)
+0501.598 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (11.8 MB, 5325 files batched, 1001 (5302) added so far); re-opening (prior size: 19315.7 KB)
