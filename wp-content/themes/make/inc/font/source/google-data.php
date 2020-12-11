@@ -3,7 +3,7 @@
  * @package Make
  */
 
-// Updated: 2020-11-28T09:07:40+00:00
+// Updated: 2020-12-07T20:20:12+00:00
 
 // Bail if this isn't being included inside of MAKE_Font_Source_Google.
 if ( ! isset( $this ) || ! $this instanceof MAKE_Font_Source_Google ) {
@@ -6075,6 +6075,36 @@ $this->load_font_data( array(
 			'latin-ext',
 		),
 		'category' => 'sans-serif',
+	),
+	'JetBrains Mono' => array(
+		'label' => 'JetBrains Mono',
+		'variants' => array(
+			'100',
+			'100italic',
+			'200',
+			'200italic',
+			'300',
+			'300italic',
+			'500',
+			'500italic',
+			'600',
+			'600italic',
+			'700',
+			'700italic',
+			'800',
+			'800italic',
+			'italic',
+			'regular',
+		),
+		'subsets' => array(
+			'cyrillic',
+			'cyrillic-ext',
+			'greek',
+			'latin',
+			'latin-ext',
+			'vietnamese',
+		),
+		'category' => 'monospace',
 	),
 	'Jim Nightshade' => array(
 		'label' => 'Jim Nightshade',

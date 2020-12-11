@@ -225,6 +225,9 @@
 .ttfmake-configuration-overlay-input-wrap select {
 	border: 1px solid #e5e5e5;
 }
+.ttfmake-configuration-overlay-input-wrap .iris-picker {
+	display: block !important;
+}
 /*---------------------------------------------------------
  Sections (builder.css)
 -------------------------------------------------------- */

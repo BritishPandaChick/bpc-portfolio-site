@@ -543,3 +543,9 @@ li.customize-control.customize-control-make_range .ui-slider-handle:hover {
 	border: 1px solid #aaaaaa;
 	box-shadow: none;
 }
+
+/* Wordpress 5.6 */
+.make-radio-buttonset-container .ui-checkboxradio-icon, 
+.make-radio-buttonset-container .ui-checkboxradio-icon-space {
+	display: none;
+}
