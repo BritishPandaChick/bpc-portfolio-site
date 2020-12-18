@@ -64,7 +64,7 @@ class Firewall_Attacks_Log extends Base {
 	/**
 	 * Logs constructor.
 	 *
-	 * @param \Wbcr_Factory436_Plugin $plugin
+	 * @param \Wbcr_Factory439_Plugin $plugin
 	 *
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 *

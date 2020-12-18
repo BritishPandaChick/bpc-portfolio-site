@@ -113,7 +113,7 @@
         if ( ajax ) this.loadData();
     };
     
-    $.fn.factoryBootstrap436_listControl = function (option) {
+    $.fn.factoryBootstrap439_listControl = function (option) {
         
         // call an method
         if ( typeof option === "string" ) {
@@ -132,10 +132,10 @@
         }
     };
 
-    $.fn.factoryBootstrap436_listControl.Constructor = list;
+    $.fn.factoryBootstrap439_listControl.Constructor = list;
 
     $(function(){
-        $(".factory-bootstrap-436 .factory-list").factoryBootstrap436_listControl();
+        $(".factory-bootstrap-439 .factory-list").factoryBootstrap439_listControl();
     });
     
 }( jQuery ) );

@@ -103,7 +103,7 @@ class Helper {
 	 */
 	public static function maybeGetPostJson($name)
 	{
-		return \WbcrFactoryClearfy227_Helpers::maybeGetPostJson($name);
+		return \WbcrFactoryClearfy230_Helpers::maybeGetPostJson($name);
 	}
 
 	/**
@@ -115,7 +115,7 @@ class Helper {
 	 */
 	public static function getEscapeJson(array $data)
 	{
-		return \WbcrFactoryClearfy227_Helpers::getEscapeJson($data);
+		return \WbcrFactoryClearfy230_Helpers::getEscapeJson($data);
 	}
 
 	/**
@@ -129,7 +129,7 @@ class Helper {
 	 */
 	public static function recursiveSanitizeArray($array, $function)
 	{
-		return \WbcrFactoryClearfy227_Helpers::recursiveSanitizeArray($array, $function);
+		return \WbcrFactoryClearfy230_Helpers::recursiveSanitizeArray($array, $function);
 	}
 
 	/*
@@ -139,7 +139,7 @@ class Helper {
 	 */
 	public static function flushPageCache()
 	{
-		\WbcrFactoryClearfy227_Helpers::flushPageCache();
+		\WbcrFactoryClearfy230_Helpers::flushPageCache();
 	}
 
 }

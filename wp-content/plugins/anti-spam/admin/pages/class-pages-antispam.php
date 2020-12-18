@@ -39,7 +39,7 @@ class Antispam extends Base {
 	 * @since  6.0
 	 * @var bool
 	 */
-	public $show_right_sidebar_in_options = false;
+	public $show_right_sidebar_in_options = true;
 
 	/**
 	 *
@@ -84,12 +84,12 @@ class Antispam extends Base {
 	/**
 	 * Antispam page constructor.
 	 *
-	 * @param \Wbcr_Factory436_Plugin $plugin
+	 * @param \Wbcr_Factory439_Plugin $plugin
 	 *
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 *
 	 */
-	public function __construct( \Wbcr_Factory436_Plugin $plugin ) {
+	public function __construct( \Wbcr_Factory439_Plugin $plugin ) {
 		$this->menu_title                  = __( 'Anti-spam', 'titan-security' );
 		$this->page_menu_short_description = __( 'Detected and stoped spam', 'titan-security' );
 
@@ -102,7 +102,7 @@ class Antispam extends Base {
 	 *
 	 * @return void
 	 * @since 6.2
-	 * @see   Wbcr_FactoryPages435_AdminPage
+	 * @see   Wbcr_FactoryPages438_AdminPage
 	 *
 	 */
 	public function assets( $scripts, $styles ) {
@@ -111,7 +111,7 @@ class Antispam extends Base {
 		$this->styles->add( $this->MODULE_URL . '/assets/css/settings.css' );
 		$this->scripts->add( $this->MODULE_URL . '/assets/js/settings.js', [
 			'jquery',
-			'wbcr-factory-clearfy-227-global'
+			'wbcr-factory-clearfy-230-global'
 		], 'wantispam-settings' );
 	}
 

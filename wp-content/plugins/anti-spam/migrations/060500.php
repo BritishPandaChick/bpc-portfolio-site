@@ -4,7 +4,7 @@
  * Updates for altering the table used to store statistics data.
  * Adds new columns and renames existing ones in order to add support for the new social buttons.
  */
-class WTITANUpdate060500 extends Wbcr_Factory436_Update {
+class WTITANUpdate060500 extends Wbcr_Factory439_Update {
 
 	public function install() {
 		if ( $this->plugin->isNetworkAdmin() ) {

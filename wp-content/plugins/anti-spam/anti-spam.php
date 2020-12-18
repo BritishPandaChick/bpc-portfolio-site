@@ -3,7 +3,7 @@
 Plugin Name: Titan Anti-spam & Security
 Plugin URI: http://wordpress.org/plugins/anti-spam/
 Description: Titan Security - Anti-spam, Anti-virus, Firewall and Malware Scan
-Version: 7.2.0
+Version: 7.2.1
 Author: CreativeMotion
 Text Domain: titan-security
 Author URI: https://cm-wp.com/
@@ -78,6 +78,10 @@ $wtitan_plugin_info = [
 			]
 		]
 	],
+	
+	// PLUGIN SUBSCRIBE FORM
+	'subscribe_widget' => true,
+	'subscribe_settings' => ['group_id' => '105407158'],
 
 	// PLUGIN ADVERTS
 	'render_adverts' => true,
@@ -89,18 +93,18 @@ $wtitan_plugin_info = [
 
 	// FRAMEWORK MODULES
 	'load_factory_modules' => [
-		['libs/factory/bootstrap', 'factory_bootstrap_436', 'admin'],
-		['libs/factory/forms', 'factory_forms_433', 'admin'],
-		['libs/factory/pages', 'factory_pages_435', 'admin'],
-		['libs/factory/clearfy', 'factory_clearfy_227', 'all'],
-		['libs/factory/freemius', 'factory_freemius_123', 'all'],
-		['libs/factory/feedback', 'factory_feedback_107', 'admin']
+		['libs/factory/bootstrap', 'factory_bootstrap_439', 'admin'],
+		['libs/factory/forms', 'factory_forms_436', 'admin'],
+		['libs/factory/pages', 'factory_pages_438', 'admin'],
+		['libs/factory/clearfy', 'factory_clearfy_230', 'all'],
+		['libs/factory/freemius', 'factory_freemius_126', 'all'],
+		['libs/factory/feedback', 'factory_feedback_108', 'admin']
 	],
 	'load_plugin_components' => array()
 
 ];
 
-$wtitan_compatibility = new Wbcr_Factory436_Requirements(__FILE__, array_merge($wtitan_plugin_info, [
+$wtitan_compatibility = new Wbcr_Factory439_Requirements(__FILE__, array_merge($wtitan_plugin_info, [
 	'plugin_already_activate' => defined('WTITAN_PLUGIN_ACTIVE'),
 	'required_php_version' => '5.6',
 	'required_wp_version' => '4.9.0',

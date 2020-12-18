@@ -1,6 +1,6 @@
 <?php
 
-namespace WBCR\Factory_Feedback_107;
+namespace WBCR\Factory_Feedback_108;
 
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
@@ -28,7 +28,7 @@ class Base {
 	 * Plugin instance this module interacts with
 	 *
 	 * @since  1.0.0 Added
-	 * @var \Wbcr_Factory436_Plugin
+	 * @var \Wbcr_Factory439_Plugin
 	 */
 	private $plugin;
 
@@ -36,19 +36,19 @@ class Base {
 	 * Экземпляр класса для работы API CreativeMotion
 	 *
 	 * @since  1.0.0
-	 * @var \WBCR\Factory_Feedback_107\Creative_Motion_API
+	 * @var \WBCR\Factory_Feedback_108\Creative_Motion_API
 	 */
 	private $api;
 
 	/**
 	 * Wbcr_Factory_Feedback constructor.
 	 *
-	 * @param \Wbcr_Factory436_Plugin $plugin
+	 * @param \Wbcr_Factory439_Plugin $plugin
 	 *
 	 * @since 1.0.0 Added
 	 *
 	 */
-	public function __construct( \Wbcr_Factory436_Plugin $plugin ) {
+	public function __construct( \Wbcr_Factory439_Plugin $plugin ) {
 		$this->plugin = $plugin;
 
 		$this->api = new Creative_Motion_API( $this->plugin );
@@ -64,7 +64,10 @@ class Base {
 		}
 
 		if ( wp_doing_ajax() ) {
-			add_action( "wp_ajax_wbcr-factory-feedback-107-save_{$plugin->getPluginName()}", [ $this, 'send_feedback' ] );
+			add_action( "wp_ajax_wbcr-factory-feedback-108-save_{$plugin->getPluginName()}", [
+				$this,
+				'send_feedback'
+			] );
 		}
 	}
 
@@ -79,8 +82,8 @@ class Base {
 	 */
 	public function admin_assets( $hook_suffix ) {
 		if ( 'plugins.php' === $hook_suffix ) {
-			wp_enqueue_script( 'wbcr-factory-feedback-107-deactivate', FACTORY_FEEDBACK_107_URL . '/assets/js/deactivate-feedback.js', [ 'jquery' ], FACTORY_FEEDBACK_107_VERSION, true );
-			wp_enqueue_style( 'wbcr-factory-feedback-107-deactivate', FACTORY_FEEDBACK_107_URL . '/assets/css/dialog-boxes.css' );
+			wp_enqueue_script( 'wbcr-factory-feedback-108-deactivate', FACTORY_FEEDBACK_108_URL . '/assets/js/deactivate-feedback.js', [ 'jquery' ], FACTORY_FEEDBACK_108_VERSION, true );
+			wp_enqueue_style( 'wbcr-factory-feedback-108-deactivate', FACTORY_FEEDBACK_108_URL . '/assets/css/dialog-boxes.css' );
 		}
 	}
 
@@ -91,7 +94,7 @@ class Base {
 	 * @since  1.0.0 Added
 	 */
 	public function render_deactivate_form() {
-		include FACTORY_FEEDBACK_107_DIR . "/views/deactivate-form.php";
+		include FACTORY_FEEDBACK_108_DIR . "/views/deactivate-form.php";
 	}
 
 	/**
@@ -108,7 +111,7 @@ class Base {
 		if ( $plugin_file !== $this->plugin->get_paths()->basename ) {
 			return $actions;
 		}
-		$actions['deactivate'] .= '<i class="wbcr-factory-feedback-107-plugin-slug" data-plugin="' . $this->plugin->getPluginName() . '"></i>';
+		$actions['deactivate'] = $actions['deactivate'] . '<i class="wbcr-factory-feedback-108-plugin-slug" data-plugin="' . $this->plugin->getPluginName() . '"></i>';
 
 		return $actions;
 	}

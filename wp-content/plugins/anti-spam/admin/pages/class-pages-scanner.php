@@ -4,8 +4,8 @@ namespace WBCR\Titan\Page;
 
 use WBCR\Titan;
 
-use Wbcr_Factory436_Plugin;
-use Wbcr_FactoryClearfy227_PageBase;
+use Wbcr_Factory439_Plugin;
+use Wbcr_FactoryClearfy230_PageBase;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -57,10 +57,10 @@ class Scanner extends Base {
 	/**
 	 * Scanner constructor.
 	 *
-	 * @param Wbcr_Factory436_Plugin $plugin
+	 * @param Wbcr_Factory439_Plugin $plugin
 	 *
 	 */
-	public function __construct( Wbcr_Factory436_Plugin $plugin ) {
+	public function __construct( Wbcr_Factory439_Plugin $plugin ) {
 		$this->plugin = $plugin;
 
 		$this->menu_title                  = __( 'Scanner', 'titan-security' );

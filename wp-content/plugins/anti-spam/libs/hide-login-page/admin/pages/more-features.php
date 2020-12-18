@@ -11,7 +11,7 @@
 		exit;
 	}
 
-	class WHLP_MoreFeaturesPage extends Wbcr_FactoryClearfy227_MoreFeaturesPage {
+	class WHLP_MoreFeaturesPage extends Wbcr_FactoryClearfy230_MoreFeaturesPage {
 
 		public function getPageTitle()
 		{

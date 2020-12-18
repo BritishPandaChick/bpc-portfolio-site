@@ -1,0 +1,231 @@
+0000.176 (0) Opened log file at time: Fri, 18 Dec 2020 05:32:08 +0000 on http://localhost/bpcportfolio
+0000.300 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.42 WP: 5.6 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 55.6M | 58M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.933 (0) Free space on disk containing Updraft's temporary directory: 727765.6 MB
+0001.350 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_commentmeta.table.gz
+0001.491 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_comments.table.gz
+0001.509 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_convertkit_user_history.table.gz
+0001.516 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_links.table.gz
+0001.518 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_options.table.gz
+0001.525 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_postmeta.table.gz
+0001.527 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_posts.table.gz
+0001.527 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_smush_dir_images.table.gz
+0001.538 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_termmeta.table.gz
+0001.540 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_terms.table.gz
+0001.540 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_term_relationships.table.gz
+0001.541 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_term_taxonomy.table.gz
+0001.542 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_usermeta.table.gz
+0001.543 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_users.table.gz
+0001.563 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_wfblockediplog.table.gz
+0001.564 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_wfblocks7.table.gz
+0001.564 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_wfconfig.table.gz
+0001.594 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_wfcrawlers.table.gz
+0001.604 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_wffilechanges.table.gz
+0001.616 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_wffilemods.table.gz
+0001.624 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_wfhits.table.gz
+0001.627 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_wfhoover.table.gz
+0001.629 (0) Deleting old temporary file: backup_2020-12-11-0021_BritishPandaChick_6e21358e2769-db-table-wp_wfissues.table.gz
+0001.669 (0) Deleting old log file: log.963b588a052f.txt
+0001.708 (0) Deleting old log file: log.de6697e4e94a.txt
+0001.713 (0) Deleting old log file: log.fbd09c0117b7.txt
+0001.885 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0002.448 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0003.291 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1607664090, seconds_ago=605441)
+0003.412 (0) Semaphore (fd, wp_options) was stuck, set lock time to 2020-12-18 05:32:11
+0003.535 (0) Semaphore (fd, wp_options) reset to 1
+0003.612 (0) Set semaphore last lock (fd) time to 2020-12-18 05:32:11
+0003.683 (0) Semaphore lock (fd) complete
+0004.705 (0) Backup run: resumption=0, nonce=63e18f03b386, file_nonce=63e18f03b386 begun at=1608269527 (5s ago), job type=backup
+0004.882 (0) Scheduling a resumption (1) after 545 seconds (1608270077) in case this run gets aborted
+0005.252 (0) Checking if we have a zip executable available
+0005.501 (0) Creation of backups of directories: beginning
+0005.823 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0098.125 (0) Total entities for the zip file: 922 directories, 5277 files (0 skipped as non-modified), 72 MB
+0103.322 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0119.131 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 100 files added (on-disk size: 157.2 KB)
+0120.267 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 200 files added (on-disk size: 157.2 KB)
+0120.968 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 300 files added (on-disk size: 157.2 KB)
+0121.335 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (4.6 MB, 300 (301) files added so far); re-opening (prior size: 157.2 KB)
+0164.320 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 400 files added (on-disk size: 1841.2 KB)
+0164.922 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 500 files added (on-disk size: 1841.2 KB)
+0165.426 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 600 files added (on-disk size: 1841.2 KB)
+0166.204 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 700 files added (on-disk size: 1841.2 KB)
+0166.635 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 800 files added (on-disk size: 1841.2 KB)
+0166.965 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 900 files added (on-disk size: 1841.2 KB)
+0167.698 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (8.9 MB, 600 (901) files added so far); re-opening (prior size: 1841.2 KB)
+0237.801 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 1000 files added (on-disk size: 4442.3 KB)
+0238.119 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 1100 files added (on-disk size: 4442.3 KB)
+0238.393 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 1200 files added (on-disk size: 4442.3 KB)
+0238.589 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 1300 files added (on-disk size: 4442.3 KB)
+0238.789 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 1400 files added (on-disk size: 4442.3 KB)
+0238.933 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 1500 files added (on-disk size: 4442.3 KB)
+0239.199 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 1600 files added (on-disk size: 4442.3 KB)
+0239.691 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 1700 files added (on-disk size: 4442.3 KB)
+0240.007 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 1800 files added (on-disk size: 4442.3 KB)
+0240.060 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (3.9 MB, 900 (1801) files added so far); re-opening (prior size: 4442.3 KB)
+0291.344 (0) File has vanished from underneath us; dropping: plugins/updraftplus/css/updraftplus-admin-1-16-42.min.css
+0292.316 (0) File has vanished from underneath us; dropping: plugins/updraftplus/css/updraftplus-admin-1-16-42.min.css.map
+0292.681 (0) File has vanished from underneath us; dropping: plugins/updraftplus/css/updraftplus-notices-1-16-42.min.css
+0292.995 (0) File has vanished from underneath us; dropping: plugins/updraftplus/css/updraftplus-notices-1-16-42.min.css.map
+0293.198 (0) File has vanished from underneath us; dropping: plugins/updraftplus/css/updraftplus-tour-1-16-42.min.css
+0293.689 (0) File has vanished from underneath us; dropping: plugins/updraftplus/css/updraftplus-tour-1-16-42.min.css.map
+0293.959 (0) File has vanished from underneath us; dropping: plugins/updraftplus/images/notices/christmas.png
+0294.211 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1 MB, 82 (1883) files added so far); re-opening (prior size: 5785.3 KB)
+0296.074 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 1900 files added (on-disk size: 6234.4 KB)
+0297.870 (0) File has vanished from underneath us; dropping: plugins/updraftplus/includes/blockui/jquery.blockUI-1-16-42.min.js
+0298.827 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.2 MB, 31 (1914) files added so far); re-opening (prior size: 6234.4 KB)
+0301.442 (0) File has vanished from underneath us; dropping: plugins/updraftplus/includes/checkout-embed/assets/udp-checkout-embed-1-16-42.min.css
+0302.012 (0) File has vanished from underneath us; dropping: plugins/updraftplus/includes/checkout-embed/assets/udp-checkout-embed-1-16-42.min.css.map
+0303.012 (0) File has vanished from underneath us; dropping: plugins/updraftplus/includes/checkout-embed/assets/udp-checkout-embed-1-16-42.min.js
+0304.047 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.2 MB, 4 (1918) files added so far); re-opening (prior size: 6479 KB)
+0305.471 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 2000 files added (on-disk size: 6602.8 KB)
+0306.732 (0) File has vanished from underneath us; dropping: plugins/updraftplus/includes/jquery-ui.custom-v1.11.4-1-16-42.min.css
+0307.810 (0) File has vanished from underneath us; dropping: plugins/updraftplus/includes/jquery-ui.custom-v1.11.4-1-16-42.min.css.map
+0308.686 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2 MB, 116 (2034) files added so far); re-opening (prior size: 6602.8 KB)
+0313.263 (0) File has vanished from underneath us; dropping: plugins/updraftplus/includes/jquery-ui.custom-v1.12.1-1-16-42.min.css
+0313.918 (0) File has vanished from underneath us; dropping: plugins/updraftplus/includes/jquery-ui.custom-v1.12.1-1-16-42.min.css.map
+0314.380 (0) File has vanished from underneath us; dropping: plugins/updraftplus/includes/labelauty/jquery-labelauty-1-16-42.min.css
+0315.698 (0) File has vanished from underneath us; dropping: plugins/updraftplus/includes/labelauty/jquery-labelauty-1-16-42.min.css.map
+0316.615 (0) File has vanished from underneath us; dropping: plugins/updraftplus/includes/labelauty/jquery-labelauty-1-16-42.min.js
+0317.540 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.6 MB, 18 (2052) files added so far); re-opening (prior size: 7103.5 KB)
+0320.313 (0) File has vanished from underneath us; dropping: plugins/updraftplus/includes/updraft-admin-common-1-16-42.min.js
+0320.925 (0) File has vanished from underneath us; dropping: plugins/updraftplus/js/tour-1-16-42.min.js
+0321.905 (0) File has vanished from underneath us; dropping: plugins/updraftplus/js/updraft-admin-restore-1-16-42.min.js
+0322.428 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 2100 files added (on-disk size: 7251.2 KB)
+0323.326 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (4.6 MB, 49 (2101) files added so far); re-opening (prior size: 7251.2 KB)
+0327.765 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 2200 files added (on-disk size: 8414.4 KB)
+0328.422 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (10.7 MB, 100 (2201) files added so far); re-opening (prior size: 8414.4 KB)
+0331.041 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 2300 files added (on-disk size: 11203.3 KB)
+0332.555 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 2400 files added (on-disk size: 11203.3 KB)
+0337.031 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.4 MB, 200 (2401) files added so far); re-opening (prior size: 11203.3 KB)
+0338.006 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 2500 files added (on-disk size: 11421.8 KB)
+0338.276 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 2600 files added (on-disk size: 11421.8 KB)
+0338.506 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 2700 files added (on-disk size: 11421.8 KB)
+0338.961 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 2800 files added (on-disk size: 11421.8 KB)
+0339.286 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 2900 files added (on-disk size: 11421.8 KB)
+0340.428 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (3 MB, 500 (2901) files added so far); re-opening (prior size: 11421.8 KB)
+0341.974 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 3000 files added (on-disk size: 12353.4 KB)
+0342.119 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 3100 files added (on-disk size: 12353.4 KB)
+0342.300 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 3200 files added (on-disk size: 12353.4 KB)
+0342.685 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 3300 files added (on-disk size: 12353.4 KB)
+0342.838 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 3400 files added (on-disk size: 12353.4 KB)
+0343.240 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 3500 files added (on-disk size: 12353.4 KB)
+0343.864 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 3600 files added (on-disk size: 12353.4 KB)
+0344.218 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (12.6 MB, 700 (3601) files added so far); re-opening (prior size: 12353.4 KB)
+0395.179 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 3700 files added (on-disk size: 17431.5 KB)
+0395.469 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/admin/class-add-keyword-modal.php
+0395.600 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/admin/class-keyword-synonyms-modal.php
+0395.688 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/admin/class-multiple-keywords-modal.php
+0395.929 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 3800 files added (on-disk size: 17431.5 KB)
+0396.437 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 3900 files added (on-disk size: 17431.5 KB)
+0396.733 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/admin-global-1540-rtl.css
+0396.903 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/admin-global-1540.css
+0397.049 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/adminbar-1540-rtl.css
+0397.170 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/adminbar-1540.css
+0397.279 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/alerts-1540-rtl.css
+0397.381 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/alerts-1540.css
+0397.435 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/dashboard-1540-rtl.css
+0397.665 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/dashboard-1540.css
+0397.834 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/edit-page-1540-rtl.css
+0397.922 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/edit-page-1540.css
+0398.006 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/elementor-1540-rtl.css
+0398.137 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/elementor-1540.css
+0398.268 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/featured-image-1540-rtl.css
+0398.360 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/featured-image-1540.css
+0398.500 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/filter-explanation-1540-rtl.css
+0398.747 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/filter-explanation-1540.css
+0398.892 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/icons-1540-rtl.css
+0399.179 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/icons-1540.css
+0399.331 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/inside-editor-1540-rtl.css
+0399.534 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/inside-editor-1540.css
+0399.622 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/metabox-1540-rtl.css
+0399.696 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/metabox-1540.css
+0399.722 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/metabox-primary-category-1540-rtl.css
+0399.773 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/metabox-primary-category-1540.css
+0399.875 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/modal-1540-rtl.css
+0399.933 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/modal-1540.css
+0399.989 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/monorepo-1540-rtl.css
+0400.084 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/monorepo-1540.css
+0400.154 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/notifications-1540-rtl.css
+0400.232 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/notifications-1540.css
+0400.273 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/schema-blocks-1540-rtl.css
+0400.321 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/schema-blocks-1540.css
+0400.350 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/score_icon-1540-rtl.css
+0400.398 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/score_icon-1540.css
+0400.530 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/search-appearance-1540-rtl.css
+0400.610 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/search-appearance-1540.css
+0400.687 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.5 MB, 379 (3980) files added so far); re-opening (prior size: 17431.5 KB)
+0404.171 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/structured-data-blocks-1540-rtl.css
+0404.293 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/structured-data-blocks-1540.css
+0404.393 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/toggle-switch-1540-rtl.css
+0404.557 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/toggle-switch-1540.css
+0405.098 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/wpseo-dismissible-1540-rtl.css
+0405.215 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/wpseo-dismissible-1540.css
+0405.415 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/yoast-components-1540-rtl.css
+0405.525 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/yoast-components-1540.css
+0405.680 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/yoast-extensions-1540-rtl.css
+0405.936 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/yoast-extensions-1540.css
+0406.013 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/yst_plugin_tools-1540-rtl.css
+0406.044 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/yst_plugin_tools-1540.css
+0406.102 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/yst_seo_score-1540-rtl.css
+0406.188 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/css/dist/yst_seo_score-1540.css
+0406.369 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 4000 files added (on-disk size: 17955.8 KB)
+0406.554 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/admin-global-1540.js
+0406.619 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/analysis-1540.js
+0406.688 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/analysis-worker-1540.js
+0406.745 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/api-client-1540.js
+0406.869 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/babel-polyfill-1540.js
+0406.967 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/block-editor-1540.js
+0407.031 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/bulk-editor-1540.js
+0407.100 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/classic-editor-1540.js
+0407.145 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/commons-1540.js
+0407.200 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/configuration-wizard-1540.js
+0407.229 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/dashboard-widget-1540.js
+0407.278 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/draft-js-1540.js
+0407.322 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/edit-page-1540.js
+0407.378 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/elementor-1540.js
+0407.511 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/filter-explanation-1540.js
+0407.562 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/help-scout-beacon-1540.js
+0407.717 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/indexation-1540.js
+0407.810 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/jed-1540.js
+0407.910 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/network-admin-1540.js
+0408.099 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/post-edit-1540.js
+0408.163 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/quick-edit-handler-1540.js
+0408.220 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/redux-1540.js
+0408.296 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/reindex-links-1540.js
+0408.376 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/schema-blocks-1540.js
+0408.469 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.9 MB, 112 (4092) files added so far); re-opening (prior size: 17955.8 KB)
+0409.686 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 4100 files added (on-disk size: 18358.6 KB)
+0410.209 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/settings-1540.js
+0412.112 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/structured-data-blocks-1540.js
+0412.328 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/styled-components-1540.js
+0412.899 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/term-edit-1540.js
+0413.648 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/used-keywords-assessment-1540.js
+0414.294 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/yoast/analysis-report-1540.js
+0415.275 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/yoast/components-1540.js
+0415.898 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/yoast/configuration-wizard-1540.js
+0416.685 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/yoast/feature-flag-1540.js
+0417.187 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/yoast/helpers-1540.js
+0417.851 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/yoast/replacement-variable-editor-1540.js
+0418.905 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/yoast/schema-blocks-1540.js
+0419.542 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/yoast/search-metadata-previews-1540.js
+0420.207 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/yoast/social-metadata-forms-1540.js
+0422.207 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/yoast/style-guide-1540.js
+0422.433 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/js/dist/yoast/yoast-components-1540.js
+0423.813 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.2 MB, 55 (4147) files added so far); re-opening (prior size: 18358.6 KB)
+0425.922 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 4200 files added (on-disk size: 18420.1 KB)
+0426.452 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 4300 files added (on-disk size: 18420.1 KB)
+0426.678 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/src/conditionals/wpml-conditional.php
+0426.943 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 4400 files added (on-disk size: 18420.1 KB)
+0427.198 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 4500 files added (on-disk size: 18420.1 KB)
+0427.651 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 4600 files added (on-disk size: 18420.1 KB)
+0427.988 (0) File has vanished from underneath us; dropping: plugins/wordpress-seo/src/presenters/open-graph/fb-app-id-presenter.php
+0428.211 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (3.6 MB, 500 (4647) files added so far); re-opening (prior size: 18420.1 KB)
+0433.828 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 4700 files added (on-disk size: 19559.6 KB)
+0434.250 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.1 MB, 54 (4701) files added so far); re-opening (prior size: 19559.6 KB)
+0435.235 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 4800 files added (on-disk size: 19602.5 KB)
+0435.538 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 4900 files added (on-disk size: 19602.5 KB)
+0438.575 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.9 MB, 230 (4931) files added so far); re-opening (prior size: 19602.5 KB)
+0443.132 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 5000 files added (on-disk size: 20775.7 KB)
+0443.322 (0) Zip: backup_2020-12-18-0032_BritishPandaChick_63e18f03b386-plugins.zip.tmp: 5100 files added (on-disk size: 20775.7 KB)
+0453.553 (0) Created plugins zip (0) - 22982.2 KB in 446.6 s (51.5 KB/s) (sha1: cbf4c9f0651649472ff423087612078cc1219141, sha256: ed84aaa9ff35dad03f4414d3e874f38b3acfcc9e30dc3a222e2b2bcc1d9026e1)
+0453.873 (0) Beginning creation of dump of themes (split every: 400 MB)

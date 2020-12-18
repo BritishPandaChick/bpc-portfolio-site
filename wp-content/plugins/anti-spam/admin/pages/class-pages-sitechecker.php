@@ -35,7 +35,7 @@ class SiteChecker extends Base {
 	/**
 	 * {@inheritdoc}
 	 */
-	public $show_right_sidebar_in_options = false;
+	public $show_right_sidebar_in_options = true;
 
 
 	/**
@@ -65,10 +65,10 @@ class SiteChecker extends Base {
 	/**
 	 * Site Checker constructor.
 	 *
-	 * @param \Wbcr_Factory436_Plugin $plugin
+	 * @param \Wbcr_Factory439_Plugin $plugin
 	 *
 	 */
-	public function __construct( \Wbcr_Factory436_Plugin $plugin ) {
+	public function __construct( \Wbcr_Factory439_Plugin $plugin ) {
 		$this->plugin = $plugin;
 
 		$this->menu_title                  = __( 'Site Checker', 'titan-security' );

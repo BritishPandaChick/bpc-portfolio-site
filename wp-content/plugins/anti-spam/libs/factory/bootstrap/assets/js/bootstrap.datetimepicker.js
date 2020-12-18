@@ -1579,7 +1579,7 @@
 		};
 
 		picker.date = function(newDate) {
-			///<signature helpKeyword="$.fn.factoryBootstrap436_DatetimePickerControl.date">
+			///<signature helpKeyword="$.fn.factoryBootstrap439_DatetimePickerControl.date">
 			///<summary>Returns the component's model current date, a moment object or null if not set.</summary>
 			///<returns type="Moment">date.clone()</returns>
 			///</signature>
@@ -1587,7 +1587,7 @@
 			///<summary>Sets the components model current moment to it. Passing a null value unsets the components
 			// model current moment. Parsing of the newDate parameter is made using moment library with the
 			// options.format and options.useStrict components configuration.</summary> /<param name="newDate"
-			// locid="$.fn.factoryBootstrap436_DatetimePickerControl.date_p:newDate">Takes string, Date, moment, null
+			// locid="$.fn.factoryBootstrap439_DatetimePickerControl.date_p:newDate">Takes string, Date, moment, null
 			// parameter.</param> /</signature>
 			if( arguments.length === 0 ) {
 				if( unset ) {
@@ -1667,14 +1667,14 @@
 		};
 
 		picker.disabledDates = function(dates) {
-			///<signature helpKeyword="$.fn.factoryBootstrap436_DatetimePickerControl.disabledDates">
+			///<signature helpKeyword="$.fn.factoryBootstrap439_DatetimePickerControl.disabledDates">
 			///<summary>Returns an array with the currently set disabled dates on the component.</summary>
 			///<returns type="array">options.disabledDates</returns>
 			///</signature>
 			///<signature>
 			///<summary>Setting this takes precedence over options.minDate, options.maxDate configuration. Also calling
 			// this function removes the configuration of /options.enabledDates if such exist.</summary> /<param
-			// name="dates" locid="$.fn.factoryBootstrap436_DatetimePickerControl.disabledDates_p:dates">Takes an [
+			// name="dates" locid="$.fn.factoryBootstrap439_DatetimePickerControl.disabledDates_p:dates">Takes an [
 			// string or Date or moment ] of values and allows the user to select only from those days.</param>
 			// /</signature>
 			if( arguments.length === 0 ) {
@@ -1696,14 +1696,14 @@
 		};
 
 		picker.enabledDates = function(dates) {
-			///<signature helpKeyword="$.fn.factoryBootstrap436_DatetimePickerControl.enabledDates">
+			///<signature helpKeyword="$.fn.factoryBootstrap439_DatetimePickerControl.enabledDates">
 			///<summary>Returns an array with the currently set enabled dates on the component.</summary>
 			///<returns type="array">options.enabledDates</returns>
 			///</signature>
 			///<signature>
 			///<summary>Setting this takes precedence over options.minDate, options.maxDate configuration. Also calling
 			// this function removes the configuration of options.disabledDates if such exist.</summary> /<param
-			// name="dates" locid="$.fn.factoryBootstrap436_DatetimePickerControl.enabledDates_p:dates">Takes an [
+			// name="dates" locid="$.fn.factoryBootstrap439_DatetimePickerControl.enabledDates_p:dates">Takes an [
 			// string or Date or moment ] of values and allows the user to select only from those days.</param>
 			// /</signature>
 			if( arguments.length === 0 ) {
@@ -1836,7 +1836,7 @@
 		};
 
 		picker.defaultDate = function(defaultDate) {
-			///<signature helpKeyword="$.fn.factoryBootstrap436_DatetimePickerControl.defaultDate">
+			///<signature helpKeyword="$.fn.factoryBootstrap439_DatetimePickerControl.defaultDate">
 			///<summary>Returns a moment with the options.defaultDate option configuration or false if not
 			// set</summary>
 			///<returns type="Moment">date.clone()</returns>
@@ -1844,7 +1844,7 @@
 			///<signature>
 			///<summary>Will set the picker's inital date. If a boolean:false value is passed the options.defaultDate
 			// parameter is cleared.</summary> /<param name="defaultDate"
-			// locid="$.fn.factoryBootstrap436_DatetimePickerControl.defaultDate_p:defaultDate">Takes a string, Date,
+			// locid="$.fn.factoryBootstrap439_DatetimePickerControl.defaultDate_p:defaultDate">Takes a string, Date,
 			// moment, boolean:false</param> /</signature>
 			if( arguments.length === 0 ) {
 				return options.defaultDate ? options.defaultDate.clone() : options.defaultDate;
@@ -2282,14 +2282,14 @@
 		};
 
 		picker.disabledTimeIntervals = function(disabledTimeIntervals) {
-			///<signature helpKeyword="$.fn.factoryBootstrap436_DatetimePickerControl.disabledTimeIntervals">
+			///<signature helpKeyword="$.fn.factoryBootstrap439_DatetimePickerControl.disabledTimeIntervals">
 			///<summary>Returns an array with the currently set disabled dates on the component.</summary>
 			///<returns type="array">options.disabledTimeIntervals</returns>
 			///</signature>
 			///<signature>
 			///<summary>Setting this takes precedence over options.minDate, options.maxDate configuration. Also calling
 			// this function removes the configuration of /options.enabledDates if such exist.</summary> /<param
-			// name="dates" locid="$.fn.factoryBootstrap436_DatetimePickerControl.disabledTimeIntervals_p:dates">Takes
+			// name="dates" locid="$.fn.factoryBootstrap439_DatetimePickerControl.disabledTimeIntervals_p:dates">Takes
 			// an [ string or Date or moment ] of values and allows the user to select only from those days.</param>
 			// /</signature>
 			if( arguments.length === 0 ) {
@@ -2312,14 +2312,14 @@
 		};
 
 		picker.disabledHours = function(hours) {
-			///<signature helpKeyword="$.fn.factoryBootstrap436_DatetimePickerControl.disabledHours">
+			///<signature helpKeyword="$.fn.factoryBootstrap439_DatetimePickerControl.disabledHours">
 			///<summary>Returns an array with the currently set disabled hours on the component.</summary>
 			///<returns type="array">options.disabledHours</returns>
 			///</signature>
 			///<signature>
 			///<summary>Setting this takes precedence over options.minDate, options.maxDate configuration. Also calling
 			// this function removes the configuration of /options.enabledHours if such exist.</summary> /<param
-			// name="hours" locid="$.fn.factoryBootstrap436_DatetimePickerControl.disabledHours_p:hours">Takes an [ int
+			// name="hours" locid="$.fn.factoryBootstrap439_DatetimePickerControl.disabledHours_p:hours">Takes an [ int
 			// ] of values and disallows the user to select only from those hours.</param> /</signature>
 			if( arguments.length === 0 ) {
 				return (options.disabledHours ? $.extend({}, options.disabledHours) : options.disabledHours);
@@ -2351,14 +2351,14 @@
 		};
 
 		picker.enabledHours = function(hours) {
-			///<signature helpKeyword="$.fn.factoryBootstrap436_DatetimePickerControl.enabledHours">
+			///<signature helpKeyword="$.fn.factoryBootstrap439_DatetimePickerControl.enabledHours">
 			///<summary>Returns an array with the currently set enabled hours on the component.</summary>
 			///<returns type="array">options.enabledHours</returns>
 			///</signature>
 			///<signature>
 			///<summary>Setting this takes precedence over options.minDate, options.maxDate configuration. Also calling
 			// this function removes the configuration of options.disabledHours if such exist.</summary> /<param
-			// name="hours" locid="$.fn.factoryBootstrap436_DatetimePickerControl.enabledHours_p:hours">Takes an [ int
+			// name="hours" locid="$.fn.factoryBootstrap439_DatetimePickerControl.enabledHours_p:hours">Takes an [ int
 			// ] of values and allows the user to select only from those hours.</param> /</signature>
 			if( arguments.length === 0 ) {
 				return (options.enabledHours ? $.extend({}, options.enabledHours) : options.enabledHours);
@@ -2492,7 +2492,7 @@
 	 * @class datetimepicker
 	 * @memberOf jQuery.fn
 	 */
-	$.fn.factoryBootstrap436_DatetimePickerControl = function(options) {
+	$.fn.factoryBootstrap439_DatetimePickerControl = function(options) {
 		options = options || {};
 
 		var args = Array.prototype.slice.call(arguments, 1),
@@ -2506,7 +2506,7 @@
 					_options;
 				if( !$this.data('DateTimePicker') ) {
 					// create a private copy of the defaults object
-					_options = $.extend(true, {}, $.fn.factoryBootstrap436_DatetimePickerControl.defaults, options);
+					_options = $.extend(true, {}, $.fn.factoryBootstrap439_DatetimePickerControl.defaults, options);
 					$this.data('DateTimePicker', dateTimePicker($this, _options));
 				}
 			});
@@ -2532,7 +2532,7 @@
 		throw new TypeError('Invalid arguments for DateTimePicker: ' + options);
 	};
 
-	$.fn.factoryBootstrap436_DatetimePickerControl.defaults = {
+	$.fn.factoryBootstrap439_DatetimePickerControl.defaults = {
 		timeZone: '',
 		format: false,
 		dayViewHeaderFormat: 'MMMM YYYY',
@@ -2719,7 +2719,7 @@
 		viewDate: false
 	};
 
-	return $.fn.factoryBootstrap436_DatetimePickerControl;
+	return $.fn.factoryBootstrap439_DatetimePickerControl;
 }));
 
 ( function($) {
@@ -2727,20 +2727,20 @@
 		/**
 		 * Init base controls
 		 */
-		$(".factory-bootstrap-436 .factory-datetimepicker").factoryBootstrap436_DatetimePickerControl();
+		$(".factory-bootstrap-439 .factory-datetimepicker").factoryBootstrap439_DatetimePickerControl();
 
 		/**
 		 * Init range controls
 		 */
-		$('.factory-bootstrap-436 .factory-datetimepicker-range-0').factoryBootstrap436_DatetimePickerControl();
-		$('.factory-bootstrap-436 .factory-datetimepicker-range-1').factoryBootstrap436_DatetimePickerControl({
+		$('.factory-bootstrap-439 .factory-datetimepicker-range-0').factoryBootstrap439_DatetimePickerControl();
+		$('.factory-bootstrap-439 .factory-datetimepicker-range-1').factoryBootstrap439_DatetimePickerControl({
 			useCurrent: false //Important! See issue #1075
 		});
-		$(".factory-bootstrap-436 .factory-datetimepicker-range-0").on("dp.change", function(e) {
-			$('.factory-bootstrap-436 .factory-datetimepicker-range-1').data("DateTimePicker").minDate(e.date);
+		$(".factory-bootstrap-439 .factory-datetimepicker-range-0").on("dp.change", function(e) {
+			$('.factory-bootstrap-439 .factory-datetimepicker-range-1').data("DateTimePicker").minDate(e.date);
 		});
-		$(".factory-bootstrap-436 .factory-datetimepicker-range-1").on("dp.change", function(e) {
-			$('.factory-bootstrap-436 .factory-datetimepicker-range-0').data("DateTimePicker").maxDate(e.date);
+		$(".factory-bootstrap-439 .factory-datetimepicker-range-1").on("dp.change", function(e) {
+			$('.factory-bootstrap-439 .factory-datetimepicker-range-0').data("DateTimePicker").maxDate(e.date);
 		});
 	});
 }(jQuery) );

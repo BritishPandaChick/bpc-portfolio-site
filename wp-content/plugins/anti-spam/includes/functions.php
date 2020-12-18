@@ -349,8 +349,8 @@ function collect_wp_hash_sum($path = ABSPATH)
  * This is necessary to remind the user to update the configuration of the plugin components,
  * Otherwise, the newly activated components will not be involved in the work of the plugin.
  *
- * @param Wbcr_Factory436_Plugin $plugin
- * @param Wbcr_FactoryPages435_ImpressiveThemplate $obj
+ * @param Wbcr_Factory439_Plugin $plugin
+ * @param Wbcr_FactoryPages438_ImpressiveThemplate $obj
  *
  * @return bool
  */

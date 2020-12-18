@@ -23,9 +23,9 @@ function audit_ajax(action_before = true) {
                 jQuery('#wt-checker-check').removeAttr('disabled');
             } else loader.attr('data-status', loader.attr('data-status') + 1);
 
-            var noticeId = jQuery.wbcr_factory_clearfy_227.app.showNotice('Security audit success', 'success');
+            var noticeId = jQuery.wbcr_factory_clearfy_230.app.showNotice('Security audit success', 'success');
             setTimeout(function () {
-                jQuery.wbcr_factory_clearfy_227.app.hideNotice(noticeId);
+                jQuery.wbcr_factory_clearfy_230.app.hideNotice(noticeId);
             }, 5000);
 
             if (action_before) {

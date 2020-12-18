@@ -9,7 +9,7 @@ if ( is_array( $data ) ) {
  * @var \WBCR\Titan\Audit $audit
  * @var \WBCR\Titan\SiteChecker $sites
  * @var array $scanner
- * @var Wbcr_Factory436_Plugin $this_plugin
+ * @var Wbcr_Factory439_Plugin $this_plugin
  */
 
 

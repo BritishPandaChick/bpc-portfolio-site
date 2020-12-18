@@ -70,9 +70,9 @@
                 type = 'warning';
             }
 
-            var noticeId = $.wbcr_factory_clearfy_227.app.showNotice(response.data.message, type);
+            var noticeId = $.wbcr_factory_clearfy_230.app.showNotice(response.data.message, type);
             setTimeout(function () {
-                $.wbcr_factory_clearfy_227.app.hideNotice(noticeId);
+                $.wbcr_factory_clearfy_230.app.hideNotice(noticeId);
             }, 5000);
         });
     });

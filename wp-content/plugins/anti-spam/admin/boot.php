@@ -16,6 +16,41 @@ if( !defined('ABSPATH') ) {
 }
 
 /**
+ * Widget with the offer to buy Clearfy Business
+ *
+ * @param array $widgets
+ * @param string $position
+ * @param Wbcr_Factory439_Plugin $plugin
+ */
+
+add_filter('wbcr/factory/pages/impressive/widgets', function ($widgets, $position, $plugin) {
+
+	if( $plugin->getPluginName() == \WBCR\Titan\Plugin::app()->getPluginName() ) {
+
+		if(\WBCR\Titan\Plugin::app()->premium->is_activate() ) {
+			unset($widgets['donate_widget']);
+
+			if( $position == 'right' ) {
+				unset($widgets['adverts_widget']);
+				unset($widgets['business_suggetion']);
+				unset($widgets['rating_widget']);
+				unset($widgets['info_widget']);
+			}
+
+			return $widgets;
+		} else {
+			if( $position == 'right' ) {
+				unset($widgets['business_suggetion']);
+				unset($widgets['info_widget']);
+				unset($widgets['rating_widget']);
+			}
+		}
+	}
+
+	return $widgets;
+}, 9999, 3);
+
+/**
  * Этот хук реализует условную логику перенаправления на страницу мастера настроек,
  * сразу после активации плагина.
  */
@@ -31,7 +66,7 @@ add_action('admin_init', function () {
 			if( \WBCR\Titan\Plugin\Helper::is_need_show_setup_page() ) {
 				try {
 					$redirect_url = '';
-					if( class_exists('Wbcr_FactoryPages435') ) {
+					if( class_exists('Wbcr_FactoryPages438') ) {
 						$redirect_url = $plugin->getPluginPageUrl('setup', ['wtitan_setup_page_viewed' => 1]);
 					}
 					if( $redirect_url ) {
@@ -119,8 +154,8 @@ add_action('wbcr/factory/admin_notices', function ($notices, $plugin_name) {
 	echo '<div class="alert alert-warning wbcr-factory-warning-notice wtitan-get-plugins-scanner__notice"><p><span class="dashicons dashicons-plugins-checked"></span> ' . $notice_text . '</p></div>';
 	*///$obj->printWarningNotice($notice_text);
 
-/** @var \Wbcr_Factory436_Plugin $plugin */
-/** @var \Wbcr_FactoryPages435_ImpressiveThemplate $obj */
+/** @var \Wbcr_Factory439_Plugin $plugin */
+/** @var \Wbcr_FactoryPages438_ImpressiveThemplate $obj */
 /*if ( ( \WBCR\Titan\Plugin::app()->premium->is_activate() ) || ( $plugin->getPluginName() != \WBCR\Titan\Plugin::app()->getPluginName() ) || $obj->id == 'license' ) {
 	return;
 }
