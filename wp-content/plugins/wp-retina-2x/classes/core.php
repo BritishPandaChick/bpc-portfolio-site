@@ -5,8 +5,8 @@ require WR2X_PATH . '/vendor/autoload.php';
 class Meow_WR2X_Core {
 
 	public $method = false;
-	public $retina_sizes = false;
-	public $disabled_sizes = false;
+	public $retina_sizes = array();
+	public $disabled_sizes = array();
 	public $lazy = false;
 
 	public function __construct() {

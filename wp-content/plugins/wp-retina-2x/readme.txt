@@ -3,9 +3,9 @@ Contributors: TigrouMeow
 Tags: retina, images, replace, regenerate, sizes, lazysizes, high-dpi
 Donate link: https://commerce.coinbase.com/checkout/d047546a-77a8-41c8-9ea9-4a950f61832f
 Requires at least: 5.0
-Tested up to: 5.5
+Tested up to: 5.6
 Requires PHP: 5.6
-Stable tag: 6.1.0
+Stable tag: 6.1.1
 
 Retina, Replace Images, Regenerate Thumbnails, Image Sizes Management, Image Threshold and more.
 
@@ -50,6 +50,11 @@ The plugin cannot inject CSS to handles the images added through CSS, that's bot
 3. Check if it works! - if it doesn't, read the FAQ, the tutorial, and check the forums.
 
 == Changelog ==
+
+= 6.1.1 =
+* Annoucement: Partnership with Easy IO! Probably the best deal on the market to optimize your images :)
+* Fix: Some variables should be initialized as arrays instead of booleans.
+* Fix: The CDN domain could not be modifed.
 
 = 6.1.0 =
 * Fix: PictureFill was not being ran, the Responsive Images method was instead.

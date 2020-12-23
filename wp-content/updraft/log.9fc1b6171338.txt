@@ -1,0 +1,103 @@
+0000.002 (0) Opened log file at time: Wed, 23 Dec 2020 05:46:31 +0000 on http://localhost/bpcportfolio
+0000.185 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.43 WP: 5.6 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 52.1M | 54M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.546 (0) Free space on disk containing Updraft's temporary directory: 727146.7 MB
+0000.817 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0000.900 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0001.278 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1608521177, seconds_ago=181215)
+0002.973 (0) Set semaphore last lock (fd) time to 2020-12-23 05:46:34
+0003.235 (0) Semaphore lock (fd) complete
+0003.728 (0) Backup run: resumption=0, nonce=9fc1b6171338, file_nonce=9fc1b6171338 begun at=1608702391 (4s ago), job type=backup
+0003.994 (0) Scheduling a resumption (1) after 525 seconds (1608702920) in case this run gets aborted
+0004.430 (0) Checking if we have a zip executable available
+0004.771 (0) Creation of backups of directories: beginning
+0005.823 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0123.684 (0) Total entities for the zip file: 948 directories, 5434 files (0 skipped as non-modified), 73.2 MB
+0124.411 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0125.544 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 100 files added (on-disk size: 162.3 KB)
+0125.760 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 200 files added (on-disk size: 162.3 KB)
+0126.142 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 300 files added (on-disk size: 162.3 KB)
+0126.399 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 400 files added (on-disk size: 162.3 KB)
+0126.749 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 500 files added (on-disk size: 162.3 KB)
+0127.090 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 600 files added (on-disk size: 162.3 KB)
+0127.198 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 700 files added (on-disk size: 162.3 KB)
+0127.343 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/images/service-analytics.jpg
+0127.412 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/images/service-search_console.jpg
+0127.469 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-activation.616704100f9016aeebb3.js
+0127.512 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js
+0127.763 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-api.6a42961c6bc79bdf328c.js
+0128.007 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-base.b959fa769b6c8fdc2fb4.js
+0128.343 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js
+0128.532 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-dashboard-splash.ef799570042683d71918.js
+0128.882 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js
+0129.149 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-data.7dc53a3cd3086a018b13.js
+0129.276 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-datastore-forms.b4202d947aa1dcaa3b75.js
+0129.390 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-datastore-site.4344b82e6fc429e3c9ac.js
+0129.479 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-datastore-user.5e9ca259c2184a0d9df4.js
+0129.613 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (8.4 MB, 785 (786) files added so far); re-opening (prior size: 162.3 KB)
+0145.245 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js
+0145.701 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-modules-adsense.9c9ac827114682b53664.js
+0145.935 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-modules-analytics.2fba567ee1d0accf85a8.js
+0146.122 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-modules-optimize.3fefe04a54da6c1473c5.js
+0146.254 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-modules-pagespeed-insights.080d11415e35366e459e.js
+0146.388 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-modules-search-console.c11b1a4aca75028e417e.js
+0146.561 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-modules-tagmanager.6a7e6fe54956f68d1d64.js
+0146.677 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-modules.69a2bdd30cf7d03b2746.js
+0146.959 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js
+0147.717 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js
+0147.972 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-vendor.a2b099cc5529826c5cd2.js
+0148.173 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-widgets.a41a91f78debc8a0d887.js
+0148.295 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js
+0148.546 (0) File has vanished from underneath us; dropping: plugins/google-site-kit/dist/assets/js/pagead2.ads.2923927a61f4dbe5ced5.js
+0148.743 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (787) files added so far); re-opening (prior size: 3084 KB)
+0149.179 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 800 files added (on-disk size: 3085.2 KB)
+0150.121 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 900 files added (on-disk size: 3085.2 KB)
+0150.540 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 1000 files added (on-disk size: 3085.2 KB)
+0150.846 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 1100 files added (on-disk size: 3085.2 KB)
+0151.037 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 1200 files added (on-disk size: 3085.2 KB)
+0151.401 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 1300 files added (on-disk size: 3085.2 KB)
+0151.613 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 1400 files added (on-disk size: 3085.2 KB)
+0151.829 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.1 MB, 614 (1401) files added so far); re-opening (prior size: 3085.2 KB)
+0152.969 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 1500 files added (on-disk size: 3885 KB)
+0153.092 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 1600 files added (on-disk size: 3885 KB)
+0153.271 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 1700 files added (on-disk size: 3885 KB)
+0153.542 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 1800 files added (on-disk size: 3885 KB)
+0154.251 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 1900 files added (on-disk size: 3885 KB)
+0154.434 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 2000 files added (on-disk size: 3885 KB)
+0154.599 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 2100 files added (on-disk size: 3885 KB)
+0154.912 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 2200 files added (on-disk size: 3885 KB)
+0155.275 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 2300 files added (on-disk size: 3885 KB)
+0155.489 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 2400 files added (on-disk size: 3885 KB)
+0155.607 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (22.5 MB, 5434 files batched, 1001 (2402) added so far); re-opening (prior size: 3885 KB)
+0171.188 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 2500 files added (on-disk size: 10323.8 KB)
+0171.439 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 2600 files added (on-disk size: 10323.8 KB)
+0171.660 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 2700 files added (on-disk size: 10323.8 KB)
+0171.815 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 2800 files added (on-disk size: 10323.8 KB)
+0171.942 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 2900 files added (on-disk size: 10323.8 KB)
+0172.108 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 3000 files added (on-disk size: 10323.8 KB)
+0172.350 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 3100 files added (on-disk size: 10323.8 KB)
+0172.538 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 3200 files added (on-disk size: 10323.8 KB)
+0172.735 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 3300 files added (on-disk size: 10323.8 KB)
+0172.853 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 3400 files added (on-disk size: 10323.8 KB)
+0173.192 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (8 MB, 5434 files batched, 1001 (3403) added so far); re-opening (prior size: 10323.8 KB)
+0186.639 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 3500 files added (on-disk size: 13397 KB)
+0186.852 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 3600 files added (on-disk size: 13397 KB)
+0187.147 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 3700 files added (on-disk size: 13397 KB)
+0187.312 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 3800 files added (on-disk size: 13397 KB)
+0187.434 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 3900 files added (on-disk size: 13397 KB)
+0187.563 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 4000 files added (on-disk size: 13397 KB)
+0187.664 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 4100 files added (on-disk size: 13397 KB)
+0187.854 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 4200 files added (on-disk size: 13397 KB)
+0188.013 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 4300 files added (on-disk size: 13397 KB)
+0188.164 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 4400 files added (on-disk size: 13397 KB)
+0188.480 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (17.4 MB, 5434 files batched, 1001 (4404) added so far); re-opening (prior size: 13397 KB)
+0202.954 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 4500 files added (on-disk size: 19379.3 KB)
+0203.131 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 4600 files added (on-disk size: 19379.3 KB)
+0203.545 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 4700 files added (on-disk size: 19379.3 KB)
+0203.737 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 4800 files added (on-disk size: 19379.3 KB)
+0203.943 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 4900 files added (on-disk size: 19379.3 KB)
+0204.064 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 5000 files added (on-disk size: 19379.3 KB)
+0204.213 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 5100 files added (on-disk size: 19379.3 KB)
+0204.303 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 5200 files added (on-disk size: 19379.3 KB)
+0204.407 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 5300 files added (on-disk size: 19379.3 KB)
+0204.730 (0) Zip: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp: 5400 files added (on-disk size: 19379.3 KB)
+0204.820 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (10.3 MB, 5434 files batched, 1001 (5405) added so far); re-opening (prior size: 19379.3 KB)

@@ -3,7 +3,7 @@
 Plugin Name: Perfect Images + Retina
 Plugin URI: https://meowapps.com
 Description: Retina, Replace Images, Regenerate Thumbnails, Image Sizes Management, Image Threshold and more.
-Version: 6.1.0
+Version: 6.1.1
 Author: Jordy Meow
 Author URI: https://meowapps.com
 Text Domain: wp-retina-2x
@@ -37,28 +37,28 @@ if ( !get_option( 'wr2x_version_6_0_0' ) ) {
 // We should enable this later, to avoid the two update messages to show at the same
 // time... maybe, let's do this in December?
 
-// if ( !get_option( 'wr2x_notice_easyio' ) ) {
-// 	function wr2x_easy_io_admin_notices() {
-// 		echo '<div class="notice notice-error"><h2>Perfect Images brings its own all-in one Image Optimization + CDN offer! 🥳<b></b></h2>';
-// 		echo '<p>This is a big news, as I dreamed of this for many years! I really wanted to bring perfect image optimization coupled with a CDN, while being easy to use and affordable. And now, thanks to a partnership with EWWW (which has really nice back-end infrastructure), it is here! Please check the Settings, in <b>Meow Apps > Perfect Images > Optimization & Speed</b>. Enjoy and let me know how it goes!
-// 		</p>';
-// 		echo '<p>
-// 			<form method="post" action="">
-// 				<input type="hidden" name="wr2x_notice_easyio" value="true">
-// 				<input type="submit" name="submit" id="submit" class="button" value="Nice! But please hide that now!">
-// 			</form>
-// 		</p>
-// 		';
-// 		echo '</div>';
-// 	}
-// 	if ( isset( $_POST['wr2x_notice_easyio'] ) ) {
-// 		update_option( 'wr2x_notice_easyio', true, false );
-// 	}
-// 	else
-// 		add_action( 'admin_notices', 'wr2x_easy_io_admin_notices' );
-// }
+if ( !get_option( 'wr2x_notice_easyio' ) ) {
+	function wr2x_easy_io_admin_notices() {
+		echo '<div class="notice notice-error"><h2>Perfect Images brings its own all-in one Image Optimization + CDN offer! 🥳<b></b></h2>';
+		echo '<p>This is a big news, as I dreamed of this for many years! I really wanted to bring perfect image optimization coupled with a CDN, while being easy to use and affordable. And now, thanks to a partnership with EWWW (which has really nice back-end infrastructure), it is here! Please check the Settings, in <b>Meow Apps > Perfect Images > Optimization & Speed</b>. Enjoy and let me know how it goes!
+		</p>';
+		echo '<p>
+			<form method="post" action="">
+				<input type="hidden" name="wr2x_notice_easyio" value="true">
+				<input type="submit" name="submit" id="submit" class="button" value="Nice! But please hide that now!">
+			</form>
+		</p>
+		';
+		echo '</div>';
+	}
+	if ( isset( $_POST['wr2x_notice_easyio'] ) ) {
+		update_option( 'wr2x_notice_easyio', true, false );
+	}
+	else
+		add_action( 'admin_notices', 'wr2x_easy_io_admin_notices' );
+}
 
-define( 'WR2X_VERSION', '6.1.0' );
+define( 'WR2X_VERSION', '6.1.1' );
 define( 'WR2X_PREFIX', 'wr2x' );
 define( 'WR2X_DOMAIN', ' wp-retina-2x' );
 define( 'WR2X_ENTRY', __FILE__ );
