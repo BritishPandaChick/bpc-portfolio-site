@@ -1,0 +1,85 @@
+0000.008 (0) Opened log file at time: Tue, 29 Dec 2020 19:50:24 +0000 on http://localhost/bpcportfolio
+0000.756 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.43 WP: 5.6 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 52.2M | 54M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0001.117 (0) Free space on disk containing Updraft's temporary directory: 728059.8 MB
+0001.722 (0) Deleting old temporary file: backup_2020-12-23-0046_BritishPandaChick_9fc1b6171338-plugins.zip.tmp
+0001.985 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0002.172 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0002.997 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1608702392, seconds_ago=569034)
+0003.291 (0) Semaphore (fd, wp_options) was stuck, set lock time to 2020-12-29 19:50:27
+0003.340 (0) Semaphore (fd, wp_options) reset to 1
+0003.425 (0) Set semaphore last lock (fd) time to 2020-12-29 19:50:27
+0003.516 (0) Semaphore lock (fd) complete
+0004.048 (0) Backup run: resumption=0, nonce=afb63e17335d, file_nonce=afb63e17335d begun at=1609271424 (4s ago), job type=backup
+0004.357 (0) Scheduling a resumption (1) after 300 seconds (1609271728) in case this run gets aborted
+0004.924 (0) Checking if we have a zip executable available
+0005.092 (0) Creation of backups of directories: beginning
+0005.348 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0158.147 (0) Total entities for the zip file: 948 directories, 5433 files (0 skipped as non-modified), 72.9 MB
+0158.753 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0160.935 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 100 files added (on-disk size: 162.3 KB)
+0161.591 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 200 files added (on-disk size: 162.3 KB)
+0162.103 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 300 files added (on-disk size: 162.3 KB)
+0162.627 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 400 files added (on-disk size: 162.3 KB)
+0162.829 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (5.4 MB, 401 (402) files added so far); re-opening (prior size: 162.3 KB)
+0194.316 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 500 files added (on-disk size: 2112 KB)
+0194.660 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 600 files added (on-disk size: 2112 KB)
+0194.970 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 700 files added (on-disk size: 2112 KB)
+0195.270 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 800 files added (on-disk size: 2112 KB)
+0195.599 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 900 files added (on-disk size: 2112 KB)
+0195.959 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 1000 files added (on-disk size: 2112 KB)
+0196.360 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 1100 files added (on-disk size: 2112 KB)
+0196.785 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 1200 files added (on-disk size: 2112 KB)
+0196.882 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (8.5 MB, 799 (1201) files added so far); re-opening (prior size: 2112 KB)
+0219.981 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 1300 files added (on-disk size: 4666.1 KB)
+0221.819 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.5 MB, 198 (1399) files added so far); re-opening (prior size: 4666.1 KB)
+0227.291 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 1400 files added (on-disk size: 4877.4 KB)
+0227.630 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 1500 files added (on-disk size: 4877.4 KB)
+0228.571 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 1600 files added (on-disk size: 4877.4 KB)
+0229.069 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 1700 files added (on-disk size: 4877.4 KB)
+0229.682 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 1800 files added (on-disk size: 4877.4 KB)
+0230.071 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.3 MB, 402 (1801) files added so far); re-opening (prior size: 4877.4 KB)
+0244.497 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 1900 files added (on-disk size: 5608.2 KB)
+0244.836 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 2000 files added (on-disk size: 5608.2 KB)
+0245.097 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 2100 files added (on-disk size: 5608.2 KB)
+0245.304 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 2200 files added (on-disk size: 5608.2 KB)
+0245.637 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 2300 files added (on-disk size: 5608.2 KB)
+0246.075 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 2400 files added (on-disk size: 5608.2 KB)
+0246.819 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (20.8 MB, 681 (2482) files added so far); re-opening (prior size: 5608.2 KB)
+0298.235 (0) The time we have been running (297.3) is approaching the resumption interval (300) - increasing resumption interval to 328
+0298.544 (0) The scheduled resumption is within 45 seconds - will reschedule
+0298.666 (0) Rescheduling resumption 1: moving to 373 seconds from now (1609272095)
+0298.834 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 328 + 45 = 373
+0298.952 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 2500 files added (on-disk size: 11456.4 KB)
+0299.248 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 2600 files added (on-disk size: 11456.4 KB)
+0299.901 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 2700 files added (on-disk size: 11456.4 KB)
+0300.216 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 2800 files added (on-disk size: 11456.4 KB)
+0300.679 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 2900 files added (on-disk size: 11456.4 KB)
+0301.186 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 3000 files added (on-disk size: 11456.4 KB)
+0301.507 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 3100 files added (on-disk size: 11456.4 KB)
+0301.687 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 3200 files added (on-disk size: 11456.4 KB)
+0301.865 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (4.5 MB, 719 (3201) files added so far); re-opening (prior size: 11456.4 KB)
+0335.572 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 3300 files added (on-disk size: 13221 KB)
+0335.887 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 3400 files added (on-disk size: 13221 KB)
+0336.201 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 3500 files added (on-disk size: 13221 KB)
+0336.517 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 3600 files added (on-disk size: 13221 KB)
+0337.064 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 3700 files added (on-disk size: 13221 KB)
+0337.371 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 3800 files added (on-disk size: 13221 KB)
+0337.737 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 3900 files added (on-disk size: 13221 KB)
+0337.874 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (12.5 MB, 700 (3901) files added so far); re-opening (prior size: 13221 KB)
+0385.662 (0) The time we have been running (382.7) is approaching the resumption interval (373) - increasing resumption interval to 413
+0389.153 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 4000 files added (on-disk size: 18042.8 KB)
+0389.820 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.7 MB, 183 (4084) files added so far); re-opening (prior size: 18042.8 KB)
+0407.387 (0) The time we have been running (404.9) is approaching the resumption interval (413) - increasing resumption interval to 435
+0408.176 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 4100 files added (on-disk size: 18282.3 KB)
+0409.547 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 4200 files added (on-disk size: 18282.3 KB)
+0410.120 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 4300 files added (on-disk size: 18282.3 KB)
+0410.549 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 4400 files added (on-disk size: 18282.3 KB)
+0410.819 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (6.2 MB, 319 (4403) files added so far); re-opening (prior size: 18282.3 KB)
+0424.709 (0) The time we have been running (423.7) is approaching the resumption interval (435) - increasing resumption interval to 454
+0425.045 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 4500 files added (on-disk size: 20136.4 KB)
+0425.341 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 4600 files added (on-disk size: 20136.4 KB)
+0425.684 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 4700 files added (on-disk size: 20136.4 KB)
+0425.948 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 4800 files added (on-disk size: 20136.4 KB)
+0426.192 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 4900 files added (on-disk size: 20136.4 KB)
+0426.466 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 5000 files added (on-disk size: 20136.4 KB)
+0426.935 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 5100 files added (on-disk size: 20136.4 KB)
