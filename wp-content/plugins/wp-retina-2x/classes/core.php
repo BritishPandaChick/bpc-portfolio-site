@@ -1,6 +1,6 @@
 <?php
 
-require WR2X_PATH . '/vendor/autoload.php';
+require trailingslashit( WR2X_PATH ) . 'vendor/autoload.php';
 
 class Meow_WR2X_Core {
 
@@ -18,7 +18,7 @@ class Meow_WR2X_Core {
 		$this->set_defaults();
 		$this->init();
 		//add_action( 'plugins_loaded', array( $this, 'init' ) );
-		include( WR2X_PATH . '/classes/api.php' );
+		include( trailingslashit( WR2X_PATH ) . 'classes/api.php' );
 		if ( class_exists( 'MeowPro_WR2X_Core' ) ) {
 			new MeowPro_WR2X_Core( $this );
 		}
@@ -1432,23 +1432,23 @@ class Meow_WR2X_Core {
 
 		// Picturefill Debug
 		if ( $this->method == "Picturefill"  && $this->is_debug() ) {
-			$physical_file = WR2X_PATH . '/app/debug.js';
+			$physical_file = trailingslashit( WR2X_PATH ) . 'app/debug.js';
 			$cache_buster = file_exists( $physical_file ) ? filemtime( $physical_file ) : WR2X_VERSION;
-			wp_enqueue_script( 'wr2x-debug-js', WR2X_URL . '/app/debug.js', array(), $cache_buster, false );
+			wp_enqueue_script( 'wr2x-debug-js', trailingslashit( WR2X_URL ) . 'app/debug.js', array(), $cache_buster, false );
 		}
 
 		// No Picturefill Script
 		if ( $this->method == "Picturefill"  && !get_option( "wr2x_picturefill_noscript" ) ) {
-			$physical_file = WR2X_PATH . '/app/picturefill.min.js';
+			$physical_file = trailingslashit( WR2X_PATH ) . 'app/picturefill.min.js';
 			$cache_buster = file_exists( $physical_file ) ? filemtime( $physical_file ) : WR2X_VERSION;
-			wp_enqueue_script( 'wr2x-picturefill-js', WR2X_URL . '/app/picturefill.min.js', array(), $cache_buster, false );
+			wp_enqueue_script( 'wr2x-picturefill-js', trailingslashit( WR2X_URL ) . 'app/picturefill.min.js', array(), $cache_buster, false );
 		}
 
 		// Lazysizes
 		if ( get_option( "wr2x_picturefill_lazysizes" ) && class_exists( 'MeowPro_WR2X_Core' ) ) {
-			$physical_file = WR2X_PATH . '/app/lazysizes.min.js';
+			$physical_file = trailingslashit( WR2X_PATH ) . 'app/lazysizes.min.js';
 			$cache_buster = file_exists( $physical_file ) ? filemtime( $physical_file ) : WR2X_VERSION;
-			wp_enqueue_script( 'wr2x-picturefill-js', WR2X_URL . '/app/lazysizes.min.js', array(), $cache_buster, false );
+			wp_enqueue_script( 'wr2x-picturefill-js', trailingslashit( WR2X_URL ) . 'app/lazysizes.min.js', array(), $cache_buster, false );
 		}
 
 		// Debug + HTML Rewrite = No JS!
@@ -1458,23 +1458,23 @@ class Meow_WR2X_Core {
 
 		// Debug mode, we force the devicePixelRatio to be Retina
 		if ( $this->is_debug() ) {
-			$physical_file = WR2X_PATH . '/app/debug.js';
+			$physical_file = trailingslashit( WR2X_PATH ) . 'app/debug.js';
 			$cache_buster = file_exists( $physical_file ) ? filemtime( $physical_file ) : WR2X_VERSION;
-			wp_enqueue_script( 'wr2x-debug-js', WR2X_URL . '/app/debug.js', array(), $cache_buster, false );
+			wp_enqueue_script( 'wr2x-debug-js', trailingslashit( WR2X_URL ) . 'app/debug.js', array(), $cache_buster, false );
 		}
 
 		// Retina-Images and HTML Rewrite both need the devicePixelRatio cookie on the server-side
 		if ( $this->method == "Retina-Images" || $this->method == "HTML Rewrite" ) {
-			$physical_file = WR2X_PATH . '/app/retina-cookie.js';
+			$physical_file = trailingslashit( WR2X_PATH ) . 'app/retina-cookie.js';
 			$cache_buster = file_exists( $physical_file ) ? filemtime( $physical_file ) : WR2X_VERSION;
-			wp_enqueue_script( 'wr2x-debug-js', WR2X_URL . '/app/retina-cookie.js', array(), $cache_buster, false );
+			wp_enqueue_script( 'wr2x-debug-js', trailingslashit( WR2X_URL ) . 'app/retina-cookie.js', array(), $cache_buster, false );
 		}
 
 		// Retina.js only needs itself
 		if ( $this->method == "retina.js" ) {
-			$physical_file = WR2X_PATH . '/app/retina.min.js';
+			$physical_file = trailingslashit( WR2X_PATH ) . 'app/retina.min.js';
 			$cache_buster = file_exists( $physical_file ) ? filemtime( $physical_file ) : WR2X_VERSION;
-			wp_enqueue_script( 'wr2x-retinajs-js', WR2X_URL . '/app/retina.min.js', array(), $cache_buster, false );
+			wp_enqueue_script( 'wr2x-retinajs-js', trailingslashit( WR2X_URL ) . 'app/retina.min.js', array(), $cache_buster, false );
 		}
 	}
 

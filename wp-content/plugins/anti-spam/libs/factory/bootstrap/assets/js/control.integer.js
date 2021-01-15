@@ -71,7 +71,7 @@
     // INTEGER CONTROL DEFINITION
     // ================================
     
-    $.fn.factoryBootstrap439_integerControl = function (option) {
+    $.fn.factoryBootstrap442_integerControl = function (option) {
         
         // call an method
         if ( typeof option === "string" ) {
@@ -90,13 +90,13 @@
         }
     };
 
-    $.fn.factoryBootstrap439_integerControl.Constructor = IntegerControl;
+    $.fn.factoryBootstrap442_integerControl.Constructor = IntegerControl;
     
     // AUTO CREATING
     // ================================
     
     $(function(){
-        $(".factory-bootstrap-439 .factory-integer").factoryBootstrap439_integerControl();
+        $(".factory-bootstrap-442 .factory-integer").factoryBootstrap442_integerControl();
     });
     
 }( jQuery ) );

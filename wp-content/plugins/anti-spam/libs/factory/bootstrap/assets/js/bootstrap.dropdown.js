@@ -118,7 +118,7 @@
   // DROPDOWN PLUGIN DEFINITION
   // ==========================
 
-  $.fn.factoryBootstrap439_dropdown = function (option) {
+  $.fn.factoryBootstrap442_dropdown = function (option) {
     return this.each(function () {
       var $this = $(this)
       var data  = $this.data('bs.dropdown')
@@ -128,7 +128,7 @@
     })
   }
 
-  $.fn.factoryBootstrap439_dropdown.Constructor = Dropdown
+  $.fn.factoryBootstrap442_dropdown.Constructor = Dropdown
 
 
   // APPLY TO STANDARD DROPDOWN ELEMENTS

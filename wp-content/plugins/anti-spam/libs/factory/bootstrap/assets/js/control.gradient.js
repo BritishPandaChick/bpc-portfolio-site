@@ -30,7 +30,7 @@
     // GRADIENT CONTROL DEFINITION
     // ================================
     
-    $.fn.factoryBootstrap439_gradientControl = function (option) {
+    $.fn.factoryBootstrap442_gradientControl = function (option) {
         return this.each(function () {
             var $this = $(this);
             var data  = $this.data('factory.gradient-control');
@@ -39,13 +39,13 @@
         });
     };
 
-    $.fn.factoryBootstrap439_gradientControl.Constructor = GradientControl;
+    $.fn.factoryBootstrap442_gradientControl.Constructor = GradientControl;
     
     // GRADIENT CREATING
     // ================================
     
     $(function(){
-        $(".factory-bootstrap-439 .factory-gradient").factoryBootstrap439_gradientControl();
+        $(".factory-bootstrap-442 .factory-gradient").factoryBootstrap442_gradientControl();
     });
     
 }( jQuery ) );

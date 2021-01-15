@@ -1,31 +1,49 @@
 jQuery(function($) {
 	$('#wbcr-factory-subscribe-widget__subscribe-form').submit(function(e) {
 		e.preventDefault();
-		var agree = $(this).find('[name=agree_terms]:checked');
+		var agree = $(this).find('[name=agree_terms]:checked'),
+			pluginName = $('#wbcr-factory-subscribe-widget__plugin-name').val(),
+			email = $('#wbcr-factory-subscribe-widget__email').val(),
+			groupId = $('#wbcr-factory-subscribe-widget__group-id').val();
+
 		if( agree.length === 0 ) {
 			return;
 		}
 
 		$.ajax({
 			method: "POST",
-			url: "https://clearfy.pro/wp-json/mailerlite/v1/subscribe/",
+			url: ajaxurl,
+			dataType: 'json',
 			data: {
-				email: $('#wbcr-factory-subscribe-widget__email').val(),
-				group_id: $('#wbcr-factory-subscribe-widget__group-id').val(),
+				action: 'wbcr-clearfy-subscribe-for-' + pluginName,
+				email: email,
+				group_id: groupId,
+				plugin_name: pluginName,
+				_wpnonce: $(this).data('nonce')
 			},
-			success: function(data) {
-				if( !data.message ) {
-					if( data.subscribed ) {
+			success: function(response) {
+				if( !response || !response.success ) {
+					if( response.data ) {
+						console.log(response.data.error_message);
+						noticeId = $.wbcr_factory_clearfy_233.app.showNotice('Error: [' + response.data.error_message + ']', 'danger');
+						setTimeout(function() {
+							$.wbcr_factory_clearfy_233.app.hideNotice(noticeId);
+						}, 5000);
+					} else {
+						console.log(response);
+					}
+
+					return;
+				}
+
+				if( response.data ) {
+					$(".wbcr-factory-subscribe-widget__text").hide();
+
+					if( response.data.subscribed ) {
 						$(".wbcr-factory-subscribe-widget__text--success").show();
 					} else {
 						$(".wbcr-factory-subscribe-widget__text--success2").show();
 					}
-				} else {
-					console.log(data.message);
-					var noticeId = $.wbcr_factory_clearfy_230.app.showNotice('Error: [' + data.message + ']', 'danger');
-					setTimeout(function() {
-						$.wbcr_factory_clearfy_230.app.hideNotice(noticeId);
-					}, 5000);
 				}
 			},
 			error: function(xhr, ajaxOptions, thrownError) {
@@ -34,9 +52,9 @@ jQuery(function($) {
 				console.log(xhr.responseText);
 				console.log(thrownError);
 
-				var noticeId = $.wbcr_factory_clearfy_230.app.showNotice('Error: [' + thrownError + '] Status: [' + xhr.status + '] Error massage: [' + xhr.responseText + ']', 'danger');
+				var noticeId = $.wbcr_factory_clearfy_233.app.showNotice('Error: [' + thrownError + '] Status: [' + xhr.status + '] Error massage: [' + xhr.responseText + ']', 'danger');
 				setTimeout(function() {
-					$.wbcr_factory_clearfy_230.app.hideNotice(noticeId);
+					$.wbcr_factory_clearfy_233.app.hideNotice(noticeId);
 				}, 5000);
 			}
 		});

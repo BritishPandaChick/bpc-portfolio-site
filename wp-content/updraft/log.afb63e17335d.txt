@@ -83,3 +83,7 @@
 0426.192 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 4900 files added (on-disk size: 20136.4 KB)
 0426.466 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 5000 files added (on-disk size: 20136.4 KB)
 0426.935 (0) Zip: backup_2020-12-29-1450_BritishPandaChick_afb63e17335d-plugins.zip.tmp: 5100 files added (on-disk size: 20136.4 KB)
+1463749.637 (1) Opened log file at time: Fri, 15 Jan 2021 18:26:13 +0000 on http://localhost/bpcportfolio
+1463749.895 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.43 WP: 5.6 PHP: 7.4.8 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.13-MariaDB WPLANG: en_US Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 51.6M | 54M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+1463750.163 (1) Free space on disk containing Updraft's temporary directory: 729075 MB
+1463750.281 (1) This backup task (afb63e17335d) is either complete or began over 2 days ago: ending (1610735172.8223, 1609271424) (existing jobdata keys: resume_interval, job_type, jobstatus, backup_time, job_time_ms, service, split_every, maxzipbatch, job_file_entities, option_cache, uploaded_lastreset, one_shot, followsups_allowed, backup_database, backup_files, remote_storage_instances, runs_started, current_resumption, binzip, filecreating_substatus, files_enumerated_at, warnings, run_times, useful_checkins)

@@ -32,9 +32,9 @@
 		exit;
 	}
 
-	if( !class_exists('Wbcr_FactoryForms436_IntegerControl') ) {
+	if( !class_exists('Wbcr_FactoryForms439_IntegerControl') ) {
 
-		class Wbcr_FactoryForms436_IntegerControl extends Wbcr_FactoryForms436_Control {
+		class Wbcr_FactoryForms439_IntegerControl extends Wbcr_FactoryForms439_Control {
 
 			public $type = 'integer';
 

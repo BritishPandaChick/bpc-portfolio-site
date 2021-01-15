@@ -21,7 +21,7 @@ abstract class Module_Base {
 	 * Plugin object
 	 *
 	 * @since  7.0
-	 * @var \Wbcr_Factory439_Plugin
+	 * @var \Wbcr_Factory442_Plugin
 	 */
 	public $plugin;
 

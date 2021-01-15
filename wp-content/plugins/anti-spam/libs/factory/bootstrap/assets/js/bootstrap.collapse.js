@@ -129,7 +129,7 @@
   // COLLAPSE PLUGIN DEFINITION
   // ==========================
 
-  $.fn.factoryBootstrap439_collapse = function (option) {
+  $.fn.factoryBootstrap442_collapse = function (option) {
     return this.each(function () {
       var $this   = $(this)
       var data    = $this.data('bs.collapse')
@@ -140,7 +140,7 @@
     })
   }
 
-  $.fn.factoryBootstrap439_collapse.Constructor = Collapse
+  $.fn.factoryBootstrap442_collapse.Constructor = Collapse
 
   // COLLAPSE DATA-API
   // =================

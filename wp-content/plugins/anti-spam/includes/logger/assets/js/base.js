@@ -27,10 +27,10 @@
 
                 $('#js-wlogger-viewer').html('');
                 $('#js-wlogger-size').text('0B');
-                $.wbcr_factory_clearfy_230.app.showNotice(data.message, data.type);
+                $.wbcr_factory_clearfy_233.app.showNotice(data.message, data.type);
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                $.wbcr_factory_clearfy_230.app.showNotice('Error: ' + errorThrown + ', status: ' + textStatus, 'danger');
+                $.wbcr_factory_clearfy_233.app.showNotice('Error: ' + errorThrown + ', status: ' + textStatus, 'danger');
                 btn.html(currentBtnText);
             }
         });

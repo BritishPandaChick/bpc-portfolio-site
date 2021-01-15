@@ -5,7 +5,7 @@ Donate link: https://commerce.coinbase.com/checkout/d047546a-77a8-41c8-9ea9-4a95
 Requires at least: 5.0
 Tested up to: 5.6
 Requires PHP: 5.6
-Stable tag: 6.1.1
+Stable tag: 6.1.2
 
 Retina, Replace Images, Regenerate Thumbnails, Image Sizes Management, Image Threshold and more.
 
@@ -50,6 +50,11 @@ The plugin cannot inject CSS to handles the images added through CSS, that's bot
 3. Check if it works! - if it doesn't, read the FAQ, the tutorial, and check the forums.
 
 == Changelog ==
+
+= 6.1.2 =
+* Fix: Avoid double slashes in the URLs of the scripts.
+* Fix: Updated admin, which works better with PHP Error Logs.
+* Add: Better paging.
 
 = 6.1.1 =
 * Annoucement: Partnership with Easy IO! Probably the best deal on the market to optimize your images :)

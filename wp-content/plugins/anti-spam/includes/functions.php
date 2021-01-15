@@ -11,7 +11,7 @@ use WBCR\Titan\Client\Client;
 use WBCR\Titan\Client\Entity\CmsCheckItem;
 use WBCR\Titan\Logger\Writter;
 use WBCR\Titan\MalwareScanner\HashListPool;
-use WBCR\Titan\MalwareScanner\Match;
+use WBCR\Titan\MalwareScanner\Result;
 use WBCR\Titan\MalwareScanner\Scanner;
 use WBCR\Titan\MalwareScanner\Signature;
 use WBCR\Titan\Plugin;
@@ -53,7 +53,7 @@ add_action('titan_malware_weekly_digest', 'titan_malware_weekly_digest');
 function titan_malware_weekly_digest()
 {
 	/**
-	 * @var Match[] $matched
+	 * @var Result[] $matched
 	 */
 	$matched = get_option(Plugin::app()->getPrefix() . 'matched_weekly', []);
 
@@ -111,7 +111,7 @@ function titan_scheduled_scanner()
 	$matched = Plugin::app()->getOption('scanner_malware_matched', []);
 
 	foreach($scanner->scan($files_count) as $match) {
-		/** @var Match $match */
+		/** @var Result $match */
 		if( $match->getSignature()->getSever() === Signature::SEVER_CRITICAL ) {
 			array_unshift($matched, $match);
 		} else {
@@ -267,7 +267,7 @@ function titan_remove_scheduler_scanner()
 	Plugin::app()->updateOption('scanner_status', 'stopped');
 
 	try {
-		/** @var Match[] $matched */
+		/** @var Result[] $matched */
 		$matched = get_option(Plugin::app()->getPrefix() . 'scanner_malware_matched', []);
 		$weeklyMatched = get_option(Plugin::app()->getPrefix() . 'matched_weekly', []);
 
@@ -349,8 +349,8 @@ function collect_wp_hash_sum($path = ABSPATH)
  * This is necessary to remind the user to update the configuration of the plugin components,
  * Otherwise, the newly activated components will not be involved in the work of the plugin.
  *
- * @param Wbcr_Factory439_Plugin $plugin
- * @param Wbcr_FactoryPages438_ImpressiveThemplate $obj
+ * @param Wbcr_Factory442_Plugin $plugin
+ * @param Wbcr_FactoryPages441_ImpressiveThemplate $obj
  *
  * @return bool
  */
@@ -449,7 +449,7 @@ function titan_set_scanner_speed_deactive()
 /**
  * @return int|float [Memory limit in MB]
  */
-function get_memory_limit()
+function titan_get_memory_limit()
 {
 	$mem = ini_get('memory_limit');
 	$last = $mem[strlen($mem) - 1];
@@ -477,7 +477,7 @@ function get_memory_limit()
 
 function get_recommended_scanner_speed()
 {
-	$mem = get_memory_limit();
+	$mem = titan_get_memory_limit();
 	if( $mem > 100 ) {
 		$recommendation = Scanner::SPEED_FAST;
 	} elseif( $mem > 60 ) {
@@ -551,4 +551,27 @@ function titan_init_check_schedule()
 	if( $is_schedule ) {
 		Plugin::app()->updatePopulateOption('scanner_schedule_last_time', date_i18n($format_date));
 	}
+}
+
+/**
+ * Return premium widget markup
+ *
+ * @return string
+ */
+function wtitan_get_sidebar_adverts_widget()
+{
+	ob_start();
+	?>
+	<div id="wtitan-adverts-widget" class="wbcr-factory-sidebar-widget">
+		<a href="https://cm-wp.com/wp-support/" target="_blank" rel="noopener noreferrer">
+			<img src="https://api.cm-wp.com/wp-content/uploads/2021/01/vertical_maintance.jpg" width="100%" alt="">
+		</a>
+	</div>
+	<?php
+
+	$output = ob_get_contents();
+
+	ob_end_clean();
+
+	return $output;
 }
