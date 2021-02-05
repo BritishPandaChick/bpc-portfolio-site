@@ -1,4 +1,6 @@
-<?php $fontsData      = uaf_get_uploaded_font_data(); ?>
+<?php 
+if ( ! defined( 'ABSPATH' ) ) exit; 
+$fontsData      = uaf_get_uploaded_font_data(); ?>
 
 <?php 
 if (!empty($fontsData)):

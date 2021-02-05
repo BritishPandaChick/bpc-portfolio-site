@@ -1,8 +1,9 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; 
 function uaf_count_uploaded_fonts(){
 	$count = 0;
 	$fontsRawData   = get_option('uaf_font_data');
-	if (!empty($fontsRawData)){
+	if ((!empty($fontsRawData)) && ($fontsRawData != 'null')){
 		$fontsData 		= json_decode($fontsRawData, true);	
 		$count 			= count($fontsData);
 	}

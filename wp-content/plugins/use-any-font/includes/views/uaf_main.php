@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; 
 if (isset($_GET['tab'])){
   $currentTab = $_GET['tab'];
 } else {

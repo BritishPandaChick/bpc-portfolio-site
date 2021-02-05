@@ -1,4 +1,6 @@
-<?php $fontsData		= uaf_get_uploaded_font_data(); ?>
+<?php 
+if ( ! defined( 'ABSPATH' ) ) exit; 
+$fontsData		= uaf_get_uploaded_font_data(); ?>
 
 <p align="right"><input type="button" name="open_assign_font" onClick="open_assign_font();" class="button-primary" id="open_assign_font_button" value="Assign Font" /><br/></p>
 

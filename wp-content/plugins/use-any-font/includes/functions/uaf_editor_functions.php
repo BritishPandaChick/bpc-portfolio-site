@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; 
 // DEFAULT WORDPRESS EDITOR
 $uaf_disbale_editor_font_list_value = get_option('uaf_disbale_editor_font_list');
 if ($uaf_disbale_editor_font_list_value != 1):

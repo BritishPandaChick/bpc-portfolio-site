@@ -1,6 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; 
 
-$GLOBALS['uaf_current_version']				= '6.0.3';
+$GLOBALS['uaf_current_version']				= '6.0.4';
 
 
 $GLOBALS['uaf_fix_settings'] 				= array(
@@ -28,6 +29,6 @@ $GLOBALS['uaf_user_settings'] 				= array(
 													'uaf_font_display_property' 	=> 'auto',
 													'uaf_enable_multi_lang_support' => '0',
 													'uaf_disbale_editor_font_list'	=> '0',
-													'uaf_use_absolute_font_path'	=> '1'
+													'uaf_use_absolute_font_path'	=> '0'
 												);
 ?>

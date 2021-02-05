@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit;  ?>
 <div class="dcform">
 	<form action="admin.php?page=use-any-font&tab=api" method="post" id="uaf_api_key_form" >
 		<p>

@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; 
 function uaf_client_assets() {
 	$uaf_upload 	= wp_upload_dir();
 	$uaf_upload_url = set_url_scheme($uaf_upload['baseurl']);

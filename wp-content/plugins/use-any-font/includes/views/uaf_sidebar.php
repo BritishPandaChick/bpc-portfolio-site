@@ -1,4 +1,6 @@
-<?php if(is_plugin_active( 'gravityforms/gravityforms.php' ) && !is_plugin_active( 'jquery-validation-for-gravity-form/jquery-validation-for-gravity-form.php' ) ) { ?>
+<?php 
+if ( ! defined( 'ABSPATH' ) ) exit; 
+if(is_plugin_active( 'gravityforms/gravityforms.php' ) && !is_plugin_active( 'jquery-validation-for-gravity-form/jquery-validation-for-gravity-form.php' ) ) { ?>
     <div class="dcwidget">
         <div class="dcwidgetheader">
             jQuery Validation For Gravity Forms

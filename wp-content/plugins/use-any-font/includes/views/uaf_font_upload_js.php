@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit;  ?>
 <p align="right"><input type="button" name="open_add_font" onClick="open_add_font();" class="button-primary" value="Add Fonts" /><br/></p>
 
 

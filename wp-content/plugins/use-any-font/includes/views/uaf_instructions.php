@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit;  ?>
 <div class="dcinstructions">
     <div class="instruct-head">        
         Step 1 : Verify API Key

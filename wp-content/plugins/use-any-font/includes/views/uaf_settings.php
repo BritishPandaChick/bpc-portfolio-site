@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit;  ?>
 <div class="dcform">
     <form method="post" action="">
         <p>
@@ -69,6 +70,7 @@
         <p> 
             <label>&nbsp;</label>
             <span class="field">
+                <?php wp_nonce_field( 'uaf_save_settings', 'uaf_nonce' ); ?>
                 <input type="submit" name="save-uaf-options" class="button-primary" value="Save Settings" />
             </span>
         </p>

@@ -1,10 +1,11 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; 
 /*
 Plugin Name: Use Any Font
 Plugin URI: https://dineshkarki.com.np/use-any-font
 Description: Embed any font in your website
 Author: Dnesscarkey
-Version: 6.0.3
+Version: 6.0.4
 Author URI: https://dineshkarki.com.np/use-any-font
 */
 

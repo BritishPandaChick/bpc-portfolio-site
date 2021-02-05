@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; 
 function uaf_create_menu() {
 	add_menu_page( 'Use Any Font', 'Use Any Font', 'manage_options', 'use-any-font', 'uaf_interface', 'dashicons-editor-textcolor');
 }
@@ -149,16 +150,28 @@ function uaf_check_site_url(){
 }
 
 function uaf_save_options(){
-	$all_fields = $_POST;
-	unset($all_fields['save-uaf-options']); // REMOVE submit field
-	foreach ($all_fields as $fieldname => $fieldvalue) {
-		update_option($fieldname,stripslashes($fieldvalue));
-	}
+	if ( isset($_POST['uaf_nonce']) && wp_verify_nonce($_POST['uaf_nonce'], 'uaf_save_settings')) {
+		$all_fields_name = array(
+								'uaf_server_url_type',
+								'uaf_uploader_type',
+								'uaf_use_absolute_font_path',
+								'uaf_disbale_editor_font_list',
+								'uaf_enable_multi_lang_support',
+								'uaf_font_display_property'
+		);
 
-	uaf_get_options();
-	uaf_write_css();
-	$return['status']   = 'ok';
-	$return['body'] 	= 'Settings Saved';
+		foreach ($all_fields_name as $fieldname) {
+			update_option($fieldname,sanitize_text_field($_POST[$fieldname]));
+		}
+
+		uaf_get_options();
+		uaf_write_css();
+		$return['status']   = 'ok';
+		$return['body'] 	= 'Settings Saved';		
+	} else {
+		$return['status']   = 'error';
+		$return['body'] 	= 'Sorry, your nonce did not verify. Please try again.';
+	}	
 	return $return;
 }
 
