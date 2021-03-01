@@ -454,3 +454,172 @@
 1246.936 (0) Googledrive chunked upload: 20.1 % uploaded (5242880)
 1252.634 (0) Googledrive chunked upload: 24.1 % uploaded (6291456)
 1260.302 (0) The time we have been running (1257.4) is approaching the resumption interval (1286) - increasing resumption interval to 1288
+1261.434 (0) Googledrive chunked upload: 28.1 % uploaded (7340032)
+1265.884 (0) The time we have been running (1263.3) is approaching the resumption interval (1288) - increasing resumption interval to 1294
+1266.795 (0) Googledrive chunked upload: 32.1 % uploaded (8388608)
+1273.224 (0) The time we have been running (1270.2) is approaching the resumption interval (1294) - increasing resumption interval to 1301
+1273.775 (0) Googledrive chunked upload: 36.1 % uploaded (9437184)
+1278.882 (0) The time we have been running (1275.5) is approaching the resumption interval (1301) - increasing resumption interval to 1306
+1281.448 (0) Googledrive chunked upload: 40.1 % uploaded (10485760)
+1292.523 (0) The time we have been running (1290.1) is approaching the resumption interval (1306) - increasing resumption interval to 1321
+1293.518 (0) Googledrive chunked upload: 44.1 % uploaded (11534336)
+1300.817 (0) The time we have been running (1296.6) is approaching the resumption interval (1321) - increasing resumption interval to 1327
+1301.675 (0) Googledrive chunked upload: 48.1 % uploaded (12582912)
+1309.725 (0) The time we have been running (1306.8) is approaching the resumption interval (1327) - increasing resumption interval to 1337
+1312.578 (0) Googledrive chunked upload: 52.1 % uploaded (13631488)
+1320.956 (0) The time we have been running (1317.5) is approaching the resumption interval (1337) - increasing resumption interval to 1348
+1323.469 (0) Googledrive chunked upload: 56.1 % uploaded (14680064)
+1335.831 (0) The time we have been running (1329.9) is approaching the resumption interval (1348) - increasing resumption interval to 1360
+1339.683 (0) Googledrive chunked upload: 60.2 % uploaded (15728640)
+1349.035 (0) The time we have been running (1346.8) is approaching the resumption interval (1360) - increasing resumption interval to 1377
+1351.029 (0) Googledrive chunked upload: 64.2 % uploaded (16777216)
+1359.295 (0) The time we have been running (1355.5) is approaching the resumption interval (1377) - increasing resumption interval to 1386
+1359.829 (0) Googledrive chunked upload: 68.2 % uploaded (17825792)
+1365.122 (0) The time we have been running (1363.3) is approaching the resumption interval (1386) - increasing resumption interval to 1394
+1365.735 (0) Googledrive chunked upload: 72.2 % uploaded (18874368)
+1369.371 (0) The time we have been running (1368.1) is approaching the resumption interval (1394) - increasing resumption interval to 1399
+1369.637 (0) Googledrive chunked upload: 76.2 % uploaded (19922944)
+1377.653 (0) The time we have been running (1372.7) is approaching the resumption interval (1399) - increasing resumption interval to 1403
+1379.820 (0) Googledrive chunked upload: 80.2 % uploaded (20971520)
+1389.090 (0) The time we have been running (1384.9) is approaching the resumption interval (1403) - increasing resumption interval to 1415
+1390.616 (0) Googledrive chunked upload: 84.2 % uploaded (22020096)
+1396.641 (0) The time we have been running (1394.4) is approaching the resumption interval (1415) - increasing resumption interval to 1425
+1397.319 (0) Googledrive chunked upload: 88.2 % uploaded (23068672)
+1407.845 (0) The time we have been running (1401.6) is approaching the resumption interval (1425) - increasing resumption interval to 1432
+1409.102 (0) Googledrive chunked upload: 92.2 % uploaded (24117248)
+1414.068 (0) The time we have been running (1411.7) is approaching the resumption interval (1432) - increasing resumption interval to 1442
+1414.945 (0) Googledrive chunked upload: 96.2 % uploaded (25165824)
+1418.275 (0) The time we have been running (1417.1) is approaching the resumption interval (1442) - increasing resumption interval to 1448
+1418.696 (0) Googledrive chunked upload: 100 % uploaded (25165824)
+1419.307 (0) Google Drive: OK: Archive backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-plugins.zip uploaded in 261.13 seconds
+1419.803 (0) Recording as successfully uploaded: backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-plugins.zip
+1420.008 (0) Deleting local file: backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-plugins.zip: OK
+1420.517 (0) Google Drive: quota usage: used=380.2 MB, total=15360 MB, available=14979.8 MB
+1420.840 (0) Google Drive: backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-themes.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+1424.709 (0) The time we have been running (1423.1) is approaching the resumption interval (1448) - increasing resumption interval to 1454
+1424.843 (0) Googledrive chunked upload: 15.7 % uploaded (1048576)
+1428.035 (0) The time we have been running (1426.5) is approaching the resumption interval (1454) - increasing resumption interval to 1457
+1428.316 (0) Googledrive chunked upload: 31.4 % uploaded (2097152)
+1431.289 (0) The time we have been running (1429.9) is approaching the resumption interval (1457) - increasing resumption interval to 1460
+1431.455 (0) Googledrive chunked upload: 47.1 % uploaded (3145728)
+1434.597 (0) The time we have been running (1433.2) is approaching the resumption interval (1460) - increasing resumption interval to 1464
+1435.125 (0) Googledrive chunked upload: 62.8 % uploaded (4194304)
+1440.142 (0) The time we have been running (1437.9) is approaching the resumption interval (1464) - increasing resumption interval to 1468
+1440.650 (0) Googledrive chunked upload: 78.5 % uploaded (5242880)
+1444.866 (0) The time we have been running (1443.1) is approaching the resumption interval (1468) - increasing resumption interval to 1474
+1445.377 (0) Googledrive chunked upload: 94.2 % uploaded (6291456)
+1447.887 (0) The time we have been running (1446.3) is approaching the resumption interval (1474) - increasing resumption interval to 1477
+1448.783 (0) Googledrive chunked upload: 100 % uploaded (6291456)
+1449.872 (0) Google Drive: OK: Archive backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-themes.zip uploaded in 28.61 seconds
+1450.059 (0) Recording as successfully uploaded: backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-themes.zip
+1450.427 (0) Deleting local file: backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-themes.zip: OK
+1450.869 (0) Google Drive: quota usage: used=386.6 MB, total=15360 MB, available=14973.4 MB
+1451.072 (0) Google Drive: backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-uploads.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+1454.828 (0) The time we have been running (1453.5) is approaching the resumption interval (1477) - increasing resumption interval to 1484
+1455.372 (0) Googledrive chunked upload: 7.2 % uploaded (1048576)
+1459.260 (0) The time we have been running (1457.3) is approaching the resumption interval (1484) - increasing resumption interval to 1488
+1459.515 (0) Googledrive chunked upload: 14.5 % uploaded (2097152)
+1463.338 (0) The time we have been running (1461.9) is approaching the resumption interval (1488) - increasing resumption interval to 1492
+1464.705 (0) Googledrive chunked upload: 21.7 % uploaded (3145728)
+1469.157 (0) The time we have been running (1467.4) is approaching the resumption interval (1492) - increasing resumption interval to 1498
+1469.613 (0) Googledrive chunked upload: 28.9 % uploaded (4194304)
+1473.784 (0) The time we have been running (1472.1) is approaching the resumption interval (1498) - increasing resumption interval to 1503
+1473.967 (0) Googledrive chunked upload: 36.1 % uploaded (5242880)
+1476.429 (0) The time we have been running (1475.4) is approaching the resumption interval (1503) - increasing resumption interval to 1506
+1476.606 (0) Googledrive chunked upload: 43.4 % uploaded (6291456)
+1478.956 (0) The time we have been running (1477.8) is approaching the resumption interval (1506) - increasing resumption interval to 1508
+1479.470 (0) Googledrive chunked upload: 50.6 % uploaded (7340032)
+1485.370 (0) The time we have been running (1481.6) is approaching the resumption interval (1508) - increasing resumption interval to 1512
+1486.727 (0) Googledrive chunked upload: 57.8 % uploaded (8388608)
+1491.784 (0) The time we have been running (1490) is approaching the resumption interval (1512) - increasing resumption interval to 1520
+1492.628 (0) Googledrive chunked upload: 65.1 % uploaded (9437184)
+1496.441 (0) The time we have been running (1494.3) is approaching the resumption interval (1520) - increasing resumption interval to 1525
+1497.476 (0) Googledrive chunked upload: 72.3 % uploaded (10485760)
+1500.641 (0) The time we have been running (1499.3) is approaching the resumption interval (1525) - increasing resumption interval to 1530
+1500.847 (0) Googledrive chunked upload: 79.5 % uploaded (11534336)
+1503.821 (0) The time we have been running (1502.7) is approaching the resumption interval (1530) - increasing resumption interval to 1533
+1504.087 (0) Googledrive chunked upload: 86.7 % uploaded (12582912)
+1506.737 (0) The time we have been running (1505.5) is approaching the resumption interval (1533) - increasing resumption interval to 1536
+1507.037 (0) Googledrive chunked upload: 94 % uploaded (13631488)
+1509.802 (0) The time we have been running (1508.5) is approaching the resumption interval (1536) - increasing resumption interval to 1539
+1510.113 (0) Googledrive chunked upload: 100 % uploaded (13631488)
+1510.288 (0) Google Drive: OK: Archive backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-uploads.zip uploaded in 59.07 seconds
+1510.415 (0) Recording as successfully uploaded: backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-uploads.zip
+1510.618 (0) Deleting local file: backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-uploads.zip: OK
+1511.051 (0) Google Drive: quota usage: used=400.4 MB, total=15360 MB, available=14959.6 MB
+1511.177 (0) Google Drive: backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-others.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+1514.438 (0) The time we have been running (1513) is approaching the resumption interval (1539) - increasing resumption interval to 1543
+1514.671 (0) Googledrive chunked upload: 41.7 % uploaded (1048576)
+1517.377 (0) The time we have been running (1516.3) is approaching the resumption interval (1543) - increasing resumption interval to 1547
+1517.512 (0) Googledrive chunked upload: 83.4 % uploaded (2097152)
+1519.474 (0) The time we have been running (1518.4) is approaching the resumption interval (1547) - increasing resumption interval to 1549
+1519.663 (0) Googledrive chunked upload: 100 % uploaded (2097152)
+1520.016 (0) Google Drive: OK: Archive backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-others.zip uploaded in 8.49 seconds
+1520.131 (0) Recording as successfully uploaded: backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-others.zip
+1520.447 (0) Deleting local file: backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-others.zip: OK
+1520.927 (0) Google Drive: quota usage: used=402.8 MB, total=15360 MB, available=14957.2 MB
+1521.006 (0) Google Drive: backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-db.gz: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+1523.768 (0) The time we have been running (1522.4) is approaching the resumption interval (1549) - increasing resumption interval to 1553
+1523.913 (0) Googledrive chunked upload: 59.2 % uploaded (1048576)
+1526.253 (0) The time we have been running (1525.2) is approaching the resumption interval (1553) - increasing resumption interval to 1556
+1526.411 (0) Googledrive chunked upload: 100 % uploaded (1048576)
+1526.998 (0) Google Drive: OK: Archive backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-db.gz uploaded in 5.92 seconds
+1527.074 (0) Recording as successfully uploaded: backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-db.gz
+1527.301 (0) Deleting local file: backup_2021-02-28-1220_Sarah_Bartley_b3eae9f166b2-db.gz: OK
+1527.975 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+1528.324 (0) Number of backup sets in history: 6; groups (db): 1
+1528.417 (0) Examining (for databases) backup set with group_id=0, nonce=b3eae9f166b2, datestamp=1614532859 (Feb 28 2021 17:20:59)
+1528.503 (0) This backup set is the backup set just made, so will not be deleted.
+1528.504 (0) Examining (for databases) backup set with group_id=0, nonce=152a5686ea75, datestamp=1614456040 (Feb 27 2021 20:00:40)
+1528.504 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+1528.718 (0) Examining (for databases) backup set with group_id=0, nonce=2e1e681f6778, datestamp=1614365125 (Feb 26 2021 18:45:25)
+1528.718 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+1528.719 (0) Examining (for databases) backup set with group_id=0, nonce=555bbff70ee4, datestamp=1614195394 (Feb 24 2021 19:36:34)
+1528.719 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+1528.719 (0) Examining (for databases) backup set with group_id=0, nonce=4ad92c8a84a5, datestamp=1614114510 (Feb 23 2021 21:08:30)
+1528.719 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+1528.720 (0) Examining (for databases) backup set with group_id=0, nonce=7f06ad42509d, datestamp=1614022696 (Feb 22 2021 19:38:16)
+1528.720 (0) 1614022696: db: this set includes a database (backup_2021-02-22-1438_Sarah_Bartley_7f06ad42509d-db.gz); db count is now 5
+1528.720 (0) 1614022696: db: over retain limit (5); will delete this database
+1528.720 (0) Delete file: backup_2021-02-22-1438_Sarah_Bartley_7f06ad42509d-db.gz, service=googledrive
+1531.677 (0) Google Drive: backup_2021-02-22-1438_Sarah_Bartley_7f06ad42509d-db.gz: Deletion successful
+1533.111 (0) The time we have been running (1530.9) is approaching the resumption interval (1556) - increasing resumption interval to 1561
+1534.580 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+1535.008 (0) Number of backup sets in history: 6; groups (files): 1
+1535.730 (0) Examining (for files) backup set with nonce=b3eae9f166b2, datestamp=1614532859 (Feb 28 2021 17:20:59)
+1537.327 (0) This backup set is the backup set just made, so will not be deleted.
+1538.305 (0) This backup set is the backup set just made, so will not be deleted.
+1539.117 (0) This backup set is the backup set just made, so will not be deleted.
+1540.221 (0) This backup set is the backup set just made, so will not be deleted.
+1540.488 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+1540.734 (0) Examining (for files) backup set with nonce=152a5686ea75, datestamp=1614456040 (Feb 27 2021 20:00:40)
+1541.037 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+1541.224 (0) Examining (for files) backup set with nonce=2e1e681f6778, datestamp=1614365125 (Feb 26 2021 18:45:25)
+1541.224 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+1541.224 (0) Examining (for files) backup set with nonce=555bbff70ee4, datestamp=1614195394 (Feb 24 2021 19:36:34)
+1541.224 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+1541.224 (0) Examining (for files) backup set with nonce=4ad92c8a84a5, datestamp=1614114510 (Feb 23 2021 21:08:30)
+1541.224 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+1541.224 (0) Examining (for files) backup set with nonce=7f06ad42509d, datestamp=1614022696 (Feb 22 2021 19:38:16)
+1541.224 (0) plugins: over retain limit (5); will delete this file entity
+1541.224 (0) themes: over retain limit (5); will delete this file entity
+1541.224 (0) uploads: over retain limit (5); will delete this file entity
+1541.224 (0) others: over retain limit (5); will delete this file entity
+1541.224 (0) Delete file: backup_2021-02-22-1438_Sarah_Bartley_7f06ad42509d-plugins.zip, service=googledrive
+1541.587 (0) Delete file: backup_2021-02-22-1438_Sarah_Bartley_7f06ad42509d-themes.zip, service=googledrive
+1542.123 (0) Delete file: backup_2021-02-22-1438_Sarah_Bartley_7f06ad42509d-uploads.zip, service=googledrive
+1542.562 (0) Delete file: backup_2021-02-22-1438_Sarah_Bartley_7f06ad42509d-others.zip, service=googledrive
+1544.563 (0) Google Drive: backup_2021-02-22-1438_Sarah_Bartley_7f06ad42509d-others.zip: Deletion successful
+1546.170 (0) Google Drive: backup_2021-02-22-1438_Sarah_Bartley_7f06ad42509d-uploads.zip: Deletion successful
+1547.539 (0) Google Drive: backup_2021-02-22-1438_Sarah_Bartley_7f06ad42509d-themes.zip: Deletion successful
+1548.465 (0) Google Drive: backup_2021-02-22-1438_Sarah_Bartley_7f06ad42509d-plugins.zip: Deletion successful
+1549.042 (0) The time we have been running (1547.7) is approaching the resumption interval (1561) - increasing resumption interval to 1578
+1549.785 (0) This backup set is now empty; will remove from history
+1549.885 (0) Deleting log file (log.7f06ad42509d.txt)
+1549.985 (0) Retain: saving new backup history (sets now: 5) and finishing retain operation
+1550.725 (0) Resume backup (b3eae9f166b2, 0): finish run
+1551.049 (0) Decremented the semaphore (fd) by 1
+1551.837 (0) Semaphore (fd) unlocked
+1552.036 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+1553.456 (0) No email will/can be sent - the user has not configured an email address.
+1553.700 (0) The backup apparently succeeded and is now complete
