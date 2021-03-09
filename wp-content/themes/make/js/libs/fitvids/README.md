@@ -10,7 +10,7 @@ Include jQuery 1.7+ and FitVids.js in your layout and target your videos contain
 <script src="path/to/jquery.min.js"></script>
 <script src="path/to/jquery.fitvids.js"></script>
 <script>
-  $(document).ready(function(){
+  $(function(){
     // Target your .container, .wrapper, .post, etc.
     $("#thing-with-videos").fitVids();
   });

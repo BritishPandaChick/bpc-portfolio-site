@@ -55,11 +55,11 @@
 
 			if ( 'visual' === this.getMode() ) {
 				// Focus on visual editor
-				this.getEditor().focus();
+				this.getEditor().trigger( 'focus' );
 				this.getEditor().on( 'keydown', this.onKeyDown );
 			} else {
 				// Focus on code editor
-				this.$textarea.focus();
+				this.$textarea.trigger( 'focus' );
 				this.$textarea.on( 'keydown', this.onKeyDown );
 			}
 
@@ -219,7 +219,7 @@
 		},
 
 		onToggleSelection: function() {
-			if ( this.frame.state().get( 'selection' ).size() ) {
+			if ( this.frame.state().get( 'selection' ).length ) {
 				$( '.ttfmake-media-overlay-remove-image', this.$el ).show();
 			} else {
 				$( '.ttfmake-media-overlay-remove-image', this.$el ).hide();
@@ -234,7 +234,7 @@
 		onSelect: function() {
 			var selection = this.frame.state().get( 'selection' );
 
-			if ( selection.size() ) {
+			if ( selection.length ) {
 				var attachment = selection.first().toJSON();
 				this.changeset.set( this.field, attachment.id );
 				this.changeset.set( this.field + '-url', attachment.url );
@@ -337,7 +337,7 @@
 			$body.on( 'keydown', this.onKeyDown );
 
 			// Focus on first input
-			$( 'input, select', this.$el ).first().focus();
+			$( 'input, select', this.$el ).first().trigger( 'focus' );
 
 			// Scroll to the open divider
 			var $overlay = $( '.ttfmake-overlay-body', this.$el );

@@ -3,7 +3,7 @@
  * @package Make
  */
 
-// Updated: 2021-01-27T08:48:10+00:00
+// Updated: 2021-03-09T15:35:31+00:00
 
 // Bail if this isn't being included inside of MAKE_Font_Source_Google.
 if ( ! isset( $this ) || ! $this instanceof MAKE_Font_Source_Google ) {
@@ -129,6 +129,30 @@ $this->load_font_data( array(
 		),
 		'category' => 'handwriting',
 	),
+	'Akaya Kanadaka' => array(
+		'label' => 'Akaya Kanadaka',
+		'variants' => array(
+			'regular',
+		),
+		'subsets' => array(
+			'kannada',
+			'latin',
+			'latin-ext',
+		),
+		'category' => 'display',
+	),
+	'Akaya Telivigala' => array(
+		'label' => 'Akaya Telivigala',
+		'variants' => array(
+			'regular',
+		),
+		'subsets' => array(
+			'latin',
+			'latin-ext',
+			'telugu',
+		),
+		'category' => 'display',
+	),
 	'Akronim' => array(
 		'label' => 'Akronim',
 		'variants' => array(
@@ -202,6 +226,8 @@ $this->load_font_data( array(
 		'variants' => array(
 			'500',
 			'500italic',
+			'600',
+			'600italic',
 			'700',
 			'700italic',
 			'800',
@@ -1249,6 +1275,18 @@ $this->load_font_data( array(
 		),
 		'category' => 'sans-serif',
 	),
+	'Ballet' => array(
+		'label' => 'Ballet',
+		'variants' => array(
+			'regular',
+		),
+		'subsets' => array(
+			'latin',
+			'latin-ext',
+			'vietnamese',
+		),
+		'category' => 'handwriting',
+	),
 	'Baloo 2' => array(
 		'label' => 'Baloo 2',
 		'variants' => array(
@@ -1722,6 +1760,18 @@ $this->load_font_data( array(
 		),
 		'category' => 'sans-serif',
 	),
+	'Benne' => array(
+		'label' => 'Benne',
+		'variants' => array(
+			'regular',
+		),
+		'subsets' => array(
+			'kannada',
+			'latin',
+			'latin-ext',
+		),
+		'category' => 'serif',
+	),
 	'Bentham' => array(
 		'label' => 'Bentham',
 		'variants' => array(
@@ -2143,6 +2193,24 @@ $this->load_font_data( array(
 		'subsets' => array(
 			'latin',
 			'latin-ext',
+		),
+		'category' => 'serif',
+	),
+	'Brygada 1918' => array(
+		'label' => 'Brygada 1918',
+		'variants' => array(
+			'500',
+			'600',
+			'700',
+			'regular',
+		),
+		'subsets' => array(
+			'cyrillic',
+			'cyrillic-ext',
+			'greek',
+			'latin',
+			'latin-ext',
+			'vietnamese',
 		),
 		'category' => 'serif',
 	),
@@ -3792,6 +3860,19 @@ $this->load_font_data( array(
 			'latin',
 			'latin-ext',
 			'vietnamese',
+		),
+		'category' => 'sans-serif',
+	),
+	'DotGothic16' => array(
+		'label' => 'DotGothic16',
+		'variants' => array(
+			'regular',
+		),
+		'subsets' => array(
+			'cyrillic',
+			'japanese',
+			'latin',
+			'latin-ext',
 		),
 		'category' => 'sans-serif',
 	),
@@ -7048,7 +7129,7 @@ $this->load_font_data( array(
 			'latin',
 			'latin-ext',
 		),
-		'category' => 'serif',
+		'category' => 'sans-serif',
 	),
 	'Lakki Reddy' => array(
 		'label' => 'Lakki Reddy',
@@ -9003,6 +9084,31 @@ $this->load_font_data( array(
 		),
 		'category' => 'sans-serif',
 	),
+	'Newsreader' => array(
+		'label' => 'Newsreader',
+		'variants' => array(
+			'200',
+			'200italic',
+			'300',
+			'300italic',
+			'500',
+			'500italic',
+			'600',
+			'600italic',
+			'700',
+			'700italic',
+			'800',
+			'800italic',
+			'italic',
+			'regular',
+		),
+		'subsets' => array(
+			'latin',
+			'latin-ext',
+			'vietnamese',
+		),
+		'category' => 'serif',
+	),
 	'Niconne' => array(
 		'label' => 'Niconne',
 		'variants' => array(
@@ -9489,6 +9595,19 @@ $this->load_font_data( array(
 		),
 		'subsets' => array(
 			'latin',
+		),
+		'category' => 'display',
+	),
+	'Oi' => array(
+		'label' => 'Oi',
+		'variants' => array(
+			'regular',
+		),
+		'subsets' => array(
+			'greek',
+			'latin',
+			'latin-ext',
+			'vietnamese',
 		),
 		'category' => 'display',
 	),
@@ -11072,6 +11191,19 @@ $this->load_font_data( array(
 		),
 		'category' => 'handwriting',
 	),
+	'Reggae One' => array(
+		'label' => 'Reggae One',
+		'variants' => array(
+			'regular',
+		),
+		'subsets' => array(
+			'cyrillic',
+			'japanese',
+			'latin',
+			'latin-ext',
+		),
+		'category' => 'display',
+	),
 	'Revalia' => array(
 		'label' => 'Revalia',
 		'variants' => array(
@@ -11258,6 +11390,19 @@ $this->load_font_data( array(
 			'latin',
 		),
 		'category' => 'handwriting',
+	),
+	'RocknRoll One' => array(
+		'label' => 'RocknRoll One',
+		'variants' => array(
+			'regular',
+		),
+		'subsets' => array(
+			'cyrillic',
+			'japanese',
+			'latin',
+			'latin-ext',
+		),
+		'category' => 'sans-serif',
 	),
 	'Rokkitt' => array(
 		'label' => 'Rokkitt',
@@ -12025,6 +12170,38 @@ $this->load_font_data( array(
 		),
 		'category' => 'monospace',
 	),
+	'Shippori Mincho' => array(
+		'label' => 'Shippori Mincho',
+		'variants' => array(
+			'500',
+			'600',
+			'700',
+			'800',
+			'regular',
+		),
+		'subsets' => array(
+			'japanese',
+			'latin',
+			'latin-ext',
+		),
+		'category' => 'serif',
+	),
+	'Shippori Mincho B1' => array(
+		'label' => 'Shippori Mincho B1',
+		'variants' => array(
+			'500',
+			'600',
+			'700',
+			'800',
+			'regular',
+		),
+		'subsets' => array(
+			'japanese',
+			'latin',
+			'latin-ext',
+		),
+		'category' => 'serif',
+	),
 	'Shojumaru' => array(
 		'label' => 'Shojumaru',
 		'variants' => array(
@@ -12666,6 +12843,19 @@ $this->load_font_data( array(
 		),
 		'category' => 'display',
 	),
+	'Stick' => array(
+		'label' => 'Stick',
+		'variants' => array(
+			'regular',
+		),
+		'subsets' => array(
+			'cyrillic',
+			'japanese',
+			'latin',
+			'latin-ext',
+		),
+		'category' => 'sans-serif',
+	),
 	'Stint Ultra Condensed' => array(
 		'label' => 'Stint Ultra Condensed',
 		'variants' => array(
@@ -13300,6 +13490,26 @@ $this->load_font_data( array(
 			'latin',
 		),
 		'category' => 'display',
+	),
+	'Truculenta' => array(
+		'label' => 'Truculenta',
+		'variants' => array(
+			'100',
+			'200',
+			'300',
+			'500',
+			'600',
+			'700',
+			'800',
+			'900',
+			'regular',
+		),
+		'subsets' => array(
+			'latin',
+			'latin-ext',
+			'vietnamese',
+		),
+		'category' => 'sans-serif',
 	),
 	'Trykker' => array(
 		'label' => 'Trykker',

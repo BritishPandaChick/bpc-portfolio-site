@@ -74,7 +74,7 @@ $this->register_admin_notice(
 );
 
 // Notice of Make 1.8 not being compatible with Make Plus older than 1.8.0
-if ( Make()->plus()->is_plus() && strcmp( Make()->plus()->get_plus_version(), '1.8.0' ) < 0 ) {
+if ( Make()->plus()->is_plus() && version_compare( Make()->plus()->get_plus_version(), '1.8.0' ) < 0 ) {
 	$this->register_admin_notice(
 		'make-makeplus-18-compatibility',
 		__( 'The latest version of Make isn\'t compatible with the version of Make Plus you\'re using. Please update Make Plus.', 'make' ),

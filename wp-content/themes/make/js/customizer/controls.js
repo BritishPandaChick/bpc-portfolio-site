@@ -53,7 +53,7 @@
 		initFont: function() {
 			var self = this;
 
-			self.cache.$document.ready(function() {
+			$(function() {
 				self.getFontElements();
 
 				self.fontElements.each(function() {
@@ -124,7 +124,7 @@
 		}
 	});
 
-	$(document).ready(function() {
+	$(function() {
 		Make.initFont();
 	});
 
@@ -231,7 +231,7 @@
 
 				// Debounce the slide event so the preview pane doesn't update too often
 				$slider.on('slide', _.debounce(function(e, ui) {
-					$input.keyup().trigger('change');
+					$input.trigger( 'keyup' ).trigger('change');
 				}, 300));
 
 				// Sync values of number input and slider
@@ -342,7 +342,7 @@
 
 				$item = $(control.params.itemTemplate({type:'link'}));
 				$stage.append($item);
-				$item.find('input').focus();
+				$item.find('input').trigger( 'focus' );
 				control.doneTyping($item);
 			});
 
@@ -373,7 +373,7 @@
 				if (checked) {
 					$item = $(control.params.itemTemplate({type:'email'}));
 					$stage.append($item);
-					$item.find('input').focus();
+					$item.find('input').trigger( 'focus' );
 					control.doneTyping($item);
 					control.sendIconRequest( $stage.find('.make-socialicons-item-email') );
 				} else {
@@ -393,7 +393,7 @@
 				if (checked) {
 					$item = $(control.params.itemTemplate({type:'rss'}));
 					$stage.append($item);
-					$item.find('input').focus();
+					$item.find('input').trigger( 'focus' );
 					control.doneTyping($item);
 					control.sendIconRequest( $stage.find('.make-socialicons-item-rss') );
 					$rsshelp.show();

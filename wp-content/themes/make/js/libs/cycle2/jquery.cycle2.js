@@ -682,7 +682,7 @@ $.fn.cycle.defaults = {
 };
 
 // automatically find and run slideshows
-$(document).ready(function() {
+$(function() {
     $( $.fn.cycle.defaults.autoSelector ).cycle();
 });
 

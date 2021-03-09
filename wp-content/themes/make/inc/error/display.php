@@ -355,7 +355,7 @@ final class MAKE_Error_Display extends MAKE_Util_Modules implements MAKE_Error_D
 		<script type="application/javascript">
 			if ('undefined' !== typeof jQuery) {
 				(function($) {
-					$(document).ready(function() {
+					$(function() {
 						var $container   = $('#wp-admin-bar-make-errors'),
 							$barbutton   = $container.find('> .ab-item'),
 							$overlay     = $('#make-error-detail-wrapper'),

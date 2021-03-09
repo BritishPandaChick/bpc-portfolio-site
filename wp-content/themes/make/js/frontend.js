@@ -58,7 +58,7 @@ var MakeFrontEnd = MakeFrontEnd || {};
 		bindEvents: function() {
 			var self = this;
 
-			self.cache.$document.ready(function() {
+			$(function() {
 				self.navigationInit();
 				self.skipLinkFocusFix();
 				self.navigationHoverFix();
@@ -125,9 +125,9 @@ var MakeFrontEnd = MakeFrontEnd || {};
 
 			var $links = $(links);
 
-			$links.focus(function() {
+			$links.on( 'focus',function() {
 				$(this).parents('li').addClass('focus');
-			}).blur(function() {
+			}).on( 'blur', function() {
 				$(this).parents('li').removeClass('focus');
 			});
 
@@ -165,7 +165,7 @@ var MakeFrontEnd = MakeFrontEnd || {};
 							element.tabIndex = -1;
 						}
 
-						element.focus();
+						element.trigger( 'focus' );
 					}
 				}, false );
 			}

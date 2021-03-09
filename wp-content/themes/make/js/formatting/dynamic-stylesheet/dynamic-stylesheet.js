@@ -85,7 +85,7 @@ var MakeDynamicStylesheet = MakeDynamicStylesheet || {};
 				this.root = this.cache.$document;
 
 				var self = this;
-				self.cache.$document.ready(function() {
+				$(function() {
 					self.cacheElements();
 					self.buildStyles();
 				} );

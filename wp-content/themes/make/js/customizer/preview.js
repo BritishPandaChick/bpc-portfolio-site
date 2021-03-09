@@ -157,7 +157,7 @@
 		}
 	});
 
-	$(document).ready(function() {
+	$(function() {
 		Make.initStyles();
 		Make.initFontLoader();
 	});

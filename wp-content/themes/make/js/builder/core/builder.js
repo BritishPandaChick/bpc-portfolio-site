@@ -166,7 +166,7 @@
 		},
 
 		toggleClosedClass: function() {
-			if ( 0 === this.sectionViews.size() ) {
+			if ( 0 === this.sectionViews.length ) {
 				this.$el.addClass('ttfmake-stage-closed');
 			} else {
 				this.$el.removeClass('ttfmake-stage-closed');
@@ -392,7 +392,7 @@
 	window.make.classes = { SectionView: SectionView, SectionItemView: SectionItemView };
 	window.make.utils = Utils;
 
-	$( document ).ready( function() {
+	$( function() {
 		window.make.load( sectionData.data );
 	} );
 

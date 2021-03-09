@@ -64,7 +64,7 @@
 
 		onColumnCountChanged: function( itemModel ) {
 			var newColumnCount = this.model.get( 'columns-number' );
-			var currentColumnCount = this.model.get( 'columns' ).size();
+			var currentColumnCount = this.model.get( 'columns' ).length;
 			var neededColumns = newColumnCount - currentColumnCount;
 			var $stage = $( '.ttfmake-text-columns-stage', this.$el );
 
