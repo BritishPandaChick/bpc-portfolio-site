@@ -498,3 +498,132 @@
 0543.746 (0) Googledrive chunked upload: 57.8 % uploaded (8388608)
 0547.208 (0) The time we have been running (546.9) is approaching the resumption interval (574) - increasing resumption interval to 577
 0547.286 (0) Googledrive chunked upload: 65.1 % uploaded (9437184)
+164849.245 (1) Opened log file at time: Thu, 11 Mar 2021 17:35:17 +0000 on http://localhost/bpcportfolio
+164849.396 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.48 WP: 5.6.2 PHP: 8.0.1 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.17-MariaDB WPLANG: en_US Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/8.0.1 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 51.7M | 54M) multisite: N openssl: OpenSSL 1.1.1i  8 Dec 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+164849.701 (1) Free space on disk containing Updraft's temporary directory: 720299.5 MB
+164849.889 (1) Requesting backup semaphore lock (4371d0ffb54b)
+164850.133 (1) [Lock option (updraft_lock_4371d0ffb54b, wp_options) was created in the database] debug
+164850.300 (1) [Lock (updraft_lock_4371d0ffb54b, wp_options) acquired after initialising the database] info
+164850.443 (1) Backup run: resumption=1, nonce=4371d0ffb54b, file_nonce=4371d0ffb54b begun at=1615319267 (164851s ago), job type=backup, previous check-in=546.9s
+164850.511 (1) Long time past since expected resumption time: approx expected=1615320393.9, now=1615484116.8, diff=163722.9
+164850.666 (1) [Warning] Your website is visited infrequently and UpdraftPlus is not getting the resources it hoped for; please read this page: https://updraftplus.com/faqs/why-am-i-getting-warnings-about-my-site-not-having-enough-visitors/
+164850.932 (1) Scheduling a resumption (2) after 577 seconds (1615484695) in case this run gets aborted
+164851.245 (1) Checking if we have a zip executable available
+164851.321 (1) Creation of backups of directories: already finished
+164851.382 (1) Saving backup status to database (elements: 8)
+164851.998 (1) Database dump (WordPress DB): Creation was completed already
+164852.510 (1) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+164853.600 (1) backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-plugins.zip: plugins: This file has already been successfully uploaded
+164853.709 (1) backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-themes.zip: themes: This file has already been successfully uploaded
+164853.871 (1) backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+164853.918 (1) backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-others.zip: others: This file has not yet been successfully uploaded: will queue
+164854.130 (1) backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-db.gz: db: This file has not yet been successfully uploaded: will queue
+164854.225 (1) Saving backup history. Total backup size: 49.1 MB
+164854.439 (1) Requesting upload of the files that have not yet been successfully uploaded (3)
+164854.561 (1) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+164854.751 (1) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+164859.090 (1) Google Drive: quota usage: used=447.4 MB, total=15360 MB, available=14912.6 MB
+164859.199 (1) Google Drive: backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-uploads.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+164859.636 (1) Google Drive: backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-uploads.zip: upload already began; attempt to resume did not succeed (HTTP code: 404)
+164861.890 (1) Google Drive: ERROR: upload error (UDP_Google_Service_Exception): Error calling PUT https://www.googleapis.com/upload/drive/v2/files?uploadType=resumable&upload_id=ABg5-UzzG33C_yC1J5OZogV2hW5QQZYTKfKXAVF3qMTWuGO-6E0elrlJFyMnKseKOjmEq9rNWEVLlv3L23lm0S6GXJTvnPQMkQ: (404)  (line: 110, file: C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\includes\Google\Http\REST.php)
+164864.513 (1) Googledrive chunked upload: 7.2 % uploaded (1048576 - increasing chunk size to 2048 KB)
+164868.352 (1) Googledrive chunked upload: 21.7 % uploaded (3145728)
+164872.236 (1) Googledrive chunked upload: 36.1 % uploaded (5242880)
+164876.551 (1) Googledrive chunked upload: 50.6 % uploaded (7340032)
+164880.331 (1) Googledrive chunked upload: 65.1 % uploaded (9437184)
+164884.052 (1) Googledrive chunked upload: 79.5 % uploaded (11534336)
+164887.657 (1) Googledrive chunked upload: 94 % uploaded (13631488)
+164890.730 (1) Googledrive chunked upload: 100 % uploaded (13631488)
+164891.020 (1) Google Drive: OK: Archive backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-uploads.zip uploaded in 31.65 seconds
+164891.098 (1) Recording as successfully uploaded: backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-uploads.zip
+164891.330 (1) Deleting local file: backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-uploads.zip: OK
+164891.814 (1) Google Drive: quota usage: used=461.2 MB, total=15360 MB, available=14898.8 MB
+164891.974 (1) Google Drive: backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-others.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+164894.891 (1) Googledrive chunked upload: 41.6 % uploaded (1048576)
+164897.445 (1) Googledrive chunked upload: 83.2 % uploaded (2097152 - increasing chunk size to 2048 KB)
+164899.366 (1) Googledrive chunked upload: 100 % uploaded (2097152)
+164899.476 (1) Google Drive: OK: Archive backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-others.zip uploaded in 7.47 seconds
+164899.533 (1) Recording as successfully uploaded: backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-others.zip
+164899.627 (1) Deleting local file: backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-others.zip: OK
+164899.974 (1) Google Drive: quota usage: used=463.6 MB, total=15360 MB, available=14896.4 MB
+164900.008 (1) Google Drive: backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-db.gz: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+164902.842 (1) Googledrive chunked upload: 62.1 % uploaded (1048576 - increasing chunk size to 2048 KB)
+164905.014 (1) Googledrive chunked upload: 100 % uploaded (1048576)
+164905.182 (1) Google Drive: OK: Archive backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-db.gz uploaded in 5.15 seconds
+164905.246 (1) Recording as successfully uploaded: backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-db.gz
+164905.304 (1) Deleting local file: backup_2021-03-09-1447_Sarah_Bartley_4371d0ffb54b-db.gz: OK
+164905.389 (1) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+164905.429 (1) Number of backup sets in history: 7; groups (db): 1
+164905.482 (1) Examining (for databases) backup set with group_id=0, nonce=a53fb7eb87fb, datestamp=1615319268 (Mar 09 2021 19:47:48)
+164905.500 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+164905.526 (1) Examining (for databases) backup set with group_id=0, nonce=4371d0ffb54b, datestamp=1615319267 (Mar 09 2021 19:47:47)
+164905.526 (1) This backup set is the backup set just made, so will not be deleted.
+164905.526 (1) Examining (for databases) backup set with group_id=0, nonce=4624d9484e82, datestamp=1615237428 (Mar 08 2021 21:03:48)
+164905.526 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+164905.527 (1) Examining (for databases) backup set with group_id=0, nonce=cf6307f8f3aa, datestamp=1615151581 (Mar 07 2021 21:13:01)
+164905.527 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+164905.527 (1) Examining (for databases) backup set with group_id=0, nonce=732885cbf8c9, datestamp=1615056551 (Mar 06 2021 18:49:11)
+164905.527 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+164905.528 (1) Examining (for databases) backup set with group_id=0, nonce=2def4c1d20f6, datestamp=1614974973 (Mar 05 2021 20:09:33)
+164905.528 (1) 1614974973: db: this set includes a database (backup_2021-03-05-1509_Sarah_Bartley_2def4c1d20f6-db.gz); db count is now 5
+164905.528 (1) 1614974973: db: over retain limit (5); will delete this database
+164905.528 (1) Delete file: backup_2021-03-05-1509_Sarah_Bartley_2def4c1d20f6-db.gz, service=googledrive
+164908.477 (1) Google Drive: backup_2021-03-05-1509_Sarah_Bartley_2def4c1d20f6-db.gz: Deletion successful
+164908.873 (1) This backup set remains non-empty (f=1/d=0); will retain in history
+164908.978 (1) Examining (for databases) backup set with group_id=0, nonce=126c41c08917, datestamp=1614619739 (Mar 01 2021 17:28:59)
+164908.978 (1) 1614619739: db: this set includes a database (backup_2021-03-01-1228_Sarah_Bartley_126c41c08917-db.gz); db count is now 5
+164908.978 (1) 1614619739: db: over retain limit (5); will delete this database
+164908.978 (1) Delete file: backup_2021-03-01-1228_Sarah_Bartley_126c41c08917-db.gz, service=googledrive
+164910.350 (1) Google Drive: backup_2021-03-01-1228_Sarah_Bartley_126c41c08917-db.gz: Deletion successful
+164910.563 (1) This backup set remains non-empty (f=1/d=0); will retain in history
+164910.629 (1) Number of backup sets in history: 7; groups (files): 1
+164910.648 (1) Examining (for files) backup set with nonce=a53fb7eb87fb, datestamp=1615319268 (Mar 09 2021 19:47:48)
+164910.848 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+164910.874 (1) Examining (for files) backup set with nonce=4371d0ffb54b, datestamp=1615319267 (Mar 09 2021 19:47:47)
+164910.874 (1) This backup set is the backup set just made, so will not be deleted.
+164910.914 (1) This backup set is the backup set just made, so will not be deleted.
+164910.914 (1) This backup set is the backup set just made, so will not be deleted.
+164910.914 (1) This backup set is the backup set just made, so will not be deleted.
+164910.914 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+164910.974 (1) Examining (for files) backup set with nonce=4624d9484e82, datestamp=1615237428 (Mar 08 2021 21:03:48)
+164910.974 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+164910.974 (1) Examining (for files) backup set with nonce=cf6307f8f3aa, datestamp=1615151581 (Mar 07 2021 21:13:01)
+164910.974 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+164910.974 (1) Examining (for files) backup set with nonce=732885cbf8c9, datestamp=1615056551 (Mar 06 2021 18:49:11)
+164910.974 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+164910.974 (1) Examining (for files) backup set with nonce=2def4c1d20f6, datestamp=1614974973 (Mar 05 2021 20:09:33)
+164910.974 (1) plugins: over retain limit (5); will delete this file entity
+164910.974 (1) themes: over retain limit (5); will delete this file entity
+164910.975 (1) uploads: over retain limit (5); will delete this file entity
+164910.975 (1) others: over retain limit (5); will delete this file entity
+164910.975 (1) Delete file: backup_2021-03-05-1509_Sarah_Bartley_2def4c1d20f6-plugins.zip, service=googledrive
+164910.992 (1) Delete file: backup_2021-03-05-1509_Sarah_Bartley_2def4c1d20f6-themes.zip, service=googledrive
+164911.018 (1) Delete file: backup_2021-03-05-1509_Sarah_Bartley_2def4c1d20f6-uploads.zip, service=googledrive
+164911.036 (1) Delete file: backup_2021-03-05-1509_Sarah_Bartley_2def4c1d20f6-others.zip, service=googledrive
+164912.546 (1) Google Drive: backup_2021-03-05-1509_Sarah_Bartley_2def4c1d20f6-others.zip: Deletion successful
+164913.240 (1) Google Drive: backup_2021-03-05-1509_Sarah_Bartley_2def4c1d20f6-uploads.zip: Deletion successful
+164914.204 (1) Google Drive: backup_2021-03-05-1509_Sarah_Bartley_2def4c1d20f6-themes.zip: Deletion successful
+164914.783 (1) Google Drive: backup_2021-03-05-1509_Sarah_Bartley_2def4c1d20f6-plugins.zip: Deletion successful
+164914.857 (1) This backup set is now empty; will remove from history
+164914.900 (1) Deleting log file (log.2def4c1d20f6.txt)
+164914.946 (1) Examining (for files) backup set with nonce=126c41c08917, datestamp=1614619739 (Mar 01 2021 17:28:59)
+164914.990 (1) plugins: over retain limit (5); will delete this file entity
+164914.990 (1) themes: over retain limit (5); will delete this file entity
+164914.990 (1) uploads: over retain limit (5); will delete this file entity
+164914.990 (1) others: over retain limit (5); will delete this file entity
+164914.990 (1) Delete file: backup_2021-03-01-1228_Sarah_Bartley_126c41c08917-plugins.zip, service=googledrive
+164915.022 (1) Delete file: backup_2021-03-01-1228_Sarah_Bartley_126c41c08917-themes.zip, service=googledrive
+164915.176 (1) Delete file: backup_2021-03-01-1228_Sarah_Bartley_126c41c08917-uploads.zip, service=googledrive
+164915.266 (1) Delete file: backup_2021-03-01-1228_Sarah_Bartley_126c41c08917-others.zip, service=googledrive
+164916.581 (1) Google Drive: backup_2021-03-01-1228_Sarah_Bartley_126c41c08917-others.zip: Deletion successful
+164917.259 (1) Google Drive: backup_2021-03-01-1228_Sarah_Bartley_126c41c08917-uploads.zip: Deletion successful
+164918.019 (1) Google Drive: backup_2021-03-01-1228_Sarah_Bartley_126c41c08917-themes.zip: Deletion successful
+164919.112 (1) Google Drive: backup_2021-03-01-1228_Sarah_Bartley_126c41c08917-plugins.zip: Deletion successful
+164919.214 (1) This backup set is now empty; will remove from history
+164919.290 (1) Deleting log file (log.126c41c08917.txt)
+164919.346 (1) Retain: saving new backup history (sets now: 5) and finishing retain operation
+164919.571 (1) Resume backup (4371d0ffb54b, 1): finish run
+164919.727 (1) [Lock option (updraft_lock_4371d0ffb54b, wp_options) released] info
+164919.838 (1) There were no errors in the uploads, so the 'resume' event (2) is being unscheduled
+164920.005 (1) No email will/can be sent - the user has not configured an email address.
+164920.023 (1) The backup apparently succeeded (with warnings) and is now complete
