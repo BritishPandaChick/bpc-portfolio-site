@@ -2,8 +2,8 @@
 Contributors: dnesscarkey
 Tags: custom fonts, font embed, font uploader, typography, install font 
 Requires at least: 3.0
-Tested up to: 5.6
-Stable tag: 6.0.4
+Tested up to: 5.7
+Stable tag: 6.0.5
 
 Embed any custom font using font uploader and assign to elements. Upload font in 1 format and other needed formats are auto converted even woff2.
 
@@ -143,10 +143,13 @@ Please do write us after integration and we will add it in our supported list.
 
 == Changelog ==
 
+= 6.0.5 =
+* Fix WP_Scripts::localize Warning message
+
 = 6.0.4 =
 * Fix count warning issue.
 
-= 6.0.4 =
+= 6.0.3 =
 * Fix font not listing in page builders and themes typography.
 
 = 6.0.2 =

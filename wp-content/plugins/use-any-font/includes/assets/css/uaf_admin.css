@@ -37,7 +37,7 @@ span.active_key{font-weight:bold; color:#060; padding-right: 20px;}
 .dcwrap h1{color: #062f4f;}
 .dcwrap .button-primary{ background: #04a2c7; border-color:#04a2c7; }
 .dcwrap .nav-tab-wrapper{ border-bottom:none; }
-.dcwrap .tab-content{}
+.dcwrap .tab-content{margin-top:0px !important; display:block !important;}
 .dcwrap .tab-content table.noborder{ border-collapse: collapse; border:none; }
 .dcwrap .nav-tab{ background: #04a2c7; border:none; color: #fff; padding: 8px 16px; border-radius: 5px 5px 0px 0px; margin: 0 0.5em 0 0.5em; font-weight: normal; font-size: 13px;}
 .dcwrap .tab-content .leftcontent{ background: #fff; padding: 5px 20px;border-radius: 5px; box-shadow: 0px 0px 10px -7px #000;}

@@ -1,7 +1,7 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit; 
 
-$GLOBALS['uaf_current_version']				= '6.0.4';
+$GLOBALS['uaf_current_version']				= '6.0.5';
 
 
 $GLOBALS['uaf_fix_settings'] 				= array(

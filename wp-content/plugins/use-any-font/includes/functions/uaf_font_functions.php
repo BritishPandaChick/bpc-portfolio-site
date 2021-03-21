@@ -181,7 +181,7 @@ function uaf_write_css(){
 
 	if ($uaf_use_absolute_font_path == 0){ // If user use relative path
 		$url_parts = parse_url($uaf_upload_url);
-		@$uaf_upload_url = "$url_parts[path]$url_parts[query]$url_parts[fragment]";
+		$uaf_upload_url = "$url_parts[path]";
 	}
 
 	ob_start();

@@ -83,7 +83,7 @@ jQuery('document').ready(function(){
 		   error: function(jqXHR, textStatus, errorThrown) 
 	        {
 	            jQuery('#font_upload_message').attr('class','error');
-				jQuery('#font_upload_message').html('Unexpected Error Occured.');
+				jQuery('#font_upload_message').html('Unexpected Error Occured. Please set Use PHP Uploader to Yes from Settings Tab and try again.');
 				jQuery('#submit-uaf-font').attr('disabled',false);
 	        }	
 	    });

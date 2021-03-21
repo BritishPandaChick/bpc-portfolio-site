@@ -16,7 +16,7 @@ function uaf_admin_assets(){
 	add_editor_style($uaf_upload_url.'admin-uaf.css');	
 
   	wp_register_script('uaf_admin_js', plugins_url('use-any-font/includes/assets/js/uaf_admin.js'), '', $GLOBALS['uaf_current_version'], true);	
-  	$uaf_server_url = $GLOBALS['uaf_user_settings']['uaf_server_url'];
+  	$uaf_server_url =  array($GLOBALS['uaf_user_settings']['uaf_server_url']);
   	wp_localize_script( 'uaf_admin_js', 'uaf_server_url', $uaf_server_url );
   	wp_enqueue_script( 'uaf_admin_js' );
 }
