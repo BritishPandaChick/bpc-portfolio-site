@@ -13,7 +13,7 @@ if( !defined('ABSPATH') ) {
  * @author        Alexander Kovalev <alex.kovalevv@gmail.com>, Github: https://github.com/alexkovalevv
  * @copyright (c) 20.10.2019, Webcraftic
  */
-class Plugin extends \Wbcr_Factory442_Plugin {
+class Plugin extends \Wbcr_Factory445_Plugin {
 
 	/**
 	 * Number of comments that will be sent for verification
@@ -24,7 +24,7 @@ class Plugin extends \Wbcr_Factory442_Plugin {
 
 	/**
 	 * @see self::app()
-	 * @var \Wbcr_Factory442_Plugin
+	 * @var \Wbcr_Factory445_Plugin
 	 */
 	private static $app;
 
@@ -83,7 +83,7 @@ class Plugin extends \Wbcr_Factory442_Plugin {
 	 * Используется для получения настроек плагина, информации о плагине, для доступа к вспомогательным
 	 * классам.
 	 *
-	 * @return \Wbcr_Factory442_Plugin|\WBCR\Titan\Plugin
+	 * @return \Wbcr_Factory445_Plugin|\WBCR\Titan\Plugin
 	 * @since  6.0
 	 */
 	public static function app()
@@ -148,7 +148,7 @@ class Plugin extends \Wbcr_Factory442_Plugin {
 			self::app()->registerPage('WBCR\Titan\Page\TwoFactor', WTITAN_PLUGIN_DIR . '/admin/pages/class-page-two-factor.php');
 
 			// Backup
-			//			self::app()->registerPage( 'WBCR\Titan\Page\Backup', WTITAN_PLUGIN_DIR . '/admin/pages/class-page-backup.php' );
+			self::app()->registerPage( 'WBCR\Titan\Page\Backup', WTITAN_PLUGIN_DIR . '/admin/pages/class-page-backup.php' );
 		}
 
 		self::app()->registerPage('WBCR\Titan\Page\Brute_Force', WTITAN_PLUGIN_DIR . '/admin/pages/firewall/class-pages-bruteforce.php');

@@ -1,4 +1,4 @@
-( function($) {
+(function($) {
 
 	// CHECKBOX CONTROL CLASS DEFINITION
 	// ================================
@@ -32,12 +32,11 @@
 		}
 
 		this.$on.click(function() {
-
 			self.$off.removeClass('active');
 			self.$on.addClass('active');
 
 			if( !isTumbler ) {
-				self.$result.attr('checked', 'checked');
+				self.$result.prop('checked', true);
 				self.$result.val(1);
 				self.$result.trigger('change');
 			} else {
@@ -66,12 +65,11 @@
 		});
 
 		this.$off.click(function() {
-
 			self.$on.removeClass('active');
 			self.$off.addClass('active');
 
 			if( !isTumbler ) {
-				self.$result.removeAttr('checked');
+				self.$result.prop('checked', false);
 				self.$result.val(0);
 				self.$result.trigger('change');
 			} else {
@@ -238,7 +236,6 @@
 								}
 
 								if( selector[selectorName] !== void 0 && selector[selectorName] !== null ) {
-									console.log(selector[selectorName]);
 									$(selectorName).val(selector[selectorName]);
 								}
 							}
@@ -255,7 +252,7 @@
 	// CHECKBOX CONTROL DEFINITION
 	// ================================
 
-	$.fn.factoryBootstrap442_checkboxControl = function(option) {
+	$.fn.factoryBootstrap445_checkboxControl = function(option) {
 
 		// call an method
 		if( typeof option === "string" ) {
@@ -278,13 +275,20 @@
 		}
 	};
 
-	$.fn.factoryBootstrap442_checkboxControl.Constructor = CheckboxControl;
+	$.fn.factoryBootstrap445_checkboxControl.Constructor = CheckboxControl;
 
 	// AUTO CREATING
 	// ================================
 
 	$(function() {
-		$(".factory-bootstrap-442 .factory-checkbox.factory-buttons-way").factoryBootstrap442_checkboxControl();
+		$(".factory-bootstrap-445 .factory-checkbox.factory-buttons-way").factoryBootstrap445_checkboxControl();
+		$(".factory-bootstrap-445 .factory-checkbox").not('.factory-buttons-way').click(function() {
+			if( $(this).prop('checked') ) {
+				$(this).val(1);
+			} else {
+				$(this).val(0);
+			}
+		});
 	});
 
-}(jQuery) );
+}(jQuery));
