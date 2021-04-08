@@ -253,3 +253,10 @@
 0993.446 (0) Table wp_wfknownfilelist: Total expected rows (approximate): 1478
 0995.063 (0) Table wp_wfknownfilelist: Rows added in this batch (next record: 1478): 1478 (uncompressed bytes in this segment=102132) in 1.31 seconds
 0995.962 (0) The time we have been running (995.2) is approaching the resumption interval (1022) - increasing resumption interval to 1026
+889529.863 (1) Opened log file at time: Thu, 08 Apr 2021 04:19:12 +0000 on http://localhost/bpcportfolio
+889529.981 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.50 WP: 5.7 PHP: 8.0.1 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 19042 (Windows 10) AMD64) MySQL: 10.4.17-MariaDB WPLANG: en_US Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/8.0.1 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 52.4M | 54M) multisite: N openssl: OpenSSL 1.1.1i  8 Dec 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+889530.051 (1) Free space on disk containing Updraft's temporary directory: 730679.5 MB
+889530.149 (1) Requesting backup semaphore lock (12d87bacac41)
+889530.239 (1) [Lock option (updraft_lock_12d87bacac41, wp_options) was created in the database] debug
+889530.439 (1) [Lock (updraft_lock_12d87bacac41, wp_options) acquired after initialising the database] info
+889530.506 (1) This backup task (12d87bacac41) is either complete or began over 2 days ago: ending (1617855552.2782, 1616966022) (existing jobdata keys: resume_interval, job_type, jobstatus, backup_time, job_time_ms, service, split_every, maxzipbatch, job_file_entities, option_cache, uploaded_lastreset, one_shot, followsups_allowed, backup_database, backup_files, remote_storage_instances, runs_started, current_resumption, binzip, filecreating_substatus, files_enumerated_at, run_times, useful_checkins, sha1-plugins0, sha256-plugins0, sha1-themes0, sha256-themes0, sha1-uploads0, sha256-uploads0, sha1-others0, sha256-others0, backup_files_array, binsqldump, dbcreating_substatus, fetch_rows)
