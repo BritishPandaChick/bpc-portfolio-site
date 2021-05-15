@@ -3,9 +3,9 @@ Contributors: TigrouMeow
 Tags: retina, images, replace, regenerate, sizes, lazysizes, high-dpi
 Donate link: https://commerce.coinbase.com/checkout/d047546a-77a8-41c8-9ea9-4a950f61832f
 Requires at least: 5.0
-Tested up to: 5.6
+Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 6.1.2
+Stable tag: 6.1.3
 
 Retina, Replace Images, Regenerate Thumbnails, Image Sizes Management, Image Threshold and more.
 
@@ -50,6 +50,11 @@ The plugin cannot inject CSS to handles the images added through CSS, that's bot
 3. Check if it works! - if it doesn't, read the FAQ, the tutorial, and check the forums.
 
 == Changelog ==
+
+= 6.1.3 (2021/04/29) =
+* Fix: Little issue with some network sites.
+* Fix: Now use the default jpeg_quality set in WP.
+* Fix: The "Build Automatically" feature is now available even if no Retina Method is used.
 
 = 6.1.2 =
 * Fix: Avoid double slashes in the URLs of the scripts.

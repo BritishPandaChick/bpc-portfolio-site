@@ -35,6 +35,11 @@ function uaf_interface(){
 	include UAF_FILE_PATH.'includes/views/uaf_main.php';
 }
 
+function uaf_predefined_font_interface(){
+	include UAF_FILE_PATH.'includes/views/uaf_predefined_fonts.php';
+	wp_die();
+}
+
 function uaf_get_options(){
 	$uaf_user_settings 		 = $GLOBALS['uaf_user_settings'];
 	foreach ($uaf_user_settings as $option_name => $option_value) {
@@ -243,5 +248,10 @@ function uaf_trigger_actions(){
 	if (isset($_POST['save-uaf-options'])){
 	    $actionReturn = uaf_save_options();
 	}
+
+	if (isset($_GET['predefinedfontid'])){
+	    $actionReturn = uaf_add_pre_defined_font($_GET['predefinedfontid']);
+	}
+	
 	$GLOBALS['uaf_action_return'] = $actionReturn;
 }

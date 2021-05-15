@@ -2,13 +2,13 @@
 Contributors: dnesscarkey
 Tags: custom fonts, font embed, font uploader, typography, install font 
 Requires at least: 3.0
-Tested up to: 5.7
-Stable tag: 6.0.5
+Tested up to: 5.7.1
+Stable tag: 6.1.3
 
 Embed any custom font using font uploader and assign to elements. Upload font in 1 format and other needed formats are auto converted even woff2.
 
 == Description ==
-Upload any custom fonts you wish and give your site a elegant look. Quickly change font without need of css knowledge. 
+Upload any custom fonts you wish and give your site a elegant look. Quickly change font without need of css knowledge. Or you can select from our 23,871+ predefined font collection to add in your site. It even has google fonts which you can store in your own server. 
 
 Click <a href="https://dineshkarki.com.np/use-any-font/demo" target="_blank">HERE</a> for Use Any Font working demo.
 
@@ -142,6 +142,18 @@ Please do write us after integration and we will add it in our supported list.
 1. Screenshot #6. Assign fonts to custom elements.
 
 == Changelog ==
+= 6.1.3 =
+* Add is_ssl check for Aboslute Font path.
+
+= 6.1.2 =
+* Fixed Pagely Cache issue. (https://wordpress.org/support/topic/version-6-1-1-causes-fatal-errors-on-pagely-servers/)
+
+= 6.1.1 =
+* Fixed goDaddy Cache flush error.
+
+= 6.1 =
+* Added 23,871+ Predefined fonts which are available for both free and commercial use.
+* Added auto cache clear for popular cache plugin.
 
 = 6.0.5 =
 * Fix WP_Scripts::localize Warning message

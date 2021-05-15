@@ -1,0 +1,135 @@
+0000.059 (0) Opened log file at time: Sat, 15 May 2021 18:37:00 +0000 on http://localhost/bpcportfolio
+0000.912 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.56 WP: 5.7.1 PHP: 8.0.1 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 19042 (Windows 10) AMD64) MySQL: 10.4.17-MariaDB WPLANG: en_US Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/8.0.1 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 49.8M | 52M) multisite: N openssl: OpenSSL 1.1.1i  8 Dec 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0001.327 (0) Free space on disk containing Updraft's temporary directory: 716930.8 MB
+0002.933 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0003.650 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0005.093 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1620653357, seconds_ago=450467)
+0020.019 (0) Set semaphore last lock (fd) time to 2021-05-15 18:37:20
+0021.528 (0) Semaphore lock (fd) complete
+0027.513 (0) Backup run: resumption=0, nonce=cffd8ef3dfd2, file_nonce=cffd8ef3dfd2 begun at=1621103820 (27s ago), job type=backup
+0030.742 (0) Scheduling a resumption (1) after 368 seconds (1621104218) in case this run gets aborted
+0033.602 (0) Checking if we have a zip executable available
+0038.382 (0) Creation of backups of directories: beginning
+0040.582 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0044.687 (0) PHP event: code E_WARNING: filemtime(): stat failed for C:\xampp\htdocs\bpcportfolio/wp-content/updraft/backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp (line 263, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0180.874 (0) Total entities for the zip file: 894 directories, 4789 files (0 skipped as non-modified), 65.1 MB
+0181.499 (0) PHP event: code E_DEPRECATED: ZipArchive::open(): Using empty file as ZipArchive is deprecated (line 3548, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0182.350 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0191.201 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 100 files added (on-disk size: 152.1 KB)
+0191.960 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 200 files added (on-disk size: 152.1 KB)
+0192.749 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 300 files added (on-disk size: 152.1 KB)
+0193.412 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 400 files added (on-disk size: 152.1 KB)
+0194.093 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (5.4 MB, 400 (401) files added so far); re-opening (prior size: 152.1 KB)
+0225.882 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 500 files added (on-disk size: 2100.7 KB)
+0226.689 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 600 files added (on-disk size: 2100.7 KB)
+0227.105 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 700 files added (on-disk size: 2100.7 KB)
+0227.570 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 800 files added (on-disk size: 2100.7 KB)
+0228.171 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (3.3 MB, 400 (801) files added so far); re-opening (prior size: 2100.7 KB)
+0258.276 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 900 files added (on-disk size: 3061.4 KB)
+0259.413 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 1000 files added (on-disk size: 3061.4 KB)
+0260.263 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 1100 files added (on-disk size: 3061.4 KB)
+0261.219 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.1 MB, 300 (1101) files added so far); re-opening (prior size: 3061.4 KB)
+0311.971 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 1200 files added (on-disk size: 3788.6 KB)
+0312.720 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 1300 files added (on-disk size: 3788.6 KB)
+0313.801 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 1400 files added (on-disk size: 3788.6 KB)
+0314.585 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 1500 files added (on-disk size: 3788.6 KB)
+0316.226 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (16 MB, 400 (1501) files added so far); re-opening (prior size: 3788.6 KB)
+0390.476 (0) The time we have been running (388) is approaching the resumption interval (368) - increasing resumption interval to 418
+0391.689 (0) The scheduled resumption is within 45 seconds - will reschedule
+0392.867 (0) Rescheduling resumption 1: moving to 463 seconds from now (1621104676)
+0393.895 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 418 + 45 = 463
+0394.116 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 1600 files added (on-disk size: 8358.7 KB)
+0395.613 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 1700 files added (on-disk size: 8358.7 KB)
+0395.999 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 1800 files added (on-disk size: 8358.7 KB)
+0396.487 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 1900 files added (on-disk size: 8358.7 KB)
+0396.834 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (3.2 MB, 452 (1953) files added so far); re-opening (prior size: 8358.7 KB)
+0424.961 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 2000 files added (on-disk size: 9493.8 KB)
+0425.181 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 2100 files added (on-disk size: 9493.8 KB)
+0425.332 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 2200 files added (on-disk size: 9493.8 KB)
+0425.458 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 2300 files added (on-disk size: 9493.8 KB)
+0425.777 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 2400 files added (on-disk size: 9493.8 KB)
+0426.005 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 2500 files added (on-disk size: 9493.8 KB)
+0426.263 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 2600 files added (on-disk size: 9493.8 KB)
+0426.499 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 2700 files added (on-disk size: 9493.8 KB)
+0426.936 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 2800 files added (on-disk size: 9493.8 KB)
+0427.523 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 2900 files added (on-disk size: 9493.8 KB)
+0427.810 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (13.3 MB, 4789 files batched, 1001 (2954) added so far); re-opening (prior size: 9493.8 KB)
+0472.074 (0) The time we have been running (471.5) is approaching the resumption interval (463) - increasing resumption interval to 502
+0472.537 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 3000 files added (on-disk size: 14666.6 KB)
+0472.996 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 3100 files added (on-disk size: 14666.6 KB)
+0473.666 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 3200 files added (on-disk size: 14666.6 KB)
+0474.689 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 3300 files added (on-disk size: 14666.6 KB)
+0475.360 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.7 MB, 347 (3301) files added so far); re-opening (prior size: 14666.6 KB)
+0483.428 (0) The time we have been running (481.4) is approaching the resumption interval (502) - increasing resumption interval to 512
+0484.842 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 3400 files added (on-disk size: 15655.2 KB)
+0485.445 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 3500 files added (on-disk size: 15655.2 KB)
+0486.754 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 3600 files added (on-disk size: 15655.2 KB)
+0487.638 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.4 MB, 300 (3601) files added so far); re-opening (prior size: 15655.2 KB)
+0516.515 (0) The time we have been running (515.3) is approaching the resumption interval (512) - increasing resumption interval to 546
+0517.586 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 3700 files added (on-disk size: 16246.4 KB)
+0517.911 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 3800 files added (on-disk size: 16246.4 KB)
+0518.723 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 3900 files added (on-disk size: 16246.4 KB)
+0519.875 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (8.7 MB, 300 (3901) files added so far); re-opening (prior size: 16246.4 KB)
+0555.835 (0) The time we have been running (555.5) is approaching the resumption interval (546) - increasing resumption interval to 586
+0556.275 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 4000 files added (on-disk size: 18674.5 KB)
+0556.430 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 4100 files added (on-disk size: 18674.5 KB)
+0556.729 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 4200 files added (on-disk size: 18674.5 KB)
+0557.064 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 4300 files added (on-disk size: 18674.5 KB)
+0557.337 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 4400 files added (on-disk size: 18674.5 KB)
+0557.670 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 4500 files added (on-disk size: 18674.5 KB)
+0557.855 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 4600 files added (on-disk size: 18674.5 KB)
+0558.140 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-plugins.zip.tmp: 4700 files added (on-disk size: 18674.5 KB)
+0586.047 (0) The time we have been running (585.2) is approaching the resumption interval (586) - increasing resumption interval to 616
+0587.067 (0) Created plugins zip (0) - 22795.9 KB in 538.7 s (42.3 KB/s) (sha1: 9d74ee1d2936b635b99ee8c6bb17601260622c53, sha256: 5a5a854f45151d2ac0826f397667cc2dcf6eb301d30a962b4983053a230a7c42)
+0587.364 (0) Beginning creation of dump of themes (split every: 400 MB)
+0587.747 (0) PHP event: code E_WARNING: filemtime(): stat failed for C:\xampp\htdocs\bpcportfolio/wp-content/updraft/backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-themes.zip.tmp (line 263, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0606.597 (0) Total entities for the zip file: 142 directories, 571 files (0 skipped as non-modified), 11.8 MB
+0607.634 (0) PHP event: code E_DEPRECATED: ZipArchive::open(): Using empty file as ZipArchive is deprecated (line 3548, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0609.213 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0612.682 (0) The time we have been running (610.9) is approaching the resumption interval (616) - increasing resumption interval to 641
+0614.476 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-themes.zip.tmp: 100 files added (on-disk size: 43.8 KB)
+0614.927 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-themes.zip.tmp: 200 files added (on-disk size: 43.8 KB)
+0615.210 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-themes.zip.tmp: 300 files added (on-disk size: 43.8 KB)
+0616.328 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-themes.zip.tmp: 400 files added (on-disk size: 43.8 KB)
+0616.801 (0) Zip: backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-themes.zip.tmp: 500 files added (on-disk size: 43.8 KB)
+0617.501 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (10.8 MB, 500 (501) files added so far); re-opening (prior size: 43.8 KB)
+0675.432 (0) The time we have been running (673.9) is approaching the resumption interval (641) - increasing resumption interval to 704
+0695.591 (0) The time we have been running (694.3) is approaching the resumption interval (704) - increasing resumption interval to 725
+0697.777 (0) Created themes zip (0) - 6556.4 KB in 109.9 s (59.7 KB/s) (sha1: 3e0e96bdf23bacf12671bc2144f646199c1ef117, sha256: c7d853e6ccb1143523b0904898ae8a2976cf63b6dce9900adb5da5c4f1d5efa4)
+0698.466 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0699.051 (0) Looking for candidates to backup in: C:\xampp\htdocs\bpcportfolio/wp-content/uploads
+0699.248 (0) finding files: .htaccess: adding to list (1)
+0699.492 (0) finding files: 2020: adding to list (2)
+0699.783 (0) finding files: 2021: adding to list (3)
+0699.924 (0) finding files: elementor: adding to list (4)
+0700.216 (0) finding files: useanyfont: adding to list (5)
+0700.603 (0) finding files: wtitan-logger: adding to list (6)
+0700.887 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0701.113 (0) PHP event: code E_WARNING: filemtime(): stat failed for C:\xampp\htdocs\bpcportfolio/wp-content/updraft/backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-uploads.zip.tmp (line 263, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0706.530 (0) Total entities for the zip file: 17 directories, 75 files (0 skipped as non-modified), 13.8 MB
+0706.825 (0) PHP event: code E_DEPRECATED: ZipArchive::open(): Using empty file as ZipArchive is deprecated (line 3548, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0707.049 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0710.767 (0) The time we have been running (707.7) is approaching the resumption interval (725) - increasing resumption interval to 738
+0728.842 (0) The time we have been running (727) is approaching the resumption interval (738) - increasing resumption interval to 758
+0735.662 (0) Created uploads zip (0) - 14165.5 KB in 34.4 s (411.7 KB/s) (sha1: e40e76ec28050452ceebf8b4a5787529bec3d50c, sha256: 3144e8eca058c75229db6b596c01e22f3fbe428621bfa8e4c79eb8f1d3266869)
+0738.423 (0) Beginning backup of other directories found in the content directory (index: 0)
+0739.192 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0739.670 (0) Looking for candidates to backup in: C:\xampp\htdocs\bpcportfolio/wp-content
+0740.104 (0) finding files: index.php: adding to list (1)
+0740.742 (0) finding files: plugins: skipping: this is the plugins directory
+0741.045 (0) finding files: themes: skipping: this is the themes directory
+0741.767 (0) finding files: updraft: skipping: this is the updraft directory
+0742.843 (0) finding files: upgrade: skipping: excluded by options
+0744.032 (0) finding files: uploads: skipping: this is the uploads directory
+0744.950 (0) finding files: wflogs: adding to list (2)
+0745.999 (0) PHP event: code E_WARNING: filemtime(): stat failed for C:\xampp\htdocs\bpcportfolio/wp-content/updraft/backup_2021-05-15-1437_Sarah_Bartley_cffd8ef3dfd2-others.zip.tmp (line 263, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0747.252 (0) Total entities for the zip file: 1 directories, 11 files (0 skipped as non-modified), 5.4 MB
+0749.334 (0) PHP event: code E_DEPRECATED: ZipArchive::open(): Using empty file as ZipArchive is deprecated (line 3548, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0750.843 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0753.307 (0) The time we have been running (751.3) is approaching the resumption interval (758) - increasing resumption interval to 782
+0759.613 (0) The time we have been running (758.3) is approaching the resumption interval (782) - increasing resumption interval to 789
+0761.976 (0) Created others zip (0) - 2494.8 KB in 15.3 s (162.7 KB/s) (sha1: 4cc69907aadf5d5c6f92064a6ea492b2b4113e8f, sha256: a943e9fa66e42def3af946efbbe975734816e1af8e79384a362daf509c3cd8b7)
+0763.489 (0) Saving backup status to database (elements: 8)
+0764.838 (0) Beginning creation of database dump (WordPress DB)
+0765.018 (0) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+0765.598 (0) PHP event: code E_WARNING: unlink(C:\xampp\htdocs\bpcportfolio/wp-content/updraft/33c7419efad9f876e4310483086cbf23.sqltest.tmp): No such file or directory (line 1672, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\class-updraftplus.php)

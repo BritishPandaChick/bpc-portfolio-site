@@ -1,5 +1,12 @@
-<?php if ( ! defined( 'ABSPATH' ) ) exit;  ?>
-<p align="right"><input type="button" name="open_add_font" onClick="open_add_font();" class="button-primary" value="Add Fonts" /><br/></p>
+<?php if ( ! defined( 'ABSPATH' ) ) exit;  
+add_thickbox();
+?>
+<p align="right">
+    <input type="button" name="open_add_font" onClick="open_add_font();" class="button-primary" value="Upload Fonts" />
+
+    <a href="<?php echo admin_url( 'admin-ajax.php' ); ?>?action=uaf_predefined_font_interface&width=800&height=550" class="thickbox button-primary" title="Add Predefined Fonts (Personal and Commercial Use)" >Add Predefined Fonts</a>
+
+    <br/></p>
 
 
 <div id="font-upload" style="display:none;">
@@ -27,7 +34,7 @@
                      <label>&nbsp;</label>
                      <span class="field">
                             <span id="font_upload_message" class=""></span>
-                             <input type="hidden" name="url" value="<?php echo base64_decode($GLOBALS['uaf_user_settings']['uaf_activated_url']); ?>" />
+                            <input type="hidden" name="url" value="<?php echo base64_decode($GLOBALS['uaf_user_settings']['uaf_activated_url']); ?>" />
                             <input type="hidden" name="api_key" value="<?php echo $GLOBALS['uaf_user_settings']['uaf_api_key']; ?>" />
                             <input type="hidden" name="font_count" value="<?php echo uaf_count_uploaded_fonts(); ?>" />
                             <input type="hidden" name="convert_response" id="convert_response" value="" />

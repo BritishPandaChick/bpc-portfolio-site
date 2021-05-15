@@ -4,7 +4,9 @@ span.active_key{font-weight:bold; color:#060; padding-right: 20px;}
 .font_holder{background: #fff;border-radius: 5px;border: 1px solid #dadce0;}
 .font_holder{ padding: 10px; margin: 0px 0px 10px 0px; }
 .font_holder .font_meta .font_name{font-weight: bold; float: left;}
+.font_holder .font_meta .font_name em{font-weight: normal;}
 .font_holder .font_meta .delete_link{ float: right; }
+.font_holder .font_meta .add_font_link{ float: right; }
 .font_holder .font_demo{ clear: both; padding-top: 10px; font-size: 25px !important; line-height: 30px  !important; }
 .font_holder .fontclassname{text-align: right; float: right;}
 .elements_holder{ float: left; width: 220px; display: block; }
@@ -47,3 +49,10 @@ span.active_key{font-weight:bold; color:#060; padding-right: 20px;}
 .dcwidget .dcwidgetbody{ background: #fff; border-radius: 0px 0px 5px 5px;padding:10px; margin-bottom: 20px;}
 span.field_error{ display: none; color: #900; }
 @media ( max-width: 768px) { .dchideMobile { display : none; } }
+
+
+.uaf_search_bar{ padding: 10px 10px 20px 10px; position: relative;width: 80%; max-width: 500px; margin: 10px auto 0px auto; }
+.uaf_search_bar input[type=search]{ display: block; width: 100%; padding: 3px;}
+.uaf_search_bar input[type=submit]{ display: inline-block;  position: absolute;right: 12px;top: 13px;}
+
+#predefined_font_load_msg{ text-align: center;color:#04a2c7; }
