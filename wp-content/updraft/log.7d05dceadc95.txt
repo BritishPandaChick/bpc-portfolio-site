@@ -1,0 +1,501 @@
+0000.002 (0) Opened log file at time: Mon, 07 Jun 2021 14:23:10 +0000 on http://localhost/bpcportfolio
+0000.134 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.56 WP: 5.7.2 PHP: 8.0.1 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 19043 (Windows 10) AMD64) MySQL: 10.4.17-MariaDB WPLANG: en_US Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/8.0.1 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 50.2M | 52M) multisite: N openssl: OpenSSL 1.1.1i  8 Dec 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.462 (0) Free space on disk containing Updraft's temporary directory: 721565.9 MB
+0000.605 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0000.695 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.984 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1622559276, seconds_ago=516515)
+0001.405 (0) Semaphore (fd, wp_options) was stuck, set lock time to 2021-06-07 14:23:12
+0001.679 (0) Semaphore (fd, wp_options) reset to 1
+0001.794 (0) Set semaphore last lock (fd) time to 2021-06-07 14:23:12
+0001.883 (0) Semaphore lock (fd) complete
+0002.260 (0) Backup run: resumption=0, nonce=7d05dceadc95, file_nonce=7d05dceadc95 begun at=1623075790 (3s ago), job type=backup
+0002.515 (0) Scheduling a resumption (1) after 300 seconds (1623076093) in case this run gets aborted
+0002.909 (0) Checking if we have a zip executable available
+0003.025 (0) Creation of backups of directories: beginning
+0003.370 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0003.655 (0) PHP event: code E_WARNING: filemtime(): stat failed for C:\xampp\htdocs\bpcportfolio/wp-content/updraft/backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp (line 263, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0041.364 (0) Total entities for the zip file: 902 directories, 4820 files (0 skipped as non-modified), 65.4 MB
+0041.434 (0) PHP event: code E_DEPRECATED: ZipArchive::open(): Using empty file as ZipArchive is deprecated (line 3548, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0041.493 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0042.642 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 100 files added (on-disk size: 153.4 KB)
+0042.837 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 200 files added (on-disk size: 153.4 KB)
+0043.089 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 300 files added (on-disk size: 153.4 KB)
+0043.414 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 400 files added (on-disk size: 153.4 KB)
+0044.199 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 500 files added (on-disk size: 153.4 KB)
+0044.438 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 600 files added (on-disk size: 153.4 KB)
+0045.347 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (7.2 MB, 648 (649) files added so far); re-opening (prior size: 153.4 KB)
+0054.709 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 700 files added (on-disk size: 2623.3 KB)
+0054.905 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 800 files added (on-disk size: 2623.3 KB)
+0055.624 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 900 files added (on-disk size: 2623.3 KB)
+0055.834 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 1000 files added (on-disk size: 2623.3 KB)
+0056.037 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 1100 files added (on-disk size: 2623.3 KB)
+0056.225 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 1200 files added (on-disk size: 2623.3 KB)
+0056.455 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 1300 files added (on-disk size: 2623.3 KB)
+0056.780 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 1400 files added (on-disk size: 2623.3 KB)
+0056.957 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 1500 files added (on-disk size: 2623.3 KB)
+0057.116 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (20.9 MB, 936 (1585) files added so far); re-opening (prior size: 2623.3 KB)
+0099.579 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 1600 files added (on-disk size: 8683.1 KB)
+0099.786 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 1700 files added (on-disk size: 8683.1 KB)
+0100.032 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 1800 files added (on-disk size: 8683.1 KB)
+0100.230 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 1900 files added (on-disk size: 8683.1 KB)
+0100.467 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 2000 files added (on-disk size: 8683.1 KB)
+0100.806 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 2100 files added (on-disk size: 8683.1 KB)
+0101.799 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 2200 files added (on-disk size: 8683.1 KB)
+0102.044 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 2300 files added (on-disk size: 8683.1 KB)
+0102.116 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (4.4 MB, 726 (2311) files added so far); re-opening (prior size: 8683.1 KB)
+0112.983 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 2400 files added (on-disk size: 10164 KB)
+0113.193 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 2500 files added (on-disk size: 10164 KB)
+0113.408 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 2600 files added (on-disk size: 10164 KB)
+0113.621 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 2700 files added (on-disk size: 10164 KB)
+0113.910 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 2800 files added (on-disk size: 10164 KB)
+0114.116 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (10.5 MB, 577 (2888) files added so far); re-opening (prior size: 10164 KB)
+0125.757 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 2900 files added (on-disk size: 14487.3 KB)
+0125.926 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 3000 files added (on-disk size: 14487.3 KB)
+0126.118 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 3100 files added (on-disk size: 14487.3 KB)
+0126.405 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 3200 files added (on-disk size: 14487.3 KB)
+0126.782 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 3300 files added (on-disk size: 14487.3 KB)
+0126.989 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 3400 files added (on-disk size: 14487.3 KB)
+0127.205 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 3500 files added (on-disk size: 14487.3 KB)
+0127.390 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 3600 files added (on-disk size: 14487.3 KB)
+0127.609 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 3700 files added (on-disk size: 14487.3 KB)
+0127.903 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 3800 files added (on-disk size: 14487.3 KB)
+0128.033 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (12.7 MB, 4820 files batched, 1001 (3889) added so far); re-opening (prior size: 14487.3 KB)
+0139.691 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 3900 files added (on-disk size: 18517.6 KB)
+0140.015 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 4000 files added (on-disk size: 18517.6 KB)
+0140.232 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 4100 files added (on-disk size: 18517.6 KB)
+0140.441 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 4200 files added (on-disk size: 18517.6 KB)
+0140.648 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 4300 files added (on-disk size: 18517.6 KB)
+0140.860 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 4400 files added (on-disk size: 18517.6 KB)
+0141.064 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 4500 files added (on-disk size: 18517.6 KB)
+0141.248 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 4600 files added (on-disk size: 18517.6 KB)
+0141.463 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 4700 files added (on-disk size: 18517.6 KB)
+0141.677 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip.tmp: 4800 files added (on-disk size: 18517.6 KB)
+0158.861 (0) Created plugins zip (0) - 22906.5 KB in 150.4 s (152.3 KB/s) (sha1: 3fa20488483db19d4669a2e79f9cd0d91be2a6a7, sha256: 2537125fa10defbffebbfefefa92ef8f7264ce47f655b515b70889dcd5886d2a)
+0159.134 (0) Beginning creation of dump of themes (split every: 400 MB)
+0159.236 (0) PHP event: code E_WARNING: filemtime(): stat failed for C:\xampp\htdocs\bpcportfolio/wp-content/updraft/backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-themes.zip.tmp (line 263, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0172.695 (0) Total entities for the zip file: 142 directories, 571 files (0 skipped as non-modified), 11.8 MB
+0172.814 (0) PHP event: code E_DEPRECATED: ZipArchive::open(): Using empty file as ZipArchive is deprecated (line 3548, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0172.915 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0173.395 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-themes.zip.tmp: 100 files added (on-disk size: 43.8 KB)
+0173.839 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-themes.zip.tmp: 200 files added (on-disk size: 43.8 KB)
+0174.110 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-themes.zip.tmp: 300 files added (on-disk size: 43.8 KB)
+0174.318 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-themes.zip.tmp: 400 files added (on-disk size: 43.8 KB)
+0174.545 (0) Zip: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-themes.zip.tmp: 500 files added (on-disk size: 43.8 KB)
+0192.824 (0) Created themes zip (0) - 6558.9 KB in 33.5 s (195.8 KB/s) (sha1: 6cc9bc9db1c27bf5a1400a4984d33616bd6e10d6, sha256: 536fa5fa672edb903be31160717a9eb433ee31112a47ba44835298f0d1524325)
+0193.349 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0193.394 (0) Looking for candidates to backup in: C:\xampp\htdocs\bpcportfolio/wp-content/uploads
+0193.461 (0) finding files: .htaccess: adding to list (1)
+0193.582 (0) finding files: 2020: adding to list (2)
+0193.660 (0) finding files: 2021: adding to list (3)
+0193.905 (0) finding files: elementor: adding to list (4)
+0194.174 (0) finding files: useanyfont: adding to list (5)
+0194.281 (0) finding files: wtitan-logger: adding to list (6)
+0194.359 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0194.420 (0) PHP event: code E_WARNING: filemtime(): stat failed for C:\xampp\htdocs\bpcportfolio/wp-content/updraft/backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-uploads.zip.tmp (line 263, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0196.947 (0) Total entities for the zip file: 18 directories, 75 files (0 skipped as non-modified), 13.8 MB
+0197.164 (0) PHP event: code E_DEPRECATED: ZipArchive::open(): Using empty file as ZipArchive is deprecated (line 3548, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0197.281 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0210.288 (0) Created uploads zip (0) - 14165.6 KB in 15.8 s (896.4 KB/s) (sha1: ebf183608c88e578fecf581481872f28938712d5, sha256: 190f141c5b2ce7b94359af0e68d6f6af5b1fbb1c9da06b57f632180bf2295b76)
+0210.608 (0) Beginning backup of other directories found in the content directory (index: 0)
+0210.683 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0210.748 (0) Looking for candidates to backup in: C:\xampp\htdocs\bpcportfolio/wp-content
+0210.794 (0) finding files: index.php: adding to list (1)
+0210.896 (0) finding files: plugins: skipping: this is the plugins directory
+0211.105 (0) finding files: themes: skipping: this is the themes directory
+0211.262 (0) finding files: updraft: skipping: this is the updraft directory
+0211.347 (0) finding files: upgrade: skipping: excluded by options
+0211.392 (0) finding files: uploads: skipping: this is the uploads directory
+0211.415 (0) finding files: wflogs: adding to list (2)
+0211.464 (0) PHP event: code E_WARNING: filemtime(): stat failed for C:\xampp\htdocs\bpcportfolio/wp-content/updraft/backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-others.zip.tmp (line 263, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0211.603 (0) Total entities for the zip file: 1 directories, 11 files (0 skipped as non-modified), 5.3 MB
+0211.672 (0) PHP event: code E_DEPRECATED: ZipArchive::open(): Using empty file as ZipArchive is deprecated (line 3548, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0217.940 (0) Created others zip (0) - 2504.1 KB in 6.4 s (391.2 KB/s) (sha1: cb29d2386db71f93bfd6664be6dcfbe36b8f7997, sha256: 9cc9aec936e9ff1f975f1b0ca2d8b855ca6df95e528bae8869538490a3ef7f0d)
+0218.199 (0) Saving backup status to database (elements: 8)
+0218.817 (0) Beginning creation of database dump (WordPress DB)
+0218.907 (0) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+0219.127 (0) PHP event: code E_WARNING: unlink(C:\xampp\htdocs\bpcportfolio/wp-content/updraft/b08df25f40b0df670d9c3f353a89d9d2.sqltest.tmp): No such file or directory (line 1672, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\class-updraftplus.php)
+0220.197 (0) Table wp_options: Total expected rows (approximate): 318
+0221.401 (0) Table wp_options: Rows added in this batch (next record: 2749): 314 (uncompressed bytes in this segment=72844) in 1.08 seconds
+0221.923 (0) Table wp_options: finishing file(s) (2, 18.1 KB)
+0222.789 (0) Table wp_users: Total expected rows (approximate): 1
+0224.056 (0) Table wp_users: Rows added in this batch (next record: 2): 1 (uncompressed bytes in this segment=1393) in 0.92 seconds
+0224.432 (0) Table wp_users: finishing file(s) (2, 0.6 KB)
+0224.722 (0) Table wp_usermeta: Total expected rows (approximate): 51
+0227.903 (0) Table wp_usermeta: Rows added in this batch (next record: 127): 49 (uncompressed bytes in this segment=9452) in 3.05 seconds
+0228.370 (0) Table wp_usermeta: finishing file(s) (2, 2.6 KB)
+0228.562 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0228.645 (0) Table wp_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=684) in 0.04 seconds
+0230.091 (0) Table wp_commentmeta: finishing file(s) (2, 0.4 KB)
+0230.692 (0) Table wp_comments: Total expected rows (approximate): 1
+0232.220 (0) Table wp_comments: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1678) in 1.39 seconds
+0232.713 (0) Table wp_comments: finishing file(s) (2, 0.5 KB)
+0234.044 (0) Table wp_links: Total expected rows (approximate): 0
+0234.744 (0) Table wp_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1266) in 0.61 seconds
+0236.282 (0) Table wp_links: finishing file(s) (2, 0.5 KB)
+0236.583 (0) Table wp_postmeta: Total expected rows (approximate): 125
+0238.014 (0) Table wp_postmeta: Rows added in this batch (next record: 3320): 125 (uncompressed bytes in this segment=39354) in 1.30 seconds
+0238.367 (0) Table wp_postmeta: finishing file(s) (2, 5.8 KB)
+0240.182 (0) Table wp_posts: Total expected rows (approximate): 60
+0242.561 (0) Table wp_posts: Rows added in this batch (next record: 126): 60 (uncompressed bytes in this segment=226089) in 2.02 seconds
+0243.163 (0) Table wp_posts: finishing file(s) (2, 13.2 KB)
+0243.979 (0) Table wp_term_relationships: Total expected rows (approximate): 5
+0245.692 (0) Table wp_term_relationships: Rows added in this batch (next record: 100000): 5 (uncompressed bytes in this segment=746) in 1.42 seconds
+0247.258 (0) Table wp_term_relationships: finishing file(s) (2, 0.4 KB)
+0247.845 (0) Table wp_term_taxonomy: Total expected rows (approximate): 1
+0249.052 (0) Table wp_term_taxonomy: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=939) in 0.70 seconds
+0249.600 (0) Table wp_term_taxonomy: finishing file(s) (2, 0.5 KB)
+0250.124 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0250.599 (0) Table wp_termmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=657) in 0.38 seconds
+0252.273 (0) Table wp_termmeta: finishing file(s) (2, 0.4 KB)
+0252.884 (0) Table wp_terms: Total expected rows (approximate): 1
+0254.219 (0) Table wp_terms: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=757) in 1.13 seconds
+0254.989 (0) Table wp_terms: finishing file(s) (2, 0.4 KB)
+0255.217 (0) Table wp_convertkit_user_history: Total expected rows (approximate): 0
+0256.266 (0) Table wp_convertkit_user_history: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=656) in 0.84 seconds
+0256.505 (0) Table wp_convertkit_user_history: finishing file(s) (2, 0.3 KB)
+0256.805 (0) Table wp_smush_dir_images: Total expected rows (approximate): 0
+0257.048 (0) Table wp_smush_dir_images: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1078) in 0.15 seconds
+0257.273 (0) The scheduled resumption is within 45 seconds - will reschedule
+0257.577 (0) Rescheduling resumption 1: moving to 345 seconds from now (1623076393)
+0260.573 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 300 + 45 = 345
+0261.522 (0) Table wp_smush_dir_images: finishing file(s) (2, 0.5 KB)
+0262.342 (0) Table wp_wfblockediplog: Total expected rows (approximate): 0
+0262.984 (0) Table wp_wfblockediplog: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=627) in 0.52 seconds
+0264.507 (0) Table wp_wfblockediplog: finishing file(s) (2, 0.4 KB)
+0264.834 (0) Table wp_wfblocks7: Total expected rows (approximate): 0
+0265.022 (0) Table wp_wfblocks7: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=816) in 0.12 seconds
+0265.293 (0) Table wp_wfblocks7: finishing file(s) (2, 0.4 KB)
+0265.608 (0) Table wp_wfconfig: Total expected rows (approximate): 256
+0271.222 (0) Table wp_wfconfig: Rows added in this batch (next record: 1000): 256 (uncompressed bytes in this segment=2810373) in 5.44 seconds
+0272.301 (0) Table wp_wfconfig: finishing file(s) (2, 1529.5 KB)
+0273.887 (0) Table wp_wfcrawlers: Total expected rows (approximate): 0
+0277.623 (0) Table wp_wfcrawlers: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=552) in 3.17 seconds
+0278.287 (0) Table wp_wfcrawlers: finishing file(s) (2, 0.3 KB)
+0281.473 (0) Table wp_wffilechanges: Total expected rows (approximate): 0
+0282.808 (0) Table wp_wffilechanges: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=452) in 1.12 seconds
+0283.258 (0) Table wp_wffilechanges: finishing file(s) (2, 0.3 KB)
+0284.073 (0) Table wp_wffilemods: Total expected rows (approximate): 4646
+0288.012 (0) Table wp_wffilemods: Rows added in this batch (next record: 5000): 4942 (uncompressed bytes in this segment=1361732) in 3.61 seconds
+0289.259 (0) Table wp_wffilemods: finishing file(s) (2, 481.8 KB)
+0289.639 (0) Table wp_wfhits: Total expected rows (approximate): 23
+0290.676 (0) Table wp_wfhits: Rows added in this batch (next record: 113): 23 (uncompressed bytes in this segment=9797) in 0.94 seconds
+0291.143 (0) Table wp_wfhits: finishing file(s) (2, 1.3 KB)
+0291.348 (0) Table wp_wfhoover: Total expected rows (approximate): 0
+0292.012 (0) Table wp_wfhoover: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=515) in 0.50 seconds
+0293.090 (0) Table wp_wfhoover: finishing file(s) (2, 0.3 KB)
+0294.251 (0) Table wp_wfissues: Total expected rows (approximate): 0
+0294.426 (0) Table wp_wfissues: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=848) in 0.10 seconds
+0294.812 (0) Table wp_wfissues: finishing file(s) (2, 0.4 KB)
+0296.277 (0) Table wp_wfknownfilelist: Total expected rows (approximate): 7761
+0297.537 (0) Table wp_wfknownfilelist: Rows added in this batch (next record: 7761): 7761 (uncompressed bytes in this segment=655354) in 1.03 seconds
+0298.408 (0) Table wp_wfknownfilelist: finishing file(s) (2, 87 KB)
+0298.957 (0) Table wp_wflivetraffichuman: Total expected rows (approximate): 0
+0300.424 (0) Table wp_wflivetraffichuman: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=648) in 1.38 seconds
+0300.986 (0) Table wp_wflivetraffichuman: finishing file(s) (2, 0.3 KB)
+0301.285 (0) Table wp_wflocs: Total expected rows (approximate): 1
+0301.724 (0) Table wp_wflocs: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=678) in 0.35 seconds
+0302.514 (0) Table wp_wflocs: finishing file(s) (2, 0.4 KB)
+0303.011 (0) Table wp_wflogins: Total expected rows (approximate): 85
+0303.706 (0) Table wp_wflogins: Rows added in this batch (next record: 113): 113 (uncompressed bytes in this segment=25443) in 0.44 seconds
+0304.855 (0) Table wp_wflogins: finishing file(s) (2, 2.5 KB)
+0305.136 (0) Table wp_wfls_2fa_secrets: Total expected rows (approximate): 0
+0305.248 (0) Table wp_wfls_2fa_secrets: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=681) in 0.05 seconds
+0305.543 (0) Table wp_wfls_2fa_secrets: finishing file(s) (2, 0.4 KB)
+0306.396 (0) Table wp_wfls_settings: Total expected rows (approximate): 17
+0306.561 (0) Table wp_wfls_settings: Rows added in this batch (next record: 1000): 19 (uncompressed bytes in this segment=1599) in 0.07 seconds
+0307.074 (0) Table wp_wfls_settings: finishing file(s) (2, 0.8 KB)
+0307.487 (0) Table wp_wfnotifications: Total expected rows (approximate): 23
+0307.625 (0) Table wp_wfnotifications: Rows added in this batch (next record: 1000): 27 (uncompressed bytes in this segment=5434) in 0.09 seconds
+0308.362 (0) Table wp_wfnotifications: finishing file(s) (2, 0.9 KB)
+0308.833 (0) Table wp_wfpendingissues: Total expected rows (approximate): 0
+0310.018 (0) Table wp_wfpendingissues: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=872) in 1.11 seconds
+0310.377 (0) Table wp_wfpendingissues: finishing file(s) (2, 0.4 KB)
+0310.664 (0) Table wp_wfreversecache: Total expected rows (approximate): 0
+0311.341 (0) Table wp_wfreversecache: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=497) in 0.57 seconds
+0311.646 (0) Table wp_wfreversecache: finishing file(s) (2, 0.3 KB)
+0312.190 (0) Table wp_wfsnipcache: Total expected rows (approximate): 1
+0312.805 (0) Table wp_wfsnipcache: Rows added in this batch (next record: 5): 1 (uncompressed bytes in this segment=798) in 0.38 seconds
+0313.307 (0) Table wp_wfsnipcache: finishing file(s) (2, 0.4 KB)
+0314.949 (0) Table wp_wfstatus: Total expected rows (approximate): 840
+0315.861 (0) Table wp_wfstatus: Rows added in this batch (next record: 1280): 937 (uncompressed bytes in this segment=81303) in 0.64 seconds
+0317.032 (0) The time we have been running (316.1) is approaching the resumption interval (345) - increasing resumption interval to 347
+0318.745 (0) The time we have been running (318.1) is approaching the resumption interval (347) - increasing resumption interval to 349
+0318.857 (0) Table wp_wfstatus: finishing file(s) (2, 15.2 KB)
+0318.988 (0) Table wp_wftrafficrates: Total expected rows (approximate): 0
+0323.260 (0) Table wp_wftrafficrates: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=566) in 4.21 seconds
+0323.626 (0) The time we have been running (323.3) is approaching the resumption interval (349) - increasing resumption interval to 354
+0323.821 (0) Table wp_wftrafficrates: finishing file(s) (2, 0.3 KB)
+0323.963 (0) Table wp_yoast_indexable: Total expected rows (approximate): 28
+0325.093 (0) Table wp_yoast_indexable: Rows added in this batch (next record: 77): 27 (uncompressed bytes in this segment=16860) in 1.06 seconds
+0325.978 (0) The time we have been running (325.5) is approaching the resumption interval (354) - increasing resumption interval to 356
+0326.355 (0) The time we have been running (326.2) is approaching the resumption interval (356) - increasing resumption interval to 357
+0326.645 (0) Table wp_yoast_indexable: finishing file(s) (2, 3 KB)
+0326.892 (0) Table wp_yoast_indexable_hierarchy: Total expected rows (approximate): 15
+0327.468 (0) Table wp_yoast_indexable_hierarchy: Rows added in this batch (next record: 1000): 14 (uncompressed bytes in this segment=1023) in 0.43 seconds
+0327.998 (0) The time we have been running (327.6) is approaching the resumption interval (357) - increasing resumption interval to 358
+0328.553 (0) The time we have been running (328.3) is approaching the resumption interval (358) - increasing resumption interval to 359
+0328.837 (0) Table wp_yoast_indexable_hierarchy: finishing file(s) (2, 0.4 KB)
+0330.396 (0) Table wp_yoast_migrations: Total expected rows (approximate): 19
+0330.830 (0) Table wp_yoast_migrations: Rows added in this batch (next record: 21): 21 (uncompressed bytes in this segment=1141) in 0.37 seconds
+0331.470 (0) The time we have been running (331) is approaching the resumption interval (359) - increasing resumption interval to 362
+0331.750 (0) Table wp_yoast_migrations: finishing file(s) (2, 0.6 KB)
+0331.929 (0) Table wp_yoast_primary_term: Total expected rows (approximate): 0
+0332.213 (0) Table wp_yoast_primary_term: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=852) in 0.17 seconds
+0333.543 (0) The time we have been running (332.6) is approaching the resumption interval (362) - increasing resumption interval to 363
+0334.344 (0) The time we have been running (333.9) is approaching the resumption interval (363) - increasing resumption interval to 364
+0334.645 (0) Table wp_yoast_primary_term: finishing file(s) (2, 0.4 KB)
+0334.913 (0) Table wp_yoast_seo_links: Total expected rows (approximate): 14
+0336.261 (0) Table wp_yoast_seo_links: Rows added in this batch (next record: 63): 14 (uncompressed bytes in this segment=2831) in 1.16 seconds
+0337.975 (0) The time we have been running (337.6) is approaching the resumption interval (364) - increasing resumption interval to 368
+0338.866 (0) The time we have been running (338.3) is approaching the resumption interval (368) - increasing resumption interval to 369
+0339.088 (0) Table wp_yoast_seo_links: finishing file(s) (2, 0.8 KB)
+0339.238 (0) PHP event: code E_WARNING: filemtime(): stat failed for C:\xampp\htdocs\bpcportfolio/wp-content/updraft/backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db.gz (line 1816, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0339.394 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_options.table.tmpr2750.gz (1/40): adding to final database dump
+0339.460 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_options.table.gz (2/40): adding to final database dump
+0339.515 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_users.table.tmpr3.gz (3/40): adding to final database dump
+0339.599 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_users.table.gz (4/40): adding to final database dump
+0339.693 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_usermeta.table.tmpr128.gz (5/40): adding to final database dump
+0339.828 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_usermeta.table.gz (6/40): adding to final database dump
+0339.965 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_commentmeta.table.tmpr0.gz (7/40): adding to final database dump
+0340.114 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_commentmeta.table.gz (8/40): adding to final database dump
+0340.236 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_comments.table.tmpr0.gz (9/40): adding to final database dump
+0340.321 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_comments.table.gz (10/40): adding to final database dump
+0340.480 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_links.table.tmpr0.gz (11/40): adding to final database dump
+0340.556 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_links.table.gz (12/40): adding to final database dump
+0340.680 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_postmeta.table.tmpr3321.gz (13/40): adding to final database dump
+0340.813 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_postmeta.table.gz (14/40): adding to final database dump
+0341.002 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_posts.table.tmpr127.gz (15/40): adding to final database dump
+0341.150 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_posts.table.gz (16/40): adding to final database dump
+0341.434 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_term_relationships.table.tmpr100001.gz (17/40): adding to final database dump
+0341.545 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_term_relationships.table.gz (18/40): adding to final database dump
+0341.634 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_term_taxonomy.table.tmpr3.gz (19/40): adding to final database dump
+0341.678 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_term_taxonomy.table.gz (20/40): adding to final database dump
+0341.764 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_termmeta.table.tmpr0.gz (21/40): adding to final database dump
+0342.001 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_termmeta.table.gz (22/40): adding to final database dump
+0342.168 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_terms.table.tmpr3.gz (23/40): adding to final database dump
+0342.308 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_terms.table.gz (24/40): adding to final database dump
+0342.466 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_convertkit_user_history.table.tmpr0.gz (25/40): adding to final database dump
+0342.544 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_convertkit_user_history.table.gz (26/40): adding to final database dump
+0342.677 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_smush_dir_images.table.tmpr0.gz (27/40): adding to final database dump
+0342.816 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_smush_dir_images.table.gz (28/40): adding to final database dump
+0342.855 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfblockediplog.table.tmpr1.gz (29/40): adding to final database dump
+0342.904 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfblockediplog.table.gz (30/40): adding to final database dump
+0342.988 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfblocks7.table.tmpr0.gz (31/40): adding to final database dump
+0343.082 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfblocks7.table.gz (32/40): adding to final database dump
+0343.216 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfconfig.table.tmpr1001.gz (33/40): adding to final database dump
+0343.724 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfconfig.table.gz (34/40): adding to final database dump
+0343.931 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfcrawlers.table.tmpr1.gz (35/40): adding to final database dump
+0344.009 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfcrawlers.table.gz (36/40): adding to final database dump
+0344.097 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wffilechanges.table.tmpr1.gz (37/40): adding to final database dump
+0344.153 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wffilechanges.table.gz (38/40): adding to final database dump
+0344.271 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wffilemods.table.tmpr5001.gz (39/40): adding to final database dump
+0344.652 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wffilemods.table.gz (40/40): adding to final database dump
+0344.763 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfhits.table.tmpr114.gz (41/40): adding to final database dump
+0344.825 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfhits.table.gz (42/40): adding to final database dump
+0344.907 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfhoover.table.tmpr0.gz (43/40): adding to final database dump
+0345.077 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfhoover.table.gz (44/40): adding to final database dump
+0345.145 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfissues.table.tmpr0.gz (45/40): adding to final database dump
+0345.229 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfissues.table.gz (46/40): adding to final database dump
+0345.318 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfknownfilelist.table.tmpr7762.gz (47/40): adding to final database dump
+0345.568 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfknownfilelist.table.gz (48/40): adding to final database dump
+0345.703 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wflivetraffichuman.table.tmpr1.gz (49/40): adding to final database dump
+0346.246 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wflivetraffichuman.table.gz (50/40): adding to final database dump
+0346.421 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wflocs.table.tmpr1.gz (51/40): adding to final database dump
+0346.616 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wflocs.table.gz (52/40): adding to final database dump
+0346.811 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wflogins.table.tmpr114.gz (53/40): adding to final database dump
+0347.272 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wflogins.table.gz (54/40): adding to final database dump
+0347.581 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfls_2fa_secrets.table.tmpr0.gz (55/40): adding to final database dump
+0347.728 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfls_2fa_secrets.table.gz (56/40): adding to final database dump
+0348.149 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfls_settings.table.tmpr1001.gz (57/40): adding to final database dump
+0348.404 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfls_settings.table.gz (58/40): adding to final database dump
+0348.806 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfnotifications.table.tmpr1001.gz (59/40): adding to final database dump
+0349.212 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfnotifications.table.gz (60/40): adding to final database dump
+0349.517 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfpendingissues.table.tmpr0.gz (61/40): adding to final database dump
+0349.612 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfpendingissues.table.gz (62/40): adding to final database dump
+0349.683 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfreversecache.table.tmpr1.gz (63/40): adding to final database dump
+0349.828 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfreversecache.table.gz (64/40): adding to final database dump
+0349.994 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfsnipcache.table.tmpr6.gz (65/40): adding to final database dump
+0350.085 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfsnipcache.table.gz (66/40): adding to final database dump
+0350.182 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfstatus.table.tmpr1281.gz (67/40): adding to final database dump
+0350.355 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wfstatus.table.gz (68/40): adding to final database dump
+0350.732 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wftrafficrates.table.tmpr1.gz (69/40): adding to final database dump
+0351.732 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_wftrafficrates.table.gz (70/40): adding to final database dump
+0351.932 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_yoast_indexable.table.tmpr78.gz (71/40): adding to final database dump
+0352.029 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_yoast_indexable.table.gz (72/40): adding to final database dump
+0352.120 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_yoast_indexable_hierarchy.table.tmpr1001.gz (73/40): adding to final database dump
+0352.294 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_yoast_indexable_hierarchy.table.gz (74/40): adding to final database dump
+0352.753 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_yoast_migrations.table.tmpr22.gz (75/40): adding to final database dump
+0353.567 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_yoast_migrations.table.gz (76/40): adding to final database dump
+0354.783 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_yoast_primary_term.table.tmpr0.gz (77/40): adding to final database dump
+0356.344 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_yoast_primary_term.table.gz (78/40): adding to final database dump
+0356.775 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_yoast_seo_links.table.tmpr64.gz (79/40): adding to final database dump
+0357.246 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db-table-wp_yoast_seo_links.table.gz (80/40): adding to final database dump
+0360.445 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db.gz: finished writing out complete database file (2160 KB)
+0368.692 (0) Total database tables backed up: 40 (backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db.gz, size: 2216398, sha1: 3cecf9ddf3eb9de97a8a0e01c5312fc3d9c3227a, sha256: 6ece3a049f9efd09a346bdc1a51a74591a42439a5b996ef2e7f44419a5af4b8d)
+0370.159 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0370.543 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0370.610 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0370.734 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-others.zip: others: This file has not yet been successfully uploaded: will queue
+0370.865 (0) backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db.gz: db: This file has not yet been successfully uploaded: will queue
+0370.987 (0) Saving backup history. Total backup size: 47.2 MB
+0371.192 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0371.450 (0) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0371.600 (0) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+0374.586 (0) Google Drive: quota usage: used=456.3 MB, total=15360 MB, available=14903.7 MB
+0374.737 (0) Google Drive: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+0378.054 (0) The time we have been running (377.6) is approaching the resumption interval (369) - increasing resumption interval to 408
+0378.210 (0) Googledrive chunked upload: 4.5 % uploaded (1048576 - increasing chunk size to 2048 KB - memory usage: 52.5 / 58)
+0386.285 (0) The time we have been running (383.8) is approaching the resumption interval (408) - increasing resumption interval to 414
+0386.574 (0) Googledrive chunked upload: 13.4 % uploaded (3145728)
+0391.267 (0) The time we have been running (390.6) is approaching the resumption interval (414) - increasing resumption interval to 421
+0391.429 (0) Googledrive chunked upload: 22.4 % uploaded (5242880)
+0400.424 (0) The time we have been running (400) is approaching the resumption interval (421) - increasing resumption interval to 430
+0400.521 (0) Googledrive chunked upload: 31.3 % uploaded (7340032)
+0405.490 (0) The time we have been running (405.1) is approaching the resumption interval (430) - increasing resumption interval to 436
+0405.535 (0) Googledrive chunked upload: 40.2 % uploaded (9437184)
+0410.250 (0) The time we have been running (409.9) is approaching the resumption interval (436) - increasing resumption interval to 440
+0410.365 (0) Googledrive chunked upload: 49.2 % uploaded (11534336)
+0414.434 (0) The time we have been running (414.1) is approaching the resumption interval (440) - increasing resumption interval to 445
+0414.655 (0) Googledrive chunked upload: 58.1 % uploaded (13631488)
+0418.860 (0) The time we have been running (418.6) is approaching the resumption interval (445) - increasing resumption interval to 449
+0418.949 (0) Googledrive chunked upload: 67.1 % uploaded (15728640)
+0422.943 (0) The time we have been running (422.6) is approaching the resumption interval (449) - increasing resumption interval to 453
+0423.376 (0) Googledrive chunked upload: 76 % uploaded (17825792)
+0428.091 (0) The time we have been running (427.7) is approaching the resumption interval (453) - increasing resumption interval to 458
+0428.191 (0) Googledrive chunked upload: 84.9 % uploaded (19922944)
+0432.947 (0) The time we have been running (432.6) is approaching the resumption interval (458) - increasing resumption interval to 463
+0433.668 (0) Googledrive chunked upload: 93.9 % uploaded (22020096)
+0437.977 (0) The time we have been running (437.5) is approaching the resumption interval (463) - increasing resumption interval to 468
+0438.087 (0) Googledrive chunked upload: 100 % uploaded (22020096)
+0438.587 (0) Google Drive: OK: Archive backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip uploaded in 63.64 seconds
+0438.654 (0) Recording as successfully uploaded: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip
+0438.972 (0) Deleting local file: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-plugins.zip: OK
+0439.351 (0) Google Drive: quota usage: used=478.6 MB, total=15360 MB, available=14881.4 MB
+0439.708 (0) Google Drive: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-themes.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+0444.123 (0) The time we have been running (443.8) is approaching the resumption interval (468) - increasing resumption interval to 474
+0444.367 (0) Googledrive chunked upload: 15.6 % uploaded (1048576)
+0446.808 (0) The time we have been running (446.6) is approaching the resumption interval (474) - increasing resumption interval to 477
+0446.970 (0) Googledrive chunked upload: 31.2 % uploaded (2097152 - increasing chunk size to 2048 KB - memory usage: 52.5 / 58)
+0452.361 (0) The time we have been running (452.1) is approaching the resumption interval (477) - increasing resumption interval to 483
+0452.639 (0) Googledrive chunked upload: 62.4 % uploaded (4194304)
+0456.888 (0) The time we have been running (456.6) is approaching the resumption interval (483) - increasing resumption interval to 487
+0456.973 (0) Googledrive chunked upload: 93.7 % uploaded (6291456)
+0459.762 (0) The time we have been running (459.5) is approaching the resumption interval (487) - increasing resumption interval to 490
+0459.981 (0) Googledrive chunked upload: 100 % uploaded (6291456)
+0460.317 (0) Google Drive: OK: Archive backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-themes.zip uploaded in 20.54 seconds
+0460.415 (0) Recording as successfully uploaded: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-themes.zip
+0460.655 (0) Deleting local file: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-themes.zip: OK
+0461.063 (0) Google Drive: quota usage: used=485.1 MB, total=15360 MB, available=14874.9 MB
+0461.105 (0) Google Drive: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-uploads.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+0464.396 (0) The time we have been running (463.9) is approaching the resumption interval (490) - increasing resumption interval to 494
+0464.444 (0) Googledrive chunked upload: 7.2 % uploaded (1048576 - increasing chunk size to 2048 KB - memory usage: 52.5 / 58)
+0471.720 (0) The time we have been running (469.8) is approaching the resumption interval (494) - increasing resumption interval to 500
+0472.256 (0) Googledrive chunked upload: 21.7 % uploaded (3145728)
+0477.544 (0) The time we have been running (477.4) is approaching the resumption interval (500) - increasing resumption interval to 508
+0477.635 (0) Googledrive chunked upload: 36.1 % uploaded (5242880)
+0483.126 (0) The time we have been running (482.4) is approaching the resumption interval (508) - increasing resumption interval to 513
+0483.337 (0) Googledrive chunked upload: 50.6 % uploaded (7340032)
+0487.329 (0) The time we have been running (487.2) is approaching the resumption interval (513) - increasing resumption interval to 518
+0487.408 (0) Googledrive chunked upload: 65.1 % uploaded (9437184)
+0493.538 (0) The time we have been running (492.1) is approaching the resumption interval (518) - increasing resumption interval to 523
+0494.743 (0) Googledrive chunked upload: 79.5 % uploaded (11534336)
+0502.245 (0) The time we have been running (500.1) is approaching the resumption interval (523) - increasing resumption interval to 531
+0503.177 (0) Googledrive chunked upload: 94 % uploaded (13631488)
+0507.903 (0) The time we have been running (507.2) is approaching the resumption interval (531) - increasing resumption interval to 538
+0508.813 (0) Googledrive chunked upload: 100 % uploaded (13631488)
+0510.259 (0) Google Drive: OK: Archive backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-uploads.zip uploaded in 49.02 seconds
+0510.715 (0) Recording as successfully uploaded: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-uploads.zip
+0511.808 (0) Deleting local file: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-uploads.zip: OK
+0512.707 (0) Google Drive: quota usage: used=498.9 MB, total=15360 MB, available=14861.1 MB
+0513.240 (0) Google Drive: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-others.zip: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+0517.410 (0) The time we have been running (517.2) is approaching the resumption interval (538) - increasing resumption interval to 548
+0517.541 (0) Googledrive chunked upload: 40.9 % uploaded (1048576)
+0520.636 (0) The time we have been running (520.2) is approaching the resumption interval (548) - increasing resumption interval to 551
+0520.758 (0) Googledrive chunked upload: 81.8 % uploaded (2097152 - increasing chunk size to 2048 KB - memory usage: 52.5 / 58)
+0523.409 (0) The time we have been running (523.3) is approaching the resumption interval (551) - increasing resumption interval to 554
+0523.509 (0) Googledrive chunked upload: 100 % uploaded (2097152)
+0523.598 (0) Google Drive: OK: Archive backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-others.zip uploaded in 9.8 seconds
+0523.647 (0) Recording as successfully uploaded: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-others.zip
+0523.798 (0) Deleting local file: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-others.zip: OK
+0524.174 (0) Google Drive: quota usage: used=501.3 MB, total=15360 MB, available=14858.7 MB
+0524.895 (0) Google Drive: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db.gz: Attempting to upload to Google Drive (into folder id: 15RCHhllwk3BBGWL3Q6OStXfBNpHqS4zi)
+0527.570 (0) The time we have been running (527.4) is approaching the resumption interval (554) - increasing resumption interval to 558
+0527.659 (0) Googledrive chunked upload: 47.3 % uploaded (1048576 - increasing chunk size to 2048 KB - memory usage: 52.5 / 58)
+0531.748 (0) The time we have been running (530.7) is approaching the resumption interval (558) - increasing resumption interval to 561
+0531.883 (0) Googledrive chunked upload: 100 % uploaded (1048576)
+0531.986 (0) Google Drive: OK: Archive backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db.gz uploaded in 6.94 seconds
+0532.008 (0) Recording as successfully uploaded: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db.gz
+0532.165 (0) Deleting local file: backup_2021-06-07-1023_Sarah_Bartley_7d05dceadc95-db.gz: OK
+0532.252 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+0532.339 (0) Number of backup sets in history: 7; groups (db): 1
+0532.423 (0) Examining (for databases) backup set with group_id=0, nonce=7d05dceadc95, datestamp=1623075790 (Jun 07 2021 14:23:10)
+0532.473 (0) This backup set is the backup set just made, so will not be deleted.
+0532.473 (0) Examining (for databases) backup set with group_id=0, nonce=5346491e7877, datestamp=1622559274 (Jun 01 2021 14:54:34)
+0532.473 (0) Examining (for databases) backup set with group_id=0, nonce=f97f7748c1d2, datestamp=1622215151 (May 28 2021 15:19:11)
+0532.474 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0532.518 (0) Examining (for databases) backup set with group_id=0, nonce=91d78c60f71d, datestamp=1621954094 (May 25 2021 14:48:14)
+0532.518 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0532.519 (0) Examining (for databases) backup set with group_id=0, nonce=26de3f29c04c, datestamp=1621863785 (May 24 2021 13:43:05)
+0532.519 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0532.519 (0) Examining (for databases) backup set with group_id=0, nonce=00f076e10e05, datestamp=1621792129 (May 23 2021 17:48:49)
+0532.519 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0532.520 (0) Examining (for databases) backup set with group_id=0, nonce=7e8d4ef44cac, datestamp=1621700845 (May 22 2021 16:27:25)
+0532.521 (0) 1621700845: db: this set includes a database (backup_2021-05-22-1227_Sarah_Bartley_7e8d4ef44cac-db.gz); db count is now 5
+0532.521 (0) 1621700845: db: over retain limit (5); will delete this database
+0532.521 (0) Delete file: backup_2021-05-22-1227_Sarah_Bartley_7e8d4ef44cac-db.gz, service=googledrive
+0535.217 (0) Google Drive: backup_2021-05-22-1227_Sarah_Bartley_7e8d4ef44cac-db.gz: Deletion successful
+0537.810 (0) The time we have been running (535.7) is approaching the resumption interval (561) - increasing resumption interval to 566
+0539.918 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0540.705 (0) Number of backup sets in history: 7; groups (files): 1
+0540.930 (0) Examining (for files) backup set with nonce=7d05dceadc95, datestamp=1623075790 (Jun 07 2021 14:23:10)
+0541.885 (0) This backup set is the backup set just made, so will not be deleted.
+0542.952 (0) This backup set is the backup set just made, so will not be deleted.
+0543.736 (0) This backup set is the backup set just made, so will not be deleted.
+0544.567 (0) This backup set is the backup set just made, so will not be deleted.
+0544.840 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0544.971 (0) Examining (for files) backup set with nonce=5346491e7877, datestamp=1622559274 (Jun 01 2021 14:54:34)
+0545.369 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0546.268 (0) Examining (for files) backup set with nonce=f97f7748c1d2, datestamp=1622215151 (May 28 2021 15:19:11)
+0546.268 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0546.627 (0) Examining (for files) backup set with nonce=91d78c60f71d, datestamp=1621954094 (May 25 2021 14:48:14)
+0546.627 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0546.627 (0) Examining (for files) backup set with nonce=26de3f29c04c, datestamp=1621863785 (May 24 2021 13:43:05)
+0546.628 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0546.628 (0) Examining (for files) backup set with nonce=00f076e10e05, datestamp=1621792129 (May 23 2021 17:48:49)
+0546.628 (0) plugins: over retain limit (5); will delete this file entity
+0546.628 (0) themes: over retain limit (5); will delete this file entity
+0546.628 (0) uploads: over retain limit (5); will delete this file entity
+0546.628 (0) others: over retain limit (5); will delete this file entity
+0546.629 (0) Delete file: backup_2021-05-23-1348_Sarah_Bartley_00f076e10e05-plugins.zip, service=googledrive
+0547.249 (0) Delete file: backup_2021-05-23-1348_Sarah_Bartley_00f076e10e05-themes.zip, service=googledrive
+0547.395 (0) Delete file: backup_2021-05-23-1348_Sarah_Bartley_00f076e10e05-uploads.zip, service=googledrive
+0547.499 (0) Delete file: backup_2021-05-23-1348_Sarah_Bartley_00f076e10e05-others.zip, service=googledrive
+0548.775 (0) Google Drive: backup_2021-05-23-1348_Sarah_Bartley_00f076e10e05-others.zip: Deletion successful
+0549.944 (0) Google Drive: backup_2021-05-23-1348_Sarah_Bartley_00f076e10e05-uploads.zip: Deletion successful
+0554.546 (0) Google Drive: backup_2021-05-23-1348_Sarah_Bartley_00f076e10e05-themes.zip: Deletion successful
+0555.399 (0) Google Drive: backup_2021-05-23-1348_Sarah_Bartley_00f076e10e05-plugins.zip: Deletion successful
+0556.332 (0) The time we have been running (555.5) is approaching the resumption interval (566) - increasing resumption interval to 586
+0556.415 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0556.449 (0) Examining (for files) backup set with nonce=7e8d4ef44cac, datestamp=1621700845 (May 22 2021 16:27:25)
+0556.471 (0) plugins: over retain limit (5); will delete this file entity
+0556.471 (0) themes: over retain limit (5); will delete this file entity
+0556.471 (0) uploads: over retain limit (5); will delete this file entity
+0556.471 (0) others: over retain limit (5); will delete this file entity
+0556.471 (0) Delete file: backup_2021-05-22-1227_Sarah_Bartley_7e8d4ef44cac-plugins.zip, service=googledrive
+0556.535 (0) Delete file: backup_2021-05-22-1227_Sarah_Bartley_7e8d4ef44cac-themes.zip, service=googledrive
+0556.571 (0) Delete file: backup_2021-05-22-1227_Sarah_Bartley_7e8d4ef44cac-uploads.zip, service=googledrive
+0556.615 (0) Delete file: backup_2021-05-22-1227_Sarah_Bartley_7e8d4ef44cac-others.zip, service=googledrive
+0557.877 (0) Google Drive: backup_2021-05-22-1227_Sarah_Bartley_7e8d4ef44cac-others.zip: Deletion successful
+0558.565 (0) Google Drive: backup_2021-05-22-1227_Sarah_Bartley_7e8d4ef44cac-uploads.zip: Deletion successful
+0559.333 (0) Google Drive: backup_2021-05-22-1227_Sarah_Bartley_7e8d4ef44cac-themes.zip: Deletion successful
+0560.316 (0) Google Drive: backup_2021-05-22-1227_Sarah_Bartley_7e8d4ef44cac-plugins.zip: Deletion successful
+0562.398 (0) The time we have been running (561.6) is approaching the resumption interval (586) - increasing resumption interval to 592
+0562.543 (0) This backup set is now empty; will remove from history
+0562.599 (0) Deleting log file (log.7e8d4ef44cac.txt)
+0562.667 (0) Retain: saving new backup history (sets now: 6) and finishing retain operation
+0563.083 (0) Resume backup (7d05dceadc95, 0): finish run
+0563.214 (0) Decremented the semaphore (fd) by 1
+0563.419 (0) Semaphore (fd) unlocked
+0563.508 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0563.751 (0) No email will/can be sent - the user has not configured an email address.
+0563.827 (0) The backup apparently succeeded and is now complete
