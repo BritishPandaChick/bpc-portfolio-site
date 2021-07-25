@@ -179,7 +179,7 @@ class Meow_WR2X_Rest
 	 * @param integer $limit
 	 * @return void
 	 */
-	function get_media_status( $skip = 0, $limit = 10, $filterBy, $orderBy, $order, $search ) {
+	function get_media_status( $skip = 0, $limit = 10, $filterBy = 'all', $orderBy = 'id', $order = 'desc', $search = '' ) {
 		global $wpdb;
 		$whereIsIn = '';
 		if ( $filterBy === 'issues' ) {

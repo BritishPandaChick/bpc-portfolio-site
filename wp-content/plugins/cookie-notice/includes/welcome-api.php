@@ -77,7 +77,9 @@ class Cookie_Notice_Welcome_API {
 				}
 
 				// validate plan and payment method
-				$plan = in_array( $_POST['plan'], array( 'compliance_monthly', 'compliance_yearly' ), true ) ? $_POST['plan'] : false;
+				$plan = in_array( $_POST['plan'], array( 'monthly', 'yearly' ), true ) ? $_POST['plan'] : false;
+				$plan = ! empty( $plan ) ? 'compliance_' . $plan . '_notrial' : false;
+				
 				$method = in_array( $_POST['method'], array( 'credit_card', 'paypal' ), true ) ? $_POST['method'] : false;
 
 				// valid plan and payment method?
@@ -109,8 +111,6 @@ class Cookie_Notice_Welcome_API {
 					}
 				}
 
-				// file_put_contents( plugin_dir_path( __FILE__ ) . "bt-customer.txt", print_r( $customer, true ) . PHP_EOL, FILE_APPEND );
-
 				// user created/received?
 				if ( empty( $customer->id ) ) {
 					$response = array( 'error' => __( 'Unable to create customer data.', 'cookie-notice' ) );
@@ -127,75 +127,12 @@ class Cookie_Notice_Welcome_API {
 					)
 				);
 
-				// file_put_contents( plugin_dir_path( __FILE__ ) . "bt-subscription.txt", print_r( $subscription, true ) . PHP_EOL, FILE_APPEND );
-
 				// subscription assigned?
 				if ( ! empty( $subscription->error ) ) {
 					$response = $subscription->error;
 					break;
 				}
 
-				// get options
-				$app_config = get_transient( 'cookie_notice_app_config' );
-
-				// create quick config
-				$params = ! empty( $app_config ) && is_array( $app_config ) ? $app_config : array();
-
-				// cast to objects
-				foreach ( $params as $key => $array ) {
-					$object = new stdClass();
-
-					foreach ( $array as $subkey => $value ) {
-						$new_params[$key] = $object;
-						$new_params[$key]->{$subkey} = $value;	
-					}
-				}
-
-				$params = $new_params;
-				$params['AppID'] = $app_id;
-				// @todo When mutliple default languages are supported
-				$params['DefaultLanguage'] = 'en';
-
-				$response = $this->request( 'quick_config', $params );
-
-				if ( $response->status === 200 ) {
-					// notify publish app
-					$params = array( 
-						'AppID' => $app_id 
-					);
-
-					$response = $this->request( 'notify_app', $params );
-
-					if ( $response->status === 200 ) {
-						$response = true;
-						
-						// update app status
-						update_option( 'cookie_notice_status', 'active' );
-					} else {
-						// errors?
-						if ( ! empty( $response->error ) ) {
-							break;
-						}
-
-						// errors?
-						if ( ! empty( $response->message ) ) {
-							$response->error = $response->message;
-							break;
-						}
-					}
-				} else {
-					// errors?
-					if ( ! empty( $response->error ) ) {
-						$response->error = $response->error;
-						break;
-					}
-
-					// errors?
-					if ( ! empty( $response->message ) ) {
-						$response->error = $response->message;
-						break;
-					}
-				}
 				break;
 
 			case 'register':
@@ -305,15 +242,89 @@ class Cookie_Notice_Welcome_API {
 				if ( empty( $response->data->AppID ) || empty( $response->data->SecretKey ) ) {
 					$response = array( 'error' => __( 'Unexpected error occurred. Please try again later.', 'cookie-notice' ) );
 					break;
+				} else {
+					$app_id = $response->data->AppID;
+					$secret_key = $response->data->SecretKey;
 				}
 				
 				// update options: app ID and secret key
-				Cookie_Notice()->options['general'] = wp_parse_args( array( 'app_id' => $response->data->AppID, 'app_key' => $response->data->SecretKey ), Cookie_Notice()->options['general'] );
+				Cookie_Notice()->options['general'] = wp_parse_args( array( 'app_id' => $app_id, 'app_key' => $secret_key ), Cookie_Notice()->options['general'] );
 
 				update_option( 'cookie_notice_options', Cookie_Notice()->options['general'] );
 				
-				// update app status
-				update_option( 'cookie_notice_status', 'pending' );
+				// purge cache
+				delete_transient( 'cookie_notice_compliance_cache' );
+				
+				// get options
+				// $app_config = get_transient( 'cookie_notice_app_config' );
+
+				// create quick config
+				$params = ! empty( $app_config ) && is_array( $app_config ) ? $app_config : array();
+
+				// cast to objects
+				if ( $params ) {
+					foreach ( $params as $key => $array ) {
+						$object = new stdClass();
+
+						foreach ( $array as $subkey => $value ) {
+							$new_params[$key] = $object;
+							$new_params[$key]->{$subkey} = $value;	
+						}
+					}
+					
+					$params = $new_params;
+				}
+
+				$params['AppID'] = $app_id;
+				// @todo When mutliple default languages are supported
+				$params['DefaultLanguage'] = 'en';
+
+				$response = $this->request( 'quick_config', $params );
+
+				if ( $response->status === 200 ) {
+					// notify publish app
+					$params = array( 
+						'AppID' => $app_id 
+					);
+
+					$response = $this->request( 'notify_app', $params );
+
+					if ( $response->status === 200 ) {
+						$response = true;
+						
+						// update app status
+						update_option( 'cookie_notice_status', 'active' );
+					} else {
+						// update app status
+						update_option( 'cookie_notice_status', 'pending' );
+					
+						// errors?
+						if ( ! empty( $response->error ) ) {
+							break;
+						}
+
+						// errors?
+						if ( ! empty( $response->message ) ) {
+							$response->error = $response->message;
+							break;
+						}
+					}
+				} else {
+					// update app status
+					update_option( 'cookie_notice_status', 'pending' );
+				
+					// errors?
+					if ( ! empty( $response->error ) ) {
+						$response->error = $response->error;
+						break;
+					}
+
+					// errors?
+					if ( ! empty( $response->message ) ) {
+						$response->error = $response->message;
+						break;
+					}
+				}
 				
 				break;
 
@@ -402,6 +413,7 @@ class Cookie_Notice_Welcome_API {
 
 				// if no app, create one
 				if ( ! $app_exists ) {
+					
 					// create new app
 					$params = array(
 						'DomainName' => $site_title,
@@ -432,18 +444,63 @@ class Cookie_Notice_Welcome_API {
 				Cookie_Notice()->options['general'] = wp_parse_args( array( 'app_id' => $app_exists->AppID, 'app_key' => $app_exists->SecretKey ), Cookie_Notice()->options['general'] );
 
 				update_option( 'cookie_notice_options', Cookie_Notice()->options['general'] );
-				
-				// update app status
-				update_option( 'cookie_notice_status', 'pending' );
-				
-				// check if the app has an active subscription
-				if ( $app_exists->PaymentStatus === 'Active' ) {
-					$response = array( 'error' => sprintf( __( 'You have an active subscription for %s', 'cookie-notice' ), $site_url ) );
+
+				// purge cache
+				delete_transient( 'cookie_notice_compliance_cache' );
+
+				// create quick config
+				$params = array(
+					'AppID' => $app_exists->AppID,
+					'DefaultLanguage' => 'en'
+				);
+
+				$response = $this->request( 'quick_config', $params );
+
+				if ( $response->status === 200 ) {
+					// notify publish app
+					$params = array( 
+						'AppID' => $app_exists->AppID
+					);
+
+					$response = $this->request( 'notify_app', $params );
+
+					if ( $response->status === 200 ) {
+						$response = true;
+						
+						// update app status
+						update_option( 'cookie_notice_status', 'active' );
+					} else {
+						// update app status
+						update_option( 'cookie_notice_status', 'pending' );
 					
+						// errors?
+						if ( ! empty( $response->error ) ) {
+							break;
+						}
+
+						// errors?
+						if ( ! empty( $response->message ) ) {
+							$response->error = $response->message;
+							break;
+						}
+					}
+				} else {
 					// update app status
-					update_option( 'cookie_notice_status', 'active' );
-					break;
+					update_option( 'cookie_notice_status', 'pending' );
+				
+					// errors?
+					if ( ! empty( $response->error ) ) {
+						$response->error = $response->error;
+						break;
+					}
+
+					// errors?
+					if ( ! empty( $response->message ) ) {
+						$response->error = $response->message;
+						break;
+					}
 				}
+				
 				break;
 
 			case 'configure':
@@ -726,6 +783,8 @@ class Cookie_Notice_Welcome_API {
 			if ( ! empty( $response->error ) ) {
 				if ( $response->error == 'App is not puplised yet' )
 					$result = 'pending';
+				else
+					$result = '';
 			}
 		}
 		

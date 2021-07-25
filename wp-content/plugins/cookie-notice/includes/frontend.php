@@ -17,6 +17,7 @@ class Cookie_Notice_Frontend {
 		add_action( 'init', array( $this, 'init' ) );
 
 		$this->widget_url = '//cdn.hu-manity.co/hu-banner.min.js';
+		$this->app_url = 'https://app.hu-manity.co';
 	}
 
 	/**
@@ -61,7 +62,7 @@ class Cookie_Notice_Frontend {
 	 * Add CORS header for API requests and purge cache.
 	 */
 	public function add_cors_http_header() {
-		header( "Access-Control-Allow-Origin: https://app.hu-manity.co" );
+		header( "Access-Control-Allow-Origin: $this->app_url" );
 		header( 'Access-Control-Allow-Methods: GET' );
 	}
 
@@ -191,7 +192,7 @@ class Cookie_Notice_Frontend {
 
 		// message output
 		$output = '
-		<!-- Cookie Notice plugin v' . Cookie_Notice()->defaults['version'] . ' -->
+		<!-- Cookie Notice plugin v' . Cookie_Notice()->defaults['version'] . ' by Hu-manity.co https://hu-manity.co/ -->
 		<div id="cookie-notice" role="banner" class="cookie-notice-hidden cookie-revoke-hidden cn-position-' . $options['position'] . '" aria-label="' . $options['aria_label'] . '" style="background-color: rgba(' . implode( ',', Cookie_Notice()->hex2rgb( $options['colors']['bar'] ) ) . ',' . $options['colors']['bar_opacity'] * 0.01 . ');">'
 			. '<div class="cookie-notice-container" style="color: ' . $options['colors']['text'] . ';">'
 			. '<span id="cn-notice-text" class="cn-text-container">'. $options['message_text'] . '</span>'
