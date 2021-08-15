@@ -136,6 +136,8 @@ final class MAKE_Setup_Misc extends MAKE_Util_Modules implements MAKE_Setup_Misc
 
 		// Title tag
 		add_theme_support( 'title-tag' );
+
+		remove_theme_support( 'widgets-block-editor' );
 	}
 
 	/**

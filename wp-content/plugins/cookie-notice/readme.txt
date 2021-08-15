@@ -3,8 +3,8 @@ Contributors: humanityco
 Tags: gdpr, ccpa, cookies, consent, compliance
 Requires at least: 4.3
 Requires PHP: 5.3
-Tested up to: 5.7.2
-Stable tag: 2.1.0
+Tested up to: 5.8
+Stable tag: 2.1.1
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 
@@ -57,6 +57,9 @@ No questions yet.
 1. screenshot-1.png
 
 == Changelog ==
+
+= 2.1.1 =
+* Fix: Security bug related to compliance caching
 
 = 2.1.0 =
 * New: Introducing Cookie Compliance Free plan
@@ -318,5 +321,5 @@ Initial release
 
 == Upgrade Notice ==
 
-= 2.1.0 =
-* New: Introducing Cookie Compliance Free plan
+= 2.1.1 =
+* Fix: Security bug related to compliance caching

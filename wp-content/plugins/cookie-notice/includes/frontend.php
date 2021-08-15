@@ -39,10 +39,7 @@ class Cookie_Notice_Frontend {
 			// init cookie compliance
 			if ( Cookie_Notice()->get_status() === 'active' ) {
 				add_action( 'send_headers', array( $this, 'add_cors_http_header' ) );
-				add_action( 'wp_head', array( $this, 'wp_head_scripts' ), 0 );
-				add_action( 'wp_enqueue_scripts', array( $this, 'wp_enqueue_compliance_scripts' ) );
-				add_action( 'wp_ajax_cn_save_config', array( $this, 'ajax_save_config' ) );
-				add_action( 'wp_ajax_nopriv_cn_save_config', array( $this, 'ajax_save_config' ) );
+				add_action( 'wp_head', array( $this, 'wp_head_scripts' ), 0 );;
 			// init cookie notice
 			} else {
 				// actions
@@ -86,18 +83,6 @@ class Cookie_Notice_Frontend {
 			'currentLanguage'	=> $locale_code[0],
 			'blocking' => (bool) ( ! is_user_logged_in() ? Cookie_Notice()->options['general']['app_blocking'] : false )
 		);
-		
-		$cached_config = get_transient( 'cookie_notice_compliance_cache' );
-		
-		if ( ! empty( $cached_config ) && is_array( $cached_config ) ) {
-			$options = array_merge( $options, array(
-				'cache' => true,
-				'cacheType' => 'db',
-				'cacheData' => $cached_config
-			) );
-		}
-		
-		// print_r( $options ); exit;
 
 		echo '
 		<!-- Hu Banner -->
@@ -105,29 +90,6 @@ class Cookie_Notice_Frontend {
 			var huOptions = ' . json_encode( $options ) . ';
 		</script>
 		<script type="text/javascript" src="' . $this->widget_url . '"></script>';
-	}
-	
-	/**
-	 * Load compliance scripts and styles - frontend.
-	 */
-	public function wp_enqueue_compliance_scripts() {
-		wp_enqueue_script( 
-			'cookie-notice-compliance', 
-			plugins_url( '../js/front-compliance.js', __FILE__ ),
-			array(),
-			Cookie_Notice()->defaults['version'],
-			isset( Cookie_Notice()->options['general']['script_placement'] ) && Cookie_Notice()->options['general']['script_placement'] === 'footer'
-		);
-		
-		wp_localize_script(
-			'cookie-notice-compliance',
-			'cnComplianceArgs',
-			array(
-				'ajaxUrl'				=> admin_url( 'admin-ajax.php' ),
-				'nonce'					=> wp_create_nonce( 'cn_save_config' ),
-				'secure'				=> (int) is_ssl()
-			)
-		);
 	}
 	
 	/**
@@ -310,30 +272,6 @@ class Cookie_Notice_Frontend {
 			$classes[] = 'cookies-not-set';
 
 		return $classes;
-	}
-	
-	/**
-	 * Save compliance config caching.
-	 */
-	public function ajax_save_config() {
-		if ( Cookie_Notice()->get_status() !== 'active' )
-			return;
-		
-		if ( ! wp_verify_nonce( esc_attr( $_REQUEST['nonce'] ), 'cn_save_config' ) )
-			return;
-		
-		$json_data = ! empty( $_REQUEST['data'] ) ? esc_attr( $_REQUEST['data'] ) : false;
-		$config_data = array();
-
-		if ( ! empty( $json_data ) )
-			$config_data = json_decode( stripslashes( html_entity_decode( $json_data ) ), true );
-		
-		// save data
-		if ( $config_data && is_array( $config_data ) )
-			set_transient( 'cookie_notice_compliance_cache', $config_data, 24 * HOUR_IN_SECONDS );
-		
-		return true;
-		exit;
 	}
 	
 	/**

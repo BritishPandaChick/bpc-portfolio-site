@@ -437,26 +437,6 @@ else :
 	Make()->compatibility()->deprecated_function( 'ttfmake_page_menu_args', '1.7.0' );
 endif;
 
-if ( ! function_exists( 'ttfmake_wp_title' ) ) :
-/**
- * Filters wp_title to print a neat <title> tag based on what is being viewed.
- *
- * @since  1.0.0.
- * @deprecated 1.7.0.
- *
- * @param  string    $title    Default title text for current view.
- * @param  string    $sep      Optional separator.
- *
- * @return string              The filtered title.
- */
-function ttfmake_wp_title( $title, $sep ) {
-	Make()->compatibility()->deprecated_function( __FUNCTION__, '1.7.0' );
-	return $title;
-}
-else :
-	Make()->compatibility()->deprecated_function( 'ttfmake_wp_title', '1.7.0' );
-endif;
-
 /**
  * Add a wrapper div to the output of oembeds and the [embed] shortcode.
  *

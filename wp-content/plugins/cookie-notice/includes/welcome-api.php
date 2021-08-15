@@ -588,7 +588,7 @@ class Cookie_Notice_Welcome_API {
 	}
 	
 	/**
-	 * Youzign API request.
+	 * API request.
 	 *
 	 * @param string  $action The requested action.
 	 * @param array   $_data   Parameters for the API action.

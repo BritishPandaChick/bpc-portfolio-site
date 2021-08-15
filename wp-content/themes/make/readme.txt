@@ -26,6 +26,9 @@ Please see the Make documentation: https://thethemefoundry.com/make-help/
 
 == Changelog ==
 
+= 1.10.2 - August 3 2021 =
+* Bugfix: Remove support for block-based widgets.
+
 = 1.10.1 - March 9 2021 =
 * Bugfix: Fixed version compatibility notices.
 
@@ -672,6 +675,9 @@ Please see the Make documentation: https://thethemefoundry.com/make-help/
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.10.2 =
+* Removed support for block-based widgets.
 
 = 1.10.1 =
 * Minor bugfixes.
