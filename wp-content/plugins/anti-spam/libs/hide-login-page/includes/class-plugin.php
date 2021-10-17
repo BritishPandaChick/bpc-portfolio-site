@@ -11,10 +11,10 @@ if( !defined('ABSPATH') ) {
 	exit;
 }
 
-class WHLP_Plugin extends Wbcr_Factory445_Plugin {
+class WHLP_Plugin extends Wbcr_Factory449_Plugin {
 
 	/**
-	 * @var Wbcr_Factory445_Plugin
+	 * @var Wbcr_Factory449_Plugin
 	 */
 	private static $app;
 
@@ -40,7 +40,7 @@ class WHLP_Plugin extends Wbcr_Factory445_Plugin {
 	}
 
 	/**
-	 * @return Wbcr_Factory445_Plugin
+	 * @return Wbcr_Factory449_Plugin
 	 */
 	public static function app()
 	{

@@ -26,6 +26,18 @@ Please see the Make documentation: https://thethemefoundry.com/make-help/
 
 == Changelog ==
 
+= 1.10.6 - September 14 2021 =
+* Bugfix: Style selectors for Font Awesome Brands were outdated.
+
+= 1.10.5 - September 14 2021 =
+* Bugfix: Style selectors for Font Awesome Brands were outdated.
+
+= 1.10.4 - September 9 2021 =
+* Bugfix: A jQuery method was being called on a vanilla element, triggering an error.
+
+= 1.10.3 - September 6 2021 =
+* Bugfix: Some strings in Customize screen weren't translatable.
+
 = 1.10.2 - August 3 2021 =
 * Bugfix: Remove support for block-based widgets.
 
@@ -675,6 +687,18 @@ Please see the Make documentation: https://thethemefoundry.com/make-help/
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.10.6 =
+* Minor bugfixes.
+
+= 1.10.5 =
+* Minor bugfixes.
+
+= 1.10.4 =
+* Minor bugfixes.
+
+= 1.10.3 =
+* Minor bugfixes.
 
 = 1.10.2 =
 * Removed support for block-based widgets.

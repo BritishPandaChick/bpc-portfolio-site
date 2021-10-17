@@ -5,7 +5,7 @@
  * Author: The Theme Foundry
  * Author URI: https://thethemefoundry.com
  * Description: Build a website that means business. With Make’s powerful drag and drop page builder and hundreds of Customizer options, you can effortlessly brand your site without touching a line of code. Add full-width banners, columns, and galleries to showcase your best work. The intuitive builder delivers clean, lean code — not shortcodes — so you can trust your content remains portable. Make lets you control page layout options, including sidebar display, on all your posts and pages. Choose from hundreds of Google Fonts and upload custom backgrounds everywhere. Built on a fully responsive grid, Make renders as beautifully on tablets and phone screens as it does on desktop. Make scales with your business and is fully compatible with popular plugins like WooCommerce, Gravity Forms, Contact Form 7, Jetpack, and others. For documentation on the page builder and getting started with Make, see: https://thethemefoundry.com/make-help/
- * Version:     1.10.2
+ * Version:     1.10.6
  * Requires at least: 4.7
  * Tested up to: 5.4
  * Requires PHP: 5.2.4
@@ -1005,51 +1005,6 @@ div.custom-logo a {
 	color: #808080;
 }
 
-.social-links a:hover .fa.fa-facebook-square,
-.social-links a:focus .fa.fa-facebook-square {
-	color: #3b5999;
-}
-
-.social-links a:hover .fa.fa-twitter,
-.social-links a:focus .fa.fa-twitter {
-	color: #4099ff;
-}
-
-.social-links a:hover .fa.fa-google-plus-square,
-.social-links a:focus .fa.fa-google-plus-square {
-	color: #d34836;
-}
-
-.social-links a:hover .fa.fa-linkedin,
-.social-links a:focus .fa.fa-linkedin {
-	color: #007bb6;
-}
-
-.social-links a:hover .fa.fa-instagram,
-.social-links a:focus .fa.fa-instagram {
-	color: #517fa4;
-}
-
-.social-links a:hover .fa.fa-flickr,
-.social-links a:focus .fa.fa-flickr {
-	color: #ff0084;
-}
-
-.social-links a:hover .fa.fa-youtube,
-.social-links a:focus .fa.fa-youtube {
-	color: #e52d27;
-}
-
-.social-links a:hover .fa.fa-vimeo-square,
-.social-links a:focus .fa.fa-vimeo-square {
-	color: #1ab7ea;
-}
-
-.social-links a:hover .fa.fa-pinterest,
-.social-links a:focus .fa.fa-pinterest {
-	color: #c92228;
-}
-
 .social-links a:hover .fa.fa-envelope,
 .social-links a:focus .fa.fa-envelope {
 	color: #ffae00;
@@ -1058,6 +1013,56 @@ div.custom-logo a {
 .social-links a:hover .fa.fa-rss,
 .social-links a:focus .fa.fa-rss {
 	color: #f60;
+}
+
+.social-links a:hover .fab,
+.social-links a:focus .fab {
+	color: #808080;
+}
+
+.social-links a:hover .fab.fa-facebook-square,
+.social-links a:focus .fab.fa-facebook-square {
+	color: #3b5999;
+}
+
+.social-links a:hover .fab.fa-twitter,
+.social-links a:focus .fab.fa-twitter {
+	color: #4099ff;
+}
+
+.social-links a:hover .fab.fa-google-plus-square,
+.social-links a:focus .fab.fa-google-plus-square {
+	color: #d34836;
+}
+
+.social-links a:hover .fab.fa-linkedin,
+.social-links a:focus .fab.fa-linkedin {
+	color: #007bb6;
+}
+
+.social-links a:hover .fab.fa-instagram,
+.social-links a:focus .fab.fa-instagram {
+	color: #517fa4;
+}
+
+.social-links a:hover .fab.fa-flickr,
+.social-links a:focus .fab.fa-flickr {
+	color: #ff0084;
+}
+
+.social-links a:hover .fab.fa-youtube,
+.social-links a:focus .fab.fa-youtube {
+	color: #e52d27;
+}
+
+.social-links a:hover .fab.fa-vimeo-square,
+.social-links a:focus .fab.fa-vimeo-square {
+	color: #1ab7ea;
+}
+
+.social-links a:hover .fab.fa-pinterest,
+.social-links a:focus .fab.fa-pinterest {
+	color: #c92228;
 }
 
 .header-social-links {

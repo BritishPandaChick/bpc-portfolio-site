@@ -223,7 +223,7 @@
     // INTEGER CONTROL DEFINITION
     // ================================
     
-    $.fn.factoryBootstrap445_paddingsEditor = function (option) {
+    $.fn.factoryBootstrap449_paddingsEditor = function (option) {
         
         // call an method
         if ( typeof option === "string" ) {
@@ -242,13 +242,13 @@
         }
     };
 
-    $.fn.factoryBootstrap445_paddingsEditor.Constructor = PaddingsEditor;
+    $.fn.factoryBootstrap449_paddingsEditor.Constructor = PaddingsEditor;
     
     // AUTO CREATING
     // ================================
     
     $(function(){
-        $(".factory-bootstrap-445 .factory-paddings-editor").factoryBootstrap445_paddingsEditor();
+        $(".factory-bootstrap-449 .factory-paddings-editor").factoryBootstrap449_paddingsEditor();
     });
     
 }( jQuery ) );

@@ -165,7 +165,7 @@ var MakeFrontEnd = MakeFrontEnd || {};
 							element.tabIndex = -1;
 						}
 
-						element.trigger( 'focus' );
+						element.focus();
 					}
 				}, false );
 			}

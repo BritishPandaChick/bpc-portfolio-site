@@ -14,7 +14,7 @@ class TwoFactor extends Base
      * The id of the page in the admin menu.
      *
      * Mainly used to navigate between pages.
-     * @see FactoryPages444_AdminPage
+     * @see FactoryPages448_AdminPage
      *
      * @since 1.0.0
      * @var string
@@ -60,7 +60,7 @@ class TwoFactor extends Base
      *
      * @return void
      * @since 1.0.0
-     * @see Wbcr_FactoryPages444_AdminPage
+     * @see Wbcr_FactoryPages448_AdminPage
      *
      */
     public function assets($scripts, $styles)

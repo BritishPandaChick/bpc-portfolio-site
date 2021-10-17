@@ -3,7 +3,7 @@
 Plugin Name: Titan Anti-spam & Security
 Plugin URI: http://wordpress.org/plugins/anti-spam/
 Description: Titan Security - Anti-spam, Anti-virus, Firewall and Malware Scan
-Version: 7.2.7
+Version: 7.2.8
 Author: CreativeMotion
 Text Domain: titan-security
 Author URI: https://cm-wp.com/
@@ -11,7 +11,7 @@ License: GPLv3
 */
 
 // Exit if accessed directly
-if( !defined('ABSPATH') ) {
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
@@ -44,7 +44,7 @@ if( !defined('ABSPATH') ) {
  * -----------------------------------------------------------------------------
  */
 
-require_once(dirname(__FILE__) . '/libs/factory/core/includes/class-factory-requirements.php');
+require_once( dirname( __FILE__ ) . '/libs/factory/core/includes/class-factory-requirements.php' );
 
 // @formatter:off
 $wtitan_plugin_info = [
@@ -107,18 +107,18 @@ $wtitan_plugin_info = [
 
 	// FRAMEWORK MODULES
 	'load_factory_modules' => [
-		['libs/factory/bootstrap', 'factory_bootstrap_445', 'admin'],
-		['libs/factory/forms', 'factory_forms_442', 'admin'],
-		['libs/factory/pages', 'factory_pages_444', 'admin'],
-		['libs/factory/clearfy', 'factory_clearfy_236', 'all'],
-		['libs/factory/freemius', 'factory_freemius_133', 'all'],
-		['libs/factory/feedback', 'factory_feedback_109', 'admin']
+		['libs/factory/bootstrap', 'factory_bootstrap_449', 'admin'],
+		['libs/factory/forms', 'factory_forms_446', 'admin'],
+		['libs/factory/pages', 'factory_pages_448', 'admin'],
+		['libs/factory/templates', 'factory_templates_101', 'all'],
+		['libs/factory/freemius', 'factory_freemius_137', 'all'],
+		['libs/factory/feedback', 'factory_feedback_111', 'admin']
 	],
 	'load_plugin_components' => array()
 
 ];
 
-$wtitan_compatibility = new Wbcr_Factory445_Requirements(__FILE__, array_merge($wtitan_plugin_info, [
+$wtitan_compatibility = new Wbcr_Factory449_Requirements(__FILE__, array_merge($wtitan_plugin_info, [
 	'plugin_already_activate' => defined('WTITAN_PLUGIN_ACTIVE'),
 	'required_php_version' => '7.0',
 	'required_wp_version' => '5.4.0',

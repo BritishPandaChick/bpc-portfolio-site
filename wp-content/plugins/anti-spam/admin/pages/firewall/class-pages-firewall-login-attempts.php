@@ -64,7 +64,7 @@ class Firewall_Login_Attempts extends Base {
 	/**
 	 * Logs constructor.
 	 *
-	 * @param \Wbcr_Factory445_Plugin $plugin
+	 * @param \Wbcr_Factory449_Plugin $plugin
 	 *
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 *

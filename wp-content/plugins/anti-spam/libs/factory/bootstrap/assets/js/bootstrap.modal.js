@@ -155,7 +155,7 @@
     if (this.isShown && this.options.backdrop) {
       var doAnimate = $.support.transition && animate
 
-      this.$backdrop = $('<div class="factory-bootstrap-445-modal-backdrop ' + animate + '" />')
+      this.$backdrop = $('<div class="factory-bootstrap-449-modal-backdrop ' + animate + '" />')
         .appendTo(document.body)
 
       this.$element.on('click.dismiss.modal', $.proxy(function (e) {
@@ -195,9 +195,9 @@
   // MODAL PLUGIN DEFINITION
   // =======================
 
-  var old = $.fn.factoryBootstrap445_modal
+  var old = $.fn.factoryBootstrap449_modal
 
-  $.fn.factoryBootstrap445_modal = function (option, _relatedTarget) {
+  $.fn.factoryBootstrap449_modal = function (option, _relatedTarget) {
     return this.each(function () {
       var $this   = $(this)
       var data    = $this.data('bs.modal')
@@ -209,14 +209,14 @@
     })
   }
 
-  $.fn.factoryBootstrap445_modal.Constructor = Modal
+  $.fn.factoryBootstrap449_modal.Constructor = Modal
 
 
   // MODAL NO CONFLICT
   // =================
 
-  $.fn.factoryBootstrap445_modal.noConflict = function () {
-    $.fn.factoryBootstrap445_modal = old
+  $.fn.factoryBootstrap449_modal.noConflict = function () {
+    $.fn.factoryBootstrap449_modal = old
     return this
   }
 
@@ -233,7 +233,7 @@
     e.preventDefault()
 
     $target
-      .factoryBootstrap445_modal(option, this)
+      .factoryBootstrap449_modal(option, this)
       .one('hide', function () {
         $this.is(':visible') && $this.focus()
       })

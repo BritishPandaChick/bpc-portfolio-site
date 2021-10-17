@@ -347,7 +347,7 @@ class Meow_WR2X_Core {
 			$img_pathinfo = $this->get_pathinfo_from_image_src( $tag->getAttribute('src') );
 			$filepath = trailingslashit( $this->get_upload_root() ) . $img_pathinfo;
 			$system_retina = $this->get_retina( $filepath );
-			if ( $system_retina != null ) {
+			if ( !empty( $system_retina ) ) {
 				$retina_pathinfo = $this->cdn_this( ltrim( str_replace( $this->get_upload_root(), "", $system_retina ), '/' ) );
 				$buffer = str_replace( $img_pathinfo, $retina_pathinfo, $buffer );
 				$this->log( "The img src '$img_pathinfo' was replaced by '$retina_pathinfo'" );
@@ -405,10 +405,13 @@ class Meow_WR2X_Core {
 			$total++;
 			$retinized_srcset[$s]['url'] = $this->cdn_this( $cfg['url'], $attachment_id );
 			if ( $this->method !== "none" ) {
-				$retina = $this->cdn_this( $this->get_retina_from_url( $cfg['url'] ), $attachment_id );
-				if ( !empty( $retina ) ) {
-					$count++;
-					$retinized_srcset[(int)$s * 2] = array( 'url' => $retina, 'descriptor' => 'w', 'value' => (int)$s * 2 ); 
+				$retinaForUrl = $this->get_retina_from_url( $cfg['url'] );
+				if ( !empty( $retinaForUrl ) ) {
+					$retina = $this->cdn_this( $retinaForUrl, $attachment_id );
+					if ( !empty( $retina ) ) {
+						$count++;
+						$retinized_srcset[(int)$s * 2] = array( 'url' => $retina, 'descriptor' => 'w', 'value' => (int)$s * 2 ); 
+					}
 				}
 			}
 		}
@@ -446,7 +449,10 @@ class Meow_WR2X_Core {
 		return $realIssue;
 	}
 
-	function get_issues() {
+	function get_issues($search = '') {
+		if ($search) {
+			return $this->calculate_issues_by_search($search);
+		}
 		$issues = get_transient( 'wr2x_issues' );
 		if ( !$issues || !is_array( $issues ) ) {
 			$issues = array();
@@ -486,6 +492,28 @@ class Meow_WR2X_Core {
 		set_transient( 'wr2x_issues', $issues );
 	}
 
+	function calculate_issues_by_search($search) {
+		global $wpdb;
+		$postids = $wpdb->get_col($wpdb->prepare( "
+			SELECT p.ID FROM $wpdb->posts p
+			WHERE post_status = 'inherit'
+			AND p.post_title LIKE %s
+			AND post_type = 'attachment'" . $this->create_sql_if_wpml_original() . "
+			AND ( post_mime_type = 'image/jpeg' OR
+				post_mime_type = 'image/jpg' OR
+				post_mime_type = 'image/png' OR
+				post_mime_type = 'image/gif' )
+		", ( '%' . $search . '%' )));
+		$issues = array();
+		foreach ( $postids as $id ) {
+			$info = $this->retina_info( $id );
+			if ( $this->info_has_issues( $info ) )
+				array_push( $issues, $id );
+
+		}
+		return $issues;
+	}
+
 	function add_issue( $attachmentId ) {
 		if ( $this->is_ignore( $attachmentId ) )
 			return;
@@ -507,7 +535,25 @@ class Meow_WR2X_Core {
 
 	// IGNORE
 
-	function get_ignores( $force = false ) {
+	function calculate_ignores_by_search($search) {
+		$ids = get_transient( 'wr2x_ignores' );
+		if ( !$ids || !is_array( $ids ) ) {
+			return [];
+		}
+		global $wpdb;
+		$placeholders = implode(',', array_fill(0, count($ids), '%s'));
+		$ignores = $wpdb->get_col($wpdb->prepare( "
+			SELECT p.ID FROM $wpdb->posts p
+			WHERE ID IN ($placeholders)
+			AND p.post_title LIKE %s
+		", array_merge($ids, ['%' . $search . '%'])));
+		return $ignores;
+	}
+
+	function get_ignores($search = '') {
+		if ($search) {
+			return $this->calculate_ignores_by_search($search);
+		}
 		$ignores = get_transient( 'wr2x_ignores' );
 		if ( !$ignores || !is_array( $ignores ) ) {
 			$ignores = array();
@@ -1489,6 +1535,19 @@ class Meow_WR2X_Core {
 			$cache_buster = file_exists( $physical_file ) ? filemtime( $physical_file ) : WR2X_VERSION;
 			wp_enqueue_script( 'wr2x-retinajs-js', trailingslashit( WR2X_URL ) . 'app/retina.min.js', array(), $cache_buster, false );
 		}
+	}
+
+	/**
+	 *
+	 * Roles & Access Rights
+	 *
+	 */
+	function can_access_settings() {
+		return apply_filters( 'wr2x_allow_setup', current_user_can( 'manage_options' ) );
+	}
+
+	function can_access_features() {
+		return apply_filters( 'wr2x_allow_usage', current_user_can( 'administrator' ) );
 	}
 
 }

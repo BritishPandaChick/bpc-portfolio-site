@@ -42,8 +42,8 @@ add_action( 'current_screen', function () {
  * This is necessary to remind the user to update the configuration of the plugin components,
  * Otherwise, the newly activated components will not be involved in the work of the plugin.
  *
- * @param Wbcr_Factory445_Plugin                   $plugin
- * @param Wbcr_FactoryPages444_ImpressiveThemplate $obj
+ * @param Wbcr_Factory449_Plugin                   $plugin
+ * @param Wbcr_FactoryPages448_ImpressiveThemplate $obj
  *
  * @return bool
  */

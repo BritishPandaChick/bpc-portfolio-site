@@ -28,39 +28,42 @@ class Meow_WR2X_Rest
 		// SETTINGS
 		register_rest_route( $this->namespace, '/update_option/', array(
 			'methods' => 'POST',
-			'permission_callback' => '__return_true',
+			'permission_callback' => array( $this->core, 'can_access_settings' ),
 			'callback' => array( $this, 'rest_update_option' )
 		) );
 		register_rest_route( $this->namespace, '/all_settings/', array(
 			'methods' => 'GET',
-			'permission_callback' => '__return_true',
+			'permission_callback' => array( $this->core, 'can_access_settings' ),
 			'callback' => array( $this, 'rest_all_settings' )
 		) );
 		register_rest_route( $this->namespace, '/easy_io_link/', array(
 			'methods' => 'POST',
-			'permission_callback' => '__return_true',
+			'permission_callback' => array( $this->core, 'can_access_settings' ),
 			'callback' => array( $this, 'rest_easy_io_link' )
 		) );
 		register_rest_route( $this->namespace, '/easy_io_unlink/', array(
 			'methods' => 'POST',
-			'permission_callback' => '__return_true',
+			'permission_callback' => array( $this->core, 'can_access_settings' ),
 			'callback' => array( $this, 'rest_easy_io_unlink' )
 		) );
 		register_rest_route( $this->namespace, '/easy_io_stats/', array(
 			'methods' => 'POST',
-			'permission_callback' => '__return_true',
+			'permission_callback' => array( $this->core, 'can_access_settings' ),
 			'callback' => array( $this, 'rest_easy_io_stats' )
 		) );
 
 		// STATS & LISTING
 		register_rest_route( $this->namespace, '/stats', array(
 			'methods' => 'GET',
-			'permission_callback' => '__return_true',
-			'callback' => array( $this, 'rest_get_stats' )
+			'permission_callback' => array( $this->core, 'can_access_features' ),
+			'callback' => array( $this, 'rest_get_stats' ),
+			'args' => array(
+				'search' => array( 'required' => false ),
+			),
 		) );
 		register_rest_route( $this->namespace, '/media', array(
 			'methods' => 'GET',
-			'permission_callback' => '__return_true',
+			'permission_callback' => array( $this->core, 'can_access_features' ),
 			'callback' => array( $this, 'rest_media' ),
 			'args' => array(
 				'limit' => array( 'required' => false, 'default' => 10 ),
@@ -76,39 +79,39 @@ class Meow_WR2X_Rest
 		) );
 		register_rest_route( $this->namespace, '/get_all_ids', array(
 			'methods' => 'POST',
-			'permission_callback' => '__return_true',
+			'permission_callback' => array( $this->core, 'can_access_features' ),
 			'callback' => array( $this, 'rest_get_all_ids' )
 		) );
 
 		// ACTIONS
 		register_rest_route( $this->namespace, '/refresh', array(
 			'methods' => 'POST',
-			'permission_callback' => '__return_true',
+			'permission_callback' => array( $this->core, 'can_access_features' ),
 			'callback' => array( $this, 'rest_refresh' )
 		) );
 		register_rest_route( $this->namespace, '/details', array(
 			'methods' => 'POST',
-			'permission_callback' => '__return_true',
+			'permission_callback' => array( $this->core, 'can_access_features' ),
 			'callback' => array( $this, 'rest_get_details' )
 		) );
 		register_rest_route( $this->namespace, '/build_retina', array(
 			'methods' => 'POST',
-			'permission_callback' => '__return_true',
+			'permission_callback' => array( $this->core, 'can_access_features' ),
 			'callback' => array( $this, 'rest_build_retina' )
 		) );
 		register_rest_route( $this->namespace, '/regenerate', array(
 			'methods' => 'POST',
-			'permission_callback' => '__return_true',
+			'permission_callback' => array( $this->core, 'can_access_features' ),
 			'callback' => array( $this, 'rest_regenerate' )
 		) );
 		register_rest_route( $this->namespace, '/delete_retina', array(
 			'methods' => 'POST',
-			'permission_callback' => '__return_true',
+			'permission_callback' => array( $this->core, 'can_access_features' ),
 			'callback' => array( $this, 'rest_delete_retina' )
 		) );
 		register_rest_route( $this->namespace, '/ignore', array(
 			'methods' => 'POST',
-			'permission_callback' => '__return_true',
+			'permission_callback' => array( $this->core, 'can_access_features' ),
 			'callback' => array( $this, 'rest_ignore' )
 		) );
   }
@@ -117,32 +120,32 @@ class Meow_WR2X_Rest
 		return new WP_REST_Response( [ 'success' => true, 'data' => $this->get_all_options() ], 200 );
 	}
 
-	function count_issues() {
-		return count( $this->core->get_issues() );
+	function count_issues($search) {
+		return count( $this->core->get_issues($search) );
 	}
 
-	function count_ignored() {
-		return count( $this->core->get_ignores() );
+	function count_ignored($search) {
+		return count( $this->core->get_ignores($search) );
 	}
 
-	function count_all() {
+	function count_all($search) {
 		global $wpdb;
-		$wpml = $this->core->create_sql_if_wpml_original();
+		$whereSql = '';
+		if ($search) {
+			$whereSql = $wpdb->prepare("AND post_title LIKE %s ", ( '%' . $search . '%' ));
+		}
 		return (int)$wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->posts p 
 			WHERE post_type='attachment'
-			AND post_type = 'attachment' ${wpml}
-			AND post_status='inherit'
-			AND ( post_mime_type = 'image/jpeg' OR
-			post_mime_type = 'image/png' OR
-			post_mime_type = 'image/gif' )"
+			$whereSql"
 		);
 	}
 
-	function rest_get_stats() {
+	function rest_get_stats($request) {
+		$search = sanitize_text_field( $request->get_param('search') );
 		return new WP_REST_Response( [ 'success' => true, 'data' => array(
-			'issues' => $this->count_issues(),
-			'ignored' => $this->count_ignored(),
-			'all' => $this->count_all()
+			'issues' => $this->count_issues($search),
+			'ignored' => $this->count_ignored($search),
+			'all' => $this->count_all($search)
 		) ], 200 );
 	}
 
@@ -259,13 +262,13 @@ class Meow_WR2X_Rest
 		$entries = $this->get_media_status( $skip, $limit, $filterBy, $orderBy, $order, $search );
 		$total = 0;
 		if ( $filterBy == 'issues' ) {
-			$total = $this->count_issues();
+			$total = $this->count_issues($search);
 		}
 		else if ( $filterBy == 'ignored' ) {
-			$total = $this->count_ignored();
+			$total = $this->count_ignored($search);
 		}
 		else if ( $filterBy == 'all' ) {
-			$total = $this->count_all();
+			$total = $this->count_all($search);
 		}
 		return new WP_REST_Response( [ 'success' => true, 'data' => $entries, 'total' => $total ], 200 );
 	}
@@ -369,38 +372,51 @@ class Meow_WR2X_Rest
 		return new WP_REST_Response( [ 'success' => true, 'data' => $info  ], 200 );
 	}
 
-	function get_all_options() {
-
+	function list_options() {
 		return array(
-
-			// OPTIONS
-			'wr2x_sizes' => $this->core->get_image_sizes( ARRAY_A ),
-			'wr2x_retina_sizes' => array_values( get_option( 'wr2x_retina_sizes' ) ),
-			'wr2x_disabled_sizes' => array_values( get_option( 'wr2x_disabled_sizes' ) ),
-			'wr2x_method' => get_option( "wr2x_method" ),
-			'wr2x_full_size' => get_option( 'wr2x_full_size', false ),
-			'wr2x_picturefill_keep_src' => get_option( 'wr2x_picturefill_keep_src', false ),
-			'wr2x_picturefill_lazysizes' => get_option( 'wr2x_picturefill_lazysizes', false ),
-			'wr2x_picturefill_css_background' => get_option( 'wr2x_picturefill_css_background', false ),
-			'wr2x_picturefill_noscript' => get_option( 'wr2x_picturefill_noscript', false ),
-			'wr2x_auto_generate' => get_option( 'wr2x_auto_generate', false ),
-			'wr2x_over_http_check' => get_option( 'wr2x_over_http_check', false ),
-			'wr2x_debug' => get_option( 'wr2x_debug', false ),
-			'wr2x_disable_responsive' => get_option( 'wr2x_disable_responsive', false ),
-			'wr2x_image_replace' => get_option( 'wr2x_image_replace', false ),
-			'wr2x_cdn_domain' => get_option( 'wr2x_cdn_domain', '' ),
-			'wr2x_easyio_domain' => get_option( 'wr2x_easyio_domain', '' ),
-			'wr2x_easyio_lossless' => get_option( 'wr2x_easyio_lossless', '' ),
-			'wr2x_big_image_size_threshold' => get_option( 'wr2x_big_image_size_threshold', false ),
-			'wr2x_hide_retina_column' => get_option( 'wr2x_hide_retina_column', false ),
-			'wr2x_hide_retina_dashboard' => get_option( 'wr2x_hide_retina_dashboard', false )
+			'wr2x_retina_sizes' => false,
+			'wr2x_disabled_sizes' => false,
+			'wr2x_method' => false,
+			'wr2x_full_size' => false,
+			'wr2x_picturefill_keep_src' => false,
+			'wr2x_picturefill_lazysizes' => false,
+			'wr2x_picturefill_css_background' => false,
+			'wr2x_picturefill_noscript' => false,
+			'wr2x_auto_generate' => false,
+			'wr2x_over_http_check' => false,
+			'wr2x_debug' => false,
+			'wr2x_disable_responsive' => false,
+			'wr2x_image_replace' => false,
+			'wr2x_cdn_domain' => '',
+			'wr2x_easyio_domain' => '',
+			'wr2x_easyio_lossless' => '',
+			'wr2x_big_image_size_threshold' => false,
+			'wr2x_hide_retina_column' => false,
+			'wr2x_hide_retina_dashboard' => false,
 		);
+	}
+
+	function get_all_options() {
+		$options = $this->list_options();
+		$current_options = array('wr2x_sizes' => $this->core->get_image_sizes( ARRAY_A ));
+		foreach ( $options as $option => $default ) {
+			if ($option === 'wr2x_retina_sizes' || $option === 'wr2x_disabled_sizes') {
+				$current_options[$option] = array_values(get_option( $option, $default ));
+				continue;
+			}
+			$current_options[$option] = get_option( $option, $default );
+		}
+		return $current_options;
 	}
 
 	function rest_update_option( $request ) {
 		$params = $request->get_json_params();
 		try {
 			$name = $params['name'];
+			$options = $this->list_options();
+			if ( !array_key_exists( $name, $options ) ) {
+				return new WP_REST_Response([ 'success' => false, 'message' => 'This option does not exist.' ], 200 );
+			}
 			$value = is_bool( $params['value'] ) ? ( $params['value'] ? '1' : '' ) : $params['value'];
 			$success = update_option( $name, $value );
 			if ( !$success ) {

@@ -65,10 +65,10 @@ class SiteChecker extends Base {
 	/**
 	 * Site Checker constructor.
 	 *
-	 * @param \Wbcr_Factory445_Plugin $plugin
+	 * @param \Wbcr_Factory449_Plugin $plugin
 	 *
 	 */
-	public function __construct( \Wbcr_Factory445_Plugin $plugin ) {
+	public function __construct( \Wbcr_Factory449_Plugin $plugin ) {
 		$this->plugin = $plugin;
 
 		$this->menu_title                  = __( 'Site Checker', 'titan-security' );

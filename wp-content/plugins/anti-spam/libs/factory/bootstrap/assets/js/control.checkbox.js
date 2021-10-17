@@ -252,7 +252,7 @@
 	// CHECKBOX CONTROL DEFINITION
 	// ================================
 
-	$.fn.factoryBootstrap445_checkboxControl = function(option) {
+	$.fn.factoryBootstrap449_checkboxControl = function(option) {
 
 		// call an method
 		if( typeof option === "string" ) {
@@ -275,14 +275,14 @@
 		}
 	};
 
-	$.fn.factoryBootstrap445_checkboxControl.Constructor = CheckboxControl;
+	$.fn.factoryBootstrap449_checkboxControl.Constructor = CheckboxControl;
 
 	// AUTO CREATING
 	// ================================
 
 	$(function() {
-		$(".factory-bootstrap-445 .factory-checkbox.factory-buttons-way").factoryBootstrap445_checkboxControl();
-		$(".factory-bootstrap-445 .factory-checkbox").not('.factory-buttons-way').click(function() {
+		$(".factory-bootstrap-449 .factory-checkbox.factory-buttons-way").factoryBootstrap449_checkboxControl();
+		$(".factory-bootstrap-449 .factory-checkbox").not('.factory-buttons-way').click(function() {
 			if( $(this).prop('checked') ) {
 				$(this).val(1);
 			} else {

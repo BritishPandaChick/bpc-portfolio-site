@@ -231,3 +231,16 @@ function uaf_wpbakery_custom_fonts($fonts) {
 	$fonts_uaf = json_decode (json_encode ($fonts_uaf), FALSE);
   	return array_merge($fonts_uaf,$fonts);
 }
+
+// FOR THE7 and presscore options framework
+add_filter('presscore_options_get_safe_fonts', 'uaf_presscore_options_custom_fonts');
+function uaf_presscore_options_custom_fonts($fonts) {
+	 $fontsData = uaf_get_font_families();
+
+	 if (!empty($fontsData)):
+		foreach ($fontsData as $key=>$fontName):
+			$fonts_uaf[$fontName] = $fontName;
+		endforeach;
+	endif;
+  	 return array_merge($fonts_uaf,$fonts);
+}

@@ -2,7 +2,7 @@
 /*
 Plugin Name: Cookie Notice & Compliance for GDPR / CCPA
 Description: Cookie Notice allows you to you elegantly inform users that your site uses cookies and helps you comply with GDPR, CCPA and other data privacy laws.
-Version: 2.1.1
+Version: 2.1.5
 Author: Hu-manity.co
 Author URI: https://hu-manity.co/
 Plugin URI: https://hu-manity.co/
@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) )
  * Cookie Notice class.
  *
  * @class Cookie_Notice
- * @version	2.1.1
+ * @version	2.1.5
  */
 class Cookie_Notice {
 
@@ -85,7 +85,7 @@ class Cookie_Notice {
 			'update_notice'				=> true,
 			'update_delay_date'			=> 0
 		),
-		'version'	=> '2.1.1'
+		'version'	=> '2.1.5'
 	);
 	
 	private static $_instance;
@@ -283,8 +283,8 @@ class Cookie_Notice {
 		if ( ! current_user_can( 'install_plugins' ) )
 			return;
 
-		if ( wp_verify_nonce( esc_attr( $_REQUEST['nonce'] ), 'cn_dismiss_notice' ) ) {
-			$notice_action = empty( $_REQUEST['notice_action'] ) || $_REQUEST['notice_action'] === 'dismiss' ? 'dismiss' : esc_attr( $_REQUEST['notice_action'] );
+		if ( wp_verify_nonce( $_REQUEST['nonce'], 'cn_dismiss_notice' ) ) {
+			$notice_action = empty( $_REQUEST['notice_action'] ) || $_REQUEST['notice_action'] === 'dismiss' ? 'dismiss' : sanitize_text_string( $_REQUEST['notice_action'] );
 
 			switch ( $notice_action ) {
 				// delay notice
@@ -338,9 +338,9 @@ class Cookie_Notice {
 			$scripts = html_entity_decode( trim( wp_kses( $content, $this->get_allowed_html() ) ) );
 
 			if ( ! empty( $scripts ) ) {
-				if ( preg_match_all( '/' . get_shortcode_regex() . '/', $content ) ) {
+				if ( preg_match_all( '/' . get_shortcode_regex() . '/', $content ) )
 					$scripts = do_shortcode( $scripts );
-				}
+
 				return $scripts;
 			}
 		}
@@ -370,12 +370,11 @@ class Cookie_Notice {
 
 		// escape class(es)
 		$args['class'] = esc_attr( $args['class'] );
-		
-		if ( Cookie_Notice()->get_status() === 'active' ) {
+
+		if ( Cookie_Notice()->get_status() === 'active' )
 			$shortcode = '<a href="#" class="cn-revoke-cookie cn-button cn-revoke-inline' . ( $options['css_style'] !== 'none' ? ' ' . $options['css_style'] : '' ) . ( $args['class'] !== '' ? ' ' . $args['class'] : '' ) . '" title="' . esc_html( $args['title'] ) . '" data-hu-action="notice-revoke">' . esc_html( $args['title'] ) . '</a>';
-		} else {
+		else
 			$shortcode = '<a href="#" class="cn-revoke-cookie cn-button cn-revoke-inline' . ( $options['css_style'] !== 'none' ? ' ' . $options['css_style'] : '' ) . ( $args['class'] !== '' ? ' ' . $args['class'] : '' ) . '" title="' . esc_html( $args['title'] ) . '">' . esc_html( $args['title'] ) . '</a>';
-		}
 
 		return $shortcode;
 	}
@@ -390,19 +389,19 @@ class Cookie_Notice {
 	public function cookies_policy_link_shortcode( $args, $content ) {
 		// get options
 		$options = $this->options['general'];
-		
+
 		// defaults
 		$defaults = array(
 			'title'	=> esc_html( $options['see_more_opt']['text'] !== '' ? $options['see_more_opt']['text'] : '&#x279c;' ),
-			'link'	=> ( $options['see_more_opt']['link_type'] === 'custom' ? $options['see_more_opt']['link'] : get_permalink( $options['see_more_opt']['id'] ) ),
-			'class'	=> $options['css_class']
+			'link'	=> ( $options['see_more_opt']['link_type'] === 'custom' ? esc_url( $options['see_more_opt']['link'] ) : get_permalink( $options['see_more_opt']['id'] ) ),
+			'class'	=> esc_attr( $options['css_class'] )
 		);
-		
+
 		// combine shortcode arguments
 		$args = shortcode_atts( $defaults, $args );
-		
+
 		$shortcode = '<a href="' . $args['link'] . '" target="' . $options['link_target'] . '" id="cn-more-info" class="cn-privacy-policy-link cn-link' . ( $args['class'] !== '' ? ' ' . $args['class'] : '' ) . '">' . esc_html( $args['title'] ) . '</a>';
-		
+
 		return $shortcode;
 	}
 
@@ -415,11 +414,22 @@ class Cookie_Notice {
 		if ( Cookie_Notice()->get_status() === 'active' ) {
 			$cookies = isset( $_COOKIE['hu-consent'] ) ? json_decode( stripslashes( $_COOKIE['hu-consent'] ), true ) : array();
 			
-			$result = ! empty( $cookies['consent'] ) ? true : false;
-		} else {
+			if ( ! empty( $cookies ) && is_array( $cookies ) ) {
+				foreach( $cookies as $cookie_name => $cookie_value ) {
+					switch ( $cookie_name ) {
+						case 'consent':
+							$cookies[$cookie_name] = (bool) $cookie_value;
+							break;
+						default:
+							$cookies[$cookie_name] = is_array( $cookie_value ) ? array_map( 'sanitize_text_field', $cookie_value ) : sanitize_text_field( $cookie_value );
+					}
+				}
+			}
+
+			$result = ( is_array( $cookies ) && json_last_error() === JSON_ERROR_NONE && ! empty( $cookies['consent'] ) ) ? true : false;
+		} else
 			$result = isset( $_COOKIE['cookie_notice_accepted'] ) && $_COOKIE['cookie_notice_accepted'] === 'true';
-		}
-		
+
 		return apply_filters( 'cn_is_cookie_accepted', $result );
 	}
 
@@ -429,15 +439,14 @@ class Cookie_Notice {
 	 * @return boolean Whether cookies are set
 	 */
 	public function cookies_set() {
-		if ( Cookie_Notice()->get_status() === 'active' ) {
+		if ( Cookie_Notice()->get_status() === 'active' )
 			$result = isset( $_COOKIE['hu-consent'] );
-		} else {
+		else
 			$result = isset( $_COOKIE['cookie_notice_accepted'] );
-		}
-		
-;		return apply_filters( 'cn_is_cookie_set', $result );
+
+		return apply_filters( 'cn_is_cookie_set', $result );
 	}
-	
+
 	/**
 	 * Add WP Super Cache cookie.
 	 */
@@ -447,7 +456,7 @@ class Cookie_Notice {
 		else
 			do_action( 'wpsc_add_cookie', 'cookie_notice_accepted' );
 	}
-	
+
 	/**
 	 * Delete WP Super Cache cookie.
 	 */

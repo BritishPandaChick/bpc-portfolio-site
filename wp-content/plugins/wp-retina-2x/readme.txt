@@ -1,13 +1,13 @@
-=== Perfect Images (Retina, Thumbnails, Replace) ===
+=== Perfect Images (Retina, Thumbnails, Replace & CDN) ===
 Contributors: TigrouMeow
 Tags: retina, images, replace, regenerate, sizes, lazysizes, high-dpi
-Donate link: https://commerce.coinbase.com/checkout/d047546a-77a8-41c8-9ea9-4a950f61832f
+Donate link: https://meowapps.com/donation/
 Requires at least: 5.0
-Tested up to: 5.7.2
+Tested up to: 5.8.1
 Requires PHP: 7.0
-Stable tag: 6.1.4
+Stable tag: 6.1.9
 
-Retina, Replace Images, Regenerate Thumbnails, Image Sizes Management, Image Threshold and more.
+Retina, Regenerate Thumbnails, Image Sizes Management, Replace Images, Image Threshold and more.
 
 == Description ==
 
@@ -17,6 +17,7 @@ Originally, this plugin only took care of one thing: Retina Images. But with tim
 * Image Sizes Management
 * Disable Image Threshold
 * Regenerate Thumbnails
+* CDN (Image Optimization with EWWW)
 * Replace Images
 
 === Retina Images ===
@@ -51,9 +52,27 @@ The plugin cannot inject CSS to handles the images added through CSS, that's bot
 
 == Changelog ==
 
+= 6.1.9 (2021/10/12) =
+* Fix: Removed a JS issue which was showing an alert for no reason.
+
+= 6.1.8 (2021/09/23) =
+* Update: Common libs 3.6.
+
+= 6.1.7 (2021/09/17) =
+* Fix: Was trying to add a Retina image in the srcset even if it was non-existent (when used with a CDN).
+* Update: Better sanitization in the common library.
+
+= 6.1.6 (2021/08/31) =
+* Update: Enhanced security.
+* Info: If you enjoy this plugin, please share some love by [writing a little review here](https://wordpress.org/support/plugin/wp-retina-2x/reviews/?rate=5#new-post). And since I read them all, don't hesitate to drop a few remarks and feature requests in those reviews. Thank you :)
+
+= 6.1.5 (2021/08/31) =
+* Update: New common library.
+* Update: Better security (but we will add even enhanced it more in the next update).
+* Update: Tiny UI enhancements.
+
 = 6.1.4 (2021/07/06) =
 * Update: Lot of enhancements in the UI.
-* Info: If you are using Lightroom, please have a look at my plugin for synchronizing your Lightroom to WordPress: https://meowapps.com/wplr-sync/. And if you love my Retina plugin, please write a little review here: https://wordpress.org/support/plugin/wp-retina-2x/reviews/?rate=5#new-post. Thank you :)
 
 = 6.1.3 (2021/04/29) =
 * Fix: Little issue with some network sites.

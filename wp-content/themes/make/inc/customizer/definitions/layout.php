@@ -230,6 +230,14 @@ $views = array(
 	'page'    => __( 'Pages', 'make' ),
 );
 
+$view_labels = array(
+	'blog'    => __( 'Blog', 'make' ),
+	'archive' => __( 'Archive', 'make' ),
+	'search'  => __( 'Search', 'make' ),
+	'post'    => __( 'Post', 'make' ),
+	'page'    => __( 'Page', 'make' ),
+);
+
 foreach ( $views as $view => $label ) {
 	$prefix = "layout-$view-";
 	$controls = array();
@@ -290,7 +298,7 @@ foreach ( $views as $view => $label ) {
 			$prefix . 'pagetitle-heading' => array(
 				'control' => array(
 					'control_type' => 'MAKE_Customizer_Control_Html',
-					'html'  => '<h4 class="make-group-title">' . esc_html__( ucfirst( $view ) . ' Title', 'make' ) . '</h4>',
+					'html'  => '<h4 class="make-group-title">' . sprintf( esc_html__( '%s Title', 'make' ), $view_labels[$view] ) . '</h4>',
 				),
 			),
 			$prefix . 'hide-title'        => array(
@@ -331,7 +339,7 @@ foreach ( $views as $view => $label ) {
 		'post-date-group-' . $view            => array(
 			'control' => array(
 				'control_type' => 'MAKE_Customizer_Control_Html',
-				'html'  => '<h4 class="make-group-title">' . esc_html__( ucfirst( $view ) . ' Date', 'make' ) . '</h4>',
+				'html'  => '<h4 class="make-group-title">' . sprintf( esc_html__( '%s Date', 'make' ), $view_labels[$view] ) . '</h4>',
 			),
 		),
 		$prefix . 'post-date'                 => array(
@@ -354,7 +362,7 @@ foreach ( $views as $view => $label ) {
 		'post-author-group-' . $view          => array(
 			'control' => array(
 				'control_type' => 'MAKE_Customizer_Control_Html',
-				'html'  => '<h4 class="make-group-title">' . esc_html__( ucfirst( $view ) . ' Author', 'make' ) . '</h4>',
+				'html'  => '<h4 class="make-group-title">' . sprintf( esc_html__( '%s Author', 'make' ), $view_labels[$view] ) . '</h4>',
 			),
 		),
 		$prefix . 'post-author'               => array(

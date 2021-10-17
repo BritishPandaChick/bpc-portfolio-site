@@ -100,7 +100,7 @@ class Cookie_Notice_Welcome_API {
 						array(
 							'AppID'					=> $app_id,
 							'AdminID'				=> $admin_id, // remove later - AdminID from API response
-							'paymentMethodNonce'	=> esc_attr( $_POST['payment_nonce'] )
+							'paymentMethodNonce'	=> sanitize_text_field( $_POST['payment_nonce'] )
 						)
 					);
 					
@@ -137,10 +137,10 @@ class Cookie_Notice_Welcome_API {
 
 			case 'register':
 				$email = is_email( $_POST['email'] );
-				$pass = ! empty( $_POST['pass'] ) ? esc_attr( $_POST['pass'] ) : '';
-				$pass2 = ! empty( $_POST['pass2'] ) ? esc_attr( $_POST['pass2'] ) : '';
+				$pass = ! empty( $_POST['pass'] ) ? $_POST['pass'] : '';
+				$pass2 = ! empty( $_POST['pass2'] ) ? $_POST['pass2'] : '';
 				$terms = isset( $_POST['terms'] );
-				$language = ! empty( $_POST['language'] ) ? esc_attr( $_POST['language'] ) : 'en';
+				$language = ! empty( $_POST['language'] ) ? sanitize_text_field( $_POST['language'] ) : 'en';
 				
 				if ( ! $terms ) {
 					$response = array( 'error' => __( "Please accept the Terms of Service to proceed.", 'cookie-notice' ) );
@@ -152,7 +152,7 @@ class Cookie_Notice_Welcome_API {
 					break;
 				}
 				
-				if ( ! $pass ) {
+				if ( ! $pass || ! is_string( $pass ) ) {
 					$response = array( 'error' => __( 'Password is not allowed to be empty.', 'cookie-notice' ) );
 					break;
 				}
@@ -330,7 +330,7 @@ class Cookie_Notice_Welcome_API {
 
 			case 'login':
 				$email = is_email( $_POST['email'] );
-				$pass = ! empty( $_POST['pass'] ) ? esc_attr( $_POST['pass'] ) : '';
+				$pass = ! empty( $_POST['pass'] ) ? $_POST['pass'] : '';
 				
 				if ( ! $email ) {
 					$response = array( 'error' => __( 'Email is not allowed to be empty.', 'cookie-notice' ) );
@@ -523,52 +523,122 @@ class Cookie_Notice_Welcome_API {
 					if ( isset( $_POST[$field] ) ) {
 						switch ( $field ) {
 							case 'cn_position':
-								$options['design']['position'] = esc_attr( $_POST[$field] );
+								// sanitize position
+								$position = sanitize_key( $_POST[$field] );
+
+								// valid position?
+								if ( in_array( $position, array( 'bottom', 'top', 'left', 'right', 'center' ), true ) )
+									$options['design']['position'] = $position;
+								else
+									$options['design']['position'] = 'bottom';
 								break;
+
 							case 'cn_color_primary':
-								$options['design']['primaryColor'] = esc_attr( $_POST[$field] );
+								// sanitize color
+								$color = sanitize_hex_color( $_POST[$field] );
+
+								// valid color?
+								if ( empty( $color ) )
+									$options['design']['primaryColor'] = '#20c19e';
+								else
+									$options['design']['primaryColor'] = $color;
 								break;
+
 							case 'cn_color_background':
-								$options['design']['bannerColor'] = esc_attr( $_POST[$field] );
+								// sanitize color
+								$color = sanitize_hex_color( $_POST[$field] );
+
+								// valid color?
+								if ( empty( $color ) )
+									$options['design']['bannerColor'] = '#ffffff';
+								else
+									$options['design']['bannerColor'] = $color;
 								break;
+
 							case 'cn_color_border':
-								$options['design']['borderColor'] = esc_attr( $_POST[$field] );
+								// sanitize color
+								$color = sanitize_hex_color( $_POST[$field] );
+
+								// valid color?
+								if ( empty( $color ) )
+									$options['design']['borderColor'] = '#5e6a74';
+								else
+									$options['design']['borderColor'] = $color;
 								break;
+
 							case 'cn_color_text':
-								$options['design']['textColor'] = esc_attr( $_POST[$field] );
+								// sanitize color
+								$color = sanitize_hex_color( $_POST[$field] );
+
+								// valid color?
+								if ( empty( $color ) )
+									$options['design']['textColor'] = '#434f58';
+								else
+									$options['design']['textColor'] = $color;
 								break;
+
 							case 'cn_color_heading':
-								$options['design']['headingColor'] = esc_attr( $_POST[$field] );
+								// sanitize color
+								$color = sanitize_hex_color( $_POST[$field] );
+
+								// valid color?
+								if ( empty( $color ) )
+									$options['design']['headingColor'] = '#434f58';
+								else
+									$options['design']['headingColor'] = $color;
 								break;
+
 							case 'cn_color_button_text':
-								$options['design']['btnTextColor'] = esc_attr( $_POST[$field] );
+								// sanitize color
+								$color = sanitize_hex_color( $_POST[$field] );
+
+								// valid color?
+								if ( empty( $color ) )
+									$options['design']['headingColor'] = '#ffffff';
+								else
+									$options['design']['headingColor'] = $color;
 								break;
+
 							case 'cn_laws':
-								$options['laws'] = array_map( 'esc_attr', $_POST[$field] );
 								$new_options = array();
 
-								foreach ( $options['laws'] as $law ) {
-									$new_options[$law] = true;
+								// any data?
+								if ( is_array( $_POST[$field] ) && ! empty( $_POST[$field] ) ) {
+									$options['laws'] = array_map( 'sanitize_text_field', $_POST[$field] );
+
+									foreach ( $options['laws'] as $law ) {
+										if ( in_array( $law, array( 'gdpr', 'ccpa' ), true ) )
+											$new_options[$law] = true;
+									}
 								}
 
 								$options['laws'] = $new_options;
 
 								// GDPR
-								if ( in_array( 'gdpr', $options['laws'] ) ) {
+								if ( array_key_exists( 'gdpr', $options['laws'] ) )
 									$options['config']['privacyPolicyLink'] = true;
-								} else {
+								else
 									$options['config']['privacyPolicyLink'] = false;
-								}
 
 								// CCPA
-								if ( in_array( 'ccpa', $options['laws'] ) ) {
+								if ( array_key_exists( 'ccpa', $options['laws'] ) )
 									$options['config']['dontSellLink'] = true;
-								} else {
+								else
 									$options['config']['dontSellLink'] = false;
-								}
 								break;
+
 							case 'cn_purposes':
-								$options['text']['bodyText'] = Cookie_Notice()->settings->cookie_messages[absint( $_POST[$field] )];
+								// sanitize purposes
+								$purposes = (int) $_POST[$field];
+
+								// get messages
+								$messages = Cookie_Notice()->settings->cookie_messages;
+
+								// valid purposes?
+								if ( array_key_exists( $purposes, $messages ) )
+									$options['text']['bodyText'] = $messages[$purposes];
+								else
+									$options['text']['bodyText'] = reset( $messages );
 								break;
 						}
 					}
@@ -733,7 +803,7 @@ class Cookie_Notice_Welcome_API {
 				if ( is_object( $param ) )
 					$api_params[$key] = $param;
 				else
-					$api_params[$key] = esc_attr( $param );
+					$api_params[$key] = sanitize_text_field( $param );
 			}
 
 			if ( $json )

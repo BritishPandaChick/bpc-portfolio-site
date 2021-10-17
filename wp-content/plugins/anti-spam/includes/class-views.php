@@ -63,14 +63,14 @@ class Views {
 	 *
 	 * @param string $template The template name.
 	 * @param mixed $data Some data to pass to the template.
-	 * @param \Wbcr_FactoryClearfy236_PageBase $page
+	 * @param \Wbcr_FactoryClearfy000_PageBase $page
 	 *
 	 * @return bool|string       The page contents. False if the template doesn't exist.
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 * @since  1.3.0
 	 *
 	 */
-	public function get_template( $template, $data = [], \Wbcr_FactoryClearfy236_PageBase $page = null ) {
+	public function get_template( $template, $data = [], \Wbcr_FactoryClearfy000_PageBase $page = null ) {
 		$template = str_replace( '_', '-', $template );
 
 		if ( false !== strpos( $template, '/' ) ) {
@@ -96,7 +96,7 @@ class Views {
 	 *
 	 * @param string $template The template name.
 	 * @param mixed $data Some data to pass to the template.
-	 * @param \Wbcr_FactoryClearfy236_PageBase $page
+	 * @param \Wbcr_FactoryClearfy000_PageBase $page
 	 *
 	 * @since  1.3.0
 	 *
@@ -104,7 +104,7 @@ class Views {
 	 * @access public
 	 *
 	 */
-	public function print_template( $template, $data = [], \Wbcr_FactoryClearfy236_PageBase $page = null ) {
+	public function print_template( $template, $data = [], \Wbcr_FactoryClearfy000_PageBase $page = null ) {
 		echo $this->get_template( $template, $data, $page );
 	}
 }
