@@ -1,22 +1,3 @@
-/* ========================================================================
- * Bootstrap: modal.js v3.0.3
- * http://getbootstrap.com/javascript/#modals
- * ========================================================================
- * Copyright 2013 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
-
 
 +function ($) { "use strict";
 
@@ -155,7 +136,7 @@
     if (this.isShown && this.options.backdrop) {
       var doAnimate = $.support.transition && animate
 
-      this.$backdrop = $('<div class="factory-bootstrap-449-modal-backdrop ' + animate + '" />')
+      this.$backdrop = $('<div class="factory-bootstrap-454-modal-backdrop ' + animate + '" />')
         .appendTo(document.body)
 
       this.$element.on('click.dismiss.modal', $.proxy(function (e) {
@@ -195,9 +176,9 @@
   // MODAL PLUGIN DEFINITION
   // =======================
 
-  var old = $.fn.factoryBootstrap449_modal
+  var old = $.fn.factoryBootstrap454_modal
 
-  $.fn.factoryBootstrap449_modal = function (option, _relatedTarget) {
+  $.fn.factoryBootstrap454_modal = function (option, _relatedTarget) {
     return this.each(function () {
       var $this   = $(this)
       var data    = $this.data('bs.modal')
@@ -209,14 +190,14 @@
     })
   }
 
-  $.fn.factoryBootstrap449_modal.Constructor = Modal
+  $.fn.factoryBootstrap454_modal.Constructor = Modal
 
 
   // MODAL NO CONFLICT
   // =================
 
-  $.fn.factoryBootstrap449_modal.noConflict = function () {
-    $.fn.factoryBootstrap449_modal = old
+  $.fn.factoryBootstrap454_modal.noConflict = function () {
+    $.fn.factoryBootstrap454_modal = old
     return this
   }
 
@@ -233,7 +214,7 @@
     e.preventDefault()
 
     $target
-      .factoryBootstrap449_modal(option, this)
+      .factoryBootstrap454_modal(option, this)
       .one('hide', function () {
         $this.is(':visible') && $this.focus()
       })

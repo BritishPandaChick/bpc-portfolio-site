@@ -2,9 +2,9 @@
 Tags: hide login, hide login page, hide wp admin, rename login, rename login url, login secure, wp-login, wp-login.php, custom login url, custom admin url, rename wp admin, hide my wp, hide my wordpress, hide pages
 Contributors: webcraftic
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VDX7JNTQPNPFW
-Requires at least: 4.2
-Tested up to: 5.4.2
-Requires PHP: 5.4
+Requires at least: 5.2
+Tested up to: 5.8
+Requires PHP: 7.0
 Stable tag: trunk
 License: GPLv2
 
@@ -77,6 +77,10 @@ http://site.com/login?action=register and http://site.com /login?action=lostpass
 1. Control panel
 
 == Changelog ==
+= 1.1.4 (20.10.2021) =
+* Added: Compatibility with Wordpress 5.8
+* Fixed: Minor bugs
+
 = 1.1.2 =
 * Fixed: Redirect to 403
 

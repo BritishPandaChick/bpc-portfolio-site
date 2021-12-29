@@ -7,7 +7,7 @@ namespace WBCR\Titan;
  *
  * @author        Alexander Kovalev <alex.kovalevv@gmail.com>, Github: https://github.com/alexkovalevv
  * @copyright (c) 26.10.2019, Webcraftic
- * @see           Wbcr_Factory449_Activator
+ * @see           Wbcr_Factory453_Activator
  * @version       1.0
  */
 
@@ -16,7 +16,7 @@ if( !defined('ABSPATH') ) {
 	exit;
 }
 
-class Activation extends \Wbcr_Factory449_Activator {
+class Activation extends \Wbcr_Factory453_Activator {
 
 	/**
 	 * Runs activation actions.

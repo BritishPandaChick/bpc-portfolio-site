@@ -80,11 +80,11 @@
                             console.log(data);
 
                             if (data) {
-                                noticeId = $.wbcr_factory_templates_101.app.showNotice(data.error_message, 'danger');
+                                noticeId = $.wbcr_factory_templates_106.app.showNotice(data.error_message, 'danger');
                             }
 
                             setTimeout(function () {
-                                $.wbcr_factory_templates_101.app.hideNotice(noticeId);
+                                $.wbcr_factory_templates_106.app.hideNotice(noticeId);
                             }, 5000);
                             return data;
                         }
@@ -96,7 +96,7 @@
                         console.log(xhr.responseText);
                         console.log(thrownError);
 
-                        var noticeId = $.wbcr_factory_templates_101.app.showNotice('Error: [' + thrownError + '] Status: [' + xhr.status + '] Error massage: [' + xhr.responseText + ']', 'danger');
+                        var noticeId = $.wbcr_factory_templates_106.app.showNotice('Error: [' + thrownError + '] Status: [' + xhr.status + '] Error massage: [' + xhr.responseText + ']', 'danger');
                         reject(thrownError);
                         Swal.close();
                     }

@@ -9,7 +9,7 @@
  */
 ;( function( $ ){
     
-    $.widget( "factoryBootstrap449.fontControl", {
+    $.widget( "factoryBootstrap454.fontControl", {
 
         _create: function() {
             
@@ -189,8 +189,8 @@
     });
     
     $(function(){
-        $.widget.bridge( "factoryBootstrap449_fontControl", $.factoryBootstrap449.fontControl );
-        $(".factory-bootstrap-449 .factory-font").factoryBootstrap449_fontControl({});
+        $.widget.bridge( "factoryBootstrap454_fontControl", $.factoryBootstrap454.fontControl );
+        $(".factory-bootstrap-454 .factory-font").factoryBootstrap454_fontControl({});
     });
     
 }( jQuery ) );

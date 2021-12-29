@@ -11,7 +11,7 @@
 		exit;
 	}
 
-	class WHLP_MoreFeaturesPage extends Wbcr_FactoryClearfy000_MoreFeaturesPage {
+	class WHLP_MoreFeaturesPage extends \WBCR\Factory_Templates_106\Pages\MoreFeatures {
 
 		public function getPageTitle()
 		{

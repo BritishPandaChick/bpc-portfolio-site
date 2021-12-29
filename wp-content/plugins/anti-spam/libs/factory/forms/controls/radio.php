@@ -21,9 +21,9 @@
 		exit;
 	}
 
-	if( !class_exists('Wbcr_FactoryForms446_RadioControl') ) {
+	if( !class_exists('Wbcr_FactoryForms450_RadioControl') ) {
 
-		class Wbcr_FactoryForms446_RadioControl extends Wbcr_FactoryForms446_Control {
+		class Wbcr_FactoryForms450_RadioControl extends Wbcr_FactoryForms450_Control {
 
 			public $type = 'radio';
 
@@ -76,7 +76,7 @@
 					: '';
 				?>
 				<span class="factory-form-radio-item">
-	                <lable class="factory-from-radio-label"><?= esc_html($item[1]); ?></lable>
+	                <lable class="factory-from-radio-label"><?php echo esc_html($item[1]); ?></lable>
 		            <input type="radio" <?php $this->attrs() ?> value="<?php echo esc_attr($item[0]) ?>" <?php echo $checked ?>/>
                 </span>
 			<?php }

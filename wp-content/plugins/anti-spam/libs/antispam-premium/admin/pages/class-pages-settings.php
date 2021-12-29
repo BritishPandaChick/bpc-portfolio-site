@@ -39,7 +39,7 @@ class Progress extends \WBCR\Titan\Page\Base {
 	 */
 	public $show_right_sidebar_in_options = false;
 
-	public function __construct(\Wbcr_Factory449_Plugin $plugin)
+	public function __construct(\Wbcr_Factory453_Plugin $plugin)
 	{
 		$this->plugin = $plugin;
 		parent::__construct($plugin);
@@ -50,7 +50,7 @@ class Progress extends \WBCR\Titan\Page\Base {
 	 *
 	 * @return void
 	 * @since 1.0.0
-	 * @see   Wbcr_FactoryPages448_AdminPage
+	 * @see   Wbcr_FactoryPages452_AdminPage
 	 *
 	 */
 	public function assets($scripts, $styles)

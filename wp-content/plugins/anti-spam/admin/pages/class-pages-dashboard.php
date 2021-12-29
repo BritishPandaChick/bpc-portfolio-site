@@ -129,12 +129,12 @@ class Dashboard extends Base {
 	/**
 	 * Logs constructor.
 	 *
-	 * @param \Wbcr_Factory449_Plugin $plugin
+	 * @param \Wbcr_Factory453_Plugin $plugin
 	 *
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 *
 	 */
-	public function __construct( \Wbcr_Factory449_Plugin $plugin ) {
+	public function __construct( \Wbcr_Factory453_Plugin $plugin ) {
 		$this->plugin = $plugin;
 
 		$this->menu_title                  = __( 'Titan Anti-spam', 'titan-security' );
