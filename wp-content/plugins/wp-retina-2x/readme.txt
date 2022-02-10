@@ -3,9 +3,9 @@ Contributors: TigrouMeow
 Tags: retina, images, replace, regenerate, sizes, lazysizes, high-dpi
 Donate link: https://meowapps.com/donation/
 Requires at least: 5.0
-Tested up to: 5.8.2
+Tested up to: 5.9
 Requires PHP: 7.0
-Stable tag: 6.2.1
+Stable tag: 6.2.2
 
 Retina, Regenerate Thumbnails, Image Sizes Management, Replace Images, Image Threshold and more.
 
@@ -51,6 +51,10 @@ The plugin cannot inject CSS to handles the images added through CSS, that's bot
 3. Check if it works! - if it doesn't, read the FAQ, the tutorial, and check the forums.
 
 == Changelog ==
+
+= 6.2.2 (2022/01/28) =
+* Update: Better compatibility with latest version of WP.
+* Fix: There was an useless error message about a modal.
 
 = 6.2.1 (2021/12/07) =
 * Fix: Avoid displaying the PHP Info logo in the Meow Apps Dashboard.

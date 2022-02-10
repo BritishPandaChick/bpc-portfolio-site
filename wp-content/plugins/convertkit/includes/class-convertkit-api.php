@@ -215,6 +215,91 @@ class ConvertKit_API {
 	}
 
 	/**
+	 * Fetches all sequences from the API.
+	 *
+	 * @since   1.9.6
+	 *
+	 * @return  mixed   WP_Error | array
+	 */
+	public function get_sequences() {
+
+		$this->log( 'API: get_sequences()' );
+
+		$sequences = array();
+
+		// Send request.
+		$response = $this->get(
+			'sequences',
+			array(
+				'api_key' => $this->api_key,
+			)
+		);
+
+		// If an error occured, return WP_Error.
+		if ( is_wp_error( $response ) ) {
+			$this->log( 'API: get_sequences(): Error: ' . $response->get_error_message() );
+			return $response;
+		}
+
+		// If no sequences exist, return WP_Error.
+		if ( ! isset( $response['courses'] ) ) {
+			$this->log( 'API: get_sequences(): Error: No sequences exist in ConvertKit.', 'convertkit' );
+			return new WP_Error( 'convertkit_api_error', __( 'No sequences exist in ConvertKit. Visit your ConvertKit account and create your first sequence.', 'convertkit' ) );
+		}
+		if ( ! count( $response['courses'] ) ) {
+			$this->log( 'API: get_sequences(): Error: No sequences exist in ConvertKit.', 'convertkit' );
+			return new WP_Error( 'convertkit_api_error', __( 'No sequences exist in ConvertKit. Visit your ConvertKit account and create your first sequence.', 'convertkit' ) );
+		}
+
+		foreach ( $response['courses'] as $sequence ) {
+			$sequences[] = $sequence;
+		}
+
+		return $sequences;
+
+	}
+
+	/**
+	 * Subscribes an email address to a sequence.
+	 *
+	 * @since   1.9.6
+	 *
+	 * @param   string $sequence_id Sequence ID.
+	 * @param   string $email       Email Address.
+	 * @return  mixed               WP_Error | array
+	 */
+	public function sequence_subscribe( $sequence_id, $email ) {
+
+		$this->log( 'API: sequence_subscribe(): [ sequence_id: ' . $sequence_id . ', email: ' . $email . ']' );
+
+		$response = $this->post(
+			'sequences/' . $sequence_id . '/subscribe',
+			array(
+				'api_key' => $this->api_key,
+				'email'   => $email,
+			)
+		);
+
+		if ( is_wp_error( $response ) ) {
+			$this->log( 'API: sequence_subscribe(): Error: ' . $response->get_error_message() );
+		}
+
+		/**
+		 * Runs actions immediately after the email address was successfully subscribed to the sequence.
+		 *
+		 * @since   1.9.6
+		 *
+		 * @param   array   $response       API Response
+		 * @param   string  $sequence_id    Sequence ID
+		 * @param   string  $email          Email Address
+		 */
+		do_action( 'convertkit_api_sequence_subscribe_success', $response, $sequence_id, $email );
+
+		return $response;
+
+	}
+
+	/**
 	 * Fetches all tags from the API.
 	 *
 	 * @since   1.9.6
@@ -500,7 +585,7 @@ class ConvertKit_API {
 	}
 
 	/**
-	 * Get HTMl from ConvertKit for the given Legacy Form ID.
+	 * Get HTML from ConvertKit for the given Legacy Form ID.
 	 *
 	 * This isn't specifically an API function, but for now it's best suited here.
 	 *
@@ -512,10 +597,10 @@ class ConvertKit_API {
 		// Define Legacy Form URL.
 		$url = add_query_arg(
 			array(
-				'api_key' => $this->api_key,
-				'v'       => 6,
+				'k' => $this->api_key,
+				'v' => 2,
 			),
-			'https://forms.convertkit.com/' . $id . '.html'
+			'https://api.convertkit.com/forms/' . $id . '/embed'
 		);
 
 		// Get HTML.
@@ -536,7 +621,7 @@ class ConvertKit_API {
 	public function get_landing_page_html( $url ) {
 
 		// Get HTML.
-		$body = $this->get_html( $url );
+		$body = $this->get_html( $url, false );
 
 		// Inject JS for subscriber forms to work.
 		$scripts = new WP_Scripts();
@@ -654,9 +739,10 @@ class ConvertKit_API {
 	 * This isn't specifically an API function, but for now it's best suited here.
 	 *
 	 * @param   string $url    URL of Form or Landing Page.
+	 * @param   bool   $body_only   Return HTML between <body> and </body> tags only.
 	 * @return  string          HTML
 	 */
-	private function get_html( $url ) {
+	private function get_html( $url, $body_only = true ) {
 
 		// Get HTML from URL.
 		$result = wp_remote_get(
@@ -677,6 +763,20 @@ class ConvertKit_API {
 		$http_response_code = wp_remote_retrieve_response_code( $result );
 		$body               = wp_remote_retrieve_body( $result );
 
+		// If the body appears to be JSON containing an error, the request for a Legacy Form
+		// through api.convertkit.com failed, so return a WP_Error now.
+		if ( $this->is_json( $body ) ) {
+			$json = json_decode( $body );
+			return new WP_Error(
+				'convertkit_api_error',
+				sprintf(
+					/* translators: API Error Message */
+					__( 'ConvertKit: %s', 'convertkit' ),
+					$json->error_message
+				)
+			);
+		}
+
 		// Get just the scheme and host from the URL.
 		$url_scheme           = wp_parse_url( $url );
 		$url_scheme_host_only = $url_scheme['scheme'] . '://' . $url_scheme['host'];
@@ -684,7 +784,13 @@ class ConvertKit_API {
 		// Load the landing page HTML into a DOMDocument.
 		libxml_use_internal_errors( true );
 		$html = new DOMDocument();
-		$html->loadHTML( mb_convert_encoding( $body, 'HTML-ENTITIES', 'UTF-8' ) );
+		if ( $body_only ) {
+			// Prevent DOMDocument from including a doctype on saveHTML().
+			// We don't use LIBXML_HTML_NOIMPLIED, as it requires a single root element, which Legacy Forms don't have.
+			$html->loadHTML( mb_convert_encoding( $body, 'HTML-ENTITIES', 'UTF-8' ), LIBXML_HTML_NODEFDTD );
+		} else {
+			$html->loadHTML( mb_convert_encoding( $body, 'HTML-ENTITIES', 'UTF-8' ) );
+		}
 
 		// Convert any relative URLs to absolute URLs in the HTML DOM.
 		$this->convert_relative_to_absolute_urls( $html->getElementsByTagName( 'a' ), 'href', $url_scheme_host_only );
@@ -693,8 +799,30 @@ class ConvertKit_API {
 		$this->convert_relative_to_absolute_urls( $html->getElementsByTagName( 'script' ), 'src', $url_scheme_host_only );
 		$this->convert_relative_to_absolute_urls( $html->getElementsByTagName( 'form' ), 'action', $url_scheme_host_only );
 
-		// Fetch the edited HTML.
-		return $html->saveHTML();
+		// If the entire HTML needs to be returned, return it now.
+		if ( ! $body_only ) {
+			return $html->saveHTML();
+		}
+
+		// Remove some HTML tags that DOMDocument adds, returning the output.
+		// We do this instead of using LIBXML_HTML_NOIMPLIED in loadHTML(), because Legacy Forms are not always contained in
+		// a single root / outer element, which is required for LIBXML_HTML_NOIMPLIED to correctly work.
+		return $this->strip_html_head_body_tags( $html->saveHTML() );
+
+	}
+
+	/**
+	 * Determines if the given string is JSON.
+	 *
+	 * @since   1.9.6.4
+	 *
+	 * @param   string $string     Possible JSON String.
+	 * @return  bool                Is JSON String.
+	 */
+	private function is_json( $string ) {
+
+		json_decode( $string );
+		return json_last_error() === JSON_ERROR_NONE;
 
 	}
 
@@ -731,6 +859,27 @@ class ConvertKit_API {
 			// Prepend the URL to the attribute's value.
 			$element->setAttribute( $attribute, $url . $element->getAttribute( $attribute ) );
 		}
+
+	}
+
+	/**
+	 * Strips <html>, <head> and <body> opening and closing tags from the given markup.
+	 *
+	 * @since   1.9.6.5
+	 *
+	 * @param   string $markup     HTML Markup.
+	 * @return  string              HTML Markup
+	 * */
+	private function strip_html_head_body_tags( $markup ) {
+
+		$markup = str_replace( '<html>', '', $markup );
+		$markup = str_replace( '</html>', '', $markup );
+		$markup = str_replace( '<head>', '', $markup );
+		$markup = str_replace( '</head>', '', $markup );
+		$markup = str_replace( '<body>', '', $markup );
+		$markup = str_replace( '</body>', '', $markup );
+
+		return $markup;
 
 	}
 
