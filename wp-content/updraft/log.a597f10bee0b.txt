@@ -1,0 +1,61 @@
+0000.001 (0) Opened log file at time: Wed, 16 Feb 2022 00:51:00 +0000 on http://localhost/bpcportfolio
+0000.148 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.22.1 WP: 5.9 PHP: 8.0.1 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 19043 (Windows 10) AMD64) MySQL: 10.4.17-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/8.0.1 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 54.3M | 26M) multisite: N openssl: OpenSSL 1.1.1i  8 Dec 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.210 (0) Free space on disk containing Updraft's temporary directory: 676948.3 MB
+0000.419 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0000.480 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.691 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1627228761, seconds_ago=17743899)
+0000.913 (0) Semaphore (fd, wp_options) was stuck, set lock time to 2022-02-16 00:51:01
+0001.008 (0) Semaphore (fd, wp_options) reset to 1
+0001.162 (0) Set semaphore last lock (fd) time to 2022-02-16 00:51:01
+0001.271 (0) Semaphore lock (fd) complete
+0001.713 (0) Backup run: resumption=0, nonce=a597f10bee0b, file_nonce=a597f10bee0b begun at=1644972660 (2s ago), job type=backup
+0002.188 (0) Scheduling a resumption (1) after 300 seconds (1644972962) in case this run gets aborted
+0002.564 (0) Checking if we have a zip executable available
+0002.860 (0) Creation of backups of directories: beginning
+0003.101 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0062.013 (0) Total entities for the zip file: 881 directories, 4547 files (0 skipped as non-modified), 65.1 MB
+0062.367 (0) PHP event: code E_DEPRECATED: ZipArchive::open(): Using empty file as ZipArchive is deprecated (line 3796, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0062.725 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0066.328 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 100 files added (on-disk size: 147.9 KB)
+0066.577 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 200 files added (on-disk size: 147.9 KB)
+0066.846 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 300 files added (on-disk size: 147.9 KB)
+0067.879 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 400 files added (on-disk size: 147.9 KB)
+0068.408 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 500 files added (on-disk size: 147.9 KB)
+0068.641 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 600 files added (on-disk size: 147.9 KB)
+0068.780 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (6.6 MB, 600 (601) files added so far); re-opening (prior size: 147.9 KB)
+0089.360 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 700 files added (on-disk size: 2472.8 KB)
+0089.797 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 800 files added (on-disk size: 2472.8 KB)
+0090.087 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 900 files added (on-disk size: 2472.8 KB)
+0090.397 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 1000 files added (on-disk size: 2472.8 KB)
+0090.938 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 1100 files added (on-disk size: 2472.8 KB)
+0091.202 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 1200 files added (on-disk size: 2472.8 KB)
+0091.346 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 1300 files added (on-disk size: 2472.8 KB)
+0091.572 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 1400 files added (on-disk size: 2472.8 KB)
+0091.782 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (21.5 MB, 800 (1401) files added so far); re-opening (prior size: 2472.8 KB)
+0128.505 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 1500 files added (on-disk size: 9335.8 KB)
+0129.096 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 1600 files added (on-disk size: 9335.8 KB)
+0129.304 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 1700 files added (on-disk size: 9335.8 KB)
+0129.499 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 1800 files added (on-disk size: 9335.8 KB)
+0129.805 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 1900 files added (on-disk size: 9335.8 KB)
+0130.032 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 2000 files added (on-disk size: 9335.8 KB)
+0130.215 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 2100 files added (on-disk size: 9335.8 KB)
+0130.401 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 2200 files added (on-disk size: 9335.8 KB)
+0131.070 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (4.5 MB, 800 (2201) files added so far); re-opening (prior size: 9335.8 KB)
+0146.319 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 2300 files added (on-disk size: 10879.1 KB)
+0146.522 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 2400 files added (on-disk size: 10879.1 KB)
+0146.679 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 2500 files added (on-disk size: 10879.1 KB)
+0146.911 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 2600 files added (on-disk size: 10879.1 KB)
+0147.058 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 2700 files added (on-disk size: 10879.1 KB)
+0147.174 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 2800 files added (on-disk size: 10879.1 KB)
+0147.491 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 2900 files added (on-disk size: 10879.1 KB)
+0147.710 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 3000 files added (on-disk size: 10879.1 KB)
+0147.870 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 3100 files added (on-disk size: 10879.1 KB)
+0147.997 (0) Zip: backup_2022-02-15-1951_Sarah_Bartley_a597f10bee0b-plugins.zip.tmp: 3200 files added (on-disk size: 10879.1 KB)
+0148.074 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (14.6 MB, 4547 files batched, 1001 (3202) added so far); re-opening (prior size: 10879.1 KB)
+624989.564 (1) Opened log file at time: Wed, 23 Feb 2022 06:27:29 +0000 on http://localhost/bpcportfolio
+624990.152 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.22.1 WP: 5.9 PHP: 8.0.1 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 19043 (Windows 10) AMD64) MySQL: 10.4.17-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/8.0.1 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 54M | 24M) multisite: N openssl: OpenSSL 1.1.1i  8 Dec 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+624990.469 (1) Free space on disk containing Updraft's temporary directory: 668477.9 MB
+624991.419 (1) Requesting backup semaphore lock (a597f10bee0b)
+624992.099 (1) [Debug] Lock option (updraft_lock_a597f10bee0b, wp_options) was created in the database
+624992.420 (1) [Info] Lock (updraft_lock_a597f10bee0b, wp_options) acquired after initialising the database
+624992.715 (1) This backup task (a597f10bee0b) is either complete or began over 2 days ago: ending (1645597649.6785, 1644972660) (existing jobdata keys: resume_interval, job_type, jobstatus, backup_time, job_time_ms, service, split_every, maxzipbatch, job_file_entities, option_cache, uploaded_lastreset, one_shot, followsups_allowed, backup_database, backup_files, remote_storage_instances, runs_started, current_resumption, binzip, filecreating_substatus, files_enumerated_at, run_times, useful_checkins)

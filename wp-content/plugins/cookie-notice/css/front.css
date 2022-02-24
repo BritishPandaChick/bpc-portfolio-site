@@ -79,6 +79,7 @@
 	opacity: 0.5;
 	padding: 10px;
 	outline: none;
+        cursor: pointer;
 }
 
 .cn-close-icon:hover {
