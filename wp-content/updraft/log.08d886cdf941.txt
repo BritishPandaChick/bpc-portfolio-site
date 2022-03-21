@@ -1,0 +1,121 @@
+0000.001 (0) Opened log file at time: Mon, 21 Mar 2022 17:48:58 +0000 on http://localhost/bpcportfolio
+0000.580 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.22.11 WP: 5.9.1 PHP: 8.0.1 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 19043 (Windows 10) AMD64) MySQL: 10.4.17-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/8.0.1 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 55.7M | 6M) multisite: N openssl: OpenSSL 1.1.1i  8 Dec 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.828 (0) Free space on disk containing Updraft's temporary directory: 668156.6 MB
+0001.070 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0001.555 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0002.236 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1645678644, seconds_ago=2206296)
+0003.731 (0) Set semaphore last lock (fd) time to 2022-03-21 17:49:02
+0004.303 (0) Semaphore lock (fd) complete
+0005.813 (0) Backup run: resumption=0, nonce=08d886cdf941, file_nonce=08d886cdf941 begun at=1647884938 (6s ago), job type=backup
+0007.137 (0) Scheduling a resumption (1) after 300 seconds (1647885245) in case this run gets aborted
+0008.203 (0) Checking if we have a zip executable available
+0008.979 (0) Creation of backups of directories: beginning
+0010.801 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0088.716 (0) Total entities for the zip file: 955 directories, 4832 files (0 skipped as non-modified), 68.2 MB
+0089.270 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0091.967 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 100 files added (on-disk size: 161.5 KB)
+0092.716 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 200 files added (on-disk size: 161.5 KB)
+0093.160 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 300 files added (on-disk size: 161.5 KB)
+0093.705 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 400 files added (on-disk size: 161.5 KB)
+0094.487 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (5.4 MB, 400 (401) files added so far); re-opening (prior size: 161.5 KB)
+0127.037 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 500 files added (on-disk size: 2110.1 KB)
+0127.665 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 600 files added (on-disk size: 2110.1 KB)
+0128.138 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 700 files added (on-disk size: 2110.1 KB)
+0128.555 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 800 files added (on-disk size: 2110.1 KB)
+0128.822 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 900 files added (on-disk size: 2110.1 KB)
+0129.064 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 1000 files added (on-disk size: 2110.1 KB)
+0129.233 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (6.3 MB, 600 (1001) files added so far); re-opening (prior size: 2110.1 KB)
+0149.119 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 1100 files added (on-disk size: 4895.4 KB)
+0149.607 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 1200 files added (on-disk size: 4895.4 KB)
+0150.225 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 1300 files added (on-disk size: 4895.4 KB)
+0150.793 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 1400 files added (on-disk size: 4895.4 KB)
+0151.319 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (16.6 MB, 400 (1401) files added so far); re-opening (prior size: 4895.4 KB)
+0154.881 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 1500 files added (on-disk size: 9435.2 KB)
+0155.508 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 1600 files added (on-disk size: 9435.2 KB)
+0155.864 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 1700 files added (on-disk size: 9435.2 KB)
+0156.160 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 1800 files added (on-disk size: 9435.2 KB)
+0156.527 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 1900 files added (on-disk size: 9435.2 KB)
+0156.757 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 2000 files added (on-disk size: 9435.2 KB)
+0157.115 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 2100 files added (on-disk size: 9435.2 KB)
+0158.193 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (4.6 MB, 700 (2101) files added so far); re-opening (prior size: 9435.2 KB)
+0161.656 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 2200 files added (on-disk size: 10850.1 KB)
+0162.154 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 2300 files added (on-disk size: 10850.1 KB)
+0163.159 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 2400 files added (on-disk size: 10850.1 KB)
+0166.000 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.8 MB, 300 (2401) files added so far); re-opening (prior size: 10850.1 KB)
+0167.470 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 2500 files added (on-disk size: 11406.4 KB)
+0167.668 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 2600 files added (on-disk size: 11406.4 KB)
+0167.930 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 2700 files added (on-disk size: 11406.4 KB)
+0168.101 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 2800 files added (on-disk size: 11406.4 KB)
+0168.329 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 2900 files added (on-disk size: 11406.4 KB)
+0168.583 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 3000 files added (on-disk size: 11406.4 KB)
+0168.787 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 3100 files added (on-disk size: 11406.4 KB)
+0168.974 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 3200 files added (on-disk size: 11406.4 KB)
+0169.212 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 3300 files added (on-disk size: 11406.4 KB)
+0169.431 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 3400 files added (on-disk size: 11406.4 KB)
+0169.686 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (15 MB, 4832 files batched, 1001 (3402) added so far); re-opening (prior size: 11406.4 KB)
+0204.460 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 3500 files added (on-disk size: 17253.5 KB)
+0204.667 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 3600 files added (on-disk size: 17253.5 KB)
+0205.873 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 3700 files added (on-disk size: 17253.5 KB)
+0206.408 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 3800 files added (on-disk size: 17253.5 KB)
+0207.159 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (7.2 MB, 433 (3835) files added so far); re-opening (prior size: 17253.5 KB)
+0210.797 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 3900 files added (on-disk size: 19402.5 KB)
+0211.067 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 4000 files added (on-disk size: 19402.5 KB)
+0211.273 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 4100 files added (on-disk size: 19402.5 KB)
+0211.695 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 4200 files added (on-disk size: 19402.5 KB)
+0211.936 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 4300 files added (on-disk size: 19402.5 KB)
+0212.213 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 4400 files added (on-disk size: 19402.5 KB)
+0212.490 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 4500 files added (on-disk size: 19402.5 KB)
+0212.805 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 4600 files added (on-disk size: 19402.5 KB)
+0213.111 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 4700 files added (on-disk size: 19402.5 KB)
+0213.249 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (10.1 MB, 866 (4701) files added so far); re-opening (prior size: 19402.5 KB)
+0225.333 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.tmp: 4800 files added (on-disk size: 23579.8 KB)
+0242.275 (0) Creating zip file manifest (C:\xampp\htdocs\bpcportfolio/wp-content/updraft/backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-plugins.zip.list-temp.tmp)
+0243.404 (0) Successfully created zip file manifest (size: 393721)
+0245.840 (0) Created plugins zip (0) - 23982.7 KB in 229.8 s (104.4 KB/s) (sha1: 88b17ca273730c5f7cbc005518cbbe96c2967310, sha256: 46b9ef6113a77c7be3d2f04fccecbdc5ae0d8e09e58c8bd11519fafcd0c21bb2)
+0246.531 (0) Beginning creation of dump of themes (split every: 400 MB)
+0247.516 (0) Total entities for the zip file: 91 directories, 452 files (0 skipped as non-modified), 10.2 MB
+0249.399 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0251.129 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-themes.zip.tmp: 100 files added (on-disk size: 35.3 KB)
+0251.708 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-themes.zip.tmp: 200 files added (on-disk size: 35.3 KB)
+0252.394 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-themes.zip.tmp: 300 files added (on-disk size: 35.3 KB)
+0253.143 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (7.6 MB, 344 (345) files added so far); re-opening (prior size: 35.3 KB)
+0271.055 (0) The time we have been running (270.7) is approaching the resumption interval (300) - increasing resumption interval to 301
+0271.551 (0) The scheduled resumption is within 45 seconds - will reschedule
+0271.930 (0) Rescheduling resumption 1: moving to 346 seconds from now (1647885556)
+0272.761 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 301 + 45 = 346
+0273.357 (0) Zip: backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-themes.zip.tmp: 400 files added (on-disk size: 4020.2 KB)
+0274.912 (0) Creating zip file manifest (C:\xampp\htdocs\bpcportfolio/wp-content/updraft/backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-themes.zip.list-temp.tmp)
+0275.980 (0) Successfully created zip file manifest (size: 27789)
+0276.981 (0) Created themes zip (0) - 6559.4 KB in 30.3 s (216.6 KB/s) (sha1: 79ff3169be4466307af8c62626ba320253498dd8, sha256: 8d0783309466f4d3158403e7dc17856b12f28162b38047f25ce05629ef401d5c)
+0277.263 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0277.401 (0) Looking for candidates to backup in: C:\xampp\htdocs\bpcportfolio/wp-content/uploads
+0277.620 (0) finding files: .htaccess: adding to list (1)
+0277.813 (0) finding files: 2020: adding to list (2)
+0278.065 (0) finding files: 2021: adding to list (3)
+0278.339 (0) finding files: 2022: adding to list (4)
+0278.584 (0) finding files: elementor: adding to list (5)
+0278.760 (0) finding files: useanyfont: adding to list (6)
+0278.995 (0) finding files: wtitan-logger: adding to list (7)
+0279.138 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0288.680 (0) Total entities for the zip file: 25 directories, 82 files (0 skipped as non-modified), 18.8 MB
+0289.084 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0301.887 (0) Creating zip file manifest (C:\xampp\htdocs\bpcportfolio/wp-content/updraft/backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-uploads.zip.list-temp.tmp)
+0302.588 (0) Successfully created zip file manifest (size: 4445)
+0305.003 (0) Created uploads zip (0) - 19221.8 KB in 25.7 s (747.2 KB/s) (sha1: 394821425ea79919aae5386d9f668589f743bf61, sha256: 76f77f5d36910b0f26e432ab9d0ff51349f49f9e3022af9e250b64d5f7950d35)
+0306.007 (0) Beginning backup of other directories found in the content directory (index: 0)
+0306.107 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0306.248 (0) Looking for candidates to backup in: C:\xampp\htdocs\bpcportfolio/wp-content
+0306.355 (0) finding files: index.php: adding to list (1)
+0306.573 (0) finding files: plugins: skipping: this is the plugins directory
+0306.939 (0) finding files: themes: skipping: this is the themes directory
+0307.088 (0) finding files: updraft: skipping: this is the updraft directory
+0307.250 (0) finding files: upgrade: skipping: excluded by options
+0307.421 (0) finding files: uploads: skipping: this is the uploads directory
+0307.640 (0) finding files: wflogs: adding to list (2)
+0308.687 (0) Total entities for the zip file: 1 directories, 11 files (0 skipped as non-modified), 5.9 MB
+0312.321 (0) Creating zip file manifest (C:\xampp\htdocs\bpcportfolio/wp-content/updraft/backup_2022-03-21-1348_Sarah_Bartley_08d886cdf941-others.zip.list-temp.tmp)
+0312.510 (0) Successfully created zip file manifest (size: 366)
+0313.230 (0) Created others zip (0) - 2779.3 KB in 5.2 s (535.1 KB/s) (sha1: 80ca2dadd5fe8c76d3bcfdf8a6c350811d775f4c, sha256: 72aac5a320484d197cbcb09e92b7a943ba3c73dbb3e7f4a42ff30e5cadb129d8)
+0314.073 (0) Saving backup status to database (elements: 8)
+0314.746 (0) Beginning creation of database dump (WordPress DB)
+0315.051 (0) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION

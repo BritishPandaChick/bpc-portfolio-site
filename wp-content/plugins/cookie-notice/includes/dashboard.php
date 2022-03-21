@@ -69,6 +69,10 @@ class Cookie_Notice_Dashboard {
 		// styles
 		wp_enqueue_style( 'cn-admin-dashboard', plugins_url( '../css/admin-dashboard.css', __FILE__ ), [], Cookie_Notice()->defaults['version'] );
 		wp_enqueue_style( 'cn-microtip', plugins_url( '../assets/microtip/microtip.min.css', __FILE__ ), [], Cookie_Notice()->defaults['version'] );
+		
+		// bail if COmpliance is not active
+		if ( Cookie_Notice()->get_status() !== 'active' )
+			return;
 
 		// scripts
 		wp_enqueue_script( 'cn-admin-chartjs', plugins_url( '../assets/chartjs/chart.min.js', __FILE__ ), [ 'jquery' ], Cookie_Notice()->defaults['version'], true );
@@ -93,8 +97,8 @@ class Cookie_Notice_Dashboard {
 				'type' => 'doughnut',
 				'data' => array(
 					'labels' => array(
-						__( 'Used', 'cookie-notice' ),
-						__( 'Free', 'cookie-notice' ),
+						_x( 'Used', 'threshold limit', 'cookie-notice' ),
+						_x( 'Free', 'threshold limit', 'cookie-notice' )
 					),
 					'datasets' => array(
 						array(

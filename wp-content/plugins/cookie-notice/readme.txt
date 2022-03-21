@@ -4,7 +4,7 @@ Tags: gdpr, ccpa, cookies, consent, compliance
 Requires at least: 4.3
 Requires PHP: 5.3
 Tested up to: 5.9.1
-Stable tag: 2.2.2
+Stable tag: 2.2.3
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 
@@ -114,9 +114,18 @@ Yes! The plugin + web appliaction version includes technical compliance features
 
 == Screenshots ==
 
-1. screenshot-1.png
+1. Cookie Notice settings, Compliance itegration inactive
+2. Cookie Notice settings, Compliance itegration active
+3. Cookie Compliance dashboard overview
+4. Cookie Compliance settings
 
 == Changelog ==
+
+= 2.2.3 =
+* Fix: Undefined notice in WP dashboard
+* Fix: Close icon event not firing
+* Tweak: Remove aria-label from the close icon
+* Tweak: CSS tweaks in the admin
 
 = 2.2.2 =
 * Fix: Uncrawlable close notice link
@@ -406,8 +415,8 @@ Initial release
 
 == Upgrade Notice ==
 
-= 2.2.2 =
-* Fix: Uncrawlable close notice link
-* Tweak: WordPress 5.9 compatibility
-* Tweak: Prevent displaying the notice in an iframe
-* Tweak: Send site language to a web app on signup
+= 2.2.3 =
+* Fix: Undefined notice in WP dashboard
+* Fix: Close icon event not firing
+* Tweak: Remove aria-label from the close icon
+* Tweak: CSS tweaks in the admin

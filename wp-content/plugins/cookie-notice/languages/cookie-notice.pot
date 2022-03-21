@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Cookie Notice\n"
-"POT-Creation-Date: 2022-02-23 18:49+0100\n"
+"POT-Creation-Date: 2022-03-01 17:10+0100\n"
 "PO-Revision-Date: 2015-03-24 11:30+0100\n"
 "Last-Translator: Bartosz Arendt <info@dfactory.eu>\n"
 "Language-Team: dFactory <info@dfactory.eu>\n"
@@ -96,88 +96,80 @@ msgstr ""
 msgid "Cookie Compliance"
 msgstr ""
 
-#: ../includes/dashboard.php:96
-msgid "Used"
-msgstr ""
-
-#: ../includes/dashboard.php:97 ../includes/welcome.php:264
-msgid "Free"
-msgstr ""
-
-#: ../includes/dashboard.php:142 ../includes/dashboard.php:154
-#: ../includes/dashboard.php:166
+#: ../includes/dashboard.php:146 ../includes/dashboard.php:158
+#: ../includes/dashboard.php:170
 #, php-format
 msgid "Level %s"
 msgstr ""
 
-#: ../includes/dashboard.php:246
+#: ../includes/dashboard.php:250
 msgid "Traffic Overview"
 msgstr ""
 
-#: ../includes/dashboard.php:247
+#: ../includes/dashboard.php:251
 msgid "Displays the general visits information for your domain."
 msgstr ""
 
-#: ../includes/dashboard.php:251
+#: ../includes/dashboard.php:255
 msgid "Consent Activity"
 msgstr ""
 
-#: ../includes/dashboard.php:252
+#: ../includes/dashboard.php:256
 msgid "Displays the chart of the domain consent activity in the last 30 days."
 msgstr ""
 
-#: ../includes/dashboard.php:272
+#: ../includes/dashboard.php:276
 msgid "View consent activity inside WordPress Dashboard"
 msgstr ""
 
-#: ../includes/dashboard.php:273
+#: ../includes/dashboard.php:277
 msgid "Display information about the visits."
 msgstr ""
 
-#: ../includes/dashboard.php:274
+#: ../includes/dashboard.php:278
 msgid "Get Consent logs data for the last 30 days."
 msgstr ""
 
-#: ../includes/dashboard.php:275
+#: ../includes/dashboard.php:279
 msgid "Enable consent purpose categories, automatic cookie blocking and more."
 msgstr ""
 
-#: ../includes/dashboard.php:276
+#: ../includes/dashboard.php:280
 msgid "Upgrade to Cookie Compliance"
 msgstr ""
 
-#: ../includes/dashboard.php:368
+#: ../includes/dashboard.php:372
 msgid "Total Visits"
 msgstr ""
 
-#: ../includes/dashboard.php:370
+#: ../includes/dashboard.php:374
 msgid "Last 30 days"
 msgstr ""
 
-#: ../includes/dashboard.php:373
+#: ../includes/dashboard.php:377
 msgid "Consent Logs"
 msgstr ""
 
-#: ../includes/dashboard.php:375
+#: ../includes/dashboard.php:379
 #, php-format
 msgid "Updated %s"
 msgstr ""
 
-#: ../includes/dashboard.php:393
+#: ../includes/dashboard.php:397
 msgid "Traffic Usage"
 msgstr ""
 
-#: ../includes/dashboard.php:396
+#: ../includes/dashboard.php:400
 #, php-format
 msgid "Visits usage: %1$s / %2$s"
 msgstr ""
 
-#: ../includes/dashboard.php:397
+#: ../includes/dashboard.php:401
 #, php-format
 msgid "Cycle started: %s"
 msgstr ""
 
-#: ../includes/dashboard.php:398
+#: ../includes/dashboard.php:402
 #, php-format
 msgid "Days to go: %s"
 msgstr ""
@@ -858,6 +850,10 @@ msgstr ""
 #: ../includes/welcome.php:263 ../includes/welcome.php:548
 #: ../includes/welcome.php:650
 msgid "Basic"
+msgstr ""
+
+#: ../includes/welcome.php:264
+msgid "Free"
 msgstr ""
 
 #: ../includes/welcome.php:267 ../includes/welcome.php:287

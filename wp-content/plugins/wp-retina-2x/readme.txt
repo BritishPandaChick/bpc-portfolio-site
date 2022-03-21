@@ -1,11 +1,11 @@
-=== Perfect Images (Retina, Thumbnails, Replace & CDN) ===
+=== Perfect Images (Retina, Thumbnails, Replace, CDN) ===
 Contributors: TigrouMeow
-Tags: retina, images, replace, regenerate, sizes, lazysizes, high-dpi
+Tags: retina, images, replace, size, thumbnail, regenerate, sizes, high-dpi
 Donate link: https://meowapps.com/donation/
 Requires at least: 5.0
-Tested up to: 5.9
+Tested up to: 5.9.1
 Requires PHP: 7.0
-Stable tag: 6.2.2
+Stable tag: 6.2.3
 
 Retina, Regenerate Thumbnails, Image Sizes Management, Replace Images, Image Threshold and more.
 
@@ -21,7 +21,7 @@ Originally, this plugin only took care of one thing: Retina Images. But with tim
 * Replace Images
 
 === Retina Images ===
-The plugin creates the image files required by the High-DPI devices and it displays them to your visitors accordingly. Your website will look beautiful and crisp on every device! The retina images will be generated for you automatically (though you can also do it manually) and served to the retina devices. The concept of retina images for full-size images is also a very unique feature which is only provided by this plugin (which is why it became unique). More information and tutorial available on the [official website](https://meowapps.com/plugin/wp-retina-2x/).
+The plugin creates the image files required by the High-DPI devices and it displays them to your visitors accordingly. Your website will look beautiful and crisp on every device! The retina images will be generated for you automatically (though you can also do it manually) and served to the retina devices. The concept of retina images for full-size images is also a very unique feature which is only provided by this plugin (which is why it became unique). More information and tutorial available on the [official website](https://meowapps.com/wp-retina-2x/).
 
 === Image Sizes Management ===
 In WordPress, it's impossible to actually know which sizes are set up by your whole system and even less to control them. With Perfect Images, you will be able to disable the sizes you do not want. Also, in the Dashboard, you will be able to check which are the sizes created for each of your media entries. For example, this will allow you to disable the medium_large, 1536x1536, and 2048x2048 sizes which are now created by WordPress automatically and useless in most cases.
@@ -51,6 +51,9 @@ The plugin cannot inject CSS to handles the images added through CSS, that's bot
 3. Check if it works! - if it doesn't, read the FAQ, the tutorial, and check the forums.
 
 == Changelog ==
+
+= 6.2.3 (2022/03/19) =
+* Update: Latest version of the framework and admin.
 
 = 6.2.2 (2022/01/28) =
 * Update: Better compatibility with latest version of WP.
