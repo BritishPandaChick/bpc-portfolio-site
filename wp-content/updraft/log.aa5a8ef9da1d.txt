@@ -1,0 +1,33 @@
+0000.004 (0) Opened log file at time: Mon, 28 Mar 2022 04:50:02 +0000 on http://localhost/bpcportfolio
+0000.194 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.22.11 WP: 5.9.2 PHP: 8.0.1 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 19043 (Windows 10) AMD64) MySQL: 10.4.17-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/8.0.1 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 54.5M | 32M) multisite: N openssl: OpenSSL 1.1.1i  8 Dec 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.633 (0) Free space on disk containing Updraft's temporary directory: 665658.4 MB
+0000.945 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0001.042 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0001.418 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1647884940, seconds_ago=558063)
+0001.730 (0) Set semaphore last lock (fd) time to 2022-03-28 04:50:04
+0001.927 (0) Semaphore lock (fd) complete
+0002.418 (0) Backup run: resumption=0, nonce=aa5a8ef9da1d, file_nonce=aa5a8ef9da1d begun at=1648443002 (2s ago), job type=backup
+0002.754 (0) Scheduling a resumption (1) after 600 seconds (1648443605) in case this run gets aborted
+0003.163 (0) Checking if we have a zip executable available
+0003.768 (0) Creation of backups of directories: beginning
+0004.015 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0073.948 (0) Total entities for the zip file: 957 directories, 4833 files (0 skipped as non-modified), 69.7 MB
+0074.126 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0074.929 (0) Zip: backup_2022-03-28-0050_Sarah_Bartley_aa5a8ef9da1d-plugins.zip.tmp: 100 files added (on-disk size: 161.8 KB)
+0075.128 (0) Zip: backup_2022-03-28-0050_Sarah_Bartley_aa5a8ef9da1d-plugins.zip.tmp: 200 files added (on-disk size: 161.8 KB)
+0075.495 (0) Zip: backup_2022-03-28-0050_Sarah_Bartley_aa5a8ef9da1d-plugins.zip.tmp: 300 files added (on-disk size: 161.8 KB)
+0077.056 (0) Zip: backup_2022-03-28-0050_Sarah_Bartley_aa5a8ef9da1d-plugins.zip.tmp: 400 files added (on-disk size: 161.8 KB)
+0077.367 (0) Zip: backup_2022-03-28-0050_Sarah_Bartley_aa5a8ef9da1d-plugins.zip.tmp: 500 files added (on-disk size: 161.8 KB)
+0077.593 (0) Zip: backup_2022-03-28-0050_Sarah_Bartley_aa5a8ef9da1d-plugins.zip.tmp: 600 files added (on-disk size: 161.8 KB)
+0077.716 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (6.9 MB, 643 (644) files added so far); re-opening (prior size: 161.8 KB)
+0138.962 (0) Zip: backup_2022-03-28-0050_Sarah_Bartley_aa5a8ef9da1d-plugins.zip.tmp: 700 files added (on-disk size: 2602.1 KB)
+0139.137 (0) Zip: backup_2022-03-28-0050_Sarah_Bartley_aa5a8ef9da1d-plugins.zip.tmp: 800 files added (on-disk size: 2602.1 KB)
+0139.350 (0) Zip: backup_2022-03-28-0050_Sarah_Bartley_aa5a8ef9da1d-plugins.zip.tmp: 900 files added (on-disk size: 2602.1 KB)
+0139.472 (0) Zip: backup_2022-03-28-0050_Sarah_Bartley_aa5a8ef9da1d-plugins.zip.tmp: 1000 files added (on-disk size: 2602.1 KB)
+0139.610 (0) Zip: backup_2022-03-28-0050_Sarah_Bartley_aa5a8ef9da1d-plugins.zip.tmp: 1100 files added (on-disk size: 2602.1 KB)
+0139.898 (0) Zip: backup_2022-03-28-0050_Sarah_Bartley_aa5a8ef9da1d-plugins.zip.tmp: 1200 files added (on-disk size: 2602.1 KB)
+0140.117 (0) Zip: backup_2022-03-28-0050_Sarah_Bartley_aa5a8ef9da1d-plugins.zip.tmp: 1300 files added (on-disk size: 2602.1 KB)
+0140.340 (0) Zip: backup_2022-03-28-0050_Sarah_Bartley_aa5a8ef9da1d-plugins.zip.tmp: 1400 files added (on-disk size: 2602.1 KB)
+0140.572 (0) Zip: backup_2022-03-28-0050_Sarah_Bartley_aa5a8ef9da1d-plugins.zip.tmp: 1500 files added (on-disk size: 2602.1 KB)
+0141.300 (0) Zip: backup_2022-03-28-0050_Sarah_Bartley_aa5a8ef9da1d-plugins.zip.tmp: 1600 files added (on-disk size: 2602.1 KB)
+0141.611 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (24.2 MB, 4833 files batched, 1001 (1645) added so far); re-opening (prior size: 2602.1 KB)
