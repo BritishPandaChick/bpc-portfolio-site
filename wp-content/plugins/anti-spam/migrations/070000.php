@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class WTITANUpdate070000 extends Wbcr_Factory453_Update {
+class WTITANUpdate070000 extends Wbcr_Factory454_Update {
 
 	public function install() {
 		if('no' === $this->plugin->getOption( 'extra_menu', 'no')) {

@@ -19,9 +19,9 @@ if( !defined('ABSPATH') ) {
 abstract class Configurate {
 
 	/**
-	 * @param \Wbcr_Factory453_Plugin $plugin
+	 * @param \Wbcr_Factory454_Plugin $plugin
 	 */
-	public function __construct(\Wbcr_Factory453_Plugin $plugin)
+	public function __construct(\Wbcr_Factory454_Plugin $plugin)
 	{
 		$this->plugin = $plugin;
 		$this->registerActionsAndFilters();

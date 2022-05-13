@@ -58,12 +58,12 @@ class License extends \WBCR\Factory_Templates_106\Pages\License {
 	/**
 	 * WCL_LicensePage constructor.
 	 *
-	 * @param \Wbcr_Factory453_Plugin $plugin
+	 * @param \Wbcr_Factory454_Plugin $plugin
 	 *
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 *
 	 */
-	public function __construct(\Wbcr_Factory453_Plugin $plugin)
+	public function __construct(\Wbcr_Factory454_Plugin $plugin)
 	{
 		$this->menu_title = __('License', 'titan-security');
 		$this->page_menu_short_description = __('Product activation', 'titan-security');
@@ -126,12 +126,12 @@ class License extends \WBCR\Factory_Templates_106\Pages\License {
 	/**
 	 * {@inheritDoc}
 	 * @param                         $notices
-	 * @param \Wbcr_Factory453_Plugin $plugin
+	 * @param \Wbcr_Factory454_Plugin $plugin
 	 *
 	 * @return array
 	 * @since 6.5.2
 	 *
-	 * @see   \FactoryPages452_ImpressiveThemplate
+	 * @see   \FactoryPages453_ImpressiveThemplate
 	 */
 	/*public function getActionNotices($notices)
 	{

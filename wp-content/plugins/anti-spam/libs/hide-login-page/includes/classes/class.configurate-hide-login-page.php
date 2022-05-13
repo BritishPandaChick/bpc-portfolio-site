@@ -34,7 +34,7 @@ class WHLP_ConfigHideLoginPage {
 	private $login_path;
 
 	/**
-	 * @param Wbcr_Factory453_Plugin $plugin
+	 * @param Wbcr_Factory454_Plugin $plugin
 	 */
 	public function __construct($plugin)
 	{

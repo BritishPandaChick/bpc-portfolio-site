@@ -14,12 +14,12 @@ $aspect = ( '' !== ttfmake_get_section_field( 'aspect' ) ) ? esc_attr( ttfmake_g
 	$title = ttfmake_get_section_field( 'title' );
 	if ( '' !== $title ) : ?>
     <h3 class="builder-gallery-section-title">
-        <?php echo apply_filters( 'the_title', $title ); ?>
+        <?php echo apply_filters( 'the_title', $title, ttfmake_get_section_html_id() ); ?>
     </h3>
     <?php endif; ?>
 
 	<div class="builder-section-content">
-		<?php if ( ! empty( $gallery ) ) : foreach ( $gallery as $item ) : ?>
+		<?php if ( ! empty( $gallery ) ) : foreach ( $gallery as $i => $item ) : ?>
 
 		<div class="builder-gallery-item <?php echo esc_attr( ttfmake_get_section_item_html_class( $item ) ); ?>"<?php echo ttfmake_builder_get_gallery_item_onclick( $item ); ?>>
 
@@ -33,7 +33,7 @@ $aspect = ( '' !== ttfmake_get_section_field( 'aspect' ) ) ? esc_attr( ttfmake_g
 				<div class="builder-gallery-content-inner">
 					<?php if ( '' !== $item['title'] ) : ?>
 					<h4 class="builder-gallery-title">
-						<?php echo apply_filters( 'the_title', $item['title'] ); ?>
+						<?php echo apply_filters( 'the_title', $item['title'], ttfmake_get_section_html_id() . '-item-' . ( $i + 1 ) ); ?>
 					</h4>
 					<?php endif; ?>
 					<?php if ( '' !== $item['description'] ) : ?>

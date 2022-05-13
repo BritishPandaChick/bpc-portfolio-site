@@ -10,7 +10,7 @@
 	$title = ttfmake_get_section_field( 'title' );
 	if ( '' !== $title ) : ?>
     <h3 class="builder-text-section-title">
-        <?php echo apply_filters( 'the_title', $title ); ?>
+        <?php echo apply_filters( 'the_title', $title, ttfmake_get_section_html_id() ); ?>
     </h3>
     <?php endif; ?>
 

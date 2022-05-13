@@ -3,9 +3,9 @@ Contributors: TigrouMeow
 Tags: retina, images, replace, size, thumbnail, regenerate, sizes, high-dpi
 Donate link: https://meowapps.com/donation/
 Requires at least: 5.0
-Tested up to: 5.9.1
+Tested up to: 5.9.3
 Requires PHP: 7.0
-Stable tag: 6.2.3
+Stable tag: 6.2.4
 
 Retina, Regenerate Thumbnails, Image Sizes Management, Replace Images, Image Threshold and more.
 
@@ -52,6 +52,10 @@ The plugin cannot inject CSS to handles the images added through CSS, that's bot
 
 == Changelog ==
 
+= 6.2.4 (2022/04/14) =
+* Fix: The Refresh Stats button should not reset the list of ignored entries.
+* Info: If you enjoy this plugin, please share some love by [writing a little review here](https://wordpress.org/support/plugin/wp-retina-2x/reviews/?rate=5#new-post). And since I read them all, don't hesitate to drop a few remarks and feature requests in those reviews. Thank you :)
+
 = 6.2.3 (2022/03/19) =
 * Update: Latest version of the framework and admin.
 
@@ -78,7 +82,6 @@ The plugin cannot inject CSS to handles the images added through CSS, that's bot
 
 = 6.1.6 (2021/08/31) =
 * Update: Enhanced security.
-* Info: If you enjoy this plugin, please share some love by [writing a little review here](https://wordpress.org/support/plugin/wp-retina-2x/reviews/?rate=5#new-post). And since I read them all, don't hesitate to drop a few remarks and feature requests in those reviews. Thank you :)
 
 = 6.1.5 (2021/08/31) =
 * Update: New common library.

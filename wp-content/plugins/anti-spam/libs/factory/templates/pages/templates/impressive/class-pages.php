@@ -18,7 +18,7 @@ if( !defined('ABSPATH') ) {
 //global $ssssdfsfsdf;
 
 /**
- * Class Wbcr_FactoryPages452_ImpressiveThemplate
+ * Class Wbcr_FactoryPages453_ImpressiveThemplate
  *
  * @method string getInfoWidget() - get widget content information
  * @method string getRatingWidget(array $args = []) - get widget content rating
@@ -62,9 +62,9 @@ class PageBase extends \WBCR\Factory_Templates_106\Impressive {
 	public $show_search_options_form;
 
 	/**
-	 * @param \Wbcr_Factory453_Plugin $plugin
+	 * @param \Wbcr_Factory454_Plugin $plugin
 	 */
-	public function __construct(\Wbcr_Factory453_Plugin $plugin)
+	public function __construct(\Wbcr_Factory454_Plugin $plugin)
 	{
 		parent::__construct($plugin);
 
@@ -112,11 +112,11 @@ class PageBase extends \WBCR\Factory_Templates_106\Impressive {
 	/**
 	 * Requests assets (js and css) for the page.
 	 *
-	 * @param \Wbcr_Factory453_ScriptList $scripts
-	 * @param \Wbcr_Factory453_StyleList $styles
+	 * @param \Wbcr_Factory454_ScriptList $scripts
+	 * @param \Wbcr_Factory454_StyleList $styles
 	 *
 	 * @return void
-	 * @see Wbcr_FactoryPages452_AdminPage
+	 * @see Wbcr_FactoryPages453_AdminPage
 	 *
 	 */
 	public function assets($scripts, $styles)
@@ -133,7 +133,7 @@ class PageBase extends \WBCR\Factory_Templates_106\Impressive {
 		if( !($this->plugin->has_premium() && $this->plugin->premium->is_active()) ) {
 			$this->scripts->add(FACTORY_TEMPLATES_106_URL . '/assets/js/clearfy-widgets.js', [
 				'jquery',
-				'wfactory-453-core-general',
+				'wfactory-454-core-general',
 				'wbcr-factory-templates-106-global'
 			], 'wbcr-factory-templates-106-widgets');
 		}
@@ -166,7 +166,7 @@ class PageBase extends \WBCR\Factory_Templates_106\Impressive {
 	}
 
 	/**
-	 * @return \Wbcr_Factory453_Request
+	 * @return \Wbcr_Factory454_Request
 	 */
 	public function request()
 	{
@@ -265,7 +265,7 @@ class PageBase extends \WBCR\Factory_Templates_106\Impressive {
 		/**
 		 * @since 4.0.9 - является устаревшим
 		 */
-		$widgets = wbcr_factory_453_apply_filters_deprecated('wbcr_factory_pages_452_imppage_get_widgets', [
+		$widgets = wbcr_factory_454_apply_filters_deprecated('wbcr_factory_pages_453_imppage_get_widgets', [
 			$widgets,
 			$position,
 			$this->plugin,
@@ -311,7 +311,7 @@ class PageBase extends \WBCR\Factory_Templates_106\Impressive {
 		/**
 		 * @since 2.0.8 - deprecated
 		 */
-		$suggetion_features = wbcr_factory_453_apply_filters_deprecated('wbcr/clearfy/page_bussines_suggetion_features', [
+		$suggetion_features = wbcr_factory_454_apply_filters_deprecated('wbcr/clearfy/page_bussines_suggetion_features', [
 			$default_features,
 			$this->plugin->getPluginName(),
 			$this->id
@@ -400,7 +400,7 @@ class PageBase extends \WBCR\Factory_Templates_106\Impressive {
 			$page_url = $args[0];
 		}
 
-		$page_url = apply_filters('wbcr_factory_pages_452_imppage_rating_widget_url', $page_url, $this->plugin->getPluginName(), $this->getResultId());
+		$page_url = apply_filters('wbcr_factory_pages_453_imppage_rating_widget_url', $page_url, $this->plugin->getPluginName(), $this->getResultId());
 
 		?>
 		<div class="wbcr-factory-sidebar-widget">

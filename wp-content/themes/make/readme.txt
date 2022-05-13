@@ -26,6 +26,9 @@ Please see the Make documentation: https://thethemefoundry.com/make-help/
 
 == Changelog ==
 
+= 1.10.7 - April 12 2022 =
+* Bugfix: `the_title` filter was called incorrectly.
+
 = 1.10.6 - September 14 2021 =
 * Bugfix: Style selectors for Font Awesome Brands were outdated.
 
@@ -687,6 +690,9 @@ Please see the Make documentation: https://thethemefoundry.com/make-help/
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.10.7 =
+* Minor bugfixes.
 
 = 1.10.6 =
 * Minor bugfixes.

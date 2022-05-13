@@ -16,9 +16,9 @@ if( !defined('ABSPATH') ) {
 class Setup extends \WBCR\Factory_Templates_106\Pages\Setup {
 
 	/**
-	 * @param \Wbcr_Factory453_Plugin $plugin
+	 * @param \Wbcr_Factory454_Plugin $plugin
 	 */
-	public function __construct(\Wbcr_Factory453_Plugin $plugin)
+	public function __construct(\Wbcr_Factory454_Plugin $plugin)
 	{
 		parent::__construct($plugin);
 
@@ -53,7 +53,7 @@ class Setup extends \WBCR\Factory_Templates_106\Pages\Setup {
 	 *
 	 * @return void
 	 * @since 1.0.0
-	 * @see   FactoryPages452_AdminPage
+	 * @see   FactoryPages453_AdminPage
 	 *
 	 */
 	public function assets($scripts, $styles)

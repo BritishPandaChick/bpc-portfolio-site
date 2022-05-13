@@ -10,7 +10,7 @@ if( !defined('ABSPATH') ) {
 /**
  * Класс страницы, которая реализует функции мастера установки.
  *
- * Этот класс унаследован от стандартного шаблона страницы \Wbcr_FactoryPages452_ImpressiveThemplate,
+ * Этот класс унаследован от стандартного шаблона страницы \Wbcr_FactoryPages453_ImpressiveThemplate,
  * поэтому все его инструменты могут быть применены и в этом классе. Но вы должны учитывать, что
  * поведение экшенов страницы было изменено. В данной реализации экшены используется для пагинации шагов.
  *
@@ -68,9 +68,9 @@ class Setup extends \WBCR\Factory_Templates_106\Impressive {
 	private $steps = [];
 
 	/**
-	 * @param \Wbcr_Factory453_Plugin $plugin
+	 * @param \Wbcr_Factory454_Plugin $plugin
 	 */
-	public function __construct(\Wbcr_Factory453_Plugin $plugin)
+	public function __construct(\Wbcr_Factory454_Plugin $plugin)
 	{
 		$this->id = 'setup';
 
@@ -135,11 +135,11 @@ class Setup extends \WBCR\Factory_Templates_106\Impressive {
 	/**
 	 * Requests assets (js and css) for the page.
 	 *
-	 * @param \Wbcr_Factory453_ScriptList $scripts
-	 * @param \Wbcr_Factory453_StyleList $styles
+	 * @param \Wbcr_Factory454_ScriptList $scripts
+	 * @param \Wbcr_Factory454_StyleList $styles
 	 *
 	 * @return void
-	 * @see Wbcr_FactoryPages452_AdminPage
+	 * @see Wbcr_FactoryPages453_AdminPage
 	 *
 	 */
 	public function assets($scripts, $styles)

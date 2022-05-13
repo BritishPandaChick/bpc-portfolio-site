@@ -3,7 +3,7 @@ Contributors: nathanbarry, growdev, travisnorthcutt, ggwicz
 Donate link: https://convertkit.com
 Tags: email, marketing, embed form, convertkit, capture
 Requires at least: 5.0
-Tested up to: 5.9.2
+Tested up to: 5.9.3
 Requires PHP: 5.6.20
 Stable tag: trunk
 License: GPLv2 or later
@@ -57,6 +57,24 @@ Navigate to the Plugin's Settings at Settings > ConvertKit.
 7. Another ConvertKit landing page example
 
 == Changelog ==
+
+### 1.9.7.5 2022-05-12
+* Fix: PHP Warning: Cannot modify header information, caused by QuickTags modal template output
+* Fix: Text Editor: Quicktag Buttons: Block could not be found error when using a Quicktag
+
+### 1.9.7.4 2022-05-04
+* Added: ConvertKit Broadcasts Block, to output a list of ConvertKit broadcasts
+* Added: ConvertKit Broadcasts Shortcode [convertkit_broadcasts], to output a list of ConvertKit broadcasts
+* Added: Settings: Tools: Import and Export configuration
+* Fix: Page/Post: If a specific Form is selected that no longer exists in ConvertKit, fallback to the Default Form setting
+
+### 1.9.7.3 2022-04-04
+* Added: Elementor Page Builder: ConvertKit Form Widget
+* Fix: Default Form would not display on Posts assigned to Categories, where Categories were created prior to 1.9.6.0 and site uses PHP 8.0 or greater
+* Fix: Categories: Improved wording of Form setting on per-Category level
+
+### 1.9.7.2 2022-03-30
+* Fix: Default Form would not display on Posts due to regression in 1.9.7.1
 
 ### 1.9.7.1 2022-03-23
 * Fix: Default Form would not display on Posts due to regression in 1.9.7.0

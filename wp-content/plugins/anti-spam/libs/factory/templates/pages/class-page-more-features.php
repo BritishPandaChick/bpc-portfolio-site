@@ -63,7 +63,7 @@ class MoreFeatures extends \WBCR\Factory_Templates_106\Impressive {
 	 */
 	public $internal = true;
 
-	public function __construct(\Wbcr_Factory453_Plugin $plugin)
+	public function __construct(\Wbcr_Factory454_Plugin $plugin)
 	{
 		$this->menu_title = __('More features (<b>free</b>)', 'wbcr_factory_templates_106');
 

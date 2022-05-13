@@ -18,9 +18,9 @@
 	}
 
 	//todo: Переопредление для совместимости со старыми версиями плагинов.
-	$.wbcr_factory_templates_106.filters = $.wbcr_factory_templates_106.filters || $.wfactory_453.filters;
+	$.wbcr_factory_templates_106.filters = $.wbcr_factory_templates_106.filters || $.wfactory_454.filters;
 	//todo: Переопредление для совместимости со старыми версиями плагинов.
-	$.wbcr_factory_templates_106.hooks = $.wbcr_factory_templates_106.hooks || $.wfactory_453.hooks;
+	$.wbcr_factory_templates_106.hooks = $.wbcr_factory_templates_106.hooks || $.wfactory_454.hooks;
 
 	$.wbcr_factory_templates_106.app = $.wbcr_factory_templates_106.app || {
 		/**
@@ -68,12 +68,12 @@
 				/**
 				 * Хук выполняет проивольную функцию, после того как уведомление отображено
 				 * Реализация системы фильтров и хуков в файле libs/clearfy/admin/assests/js/global.js
-				 * Пример регистрации хука $.wfactory_453.hooks.add('wbcr/factory_templates_106/updated',
+				 * Пример регистрации хука $.wfactory_454.hooks.add('wbcr/factory_templates_106/updated',
 				 * function(noticeId) {});
 				 * @param {string} noticeId - id уведомления
 				 */
-				$.wfactory_453.hooks.run('wbcr/factory_templates_106/showed_notice', [noticeId]);
-				$.wfactory_453.hooks.run('wbcr/clearfy/showed_notice', [noticeId]);
+				$.wfactory_454.hooks.run('wbcr/factory_templates_106/showed_notice', [noticeId]);
+				$.wfactory_454.hooks.run('wbcr/clearfy/showed_notice', [noticeId]);
 			});
 
 			return noticeId;
@@ -98,13 +98,13 @@
 				/**
 				 * Хук выполняет проивольную функцию, после того как уведомление скрыто
 				 * Реализация системы фильтров и хуков в файле libs/clearfy/admin/assests/js/global.js
-				 * Пример регистрации хука $.wfactory_453.hooks.add('wbcr/factory_templates_106/updated',
+				 * Пример регистрации хука $.wfactory_454.hooks.add('wbcr/factory_templates_106/updated',
 				 * function(noticeId)
 				 * {});
 				 * @param {string} noticeId - id уведомления
 				 */
-				$.wfactory_453.hooks.run('wbcr/factory_templates_106/hidded_notice', [noticeId]);
-				$.wfactory_453.hooks.run('wbcr/clearfy/hidded_notice', [noticeId]);
+				$.wfactory_454.hooks.run('wbcr/factory_templates_106/hidded_notice', [noticeId]);
+				$.wfactory_454.hooks.run('wbcr/clearfy/hidded_notice', [noticeId]);
 			});
 		},
 
@@ -121,7 +121,7 @@
 
 	};
 
-	$.wfactory_453.hooks.add('core/components/pre_activate', function(button) {
+	$.wfactory_454.hooks.add('core/components/pre_activate', function(button) {
 		// Выполняем код ниже, только на страницах плагина с интерфейсом Clearfy
 		if( !$('#WBCR').length ) {
 			return false;
@@ -137,7 +137,7 @@
 		}
 	});
 
-	$.wfactory_453.hooks.add('core/components/deactivated', function(button, data, response) {
+	$.wfactory_454.hooks.add('core/components/deactivated', function(button, data, response) {
 		// Выполняем код ниже, только на страницах плагина с интерфейсом Clearfy
 		if( !$('#WBCR').length ) {
 			return false;
@@ -156,7 +156,7 @@
 		}
 	});
 
-	$.wfactory_453.hooks.add('core/components/deleted', function(button) {
+	$.wfactory_454.hooks.add('core/components/deleted', function(button) {
 		// Выполняем код ниже, только на страницах плагина с интерфейсом Clearfy
 		if( !$('#WBCR').length ) {
 			return false;
@@ -175,7 +175,7 @@
 		}
 	});
 
-	$.wfactory_453.hooks.add('core/components/activation_error', function(plugin, button, response) {
+	$.wfactory_454.hooks.add('core/components/activation_error', function(plugin, button, response) {
 		// Выполняем код ниже, только на страницах плагина с интерфейсом Clearfy
 		if( !($('#WBCR').length && $.wbcr_factory_templates_106) ) {
 			return false;
@@ -188,7 +188,7 @@
 		}
 	});
 
-	$.wfactory_453.hooks.add('core/components/update_error', function(button, data, response) {
+	$.wfactory_454.hooks.add('core/components/update_error', function(button, data, response) {
 		// Выполняем код ниже, только на страницах плагина с интерфейсом Clearfy
 		if( !($('#WBCR').length && $.wbcr_factory_templates_106) ) {
 			return false;
@@ -200,7 +200,7 @@
 
 	});
 
-	$.wfactory_453.hooks.add('core/components/activated', function(button, data, response) {
+	$.wfactory_454.hooks.add('core/components/activated', function(button, data, response) {
 		// Выполняем код ниже, только на страницах плагина с интерфейсом Clearfy
 		if( !$('#WBCR').length ) {
 			return false;
@@ -209,7 +209,7 @@
 		button.closest('.plugin-card').removeClass('plugin-status-deactive');
 	});
 
-	$.wfactory_453.hooks.add('core/components/ajax_error', function(xhr, ajaxOptions, thrownError) {
+	$.wfactory_454.hooks.add('core/components/ajax_error', function(xhr, ajaxOptions, thrownError) {
 		// Выполняем код ниже, только на страницах плагина с интерфейсом Clearfy
 		if( !($('#WBCR').length && $.wbcr_factory_templates_106) ) {
 			return false;

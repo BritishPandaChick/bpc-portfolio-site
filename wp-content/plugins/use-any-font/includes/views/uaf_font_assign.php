@@ -18,7 +18,7 @@ $fontsDataWithVariations = uaf_group_fontdata_by_fontname($fontsData);
                         <?php
                         if (!empty($fontsDataWithVariations)):
 							foreach ($fontsDataWithVariations as $key=>$fontDataVariation)	: ?>
-								<option value="<?php echo array_key_first($fontDataVariation); ?>"><?php echo $key ?></option>
+								<option value="<?php echo array_key_first($fontDataVariation); ?>"><?php echo esc_attr($key) ?></option>
 							<?php endforeach;
 						endif; 
 						?>
@@ -31,7 +31,7 @@ $fontsDataWithVariations = uaf_group_fontdata_by_fontname($fontsData);
             if ($languageSelector['enableMultiLang'] == TRUE ): ?>    
                 <tr>
                     <td width="175">Select Language</td>
-                    <td><?php echo $languageSelector['selectHTML']; ?></td>
+                    <td><?php echo esc_html($languageSelector['selectHTML']); ?></td>
                 </tr>
             <?php endif; ?>
             <tr>    
@@ -75,7 +75,7 @@ $fontsDataWithVariations = uaf_group_fontdata_by_fontname($fontsData);
                             if (!empty($menus)){
                                 foreach($menus as $menu){
                         ?>
-                                    <input name="elements[]" value=".menu-<?php echo $menu->slug; ?>-container li a, .menu-<?php echo $menu->slug; ?>-container li span, #menu-<?php echo $menu->slug; ?> li a, #menu-<?php echo $menu->slug; ?> li span" type="checkbox" /> <?php echo $menu->name; ?><br/> 
+                                    <input name="elements[]" value=".menu-<?php echo esc_attr($menu->slug); ?>-container li a, .menu-<?php echo esc_attr($menu->slug); ?>-container li span, #menu-<?php echo esc_attr($menu->slug); ?> li a, #menu-<?php echo esc_attr($menu->slug); ?> li span" type="checkbox" /> <?php echo esc_html($menu->name); ?><br/> 
                         <?php
                                 }
                             } else {
@@ -133,17 +133,17 @@ $fontsImplementData		= json_decode($fontsImplementRawData, true);
 		$sn++
 		?>
         <tr>
-        	<td><?php echo $sn; ?></td>
+        	<td><?php echo esc_html($sn); ?></td>
             <td>
                 <?php 
                     if (isset($fontImplementData['font_name']) && !empty(trim($fontImplementData['font_name']))){
-                        echo $fontImplementData['font_name'];
+                        echo esc_html($fontImplementData['font_name']);
                     } else {
-                        echo @$fontsData[$fontImplementData['font_key']]['font_name'];
+                        echo @esc_html($fontsData[$fontImplementData['font_key']]['font_name']);
                     }
                 ?>                    
             </td>
-            <td><?php echo $fontImplementData['font_elements'] ?></td>
+            <td><?php echo esc_html($fontImplementData['font_elements']) ?></td>
             <td><a onclick="if (!confirm('Are you sure ?')){return false;}" href="<?php echo wp_nonce_url( 'admin.php?page=use-any-font&tab=font_assign&delete_font_assign_key='.$key, 'uaf_delete_font_assign', 'uaf_nonce' ); ?>">Delete</a></td>
         </tr>
         <?php endforeach; ?>

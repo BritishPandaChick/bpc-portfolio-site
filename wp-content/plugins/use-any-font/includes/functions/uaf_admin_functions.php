@@ -5,7 +5,7 @@ function uaf_create_menu() {
 }
 
 function uaf_admin_assets(){
-	wp_register_style('uaf_admin_css', plugins_url('use-any-font/includes/assets/css/uaf_admin.css'),'', $GLOBALS['uaf_current_version']);
+	wp_register_style('uaf_admin_css', plugins_url('../assets/css/uaf_admin.css',  __FILE__),'', $GLOBALS['uaf_current_version']);
   	wp_enqueue_style('uaf_admin_css');
 
   	$uaf_upload 	= wp_upload_dir();
@@ -15,7 +15,7 @@ function uaf_admin_assets(){
     wp_enqueue_style('uaf-font-style');
 	add_editor_style($uaf_upload_url.'admin-uaf.css');	
 
-  	wp_register_script('uaf_admin_js', plugins_url('use-any-font/includes/assets/js/uaf_admin.js'), '', $GLOBALS['uaf_current_version'], true);	
+  	wp_register_script('uaf_admin_js', plugins_url('../assets/js/uaf_admin.js',  __FILE__), '', $GLOBALS['uaf_current_version'], true);	
   	$uaf_server_url =  array($GLOBALS['uaf_user_settings']['uaf_server_url']);
   	wp_localize_script( 'uaf_admin_js', 'uaf_server_url', $uaf_server_url );
   	wp_enqueue_script( 'uaf_admin_js' );
@@ -24,7 +24,8 @@ function uaf_admin_assets(){
 function uaf_interface(){
 	$uaf_tabs = array(
 				'api' => array('name'=>'API Key','path'=>'uaf_api_interface.php'),
-				'font_upload' => array('name'=>'Upload Font','path'=>'uaf_font_upload_'.$GLOBALS['uaf_user_settings']['uaf_uploader_type'].'.php'),
+				'font_upload' => array('name'=>'Upload Font','path'=>'uaf_font_upload_js.php'), // PHP Uploader discontinued.
+				//'font_upload' => array('name'=>'Upload Font','path'=>'uaf_font_upload_'.$GLOBALS['uaf_user_settings']['uaf_uploader_type'].'.php'),
 				'font_assign' => array('name'=>'Assign Font','path'=>'uaf_font_assign.php'),
 				'settings' => array('name'=>"Settings",'path'=>'uaf_settings.php'),
 				'instructions' => array('name'=>"Instructions",'path'=>'uaf_instructions.php')
@@ -49,7 +50,7 @@ function uaf_get_options(){
 }
 
 function uaf_api_key_activate(){
-	$uaf_api_key 			= trim($_POST['uaf_api_key']);
+	$uaf_api_key 			= trim(sanitize_key($_POST['uaf_api_key']));
 	$uaf_site_url			= site_url();
 	if (!empty($uaf_api_key)){
 		$api_key_return = wp_remote_get($GLOBALS['uaf_user_settings']['uaf_server_url'].'/uaf_convertor/validate_key.php?license_key='.$uaf_api_key.'&url='.$uaf_site_url, array('timeout'=>300,'sslverify'=>false,'user-agent'=>get_bloginfo( 'url' )));
@@ -250,27 +251,28 @@ function uaf_trigger_actions(){
 		if (isset($_POST['submit-uaf-font-js'])){   
 		    $font_weight = $font_style  = '';
 		    if (isset($_POST['enable_font_variation'])){
-		    	$font_weight 	= $_POST['font_weight'];
-		    	$font_style 	= $_POST['font_style'];
+		    	$font_weight 	= sanitize_key($_POST['font_weight']);
+		    	$font_style 	= sanitize_key($_POST['font_style']);
 		    }
 		    $actionReturn = uaf_save_font_files($_POST['font_name'], $font_weight, $font_style, $_POST['convert_response']);
 		}
 
+		/* NOT in use till API accepts font file in Binary
 		if (isset($_POST['submit-uaf-font-php'])){  
 		    if ( isset($_POST['uaf_nonce']) && wp_verify_nonce($_POST['uaf_nonce'], 'uaf_font_upload_php')) {
 			    $actionReturn = uaf_upload_font_to_server();
 			    if ($actionReturn['status'] == 'success'){
 			        $font_weight = $font_style  = '';
 				    if (isset($_POST['enable_font_variation'])){
-				    	$font_weight 	= $_POST['font_weight'];
-				    	$font_style 	= $_POST['font_style'];
+				    	$font_weight 	= sanitize_key($_POST['font_weight']);
+				    	$font_style 	= sanitize_key($_POST['font_style']);
 				    }
 			        $actionReturn = uaf_save_font_files($_POST['font_name'], $font_weight, $font_style, $actionReturn['body']);
 			    }
 			} else {
 				$actionReturn = $actionReturnNonceError;
 			}
-		}
+		}*/
 
 		if (isset($_POST['submit-uaf-font-assign'])){
 		    if ( isset($_POST['uaf_nonce']) && wp_verify_nonce($_POST['uaf_nonce'], 'uaf_font_assign')) {

@@ -28,7 +28,7 @@ class Base {
 	 * Plugin instance this module interacts with
 	 *
 	 * @since  1.0.0 Added
-	 * @var \Wbcr_Factory453_Plugin
+	 * @var \Wbcr_Factory454_Plugin
 	 */
 	private $plugin;
 
@@ -43,12 +43,12 @@ class Base {
 	/**
 	 * Wbcr_Factory_Feedback constructor.
 	 *
-	 * @param \Wbcr_Factory453_Plugin $plugin
+	 * @param \Wbcr_Factory454_Plugin $plugin
 	 *
 	 * @since 1.0.0 Added
 	 *
 	 */
-	public function __construct( \Wbcr_Factory453_Plugin $plugin ) {
+	public function __construct( \Wbcr_Factory454_Plugin $plugin ) {
 		$this->plugin = $plugin;
 
 		$this->api = new Creative_Motion_API( $this->plugin );

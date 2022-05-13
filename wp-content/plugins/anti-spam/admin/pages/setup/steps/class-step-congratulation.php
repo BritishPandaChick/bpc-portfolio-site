@@ -23,7 +23,7 @@ class Step_Congratulation extends \WBCR\Factory_Templates_106\Pages\Step_Custom 
 	 *
 	 * @return void
 	 * @since 1.0.0
-	 * @see   FactoryPages452_AdminPage
+	 * @see   FactoryPages453_AdminPage
 	 *
 	 */
 	public function assets($scripts, $styles)

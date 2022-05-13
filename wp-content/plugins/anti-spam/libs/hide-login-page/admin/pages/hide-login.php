@@ -17,7 +17,7 @@ class WHLP_HideLoginPage extends WBCR\Factory_Templates_106\Pages\PageBase {
 	 * The id of the page in the admin menu.
 	 *
 	 * Mainly used to navigate between pages.
-	 * @see FactoryPages452_AdminPage
+	 * @see FactoryPages453_AdminPage
 	 *
 	 * @since 1.0.0
 	 * @var string
@@ -57,7 +57,7 @@ class WHLP_HideLoginPage extends WBCR\Factory_Templates_106\Pages\PageBase {
 	public $current_plugin = '';
 
 	/**
-	 * @param Wbcr_Factory453_Plugin $plugin
+	 * @param Wbcr_Factory454_Plugin $plugin
 	 */
 	public function __construct( $plugin ) {
 		$this->menu_title                  = __( 'Hide Login Page', 'hide-login-page' );
@@ -138,7 +138,7 @@ class WHLP_HideLoginPage extends WBCR\Factory_Templates_106\Pages\PageBase {
 	 *
 	 * @return void
 	 * @since 1.0.0
-	 * @see Wbcr_FactoryPages452_AdminPage
+	 * @see Wbcr_FactoryPages453_AdminPage
 	 *
 	 */
 	public function assets( $scripts, $styles ) {
@@ -187,10 +187,10 @@ class WHLP_HideLoginPage extends WBCR\Factory_Templates_106\Pages\PageBase {
 	 * We register notifications for some actions
 	 *
 	 * @param $notices
-	 * @param Wbcr_Factory453_Plugin $plugin
+	 * @param Wbcr_Factory454_Plugin $plugin
 	 *
 	 * @return array
-	 * @see libs\factory\pages\themplates\FactoryPages452_ImpressiveThemplate
+	 * @see libs\factory\pages\themplates\FactoryPages453_ImpressiveThemplate
 	 */
 	public function actionNotices( $notices ) {
 

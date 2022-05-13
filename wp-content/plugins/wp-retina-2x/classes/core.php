@@ -488,7 +488,7 @@ class Meow_WR2X_Core {
 				array_push( $issues, $id );
 
 		}
-		set_transient( 'wr2x_ignores', array() );
+		//set_transient( 'wr2x_ignores', array() );
 		set_transient( 'wr2x_issues', $issues );
 	}
 

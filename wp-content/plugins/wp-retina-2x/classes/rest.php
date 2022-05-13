@@ -208,35 +208,33 @@ class Meow_WR2X_Rest
 		}
 		$entries = [];
 		if ( empty( $search ) ) {
-			$entries = $wpdb->get_results( 
-				$wpdb->prepare( "SELECT p.ID, p.post_title, 
-					MAX(CASE WHEN pm.meta_key = '_wp_attachment_metadata' THEN pm.meta_value END) AS metadata
-					FROM $wpdb->posts p
-					INNER JOIN $wpdb->postmeta pm ON pm.post_id = p.ID
-					WHERE post_type='attachment'
-					AND pm.meta_key = '_wp_attachment_metadata'
-					$whereIsIn
-					GROUP BY p.ID
-					$orderSql
-					LIMIT %d, %d", $skip, $limit 
-				)
+			$sql = $wpdb->prepare( "SELECT p.ID, p.post_title, 
+				MAX(CASE WHEN pm.meta_key = '_wp_attachment_metadata' THEN pm.meta_value END) AS metadata
+				FROM $wpdb->posts p
+				INNER JOIN $wpdb->postmeta pm ON pm.post_id = p.ID
+				WHERE post_type = 'attachment'
+				AND pm.meta_key = '_wp_attachment_metadata'
+				$whereIsIn
+				GROUP BY p.ID
+				$orderSql
+				LIMIT %d, %d", $skip, $limit 
 			);
+			$entries = $wpdb->get_results( $sql );
 		}
 		else {
-			$entries = $wpdb->get_results( 
-				$wpdb->prepare( "SELECT p.ID, p.post_title, 
-					MAX(CASE WHEN pm.meta_key = '_wp_attachment_metadata' THEN pm.meta_value END) AS metadata
-					FROM $wpdb->posts p
-					INNER JOIN $wpdb->postmeta pm ON pm.post_id = p.ID
-					WHERE post_type='attachment'
-					AND pm.meta_key = '_wp_attachment_metadata'
-					$whereIsIn
-					AND p.post_title LIKE %s
-					GROUP BY p.ID
-					$orderSql
-					LIMIT %d, %d", ( '%' . $search . '%' ), $skip, $limit 
-				)
+			$sql = $wpdb->prepare( "SELECT p.ID, p.post_title, 
+				MAX(CASE WHEN pm.meta_key = '_wp_attachment_metadata' THEN pm.meta_value END) AS metadata
+				FROM $wpdb->posts p
+				INNER JOIN $wpdb->postmeta pm ON pm.post_id = p.ID
+				WHERE post_type = 'attachment'
+				AND pm.meta_key = '_wp_attachment_metadata'
+				$whereIsIn
+				AND p.post_title LIKE %s
+				GROUP BY p.ID
+				$orderSql
+				LIMIT %d, %d", ( '%' . $search . '%' ), $skip, $limit 
 			);
+			$entries = $wpdb->get_results( $sql );
 		}
 		foreach ( $entries as $entry ) {
 			$entry->ID = (int)$entry->ID;

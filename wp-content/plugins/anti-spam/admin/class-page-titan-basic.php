@@ -19,12 +19,12 @@ class Base extends \WBCR\Factory_Templates_106\Pages\PageBase {
 	/**
 	 * Scanner page constructor.
 	 *
-	 * @param \Wbcr_Factory453_Plugin $plugin
+	 * @param \Wbcr_Factory454_Plugin $plugin
 	 *
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 *
 	 */
-	public function __construct( \Wbcr_Factory453_Plugin $plugin ) {
+	public function __construct( \Wbcr_Factory454_Plugin $plugin ) {
 		parent::__construct( $plugin );
 		$this->menuIcon = WTITAN_PLUGIN_URL . '/admin/assets/img/titan-icon.png';
 	}
@@ -38,7 +38,7 @@ class Base extends \WBCR\Factory_Templates_106\Pages\PageBase {
 	public function assets( $scripts, $styles ) {
 		$this->styles->add( WTITAN_PLUGIN_URL . '/admin/assets/css/titan-security.css' );
 		$this->scripts->add( WTITAN_PLUGIN_URL . '/admin/assets/js/titan-security.js' );
-		$this->scripts->localize( 'wtitan_trial', wp_create_nonce( "wtitan_hide_trial_notice" ) );
+		$this->scripts->localize( 'wtitan_trial', ["nonce" => wp_create_nonce( "wtitan_hide_trial_notice" )] );
 
 		/* Install addons styles and scripts */
 		$this->styles->add( WTITAN_PLUGIN_URL . '/admin/assets/css/install-addons.css' );
@@ -96,7 +96,7 @@ class Base extends \WBCR\Factory_Templates_106\Pages\PageBase {
 			$page_url = $args[0];
 		}
 
-		$page_url = apply_filters( 'wbcr_factory_pages_452_imppage_rating_widget_url', $page_url, $this->plugin->getPluginName(), $this->getResultId() );
+		$page_url = apply_filters( 'wbcr_factory_pages_453_imppage_rating_widget_url', $page_url, $this->plugin->getPluginName(), $this->getResultId() );
 
 		?>
         <div class="wbcr-factory-sidebar-widget">

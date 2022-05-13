@@ -9,8 +9,8 @@ if(is_plugin_active( 'gravityforms/gravityforms.php' ) && !is_plugin_active( 'jq
             Instant javascript validation for your Gravity Forms.<br>
             
             <a href="https://demos.dnesscarkey.com/jquery-validation-for-gravity-forms/" target="_blank">
-                <img src="//146140-421025-1-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2020/10/jquery-validation-gravity.gif" style="max-width: 100%" />
-            </a>    
+                <img src="<?php plugins_url('../assets/img/jquery-validation-gravity.gif',  __FILE__) ?>" style="max-width: 100%" />
+            </a>
             <strong>Key Features</strong>
             <ul class="uaf_list">
                 <li>Additional Validation rules</li>

@@ -3,7 +3,7 @@ Contributors: dnesscarkey
 Tags: custom fonts, font embed, font uploader, typography, install font 
 Requires at least: 3.0
 Tested up to: 5.9
-Stable tag: 6.2.1
+Stable tag: 6.2.8
 
 Embed any custom font using font uploader and assign to elements. Upload font in 1 format and other needed formats are auto converted even woff2.
 
@@ -46,12 +46,17 @@ and any visual builder using the class.
 * <a href="https://wordpress.org/support/plugin/use-any-font/" target="_blank">Support Forum</a> to quickly resolve your issues.
 * Or you can also send msg using Facebook Msg widget from our website. <a href="https://dineshkarki.com.np">https://dineshkarki.com.np</a>
 
-You need API key to connect to our server for font conversion. Our server converts your font and sends it back. You can get key from <a href="https://dineshkarki.com.np/use-any-font/api-key" target="_blank">here</a>. You can also generate Lite / Test API key from button at top of the plugin page. <strong>Note : </strong> Lite / Test API only allow single font conversion.
+<strong>Font Conversion API Usage</strong>
+
+* You need API key to connect to our server for font conversion. Our server converts your font and sends it back. You can get key from <a href="https://dineshkarki.com.np/use-any-font/api-key" target="_blank">here</a>. You can also generate Lite / Test API key from button at top of the plugin page. <strong>Note : </strong> Lite / Test API only allow single font conversion.
+* Use Any Font uses Font Conversion API developed by Dnesscarkey. Font conversion API helps the plugin to convert the font files in different format (woff, woff2 but not limited to) for faster loading, and multiple browser support. Plugins sends the request to Font conversion server with font files, font conversion server converts it and returns the converted files. Once the conversion is completed, font files are automatically deleted.
+* We don't store your fonts in our server neither any of your information except the API key details. Our server deletes the temporary file after the font upload is complete. Your font files are served from your own server.
+* For font conversion, our plugin uses server2.dnesscarkey.org and server3.dnesscarkey.org and it is only dedicated to Use Any Font plugin.
+* For Font Conversion API terms and condition. Please visit <a href="https://dineshkarki.com.np/use-any-font/terms-conditions">here</a>.
+
 
 <strong>Installation Video</strong>
 [youtube http://www.youtube.com/watch?v=QzGaWIPVwEk]
-
-Note : We don't store your fonts in our server neither any of your information except the API key details. Our server deletes the temporary file after the font upload is complete.
 
 <strong>Integration for Themes / Plugin Developers</strong>
 
@@ -142,6 +147,22 @@ Please do write us after integration and we will add it in our supported list.
 1. Screenshot #6. Assign fonts to custom elements.
 
 == Changelog ==
+
+= 6.2.8 =
+* Sanitization.
+
+= 6.2.6 =
+* Removed use of PHP uploader.
+
+= 6.2.4 =
+* Added details about API usage. 
+
+= 6.2.3 =
+* Added comment for reasin being using Curl
+* Fixed option html issue. 
+
+= 6.2.2 =
+* Security Fixes.
 
 = 6.2.1 =
 * Fixed warning notice.

@@ -15,7 +15,7 @@ if( !defined('ABSPATH') ) {
 /**
  * Обработчик ajax запросов для виджета подписки на новости
  *
- * @param Wbcr_Factory453_Plugin $plugin_instance
+ * @param Wbcr_Factory454_Plugin $plugin_instance
  *
  * @since 2.3.0
  *
@@ -71,7 +71,7 @@ function wbcr_factory_templates_106_subscribe($plugin_instance)
 /**
  * Обработчик ajax запросов для проверки, активации, деактивации лицензионного ключа
  *
- * @param Wbcr_Factory453_Plugin $plugin_instance
+ * @param Wbcr_Factory454_Plugin $plugin_instance
  *
  * @since         2.0.7
  *

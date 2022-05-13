@@ -374,7 +374,7 @@ class MAKE_Sections_Columns_Definition {
 				$column_title = '';
 
 				if ( isset( $column['title'] ) && '' !== $column['title'] ) {
-					$column_title = apply_filters( 'the_title', $column['title'] );
+					$column_title = apply_filters( 'the_title', $column['title'], ttfmake_get_section_html_id() . '-column-' . ( $c + 1 ) );
 					$column_title = sprintf( '<h3>%s</h3>', $column_title );
 				}
 

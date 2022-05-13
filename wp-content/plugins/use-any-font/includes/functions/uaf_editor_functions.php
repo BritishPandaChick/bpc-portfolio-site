@@ -155,9 +155,9 @@ function uaf_astra_customizer_font_list( $value ) {
 	$fontsData		= uaf_group_fontdata_by_fontname(uaf_get_uploaded_font_data());
 	$fonts_uaf		= array();
 	if (!empty($fontsData)):
-		echo '<optgroup label="Use Any Font">';
+		echo esc_html('<optgroup label="Use Any Font">');
 		foreach ($fontsData as $fontName=>$fontData):
-			echo '<option value="' .$fontName. '">' . $fontName. '</option>';
+			echo '<option value="' .esc_attr($fontName). '">' . esc_html($fontName). '</option>';
 		endforeach;
 	endif;
 }
@@ -177,7 +177,7 @@ function uaf_oxygen_builder_font_list() {
 	$fonts_uaf = uaf_get_font_families();
 	$output = json_encode( $fonts_uaf );
 	$output = htmlspecialchars( $output, ENT_QUOTES );
-	echo "elegantCustomFonts=$output;";
+	echo esc_html("elegantCustomFonts=$output;");
 }
 
 // KIRKI CUSTOMIZER FRAMEWORK //Like FLATSOME THEME
@@ -240,6 +240,8 @@ function uaf_presscore_options_custom_fonts($fonts) {
 		foreach ($fontsData as $key=>$fontName):
 			$fonts_uaf[$fontName] = $fontName;
 		endforeach;
+		return array_merge($fonts_uaf,$fonts);
+	else:
+		return $fonts;
 	endif;
-  	 return array_merge($fonts_uaf,$fonts);
 }

@@ -19,7 +19,7 @@
                             if ($GLOBALS['uaf_user_settings']['uaf_hide_key'] == 'yes'){
                                 echo '##############################';
                             } else {
-                                echo $GLOBALS['uaf_user_settings']['uaf_api_key'];
+                                echo esc_html($GLOBALS['uaf_user_settings']['uaf_api_key']);
                             } ?>
 
                         - Active</span>
