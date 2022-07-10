@@ -17,7 +17,7 @@ class Meow_WR2X_Library {
 
 	function manage_media_custom_column( $column_name, $id ) {
 		if ( $column_name == 'wr2x_column' ) {
-			echo '<div class="wr2x-retina-field" data-id="' . $id . '"></div>';
+			echo wp_kses_post( '<div class="wr2x-retina-field" data-id="' . $id . '"></div>' );
 	  }
 	}
 }

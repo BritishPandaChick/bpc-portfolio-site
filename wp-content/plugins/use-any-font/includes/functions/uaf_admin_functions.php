@@ -168,7 +168,7 @@ function uaf_save_options(){
 		
 	$all_fields_name = array(
 							'uaf_server_url_type',
-							'uaf_uploader_type',
+							//'uaf_uploader_type',
 							'uaf_use_absolute_font_path',
 							'uaf_disbale_editor_font_list',
 							'uaf_enable_multi_lang_support',
@@ -206,8 +206,8 @@ function uaf_admin_notices(){
                     <ul style="padding-left:50px;list-style-type: square;">
                         <li><a href="https://wordpress.org/support/plugin/use-any-font/reviews/?filter=5" target="_blank">Ok, you deserve it</a></li>
                         <li><a href="https://dineshkarki.com.np/contact" target="_blank">I still have problem !!</a></li>
-                        <li><a href="?uaf_reviews_notice_hide=1">I already did</a></li>
-                        <li><a href="?uaf_reviews_notice_hide=1">Hide this message</a></li>
+                        <li><a href="?page=use-any-font&uaf_reviews_notice_hide=1">I already did</a></li>
+                        <li><a href="?page=use-any-font&uaf_reviews_notice_hide=1">Hide this message</a></li>
                     </ul>
              </div>';
         }

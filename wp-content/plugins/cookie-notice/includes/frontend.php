@@ -9,16 +9,16 @@ if ( ! defined( 'ABSPATH' ) )
  * @class Cookie_Notice_Frontend
  */
 class Cookie_Notice_Frontend {
-	private $widget_url = '';
 	private $is_bot = false;
 	private $hide_banner = false;
 	
+	// api urls
+	private $widget_url = '//cdn.hu-manity.co/hu-banner.min.js';
+	private $app_url = 'https://app.hu-manity.co';
+
 	public function __construct() {
 		// actions
 		add_action( 'init', array( $this, 'init' ) );
-
-		$this->widget_url = '//cdn.hu-manity.co/hu-banner.min.js';
-		$this->app_url = 'https://app.hu-manity.co';
 	}
 
 	/**
@@ -88,6 +88,10 @@ class Cookie_Notice_Frontend {
 			'currentLanguage'	=> $locale_code[0],
 			'blocking' => (bool) ( ! is_user_logged_in() ? Cookie_Notice()->options['general']['app_blocking'] : false )
 		) );
+		
+		if ( Cookie_Notice()->options['general']['debug_mode'] ) {
+			$options['debugMode'] = true;
+		}
 		
 		// message output
 		$output = '
@@ -241,7 +245,7 @@ class Cookie_Notice_Frontend {
 	 */
 	public function wp_print_footer_scripts() {
 		if ( Cookie_Notice()->cookies_accepted() ) {
-			$scripts = apply_filters( 'cn_refuse_code_scripts_html', html_entity_decode( trim( wp_kses( Cookie_Notice()->options['general']['refuse_code'], Cookie_Notice()->get_allowed_html() ) ) ) );
+			$scripts = apply_filters( 'cn_refuse_code_scripts_html', html_entity_decode( trim( wp_kses( Cookie_Notice()->options['general']['refuse_code'], Cookie_Notice()->get_allowed_html() ) ) ), 'body' );
 
 			if ( ! empty( $scripts ) )
 				echo $scripts;
@@ -255,7 +259,7 @@ class Cookie_Notice_Frontend {
 	 */
 	public function wp_print_header_scripts() {
 		if ( Cookie_Notice()->cookies_accepted() ) {
-			$scripts = apply_filters( 'cn_refuse_code_scripts_html', html_entity_decode( trim( wp_kses( Cookie_Notice()->options['general']['refuse_code_head'], Cookie_Notice()->get_allowed_html() ) ) ) );
+			$scripts = apply_filters( 'cn_refuse_code_scripts_html', html_entity_decode( trim( wp_kses( Cookie_Notice()->options['general']['refuse_code_head'], Cookie_Notice()->get_allowed_html() ) ) ), 'head' );
 
 			if ( ! empty( $scripts ) )
 				echo $scripts;

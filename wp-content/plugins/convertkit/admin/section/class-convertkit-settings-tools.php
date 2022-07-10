@@ -67,7 +67,7 @@ class ConvertKit_Settings_Tools extends ConvertKit_Settings_Base {
 		}
 
 		// Clear Log.
-		$log = new ConvertKit_Log();
+		$log = new ConvertKit_Log( CONVERTKIT_PLUGIN_PATH );
 		$log->clear();
 
 		// Redirect to Tools screen.
@@ -91,11 +91,11 @@ class ConvertKit_Settings_Tools extends ConvertKit_Settings_Base {
 		}
 
 		// Get Log and download.
-		$log = new ConvertKit_Log();
+		$log = new ConvertKit_Log( CONVERTKIT_PLUGIN_PATH );
 
 		// Download.
 		header( 'Content-type: application/octet-stream' );
-		header( 'Content-Disposition: attachment; filename=' . $log->get_filename() . '.txt' );
+		header( 'Content-Disposition: attachment; filename=convertkit-log.txt' );
 		header( 'Pragma: no-cache' );
 		header( 'Expires: 0' );
 		echo $wp_filesystem->get_contents( $log->get_filename() ); // phpcs:ignore
@@ -131,7 +131,7 @@ class ConvertKit_Settings_Tools extends ConvertKit_Settings_Base {
 
 		// Download.
 		header( 'Content-type: application/octet-stream' );
-		header( 'Content-Disposition: attachment; filename=system-info.txt' );
+		header( 'Content-Disposition: attachment; filename=convertkit-system-info.txt' );
 		header( 'Pragma: no-cache' );
 		header( 'Expires: 0' );
 		echo $wp_filesystem->get_contents( $filename ); // phpcs:ignore
@@ -286,7 +286,7 @@ class ConvertKit_Settings_Tools extends ConvertKit_Settings_Base {
 	public function render() {
 
 		// Get Log and System Info.
-		$log         = new ConvertKit_Log();
+		$log         = new ConvertKit_Log( CONVERTKIT_PLUGIN_PATH );
 		$system_info = new ConvertKit_System_Info();
 
 		// Define messages that might be displayed as a notification.

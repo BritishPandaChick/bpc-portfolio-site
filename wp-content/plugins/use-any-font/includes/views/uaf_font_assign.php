@@ -31,7 +31,7 @@ $fontsDataWithVariations = uaf_group_fontdata_by_fontname($fontsData);
             if ($languageSelector['enableMultiLang'] == TRUE ): ?>    
                 <tr>
                     <td width="175">Select Language</td>
-                    <td><?php echo esc_html($languageSelector['selectHTML']); ?></td>
+                    <td><?php echo $languageSelector['selectHTML']; ?></td>
                 </tr>
             <?php endif; ?>
             <tr>    

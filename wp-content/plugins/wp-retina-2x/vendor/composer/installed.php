@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '2514f13b3d3cd36ecee7d9ba766508c8b186dfa7',
+        'reference' => 'd3d1d42874842c11d8310ee82c7d02b0b3bbf0a9',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '2514f13b3d3cd36ecee7d9ba766508c8b186dfa7',
+            'reference' => 'd3d1d42874842c11d8310ee82c7d02b0b3bbf0a9',
             'dev_requirement' => false,
         ),
         'kub-at/php-simple-html-dom-parser' => array(

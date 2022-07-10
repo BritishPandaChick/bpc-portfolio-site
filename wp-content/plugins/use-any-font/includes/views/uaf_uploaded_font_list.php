@@ -30,7 +30,7 @@ if (!empty($fontsData)):
                         </div>
                     <?php endif; ?>
 
-                    <span class="<?php echo esc_attr($fontData['font_name']) ?>" style="font-weight:<?php echo esc_attr($fontData['font_weight']); ?>; font-style: <?php echo esc_attr($fontData['font_style']); ?>;">The quick brown fox jumps over the lazy dog</span>
+                    <span class="<?php echo esc_attr($fontData['font_name']) ?>" style="font-weight:<?php echo esc_attr(array_key_exists('font_weight', $fontData)?$fontData['font_weight']:''); ?>; font-style: <?php echo esc_attr(array_key_exists('font_style', $fontData)?$fontData['font_style']:''); ?>;">The quick brown fox jumps over the lazy dog</span>
 
                     <div class="delete_link"><a onclick="if (!confirm('Are you sure ?')){return false;}" href="<?php echo wp_nonce_url( 'admin.php?page=use-any-font&tab=font_upload&delete_font_key='.$key, 'uaf_delete_font', 'uaf_nonce' ); ?>">Delete</a></div>
                 </div>

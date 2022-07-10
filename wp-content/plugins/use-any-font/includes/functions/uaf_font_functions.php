@@ -266,7 +266,7 @@ function uaf_get_language_selector(){
 			$returnSelectHTML = '<select style="width:200px;" class="uaf_required" name="language"><option selected="selected" value="">- Select - </option><option value="all_lang">All Languages</option>';
 			foreach ($lang_select_data as $locale => $lang_name) {
 				//$returnSelectHTML .= '<option value="body.language-'.$locale.'">'.$lang_name.'</option>';
-				$returnSelectHTML .= '<option value="html:lang('.$locale.')">'.$lang_name.'</option>';		
+				$returnSelectHTML .= '<option value="html:lang('.esc_attr($locale).')">'.esc_attr($lang_name).'</option>';		
 			}
 			$returnSelectHTML .= '</select>';
 		} else {
@@ -282,7 +282,7 @@ function uaf_get_language_selector(){
 
 function uaf_save_font_assign(){
 	$font_key               = sanitize_key($_POST['font_key']);
-	$elements               = array_map('sanitize_title', $_POST['elements']);
+	$elements               = array_map('sanitize_text_field', $_POST['elements']);
 	$custom_elements		= trim(sanitize_text_field($_POST['custom_elements']));
 
 	$fontsData      		= uaf_get_uploaded_font_data();

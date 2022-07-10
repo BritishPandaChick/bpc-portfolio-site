@@ -3,9 +3,9 @@ Contributors: TigrouMeow
 Tags: retina, images, replace, size, thumbnail, regenerate, sizes, high-dpi
 Donate link: https://meowapps.com/donation/
 Requires at least: 5.0
-Tested up to: 5.9.3
+Tested up to: 6.0
 Requires PHP: 7.0
-Stable tag: 6.2.4
+Stable tag: 6.2.8
 
 Retina, Regenerate Thumbnails, Image Sizes Management, Replace Images, Image Threshold and more.
 
@@ -51,6 +51,10 @@ The plugin cannot inject CSS to handles the images added through CSS, that's bot
 3. Check if it works! - if it doesn't, read the FAQ, the tutorial, and check the forums.
 
 == Changelog ==
+
+= 6.2.8 (2022/06/16) =
+* Fix: Security fix.
+* Update: Remove all the notifications as they probably don't needed anymore.
 
 = 6.2.4 (2022/04/14) =
 * Fix: The Refresh Stats button should not reset the list of ignored entries.
