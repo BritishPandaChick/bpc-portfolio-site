@@ -5,7 +5,7 @@
  * Description: A simple CSS and SVG driven social icons widget.
  * Author: StudioPress
  * Author URI: https://www.studiopress.com/
- * Version: 3.1.0
+ * Version: 3.1.1
  * Text Domain: simple-social-icons
  * Domain Path: /languages
  *
@@ -99,6 +99,7 @@ class Simple_Social_Icons_Widget extends WP_Widget {
 				'background_color'       => '#999999',
 				'background_color_hover' => '#666666',
 				'alignment'              => 'alignleft',
+				'amazon'                 => '',
 				'behance'                => '',
 				'bloglovin'              => '',
 				'dribbble'               => '',
@@ -106,19 +107,23 @@ class Simple_Social_Icons_Widget extends WP_Widget {
 				'facebook'               => '',
 				'flickr'                 => '',
 				'github'                 => '',
-				'gplus'                  => '',
+				'goodreads'              => '',
 				'instagram'              => '',
 				'linkedin'               => '',
 				'medium'                 => '',
+				'meetup'                 => '',
 				'periscope'              => '',
 				'phone'                  => '',
 				'pinterest'              => '',
+				'reddit'                 => '',
 				'rss'                    => '',
 				'snapchat'               => '',
-				'stumbleupon'            => '',
+				'tiktok'                 => '',
+				'tripadvisor'            => '',
 				'tumblr'                 => '',
 				'twitter'                => '',
 				'vimeo'                  => '',
+				'whatsapp'               => '',
 				'xing'                   => '',
 				'youtube'                => '',
 			)
@@ -134,6 +139,10 @@ class Simple_Social_Icons_Widget extends WP_Widget {
 		$this->profiles = apply_filters(
 			'simple_social_default_profiles',
 			array(
+				'amazon'      => array(
+					'label'   => __( 'Amazon URI', 'simple-social-icons' ),
+					'pattern' => $this->get_icon_markup( 'amazon', __( 'Amazon', 'simple-social-icons' ) ),
+				),
 				'behance'     => array(
 					'label'   => __( 'Behance URI', 'simple-social-icons' ),
 					'pattern' => $this->get_icon_markup( 'behance', __( 'Behance', 'simple-social-icons' ) ),
@@ -162,9 +171,9 @@ class Simple_Social_Icons_Widget extends WP_Widget {
 					'label'   => __( 'GitHub URI', 'simple-social-icons' ),
 					'pattern' => $this->get_icon_markup( 'github', __( 'GitHub', 'simple-social-icons' ) ),
 				),
-				'gplus'       => array(
-					'label'   => __( 'Google+ URI', 'simple-social-icons' ),
-					'pattern' => $this->get_icon_markup( 'gplus', __( 'Google+', 'simple-social-icons' ) ),
+				'goodreads'   => array(
+					'label'   => __( 'Goodreads URI', 'simple-social-icons' ),
+					'pattern' => $this->get_icon_markup( 'goodreads', __( 'Goodreads', 'simple-social-icons' ) ),
 				),
 				'instagram'   => array(
 					'label'   => __( 'Instagram URI', 'simple-social-icons' ),
@@ -178,6 +187,10 @@ class Simple_Social_Icons_Widget extends WP_Widget {
 					'label'   => __( 'Medium URI', 'simple-social-icons' ),
 					'pattern' => $this->get_icon_markup( 'medium', __( 'Medium', 'simple-social-icons' ) ),
 				),
+				'meetup'      => array(
+					'label'   => __( 'Meetup URI', 'simple-social-icons' ),
+					'pattern' => $this->get_icon_markup( 'meetup', __( 'Meetup', 'simple-social-icons' ) ),
+				),
 				'periscope'   => array(
 					'label'   => __( 'Periscope URI', 'simple-social-icons' ),
 					'pattern' => $this->get_icon_markup( 'periscope', __( 'Periscope', 'simple-social-icons' ) ),
@@ -190,6 +203,10 @@ class Simple_Social_Icons_Widget extends WP_Widget {
 					'label'   => __( 'Pinterest URI', 'simple-social-icons' ),
 					'pattern' => $this->get_icon_markup( 'pinterest', __( 'Pinterest', 'simple-social-icons' ) ),
 				),
+				'reddit'      => array(
+					'label'   => __( 'Reddit URI', 'simple-social-icons' ),
+					'pattern' => $this->get_icon_markup( 'reddit', __( 'Reddit', 'simple-social-icons' ) ),
+				),
 				'rss'         => array(
 					'label'   => __( 'RSS URI', 'simple-social-icons' ),
 					'pattern' => $this->get_icon_markup( 'rss', __( 'RSS', 'simple-social-icons' ) ),
@@ -198,9 +215,13 @@ class Simple_Social_Icons_Widget extends WP_Widget {
 					'label'   => __( 'Snapchat URI', 'simple-social-icons' ),
 					'pattern' => $this->get_icon_markup( 'snapchat', __( 'Snapchat', 'simple-social-icons' ) ),
 				),
-				'stumbleupon' => array(
-					'label'   => __( 'StumbleUpon URI', 'simple-social-icons' ),
-					'pattern' => $this->get_icon_markup( 'stumbleupon', __( 'StumbleUpon', 'simple-social-icons' ) ),
+				'tiktok'      => array(
+					'label'   => __( 'TikTok URI', 'simple-social-icons' ),
+					'pattern' => $this->get_icon_markup( 'tiktok', __( 'TikTok', 'simple-social-icons' ) ),
+				),
+				'tripadvisor' => array(
+					'label'   => __( 'Tripadvisor URI', 'simple-social-icons' ),
+					'pattern' => $this->get_icon_markup( 'tripadvisor', __( 'Tripadvisor', 'simple-social-icons' ) ),
 				),
 				'tumblr'      => array(
 					'label'   => __( 'Tumblr URI', 'simple-social-icons' ),
@@ -213,6 +234,10 @@ class Simple_Social_Icons_Widget extends WP_Widget {
 				'vimeo'       => array(
 					'label'   => __( 'Vimeo URI', 'simple-social-icons' ),
 					'pattern' => $this->get_icon_markup( 'vimeo', __( 'Vimeo', 'simple-social-icons' ) ),
+				),
+				'whatsapp'    => array(
+					'label'   => __( 'WhatsApp URI', 'simple-social-icons' ),
+					'pattern' => $this->get_icon_markup( 'whatsapp', __( 'WhatsApp', 'simple-social-icons' ) ),
 				),
 				'xing'        => array(
 					'label'   => __( 'Xing URI', 'simple-social-icons' ),

@@ -2,8 +2,8 @@
 Contributors: studiopress, nathanrice, bgardner, dreamwhisper, laurenmancke, shannonsans, modernnerd, marksabbath, damiencarbery, helgatheviking, littlerchicken, tiagohillebrandt, wpmuguru, michaelbeil, norcross, rafaltomal
 Tags: social media, social networking, social profiles
 Requires at least: 4.0
-Tested up to: 5.9
-Stable tag: 3.1.0
+Tested up to: 6.0
+Stable tag: 3.1.1
 
 This plugin allows you to insert social icons in any widget area.
 
@@ -40,6 +40,7 @@ This will remove icon styling options in the widget settings, and prevent Simple
 
 = Which services are included? =
 
+* Amazon
 * Behance
 * Bloglovin
 * Dribbble
@@ -47,25 +48,34 @@ This will remove icon styling options in the widget settings, and prevent Simple
 * Facebook
 * Flickr
 * Github
-* Google+
+* Goodreads
 * Instagram
 * LinkedIn
 * Medium
+* Meetup
 * Periscope
 * Phone
 * Pinterest
+* Reddit
 * RSS
 * Snapchat
-* StumbleUpon
+* TikTok
+* Tripadvisor
 * Tumblr
 * Twitter
 * Vimeo
+* WhatsApp
 * Xing
 * YouTube
 
 NOTE - The rights to each pictogram in the social extension are either trademarked or copyrighted by the respective company.
 
 == Changelog ==
+
+= 3.1.1 =
+* Added Amazon, Goodreads, Meetup, Reddit, TikTok, Tripadvisor, and WhatsApp icons
+* Updated GitHub icon
+* Removed Google+ and StumbleUpon icons
 
 = 3.1.0 =
 * Add escaping to output

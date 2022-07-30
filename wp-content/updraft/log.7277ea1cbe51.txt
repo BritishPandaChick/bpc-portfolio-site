@@ -578,3 +578,9 @@
 0803.932 (1) There were errors in the uploads, so the 'resume' event is remaining scheduled
 0804.087 (1) No email will/can be sent - the user has not configured an email address.
 0804.187 (1) The backup has not finished; a resumption is scheduled
+1653631.716 (2) Opened log file at time: Fri, 29 Jul 2022 23:49:08 +0000 on http://localhost/bpcportfolio
+1653632.014 (2) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.22.14 WP: 6.0 PHP: 8.0.1 (apache2handler, Windows NT LAPTOP-LEVBKH4K 10.0 build 19043 (Windows 10) AMD64) MySQL: 10.4.17-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/8.0.1 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 56.2M | 30M) multisite: N openssl: OpenSSL 1.1.1i  8 Dec 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+1653632.132 (2) Free space on disk containing Updraft's temporary directory: 619949.5 MB
+1653632.292 (2) Requesting backup semaphore lock (7277ea1cbe51)
+1653632.550 (2) [Info] Lock (updraft_lock_7277ea1cbe51, wp_options) acquired
+1653632.657 (2) This backup task (7277ea1cbe51) is either complete or began over 2 days ago: ending (1659138548.5398, 1657484917) (existing jobdata keys: resume_interval, job_type, jobstatus, backup_time, job_time_ms, service, split_every, maxzipbatch, job_file_entities, option_cache, uploaded_lastreset, one_shot, followsups_allowed, last_sapi, backup_database, backup_files, remote_storage_instances, runs_started, current_resumption, binzip, filecreating_substatus, files_enumerated_at, run_times, useful_checkins, sha1-plugins0, sha256-plugins0, sha1-themes0, sha256-themes0, sha1-uploads0, sha256-uploads0, sha1-others0, sha256-others0, backup_files_array, binsqldump, dbcreating_substatus, fetch_rows, sha1-db0, sha256-db0, uploading_substatus, prune)
