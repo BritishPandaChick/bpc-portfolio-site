@@ -414,3 +414,72 @@
 0027.561 (0) There were errors in the uploads, so the 'resume' event is remaining scheduled
 0027.565 (0) No email will/can be sent - the user has not configured an email address.
 0027.567 (0) The backup has not finished; a resumption is scheduled
+0320.058 (1) Opened log file at time: Wed, 18 Jan 2023 15:14:46 +0000 on http://localhost/bpcportfolio
+0320.061 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.22.24 WP: 6.1.1 PHP: 8.1.4 (apache2handler, Windows NT LAPTOP-5NDR6MG6 10.0 build 22621 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 59.6M | 62M) multisite: N openssl: OpenSSL 1.1.1m  14 Dec 2021 mcrypt: N LANG:  ZipArchive::addFile: Y
+0320.063 (1) Free space on disk containing Updraft's temporary directory: 121446.4 MB
+0320.066 (1) Requesting backup semaphore lock (ff9d8bfface6)
+0320.073 (1) [Debug] Lock option (updraft_lock_ff9d8bfface6, wp_options) was created in the database
+0320.074 (1) [Info] Lock (updraft_lock_ff9d8bfface6, wp_options) acquired after initialising the database
+0320.077 (1) Backup run: resumption=1, nonce=ff9d8bfface6, file_nonce=ff9d8bfface6 begun at=1674054566 (320s ago), job type=backup, previous check-in=27.54s
+0320.081 (1) Scheduling a resumption (2) after 300 seconds (1674055186) in case this run gets aborted
+0320.099 (1) Checking if we have a zip executable available
+0320.101 (1) Creation of backups of directories: already finished
+0320.105 (1) Saving backup status to database (elements: 8)
+0320.116 (1) Database dump (WordPress DB): Creation was completed already
+0320.119 (1) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+0320.127 (1) PHP event: code E_DEPRECATED: strlen(): Passing null to parameter #1 ($string) of type string is deprecated (line 2864, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0320.133 (1) backup_2023-01-18-1009_Sarah_Bartley_ff9d8bfface6-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0320.135 (1) backup_2023-01-18-1009_Sarah_Bartley_ff9d8bfface6-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0320.138 (1) backup_2023-01-18-1009_Sarah_Bartley_ff9d8bfface6-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0320.139 (1) backup_2023-01-18-1009_Sarah_Bartley_ff9d8bfface6-others.zip: others: This file has not yet been successfully uploaded: will queue
+0320.141 (1) backup_2023-01-18-1009_Sarah_Bartley_ff9d8bfface6-db.gz: db: This file has not yet been successfully uploaded: will queue
+0320.143 (1) Saving backup history. Total backup size: 56.4 MB
+0320.147 (1) Requesting upload of the files that have not yet been successfully uploaded (5)
+0320.151 (1) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0320.153 (1) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+0320.156 (1) PHP event: code E_DEPRECATED: Return type of Requests_Cookie_Jar::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice (line 63, C:\xampp\htdocs\bpcportfolio\wp-includes\Requests\Cookie\Jar.php)
+0320.159 (1) PHP event: code E_DEPRECATED: Return type of Requests_Cookie_Jar::offsetGet($key) should either be compatible with ArrayAccess::offsetGet(mixed $offset): mixed, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice (line 73, C:\xampp\htdocs\bpcportfolio\wp-includes\Requests\Cookie\Jar.php)
+0320.162 (1) PHP event: code E_DEPRECATED: Return type of Requests_Cookie_Jar::offsetSet($key, $value) should either be compatible with ArrayAccess::offsetSet(mixed $offset, mixed $value): void, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice (line 89, C:\xampp\htdocs\bpcportfolio\wp-includes\Requests\Cookie\Jar.php)
+0320.164 (1) PHP event: code E_DEPRECATED: Return type of Requests_Cookie_Jar::offsetUnset($key) should either be compatible with ArrayAccess::offsetUnset(mixed $offset): void, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice (line 102, C:\xampp\htdocs\bpcportfolio\wp-includes\Requests\Cookie\Jar.php)
+0320.166 (1) PHP event: code E_DEPRECATED: Return type of Requests_Cookie_Jar::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice (line 111, C:\xampp\htdocs\bpcportfolio\wp-includes\Requests\Cookie\Jar.php)
+0320.172 (1) PHP event: code E_DEPRECATED: http_build_query(): Passing null to parameter #2 ($numeric_prefix) of type string is deprecated (line 345, C:\xampp\htdocs\bpcportfolio\wp-includes\Requests\Transport\cURL.php)
+0320.353 (1) PHP event: code E_DEPRECATED: Return type of Requests_Utility_CaseInsensitiveDictionary::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice (line 40, C:\xampp\htdocs\bpcportfolio\wp-includes\Requests\Utility\CaseInsensitiveDictionary.php)
+0320.356 (1) PHP event: code E_DEPRECATED: Return type of Requests_Utility_CaseInsensitiveDictionary::offsetGet($key) should either be compatible with ArrayAccess::offsetGet(mixed $offset): mixed, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice (line 51, C:\xampp\htdocs\bpcportfolio\wp-includes\Requests\Utility\CaseInsensitiveDictionary.php)
+0320.358 (1) PHP event: code E_DEPRECATED: Return type of Requests_Utility_CaseInsensitiveDictionary::offsetSet($key, $value) should either be compatible with ArrayAccess::offsetSet(mixed $offset, mixed $value): void, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice (line 68, C:\xampp\htdocs\bpcportfolio\wp-includes\Requests\Utility\CaseInsensitiveDictionary.php)
+0320.360 (1) PHP event: code E_DEPRECATED: Return type of Requests_Utility_CaseInsensitiveDictionary::offsetUnset($key) should either be compatible with ArrayAccess::offsetUnset(mixed $offset): void, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice (line 82, C:\xampp\htdocs\bpcportfolio\wp-includes\Requests\Utility\CaseInsensitiveDictionary.php)
+0320.362 (1) PHP event: code E_DEPRECATED: Return type of Requests_Utility_CaseInsensitiveDictionary::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice (line 91, C:\xampp\htdocs\bpcportfolio\wp-includes\Requests\Utility\CaseInsensitiveDictionary.php)
+0320.365 (1) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+0320.367 (1) An error condition has occurred for the first time during this job
+0320.372 (1) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+0320.376 (1) Number of backup sets in history: 5; groups (db): 1
+0320.380 (1) Examining (for databases) backup set with group_id=0, nonce=ff9d8bfface6, datestamp=1674054566 (Jan 18 2023 15:09:26)
+0320.383 (1) This backup set is the backup set just made, so will not be deleted.
+0320.383 (1) Examining (for databases) backup set with group_id=0, nonce=35f52ab4f388, datestamp=1659138672 (Jul 29 2022 23:51:12)
+0320.383 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0320.385 (1) Examining (for databases) backup set with group_id=0, nonce=7277ea1cbe51, datestamp=1657484917 (Jul 10 2022 20:28:37)
+0320.385 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0320.385 (1) Examining (for databases) backup set with group_id=0, nonce=08d886cdf941, datestamp=1647884938 (Mar 21 2022 17:48:58)
+0320.385 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0320.385 (1) Examining (for databases) backup set with group_id=0, nonce=f52c0fef7db6, datestamp=1645678642 (Feb 24 2022 04:57:22)
+0320.385 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0320.385 (1) Number of backup sets in history: 5; groups (files): 1
+0320.388 (1) Examining (for files) backup set with nonce=ff9d8bfface6, datestamp=1674054566 (Jan 18 2023 15:09:26)
+0320.388 (1) This backup set is the backup set just made, so will not be deleted.
+0320.389 (1) This backup set is the backup set just made, so will not be deleted.
+0320.389 (1) This backup set is the backup set just made, so will not be deleted.
+0320.389 (1) This backup set is the backup set just made, so will not be deleted.
+0320.390 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0320.391 (1) Examining (for files) backup set with nonce=35f52ab4f388, datestamp=1659138672 (Jul 29 2022 23:51:12)
+0320.391 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0320.391 (1) Examining (for files) backup set with nonce=7277ea1cbe51, datestamp=1657484917 (Jul 10 2022 20:28:37)
+0320.391 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0320.391 (1) Examining (for files) backup set with nonce=08d886cdf941, datestamp=1647884938 (Mar 21 2022 17:48:58)
+0320.391 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0320.391 (1) Examining (for files) backup set with nonce=f52c0fef7db6, datestamp=1645678642 (Feb 24 2022 04:57:22)
+0320.391 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0320.392 (1) Retain: saving new backup history (sets now: 5) and finishing retain operation
+0320.396 (1) Resume backup (ff9d8bfface6, 1): finish run
+0320.400 (1) [Info] Lock option (updraft_lock_ff9d8bfface6, wp_options) released
+0320.404 (1) There were errors in the uploads, so the 'resume' event is remaining scheduled
+0320.409 (1) No email will/can be sent - the user has not configured an email address.
+0320.411 (1) The backup has not finished; a resumption is scheduled
