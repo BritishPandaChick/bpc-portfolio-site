@@ -67,7 +67,7 @@ add_action('admin_init', function () {
 			if( \WBCR\Titan\Plugin\Helper::is_need_show_setup_page() ) {
 				try {
 					$redirect_url = '';
-					if( class_exists('Wbcr_FactoryPages453') ) {
+					if( class_exists('Wbcr_FactoryPages460') ) {
 						$redirect_url = $plugin->getPluginPageUrl('setup', ['wtitan_setup_page_viewed' => 1]);
 					}
 					if( $redirect_url ) {
@@ -148,8 +148,8 @@ add_action('wbcr/factory/admin_notices', function ($notices, $plugin_name) {
 	echo '<div class="alert alert-warning wbcr-factory-warning-notice wtitan-get-plugins-scanner__notice"><p><span class="dashicons dashicons-plugins-checked"></span> ' . $notice_text . '</p></div>';
 	*///$obj->printWarningNotice($notice_text);
 
-/** @var \Wbcr_Factory454_Plugin $plugin */
-/** @var \Wbcr_FactoryPages453_ImpressiveThemplate $obj */
+/** @var \Wbcr_Factory460_Plugin $plugin */
+/** @var \Wbcr_FactoryPages460_ImpressiveThemplate $obj */
 /*if ( ( \WBCR\Titan\Plugin::app()->premium->is_activate() ) || ( $plugin->getPluginName() != \WBCR\Titan\Plugin::app()->getPluginName() ) || $obj->id == 'license' ) {
 	return;
 }

@@ -4,7 +4,7 @@
  * Plugin URI: https://wordpress.org/plugins/hide-login-page/
  * Description: Hide wp-login.php login page and close wp-admin access to avoid hacker attacks and brute force.
  * Author: Webcraftic <wordpress.webraftic@gmail.com>
- * Version: 1.1.5
+ * Version: 1.1.6
  * Text Domain: hide-login-page
  * Domain Path: /languages/
  * Author URI: http://clearfy.pro
@@ -63,15 +63,15 @@ $whlp_plugin_info = array(
 
 	// FRAMEWORK MODULES
 	'load_factory_modules' => array(
-		array('libs/factory/bootstrap', 'factory_bootstrap_455', 'admin'),
-		array('libs/factory/forms', 'factory_forms_451', 'admin'),
-		array('libs/factory/pages', 'factory_pages_453', 'admin'),
-		array('libs/factory/templates', 'factory_templates_106', 'all'),
+		array('libs/factory/bootstrap', 'factory_bootstrap_461', 'admin'),
+		array('libs/factory/forms', 'factory_forms_457', 'admin'),
+		array('libs/factory/pages', 'factory_pages_460', 'admin'),
+		array('libs/factory/templates', 'factory_templates_112', 'all'),
 		array('libs/factory/adverts', 'factory_adverts_000', 'admin')
 	)
 );
 
-$whlp_compatibility = new Wbcr_Factory454_Requirements(__FILE__, array_merge($whlp_plugin_info, array(
+$whlp_compatibility = new Wbcr_Factory460_Requirements(__FILE__, array_merge($whlp_plugin_info, array(
 	'plugin_already_activate' => defined('WHLP_PLUGIN_ACTIVE'),
 	'required_php_version' => '5.4',
 	'required_wp_version' => '4.2.0',

@@ -57,6 +57,7 @@ class ConvertKit_Settings_General extends ConvertKit_Settings_Base {
 		$this->title    = __( 'General Settings', 'convertkit' );
 		$this->tab_text = __( 'General', 'convertkit' );
 
+		// Render container element.
 		add_action( 'convertkit_settings_base_render_before', array( $this, 'render_before' ) );
 
 		parent::__construct();
@@ -119,8 +120,9 @@ class ConvertKit_Settings_General extends ConvertKit_Settings_Base {
 				$this->settings_key,
 				$this->name,
 				array(
-					'label_for' => '_wp_convertkit_settings_' . $supported_post_type . '_form',
-					'post_type' => $supported_post_type,
+					'label_for'        => '_wp_convertkit_settings_' . $supported_post_type . '_form',
+					'post_type'        => $supported_post_type,
+					'post_type_object' => $post_type,
 				)
 			);
 		}
@@ -182,7 +184,8 @@ class ConvertKit_Settings_General extends ConvertKit_Settings_Base {
 	}
 
 	/**
-	 * Performs actions prior to rendering the settings form.
+	 * Renders container divs for styling, and attempts to fetch the ConvertKit Account
+	 * details if API credentials have been specified.
 	 *
 	 * @since 1.9.6
 	 */
@@ -196,7 +199,8 @@ class ConvertKit_Settings_General extends ConvertKit_Settings_Base {
 		$this->api = new ConvertKit_API(
 			$this->settings->get_api_key(),
 			$this->settings->get_api_secret(),
-			$this->settings->debug_enabled()
+			$this->settings->debug_enabled(),
+			'settings'
 		);
 
 		// Get Account Details, which we'll use in account_name_callback(), but also lets us test
@@ -319,18 +323,21 @@ class ConvertKit_Settings_General extends ConvertKit_Settings_Base {
 
 		// Refresh Forms.
 		if ( ! $this->forms ) {
-			$this->forms = new ConvertKit_Resource_Forms();
+			$this->forms = new ConvertKit_Resource_Forms( 'settings' );
 			$this->forms->refresh();
 
 			// Also refresh Landing Pages, Tags and Posts. Whilst not displayed in the Plugin Settings, this ensures up to date
 			// lists are stored for when editing e.g. Pages.
-			$landing_pages = new ConvertKit_Resource_Landing_Pages();
+			$landing_pages = new ConvertKit_Resource_Landing_Pages( 'settings' );
 			$landing_pages->refresh();
 
-			$posts = new ConvertKit_Resource_Posts();
+			$posts = new ConvertKit_Resource_Posts( 'settings' );
 			$posts->refresh();
 
-			$tags = new ConvertKit_Resource_Tags();
+			$products = new ConvertKit_Resource_Products( 'settings' );
+			$products->refresh();
+
+			$tags = new ConvertKit_Resource_Tags( 'settings' );
 			$tags->refresh();
 		}
 
@@ -353,13 +360,44 @@ class ConvertKit_Settings_General extends ConvertKit_Settings_Base {
 			$options[ esc_attr( $form['id'] ) ] = esc_html( $form['name'] );
 		}
 
+		// Build description with preview link.
+		$description = false;
+		$preview_url = WP_ConvertKit()->get_class( 'preview_output' )->get_preview_form_url( $args['post_type'] );
+		if ( $preview_url ) {
+			// Include a preview link in the description.
+			$description = sprintf(
+				'%s %s %s',
+				sprintf(
+					/* translators: Post Type name, plural */
+					esc_html__( 'Select a form above to automatically output below all %s.', 'convertkit' ),
+					$args['post_type_object']->label
+				),
+				'<a href="' . esc_attr( $preview_url ) . '" id="convertkit-preview-form-' . esc_attr( $args['post_type'] ) . '" target="_blank">' . esc_html__( 'Click here', 'convertkit' ) . '</a>',
+				esc_html__( 'to preview how this will display.', 'convertkit' )
+			);
+		} else {
+			// Just output the field's description.
+			$description = sprintf(
+				/* translators: Post Type name, plural */
+				esc_html__( 'Select a form above to automatically output below all %s.', 'convertkit' ),
+				$args['post_type_object']->label
+			);
+		}
+
 		// Build field.
 		$select_field = $this->get_select_field(
 			$args['post_type'] . '_form',
 			$this->settings->get_default_form( $args['post_type'] ),
 			$options,
-			false,
-			array( 'convertkit-select2' )
+			$description,
+			array(
+				'convertkit-select2',
+				'convertkit-preview-output-link',
+			),
+			array(
+				'data-target' => '#convertkit-preview-form-' . esc_attr( $args['post_type'] ),
+				'data-link'   => esc_attr( $preview_url ) . '&convertkit_form_id=',
+			)
 		);
 
 		// Output field.

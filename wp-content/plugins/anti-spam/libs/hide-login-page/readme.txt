@@ -3,7 +3,7 @@ Tags: hide login, hide login page, hide wp admin, rename login, rename login url
 Contributors: webcraftic
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VDX7JNTQPNPFW
 Requires at least: 5.2
-Tested up to: 5.9
+Tested up to: 6.0
 Requires PHP: 7.0
 Stable tag: trunk
 License: GPLv2
@@ -77,6 +77,9 @@ http://site.com/login?action=register and http://site.com /login?action=lostpass
 1. Control panel
 
 == Changelog ==
+= 1.1.6 (30.05.2022) =
+* Added: Compatibility with Wordpress 6.0
+
 = 1.1.5 (24.03.2022) =
 * Added: Compatibility with Wordpress 5.9
 

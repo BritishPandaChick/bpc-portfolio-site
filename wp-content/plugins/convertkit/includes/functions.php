@@ -22,6 +22,9 @@ function convertkit_plugin_activate( $network_wide ) {
 	if ( ! is_multisite() || ! $network_wide ) {
 		// Single Site activation.
 		$convertkit->get_class( 'setup' )->activate();
+
+		// Set a transient for 30 seconds to redirect to the setup screen on activation.
+		set_transient( 'convertkit-setup', true, 30 );
 	} else {
 		// Multisite network wide activation.
 		$sites = get_sites(
@@ -30,7 +33,7 @@ function convertkit_plugin_activate( $network_wide ) {
 			)
 		);
 		foreach ( $sites as $site ) {
-			switch_to_blog( $site->blog_id );
+			switch_to_blog( (int) $site->blog_id );
 			$convertkit->get_class( 'setup' )->activate();
 			restore_current_blog();
 		}
@@ -87,7 +90,7 @@ function convertkit_plugin_deactivate( $network_wide ) {
 			)
 		);
 		foreach ( $sites as $site ) {
-			switch_to_blog( $site->blog_id );
+			switch_to_blog( (int) $site->blog_id );
 			$convertkit->get_class( 'setup' )->deactivate();
 			restore_current_blog();
 		}
@@ -188,6 +191,19 @@ function convertkit_get_settings_link( $query_args = array() ) {
 	);
 
 	return add_query_arg( $query_args, admin_url( 'options-general.php' ) );
+
+}
+
+/**
+ * Helper method to return the URL the user needs to visit to register a ConvertKit account.
+ *
+ * @since   1.9.8.4
+ *
+ * @return  string  ConvertKit Registration URL.
+ */
+function convertkit_get_registration_url() {
+
+	return 'https://app.convertkit.com/users/signup?utm_source=wordpress&utm_content=convertkit';
 
 }
 

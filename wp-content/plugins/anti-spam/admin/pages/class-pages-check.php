@@ -71,12 +71,12 @@ class Check extends Base {
 	/**
 	 * Scanner page constructor.
 	 *
-	 * @param \Wbcr_Factory454_Plugin $plugin
+	 * @param \Wbcr_Factory460_Plugin $plugin
 	 *
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 *
 	 */
-	public function __construct( \Wbcr_Factory454_Plugin $plugin ) {
+	public function __construct( \Wbcr_Factory460_Plugin $plugin ) {
 		$this->plugin = $plugin;
 
 		$this->menu_title                  = __( 'Audit', 'titan-security' );
@@ -93,12 +93,12 @@ class Check extends Base {
 	/**
 	 * {@inheritDoc}
 	 * @param                         $notices
-	 * @param \Wbcr_Factory454_Plugin $plugin
+	 * @param \Wbcr_Factory460_Plugin $plugin
 	 *
 	 * @return array
 	 * @since 6.5.2
 	 *
-	 * @see   \FactoryPages453_ImpressiveThemplate
+	 * @see   \FactoryPages460_ImpressiveThemplate
 	 */
 	public function getActionNotices( $notices ) {
 
@@ -152,7 +152,7 @@ class Check extends Base {
 
 		$this->styles->add( $this->MODULE_URL . '/assets/css/check-dashboard.css' );
 		$this->scripts->add( $this->MODULE_URL . '/assets/js/check.js', [ 'jquery' ] );
-		$this->scripts->localize( 'update_nonce', wp_create_nonce( "updates" ) );
+		//$this->scripts->localize( 'update_nonce', wp_create_nonce( "updates" ) );
 		$this->scripts->localize( 'wtscanner', [
 			'update_nonce' => wp_create_nonce( "updates" ),
 			'hide_nonce'   => wp_create_nonce( "hide" ),

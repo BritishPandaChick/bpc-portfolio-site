@@ -320,7 +320,7 @@
 	// DROPDOWN CONTROL DEFINITION
 	// ================================
 
-	$.fn.factoryBootstrap455_dropdownControl = function(option) {
+	$.fn.factoryBootstrap461_dropdownControl = function(option) {
 
 		// call an method
 		if( typeof option === "string" ) {
@@ -343,13 +343,13 @@
 		}
 	};
 
-	$.fn.factoryBootstrap455_dropdownControl.Constructor = DropdownControl;
+	$.fn.factoryBootstrap461_dropdownControl.Constructor = DropdownControl;
 
 	// AUTO CREATING
 	// ================================
 
 	$(function() {
-		$(".factory-bootstrap-455 .factory-dropdown").factoryBootstrap455_dropdownControl();
+		$(".factory-bootstrap-461 .factory-dropdown").factoryBootstrap461_dropdownControl();
 	});
 
 }(jQuery) );

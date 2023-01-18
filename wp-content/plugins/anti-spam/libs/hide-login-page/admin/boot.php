@@ -47,8 +47,8 @@ function wbcr_hlp_install_conflict_plugins()
 
 /**
  *
- * @param Wbcr_Factory454_Plugin $plugin
- * @param Wbcr_FactoryPages453_ImpressiveThemplate $page
+ * @param Wbcr_Factory460_Plugin $plugin
+ * @param Wbcr_FactoryPages460_ImpressiveThemplate $page
  *
  */
 function wbcr_hlp_get_conflict_notices_error($plugin, $page)
@@ -94,7 +94,7 @@ function wbcr_hlp_rating_widget_url($page_url, $plugin_name)
 	return $page_url;
 }
 
-add_filter('wbcr_factory_pages_453_imppage_rating_widget_url', 'wbcr_hlp_rating_widget_url', 10, 2);
+add_filter('wbcr_factory_pages_460_imppage_rating_widget_url', 'wbcr_hlp_rating_widget_url', 10, 2);
 
 function wbcr_hlp_group_options($options)
 {

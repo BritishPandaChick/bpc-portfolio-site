@@ -116,6 +116,13 @@ function convertKitGutenbergRegisterBlock( block ) {
 							const attribute = block.panels[ panel ].fields[ i ], // e.g. 'term'.
 									field   = block.fields[ attribute ]; // field array.
 
+							// If this field doesn't exist as an attribute in the block's get_attributes(),
+							// this is a non-Gutenberg field (such as a color picker for shortcodes),
+							// which should be ignored.
+							if ( typeof block.attributes[ attribute ] === 'undefined' ) {
+								continue;
+							}
+
 							var fieldElement; // Holds the field element (select, textarea, text etc).
 
 							// Define Field's Properties.
@@ -266,7 +273,7 @@ function convertKitGutenbergRegisterBlock( block ) {
 							{
 								block: 'convertkit/' + block.name,
 								attributes: props.attributes,
-								className: 'convertkit-' + block.name,
+								className: 'convertkit-' + block.name
 							}
 						);
 					}

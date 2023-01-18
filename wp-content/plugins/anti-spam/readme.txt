@@ -1,10 +1,10 @@
 === Titan Anti-spam & Security ===
 Contributors: creativemotion
 Tags: antispam, firewall, malware scanner, security, antivirus, firewall, malware, scan, spam
-Requires at least: 4.9
-Tested up to: 5.9
+Requires at least: 5.2
+Tested up to: 6.0
 Requires PHP: 7.0
-Stable tag: trunk
+Stable tag: 7.3.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -193,9 +193,24 @@ You may check out the [source code of the plugin](http://plugins.trac.wordpress.
 The plugin is pretty small and easy to read.
 
 == Changelog ==
-= 7.3.0 - 07.04.2022 =
-* Added: Compatibility with Wordpress 5.9
+7.3.4 – 29.10.2022
 * Fixed: Minor bugs
+
+7.3.3 – 17.10.2022
+* Fixed: Critical error with premium component
+* Fixed: Minor bugs
+
+7.3.2 – 10.09.2022
+* Added: Compatibility with the new version of the premium plugin
+* Fixed: Minor bugs
+
+7.3.1 – 02.08.2022
+Added: Compatibility with WordPress 6.0
+Fixed: Minor bugs
+
+7.3.0 – 07.04.2022
+Added: Compatibility with WordPress 5.9
+Fixed: Minor bugs
 
 7.2.9
 * Fixed: API errors

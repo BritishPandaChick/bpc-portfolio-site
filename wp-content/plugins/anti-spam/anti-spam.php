@@ -3,7 +3,7 @@
 Plugin Name: Titan Anti-spam & Security
 Plugin URI: http://wordpress.org/plugins/anti-spam/
 Description: Titan Security - Anti-spam, Anti-virus, Firewall and Malware Scan
-Version: 7.3.0
+Version: 7.3.4
 Author: CreativeMotion
 Text Domain: titan-security
 Author URI: https://cm-wp.com/
@@ -11,7 +11,7 @@ License: GPLv3
 */
 
 // Exit if accessed directly
-if ( ! defined( 'ABSPATH' ) ) {
+if( !defined('ABSPATH') ) {
 	exit;
 }
 
@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * -----------------------------------------------------------------------------
  */
 
-require_once( dirname( __FILE__ ) . '/libs/factory/core/includes/class-factory-requirements.php' );
+require_once(dirname(__FILE__) . '/libs/factory/core/includes/class-factory-requirements.php');
 
 // @formatter:off
 $wtitan_plugin_info = [
@@ -107,18 +107,18 @@ $wtitan_plugin_info = [
 
 	// FRAMEWORK MODULES
 	'load_factory_modules' => [
-		['libs/factory/bootstrap', 'factory_bootstrap_455', 'admin'],
-		['libs/factory/forms', 'factory_forms_451', 'admin'],
-		['libs/factory/pages', 'factory_pages_453', 'admin'],
-		['libs/factory/templates', 'factory_templates_106', 'all'],
-		['libs/factory/freemius', 'factory_freemius_141', 'all'],
-		['libs/factory/feedback', 'factory_feedback_114', 'admin']
+		['libs/factory/bootstrap', 'factory_bootstrap_461', 'admin'],
+		['libs/factory/forms', 'factory_forms_457', 'admin'],
+		['libs/factory/pages', 'factory_pages_460', 'admin'],
+		['libs/factory/templates', 'factory_templates_112', 'all'],
+		['libs/factory/freemius', 'factory_freemius_147', 'all'],
+		['libs/factory/feedback', 'factory_feedback_120', 'admin']
 	],
-	'load_plugin_components' => array()
+	'load_plugin_components' => []
 
 ];
 
-$wtitan_compatibility = new Wbcr_Factory454_Requirements(__FILE__, array_merge($wtitan_plugin_info, [
+$wtitan_compatibility = new Wbcr_Factory460_Requirements(__FILE__, array_merge($wtitan_plugin_info, [
 	'plugin_already_activate' => defined('WTITAN_PLUGIN_ACTIVE'),
 	'required_php_version' => '7.0',
 	'required_wp_version' => '5.4.0',
@@ -167,20 +167,18 @@ try {
 	]));
 
 	require_once(WTITAN_PLUGIN_DIR . '/includes/functions.php');
-
-	if( $plugin->is_premium() ) {
-		require_once(WTITAN_PLUGIN_DIR . '/libs/antispam-premium/anti-spam-premium.php');
-	}
 } catch( Exception $e ) {
 	// Plugin wasn't initialized due to an error
 	define('WTITAN_PLUGIN_THROW_ERROR', true);
 
 	$wtitan_plugin_error_func = function () use ($e) {
 		$error = sprintf("The %s plugin has stopped. <b>Error:</b> %s Code: %s", 'CreativeMotion Titan security', $e->getMessage(), $e->getCode());
-		echo '<div class="notice notice-error"><p>' . $error . '</p></div>';
+		echo '<div class="notice notice-error"><p>' . esc_html($error) . '</p></div>';
 	};
 
 	add_action('admin_notices', $wtitan_plugin_error_func);
 	add_action('network_admin_notices', $wtitan_plugin_error_func);
 }
+
+// remove plugin options
 // @formatter:on

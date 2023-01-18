@@ -54,7 +54,7 @@ class ConvertKit_Admin_Quick_Edit {
 		wp_enqueue_script( 'convertkit-admin-quick-edit', CONVERTKIT_PLUGIN_URL . 'resources/backend/js/quick-edit.js', array( 'jquery' ), CONVERTKIT_PLUGIN_VERSION, true );
 
 		// Enqueue CSS.
-		wp_enqueue_style( 'convertkit-admin-quick-edit', CONVERTKIT_PLUGIN_URL . 'resources/backend/css/quick-edit.css', array(), CONVERTKIT_PLUGIN_VERSION );
+		wp_enqueue_style( 'convertkit-admin-bulk-quick-edit', CONVERTKIT_PLUGIN_URL . 'resources/backend/css/bulk-quick-edit.css', array(), CONVERTKIT_PLUGIN_VERSION );
 
 	}
 
@@ -90,7 +90,7 @@ class ConvertKit_Admin_Quick_Edit {
 		}
 
 		// Output Quick Edit fields in the footer of the Administration screen.
-		add_action( 'in_admin_footer', array( $this, 'quick_edit_fields' ), 10, 2 );
+		add_action( 'in_admin_footer', array( $this, 'quick_edit_fields' ), 10 );
 
 	}
 

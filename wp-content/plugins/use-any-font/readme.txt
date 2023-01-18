@@ -2,8 +2,8 @@
 Contributors: dnesscarkey
 Tags: custom fonts, font embed, font uploader, typography, install font 
 Requires at least: 3.0
-Tested up to: 6.0
-Stable tag: 6.2.94
+Tested up to: 6.1
+Stable tag: 6.2.98
 
 Embed any custom font using font uploader and assign to elements. Upload font in 1 format and other needed formats are auto converted even woff2.
 
@@ -25,6 +25,7 @@ Use Any Font gives you freedom to intall custom fonts in your wordpress website.
 <a href="https://wordpress.org/plugins/elementor/" title="Elementor Page Builder" target="_blank">Elementor Page Builder</a>,
 <a href="https://www.wpbeaverbuilder.com/?fla=2054&campaign=use-any-font" title="custom font in Beaver Builder" target="_blank">Beaver Builder</a>, 
 <a href="https://themify.me/member/aff/go/dnesscarkey/?cr=aHR0cHM6Ly90aGVtaWZ5Lm1lL2J1aWxkZXI=" title="custom font in Themify Builder" target="_blank">Themify Builder</a>,
+<a href="https://wordpress.org/themes/kadence/" title="custom font in Kadence Theme and Kadence Blocks" target="_blank">Kadence Theme and Blocks</a>,
 <a href="https://oxygenbuilder.com/" title="custom font in Oxygen Builder" target="_blank">Oxygen Builder</a>,
 <a href="https://wordpress.org/themes/generatepress/" title="custom font in Generate Press" target="_blank">Generate Press</a>,
 <a href="https://wordpress.org/themes/astra/" title="custom font in Astra Theme" target="_blank">Astra Theme</a>,
@@ -147,6 +148,19 @@ Please do write us after integration and we will add it in our supported list.
 1. Screenshot #6. Assign fonts to custom elements.
 
 == Changelog ==
+
+= 6.2.98 =
+* Fixed font assign issue in Poly Lang
+
+= 6.2.97 =
+* Fixed custom element assign issue.
+
+= 6.2.96 =
+* Added woff2 font upload support
+
+= 6.2.95 =
+* Fixed cache issue.
+* Added Font list for Kadence Theme and Blocks.
 
 = 6.2.94 =
 * Fixed Beaver weight selection issue.

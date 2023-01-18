@@ -264,3 +264,34 @@ function uaf_presscore_options_custom_fonts($fonts) {
 		return $fonts;
 	endif;
 }
+
+// Kadence Theme And Block
+
+// Add custom font to blocks
+function uaf_kadence_custom_fonts( $fonts ) { 
+	$fontsData		= uaf_group_fontdata_by_fontname(uaf_get_uploaded_font_data());
+	$fonts_uaf		= array();
+
+	if (!empty($fontsData)):
+	foreach ($fontsData as $fontName=>$fontData):
+		$variationStyles = array();
+		foreach ($fontData as $fontVariationKey => $fontVariationData){
+			if (array_key_exists('font_weight',$fontVariationData)){
+				$variationStyles[] = $fontVariationData['font_weight'];
+			} else {
+				$variationStyles[] = '400';
+			}				
+		}
+		$fonts_uaf[$fontName] = array(
+			'fallback' 		=> 'helvetica, arial, sans-serif',
+			'weights' 		=> $variationStyles
+		);	
+	endforeach;
+	endif;
+	return array_merge($fonts_uaf,$fonts);
+ 
+}
+add_filter( 'kadence_blocks_add_custom_fonts', 'uaf_kadence_custom_fonts' );
+add_filter( 'kadence_theme_add_custom_fonts', 'uaf_kadence_custom_fonts' );
+
+// EOF Kadence Theme And Block

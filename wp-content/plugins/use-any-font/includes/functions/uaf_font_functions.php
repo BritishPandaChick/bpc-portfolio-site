@@ -282,7 +282,13 @@ function uaf_get_language_selector(){
 
 function uaf_save_font_assign(){
 	$font_key               = sanitize_key($_POST['font_key']);
-	$elements               = array_map('sanitize_text_field', $_POST['elements']);
+	
+	if (isset($_POST['elements'])) {
+		$elements           = array_map('sanitize_text_field', $_POST['elements']);
+	} else {
+		$elements 			= array();
+	}	
+	
 	$custom_elements		= trim(sanitize_text_field($_POST['custom_elements']));
 
 	$fontsData      		= uaf_get_uploaded_font_data();
@@ -321,7 +327,7 @@ function uaf_save_font_assign(){
 
 function uaf_langutizse_elements($finalElements){
 	if (isset($_POST['language']) && ($_POST['language'] != 'all_lang')){
-		  $language 		 = sanitize_title($_POST['language']);
+		  $language 		 = sanitize_text_field($_POST['language']);
           $finalElementArray = explode(',', $finalElements);
           $finalElementArray = array_map('trim', $finalElementArray);
           $prefixed_array    = preg_filter('/^/', $language.' ', $finalElementArray);

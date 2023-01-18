@@ -129,7 +129,7 @@ function uaf_plugin_initialize(){
 	}
 	uaf_get_options();
 	uaf_trigger_actions();
-	uaf_check_site_url();
+	//uaf_check_site_url();
 
 	include UAF_FILE_PATH.'includes/functions/uaf_editor_functions.php'; // EDITOR FILTERS AND HOOKS
 }

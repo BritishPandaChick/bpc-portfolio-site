@@ -1,11 +1,11 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit; 
 
-$GLOBALS['uaf_current_version']				= '6.2.94';
+$GLOBALS['uaf_current_version']				= '6.2.98';
 
 
 $GLOBALS['uaf_fix_settings'] 				= array(
-													'allowedFontFormats' 	=> array ('ttf','otf','woff'),
+													'allowedFontFormats' 	=> array ('woff2','ttf','otf','off'),
 													'allowedFontSize'		=> 25, // IN MB
 													'serverUrl'				=> array(
 																					'default' => 'https://server2.dnesscarkey.org',

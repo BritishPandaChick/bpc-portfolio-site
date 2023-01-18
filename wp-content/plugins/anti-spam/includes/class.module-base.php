@@ -21,7 +21,7 @@ abstract class Module_Base {
 	 * Plugin object
 	 *
 	 * @since  7.0
-	 * @var \Wbcr_Factory454_Plugin
+	 * @var \Wbcr_Factory460_Plugin
 	 */
 	public $plugin;
 
@@ -86,11 +86,11 @@ abstract class Module_Base {
 			echo "<script>";
 			if ( is_array( $args ) ) {
 				foreach ( $args as $key => $value ) {
-					echo "var $key = " . json_encode( $value ) . ";\n";
+					echo "var ".esc_html($key)." = " . json_encode( $value ) . ";\n";
 				}
 			}
 			echo "</script>";
-			echo "<script type='application/javascript' src='{$url}'></script>";
+			echo "<script type='application/javascript' src='".esc_url($url)."'></script>";
 			unset( $path );
 
 			return ob_get_clean();

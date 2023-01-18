@@ -55,11 +55,11 @@
 
 			if ( 'visual' === this.getMode() ) {
 				// Focus on visual editor
-				this.getEditor().trigger( 'focus' );
+				this.getEditor().focus();
 				this.getEditor().on( 'keydown', this.onKeyDown );
 			} else {
 				// Focus on code editor
-				this.$textarea.trigger( 'focus' );
+				this.$textarea.focus();
 				this.$textarea.on( 'keydown', this.onKeyDown );
 			}
 

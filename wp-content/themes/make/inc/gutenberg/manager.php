@@ -23,7 +23,7 @@ final class MAKE_Gutenberg_Manager implements MAKE_Gutenberg_ManagerInterface, M
 		if ( is_admin() && $this->has_block_editor() ) {
 			add_action( 'make_notice_loaded', array( $this, 'admin_notice' ) );
 			add_action( 'save_post', array( $this, 'save_post' ), 10, 2 );
-			add_filter( 'use_block_editor_for_post', array( $this, 'use_block_editor_for_post' ), 10, 2 );
+			add_filter( 'use_block_editor_for_post', array( $this, 'use_block_editor_for_post' ), PHP_INT_MAX, 2 );
 			add_filter( 'theme_page_templates', array( $this, 'remove_page_template' ) );
 		}
 
@@ -58,7 +58,8 @@ final class MAKE_Gutenberg_Manager implements MAKE_Gutenberg_ManagerInterface, M
 		if ( function_exists( 'get_current_screen' ) ) {
 			$current_screen = get_current_screen();
 			$is_block_editor =
-				method_exists( $current_screen, 'is_block_editor' )
+				$current_screen
+				&& method_exists( $current_screen, 'is_block_editor' )
 				&& $current_screen->is_block_editor();
 		}
 

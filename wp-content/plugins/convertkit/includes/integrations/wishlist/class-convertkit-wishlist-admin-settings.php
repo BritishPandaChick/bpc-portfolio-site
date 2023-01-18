@@ -73,6 +73,9 @@ class ConvertKit_Wishlist_Admin_Settings extends ConvertKit_Settings_Base {
 	 */
 	public function render() {
 
+		// Render opening container.
+		$this->render_container_start();
+
 		do_settings_sections( $this->settings_key );
 
 		// Get WishList Member Levels.
@@ -81,22 +84,25 @@ class ConvertKit_Wishlist_Admin_Settings extends ConvertKit_Settings_Base {
 		// Bail with an error if no WishList Member Levels exist.
 		if ( ! $wlm_levels ) {
 			$this->output_error( __( 'No WishList Member Levels exist in the WishList Member Plugin.', 'convertkit' ) );
+			$this->render_container_end();
 			return;
 		}
 
 		// Get Forms and Tags.
-		$forms = new ConvertKit_Resource_Forms();
-		$tags  = new ConvertKit_Resource_Tags();
+		$forms = new ConvertKit_Resource_Forms( 'wishlist_member' );
+		$tags  = new ConvertKit_Resource_Tags( 'wishlist_member' );
 
 		// Bail with an error if no ConvertKit Forms exist.
 		if ( ! $forms->exist() ) {
 			$this->output_error( __( 'No Forms exist on ConvertKit.', 'convertkit' ) );
+			$this->render_container_end();
 			return;
 		}
 
 		// Bail with an error if no ConvertKit Tags exist.
 		if ( ! $tags->exist() ) {
 			$this->output_error( __( 'No Tags exist on ConvertKit.', 'convertkit' ) );
+			$this->render_container_end();
 			return;
 		}
 
@@ -152,6 +158,9 @@ class ConvertKit_Wishlist_Admin_Settings extends ConvertKit_Settings_Base {
 		// Render submit button.
 		submit_button();
 
+		// Render closing container.
+		$this->render_container_end();
+
 	}
 
 	/**
@@ -178,6 +187,12 @@ class ConvertKit_Wishlist_Admin_Settings extends ConvertKit_Settings_Base {
 // Register Admin Settings section.
 add_filter(
 	'convertkit_admin_settings_register_sections',
+	/**
+	 * Register WishList Member as a section at Settings > ConvertKit.
+	 *
+	 * @param   array   $sections   Settings Sections.
+	 * @return  array
+	 */
 	function( $sections ) {
 
 		// Bail if WishList Member isn't enabled.

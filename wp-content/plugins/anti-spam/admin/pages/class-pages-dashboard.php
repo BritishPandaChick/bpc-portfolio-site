@@ -129,12 +129,12 @@ class Dashboard extends Base {
 	/**
 	 * Logs constructor.
 	 *
-	 * @param \Wbcr_Factory454_Plugin $plugin
+	 * @param \Wbcr_Factory460_Plugin $plugin
 	 *
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 *
 	 */
-	public function __construct( \Wbcr_Factory454_Plugin $plugin ) {
+	public function __construct( \Wbcr_Factory460_Plugin $plugin ) {
 		$this->plugin = $plugin;
 
 		$this->menu_title                  = __( 'Titan Anti-spam', 'titan-security' );
@@ -209,7 +209,7 @@ class Dashboard extends Base {
 
 		$this->styles->add( WTITAN_PLUGIN_URL . '/includes/check/assets/css/check-dashboard.css' );
 		$this->scripts->add( WTITAN_PLUGIN_URL . '/includes/check/assets/js/check.js', [ 'jquery' ] );
-		$this->scripts->localize( 'update_nonce', wp_create_nonce( "updates" ) );
+		//$this->scripts->localize( 'update_nonce', wp_create_nonce( "updates" ) );
 		$this->scripts->localize( 'wtscanner', [
 			'update_nonce' => wp_create_nonce( "updates" ),
 			'hide_nonce'   => wp_create_nonce( "hide" ),

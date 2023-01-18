@@ -14,17 +14,17 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @copyright (c) 2020 Creative Motion
  * @version       1.0
  */
-class Base extends \WBCR\Factory_Templates_106\Pages\PageBase {
+class Base extends \WBCR\Factory_Templates_112\Pages\PageBase {
 
 	/**
 	 * Scanner page constructor.
 	 *
-	 * @param \Wbcr_Factory454_Plugin $plugin
+	 * @param \Wbcr_Factory460_Plugin $plugin
 	 *
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 *
 	 */
-	public function __construct( \Wbcr_Factory454_Plugin $plugin ) {
+	public function __construct( \Wbcr_Factory460_Plugin $plugin ) {
 		parent::__construct( $plugin );
 		$this->menuIcon = WTITAN_PLUGIN_URL . '/admin/assets/img/titan-icon.png';
 	}
@@ -69,7 +69,7 @@ class Base extends \WBCR\Factory_Templates_106\Pages\PageBase {
                 </p>
                 <ul>
                     <li><span class="dashicons dashicons-sos"></span>
-                        <a href="<?= $free_support_url ?>" target="_blank"
+                        <a href="<?php echo esc_url($free_support_url); ?>" target="_blank"
                            rel="noopener"><?php _e( 'Get starting free support', 'titan-security' ); ?></a>
                     </li>
                     <li style="margin-top: 15px;background: #fff4f1;padding: 10px;color: #a58074;">
@@ -96,7 +96,7 @@ class Base extends \WBCR\Factory_Templates_106\Pages\PageBase {
 			$page_url = $args[0];
 		}
 
-		$page_url = apply_filters( 'wbcr_factory_pages_453_imppage_rating_widget_url', $page_url, $this->plugin->getPluginName(), $this->getResultId() );
+		$page_url = apply_filters( 'wbcr_factory_pages_460_imppage_rating_widget_url', $page_url, $this->plugin->getPluginName(), $this->getResultId() );
 
 		?>
         <div class="wbcr-factory-sidebar-widget">
@@ -113,7 +113,7 @@ class Base extends \WBCR\Factory_Templates_106\Pages\PageBase {
 				<span class="dashicons dashicons-star-filled"></span>
 				<span class="dashicons dashicons-star-filled"></span>
 			</span>
-                <a href="<?= $page_url ?>" title="Go rate us" target="_blank">
+                <a href="<?php echo esc_url($page_url); ?>" title="Go rate us" target="_blank">
                     <strong><?php _e( 'Go rate us and push ideas', 'titan-security' ); ?></strong>
                 </a>
             </p>
