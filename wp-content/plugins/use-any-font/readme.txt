@@ -2,8 +2,8 @@
 Contributors: dnesscarkey
 Tags: custom fonts, font embed, font uploader, typography, install font 
 Requires at least: 3.0
-Tested up to: 6.1
-Stable tag: 6.2.98
+Tested up to: 6.1.1
+Stable tag: 6.3.01
 
 Embed any custom font using font uploader and assign to elements. Upload font in 1 format and other needed formats are auto converted even woff2.
 
@@ -30,6 +30,8 @@ Use Any Font gives you freedom to intall custom fonts in your wordpress website.
 <a href="https://wordpress.org/themes/generatepress/" title="custom font in Generate Press" target="_blank">Generate Press</a>,
 <a href="https://wordpress.org/themes/astra/" title="custom font in Astra Theme" target="_blank">Astra Theme</a>,
 <a href="https://wordpress.org/themes/oceanwp/" title="custom font in Revolution Slider" target="_blank">Ocean WP Theme</a>,
+<a href="https://bricksbuilder.io/" title="custom font in Bricks Builder" target="_blank">Bricks Builder</a>,
+<a href="https://themeisle.com/" title="custom font in themeisle neva theme" target="_blank">Themeisle</a>,
 <a href="https://bit.ly/3auJKzt" title="custom font in Revolution Slider" target="_blank">Revolution Slider</a>,
 <a href="https://wpbakery.com/" title="custom font in WPBakery Page Builder" target="_blank">WPBakery Page Builder ( Js Composer )</a>,
 and any visual builder using the class. 
@@ -148,6 +150,9 @@ Please do write us after integration and we will add it in our supported list.
 1. Screenshot #6. Assign fonts to custom elements.
 
 == Changelog ==
+
+= 6.3.01 =
+* Added support for Bricks Builder and Themeisle
 
 = 6.2.98 =
 * Fixed font assign issue in Poly Lang

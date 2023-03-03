@@ -845,7 +845,7 @@ class ConvertKit_API {
 	/**
 	 * Gets all posts from the API.
 	 *
-	 * @since   1.9.7.6
+	 * @since   1.0.0
 	 *
 	 * @param   int $posts_per_request   Number of Posts to fetch in each request.
 	 * @return  WP_Error|array
@@ -908,7 +908,7 @@ class ConvertKit_API {
 	/**
 	 * Gets posts from the API.
 	 *
-	 * @since   1.9.7.4
+	 * @since   1.0.0
 	 *
 	 * @param   int $page       Page number.
 	 * @param   int $per_page   Number of Posts to return.
@@ -1433,19 +1433,31 @@ class ConvertKit_API {
 			);
 		}
 
+		// If the HTML is missing the <html> tag, it's likely to be a legacy form.
+		// Wrap it in <html>, <head> and <body> tags now, so we can inject the UTF-8 Content-Type meta tag.
+		if ( strpos( $body, '<html>' ) === false ) {
+			$body = '<html><head></head><body>' . $body . '</body></html>';
+		}
+
+		// Forcibly tell DOMDocument that this HTML uses the UTF-8 charset.
+		// <meta charset="utf-8"> isn't enough, as DOMDocument still interprets the HTML as ISO-8859, which breaks character encoding
+		// Use of mb_convert_encoding() with HTML-ENTITIES is deprecated in PHP 8.2, so we have to use this method.
+		// If we don't, special characters render incorrectly.
+		$body = str_replace( '<head>', '<head>' . "\n" . '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">', $body );
+
 		// Get just the scheme and host from the URL.
 		$url_scheme           = wp_parse_url( $url );
 		$url_scheme_host_only = $url_scheme['scheme'] . '://' . $url_scheme['host'];
 
-		// Load the landing page HTML into a DOMDocument.
+		// Load the HTML into a DOMDocument.
 		libxml_use_internal_errors( true );
 		$html = new DOMDocument();
 		if ( $body_only ) {
 			// Prevent DOMDocument from including a doctype on saveHTML().
 			// We don't use LIBXML_HTML_NOIMPLIED, as it requires a single root element, which Legacy Forms don't have.
-			$html->loadHTML( mb_convert_encoding( $body, 'HTML-ENTITIES', 'UTF-8' ), LIBXML_HTML_NODEFDTD );
+			$html->loadHTML( $body, LIBXML_HTML_NODEFDTD );
 		} else {
-			$html->loadHTML( mb_convert_encoding( $body, 'HTML-ENTITIES', 'UTF-8' ) );
+			$html->loadHTML( $body );
 		}
 
 		// Convert any relative URLs to absolute URLs in the HTML DOM.
@@ -1519,7 +1531,8 @@ class ConvertKit_API {
 	}
 
 	/**
-	 * Strips <html>, <head> and <body> opening and closing tags from the given markup.
+	 * Strips <html>, <head> and <body> opening and closing tags from the given markup,
+	 * as well as the Content-Type meta tag we might have added in get_html().
 	 *
 	 * @since   1.0.0
 	 *
@@ -1534,6 +1547,7 @@ class ConvertKit_API {
 		$markup = str_replace( '</head>', '', $markup );
 		$markup = str_replace( '<body>', '', $markup );
 		$markup = str_replace( '</body>', '', $markup );
+		$markup = str_replace( '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">', '', $markup );
 
 		return $markup;
 
@@ -1621,7 +1635,7 @@ class ConvertKit_API {
 	/**
 	 * Performs a PUT request.
 	 *
-	 * @since  1.9.7.8
+	 * @since  1.0.0
 	 *
 	 * @param   string $endpoint       API Endpoint.
 	 * @param   array  $params         Params.
@@ -1719,7 +1733,11 @@ class ConvertKit_API {
 			case 429:
 				// If retry on rate limit hit is disabled, return a WP_Error.
 				if ( ! $retry_if_rate_limit_hit ) {
-					return new WP_Error( 'convertkit_api_error', $this->get_error_message( 'request_rate_limit_exceeded' ) );
+					return new WP_Error(
+						'convertkit_api_error',
+						$this->get_error_message( 'request_rate_limit_exceeded' ),
+						$http_response_code
+					);
 				}
 
 				// Retry the request a final time, waiting 2 seconds before.
@@ -1728,23 +1746,39 @@ class ConvertKit_API {
 
 			// Internal server error.
 			case 500:
-				return new WP_Error( 'convertkit_api_error', $this->get_error_message( 'request_internal_server_error' ) );
+				return new WP_Error(
+					'convertkit_api_error',
+					$this->get_error_message( 'request_internal_server_error' ),
+					$http_response_code
+				);
 
 			// Bad gateway.
 			case 502:
-				return new WP_Error( 'convertkit_api_error', $this->get_error_message( 'request_bad_gateway' ) );
+				return new WP_Error(
+					'convertkit_api_error',
+					$this->get_error_message( 'request_bad_gateway' ),
+					$http_response_code
+				);
 		}
 
 		// If the response is null, json_decode() failed as the body could not be decoded.
 		if ( is_null( $response ) ) {
 			$this->log( 'API: Error: ' . sprintf( $this->get_error_message( 'response_type_unexpected' ), $body ) );
-			return new WP_Error( 'convertkit_api_error', sprintf( $this->get_error_message( 'response_type_unexpected' ), $body ) );
+			return new WP_Error(
+				'convertkit_api_error',
+				sprintf( $this->get_error_message( 'response_type_unexpected' ), $body ),
+				$http_response_code
+			);
 		}
 
 		// If an error message or code exists in the response, return a WP_Error.
 		if ( isset( $response['error'] ) ) {
 			$this->log( 'API: Error: ' . $response['error'] . ': ' . $response['message'] );
-			return new WP_Error( 'convertkit_api_error', $response['error'] . ': ' . $response['message'] );
+			return new WP_Error(
+				'convertkit_api_error',
+				$response['error'] . ': ' . $response['message'],
+				$http_response_code
+			);
 		}
 
 		return $response;
@@ -1766,7 +1800,7 @@ class ConvertKit_API {
 		/**
 		 * Defines the maximum time to allow the API request to run.
 		 *
-		 * @since   2.2.9
+		 * @since   1.0.0
 		 *
 		 * @param   int     $timeout    Timeout, in seconds.
 		 */
@@ -1857,7 +1891,7 @@ class ConvertKit_API {
 	/**
 	 * Returns the localized/translated error message for the given error key.
 	 *
-	 * @since   1.9.7.8
+	 * @since   1.0.0
 	 *
 	 * @param   string $key    Key.
 	 * @return  string          Error message

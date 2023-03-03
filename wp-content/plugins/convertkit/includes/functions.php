@@ -47,7 +47,7 @@ function convertkit_plugin_activate( $network_wide ) {
  *
  * @since   1.9.7.4
  *
- * @param   mixed $site_or_blog_id    WP_Site or Blog ID.
+ * @param   WP_Site|int $site_or_blog_id    WP_Site or Blog ID.
  */
 function convertkit_plugin_activate_new_site( $site_or_blog_id ) {
 
@@ -120,6 +120,32 @@ function convertkit_get_supported_post_types() {
 	 * @param   array   $post_types     Post Types
 	 */
 	$post_types = apply_filters( 'convertkit_get_supported_post_types', $post_types );
+
+	return $post_types;
+
+}
+
+/**
+ * Helper method to get supported Post Types for Restricted Content (Member's Content)
+ *
+ * @since   2.1.0
+ *
+ * @return  array   Post Types
+ */
+function convertkit_get_supported_restrict_content_post_types() {
+
+	$post_types = array(
+		'page',
+	);
+
+	/**
+	 * Defines the Post Types that support Restricted Content / Members Content functionality.
+	 *
+	 * @since   2.0.0
+	 *
+	 * @param   array   $post_types     Post Types
+	 */
+	$post_types = apply_filters( 'convertkit_get_supported_restrict_content_post_types', $post_types );
 
 	return $post_types;
 

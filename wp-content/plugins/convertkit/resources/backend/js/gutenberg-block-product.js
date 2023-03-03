@@ -14,11 +14,9 @@
  */
 function convertKitGutenbergProductBlockRenderPreview( block, props ) {
 
-	var product = block.fields.product.data.products[ props.attributes.product ];
-
 	// If no Product has been selected for display, return a prompt to tell the editor
 	// what to do.
-	if ( typeof product === 'undefined' ) {
+	if ( props.attributes.product === '' ) {
 		return wp.element.createElement(
 			'div',
 			{
@@ -33,7 +31,7 @@ function convertKitGutenbergProductBlockRenderPreview( block, props ) {
 	// A Product is specified.
 	// Use the block's PHP's render() function by calling the ServerSideRender component.
 	return wp.element.createElement(
-		wp.components.ServerSideRender,
+		wp.serverSideRender,
 		{
 			block: 'convertkit/' + block.name,
 			attributes: props.attributes,

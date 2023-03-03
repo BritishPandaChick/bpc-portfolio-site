@@ -3,8 +3,8 @@ Contributors: humanityco
 Tags: gdpr, ccpa, cookies, consent, compliance
 Requires at least: 4.7
 Requires PHP: 5.4
-Tested up to: 6.1.1
-Stable tag: 2.4.5
+Tested up to: 6.2
+Stable tag: 2.4.7
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 
@@ -120,6 +120,15 @@ Yes! The plugin + web appliaction version includes technical compliance features
 4. Cookie Compliance settings
 
 == Changelog ==
+
+= 2.4.7 =
+* New: Conditional display of the banner
+* Tweak: Improved sanitization and validation of data
+* Tweak: PHP 8.1 and 8.2 compatibility
+* Tweak: Added async attribute when autoblocking is disabled
+
+= 2.4.6 =
+* Fix: Cookie Compliance inactive status issue
 
 = 2.4.5 =
 * Tweak: Remove the notice from the Elementor page builder
@@ -449,7 +458,6 @@ Initial release
 
 == Upgrade Notice ==
 
-= 2.4.5 =
-* Tweak: Remove the notice from the Elementor page builder
-* Tweak: Remove the notice from widgets screen
-* Fix: Improved Contact Form 7 reCaptcha compatibility
+= 2.4.7 =
+* New: Conditional display of the banner
+* Tweak: Improved sanitization and validation of data
