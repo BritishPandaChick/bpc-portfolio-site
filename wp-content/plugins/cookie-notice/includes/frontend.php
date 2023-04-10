@@ -17,15 +17,38 @@ class Cookie_Notice_Frontend {
 	 */
 	public function __construct() {
 		// actions
+		add_action( 'init', [ $this, 'early_init' ], 9 );
 		add_action( 'wp', [ $this, 'init' ] );
 	}
 
 	/**
-	 * Initialize frontend.
+	 * Early initialization.
+	 *
+	 * @return void
+	 */
+	public function early_init() {
+		// get main instance
+		$cn = Cookie_Notice();
+
+		// cookie compliance initialization
+		if ( $cn->get_status() === 'active' ) {
+			// sg optimizer 5.5+ compatibility
+			global $siteground_optimizer_loader;
+
+			if ( ! empty( $siteground_optimizer_loader ) && is_object( $siteground_optimizer_loader ) && is_a( $siteground_optimizer_loader, 'SiteGround_Optimizer\Loader\Loader' ) && defined( '\SiteGround_Optimizer\VERSION' ) && version_compare( \SiteGround_Optimizer\VERSION, '5.5', '>=' ) )
+				include_once( COOKIE_NOTICE_PATH . 'includes/modules/sg-optimizer/sg-optimizer.php' );
+		}
+	}
+
+	/**
+	 * Initialize plugin.
 	 *
 	 * @return void
 	 */
 	public function init() {
+		if ( is_admin() )
+			return;
+
 		// purge cache
 		if ( isset( $_GET['hu_purge_cache'] ) )
 			$this->purge_cache();
@@ -35,12 +58,12 @@ class Cookie_Notice_Frontend {
 
 		// is banner allowed to display?
 		if ( $this->maybe_display_banner() ) {
-			// init cookie compliance
+			// cookie compliance initialization
 			if ( $cn->get_status() === 'active' ) {
 				add_action( 'wp_head', [ $this, 'add_cookie_compliance' ], 0 );
 
-				// autoptimize
-				if ( function_exists( 'autoptimize' ) )
+				// autoptimize 2.4+
+				if ( function_exists( 'autoptimize' ) && defined( 'AUTOPTIMIZE_PLUGIN_VERSION' ) && version_compare( AUTOPTIMIZE_PLUGIN_VERSION, '2.4', '>=' ) )
 					include_once( COOKIE_NOTICE_PATH . 'includes/modules/autoptimize/autoptimize.php' );
 
 				// is blocking active?
@@ -49,7 +72,7 @@ class Cookie_Notice_Frontend {
 					if ( class_exists( 'WPCF7' ) && class_exists( 'WPCF7_RECAPTCHA' ) && defined( 'WPCF7_VERSION' ) && version_compare( WPCF7_VERSION, '5.1', '>=' ) )
 						include_once( COOKIE_NOTICE_PATH . 'includes/modules/contact-form-7/contact-form-7.php' );
 				}
-			// init cookie notice
+			// cookie notice initialization
 			} else {
 				// actions
 				add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_notice_scripts' ] );
@@ -119,9 +142,12 @@ class Cookie_Notice_Frontend {
 		// set access type
 		$access_type = $cn->options['general']['conditional_display'] === 'show';
 
+		// get object
+		$object = get_queried_object();
+
 		// no rules?
 		if ( empty( $rules ) )
-			$final_access = ! $access_type;
+			$final_access = true;
 		else {
 			// check the rules
 			foreach( $rules as $index => $group ) {
@@ -133,6 +159,11 @@ class Cookie_Notice_Frontend {
 					switch ( $rule['param'] ) {
 						case 'page_type':
 							if ( ( $rule['operator'] === 'equal' && $rule['value'] === 'front' && is_front_page() ) || ( $rule['operator'] === 'not_equal' && $rule['value'] === 'front' && ! is_front_page() ) || ( $rule['operator'] === 'equal' && $rule['value'] === 'home' && is_home() ) || ( $rule['operator'] === 'not_equal' && $rule['value'] === 'home' && ! is_home() ) )
+								$give_rule_access = true;
+							break;
+
+						case 'page':
+							if ( ( $rule['operator'] === 'equal' && ! empty( $object ) && is_page( $object->ID ) && (int) $object->ID === (int) $rule['value'] ) || ( $rule['operator'] === 'not_equal' && ( empty( $object ) || ! is_page() || ( is_page() && ! empty( $object ) && $object->ID !== (int) $rule['value'] ) ) ) )
 								$give_rule_access = true;
 							break;
 
@@ -174,7 +205,7 @@ class Cookie_Notice_Frontend {
 			}
 		}
 
-		return (bool) apply_filters( 'cn_conditional_display', $final_access );
+		return (bool) apply_filters( 'cn_conditional_display', $final_access, $object );
 	}
 
 	/**
@@ -313,7 +344,7 @@ class Cookie_Notice_Frontend {
 		// message output
 		$output = '
 		<!-- Cookie Notice plugin v' . esc_attr( $cn->defaults['version'] ) . ' by Hu-manity.co https://hu-manity.co/ -->
-		<div id="cookie-notice" role="dialog" class="cookie-notice-hidden cookie-revoke-hidden cn-position-' . esc_attr( $options['position'] ) . '" aria-label="' . esc_attr( $options['aria_label'] ) . '" style="background-color: ' . esc_attr( $options['colors']['bar'] . dechex( (int) round( $options['colors']['bar_opacity'] * 2.55, 0 ) ) ) . '">'
+		<div id="cookie-notice" role="dialog" class="cookie-notice-hidden cookie-revoke-hidden cn-position-' . esc_attr( $options['position'] ) . '" aria-label="' . esc_attr( $options['aria_label'] ) . '" style="background-color: __CN_BG_COLOR__">'
 			. '<div class="cookie-notice-container" style="color: ' . esc_attr( $options['colors']['text'] ) . '">'
 			. '<span id="cn-notice-text" class="cn-text-container">'. ( $options['see_more'] ? do_shortcode( $options['message_text'] ) : $options['message_text'] ) . '</span>'
 			. '<span id="cn-notice-buttons" class="cn-buttons-container"><a href="#" id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie ' . esc_attr( $options['button_class'] ) . ( $options['css_class'] !== '' ? ' cn-button-custom ' . esc_attr( $options['css_class'] ) : '' ) . '" aria-label="' . esc_attr( $options['accept_text'] ) . '"' . ( $options['css_class'] == '' ? ' style="background-color: ' . esc_attr( $options['colors']['button'] ) . '"' : '' ) . '>' . esc_html( $options['accept_text'] ) . '</a>'
@@ -331,9 +362,20 @@ class Cookie_Notice_Frontend {
 
 		add_filter( 'safe_style_css', [ $this, 'allow_style_attributes' ] );
 
-		echo apply_filters( 'cn_cookie_notice_output', wp_kses_post( $output ), $options );
+		$output = apply_filters( 'cn_cookie_notice_output', wp_kses_post( $output ), $options );
 
 		remove_filter( 'safe_style_css', [ $this, 'allow_style_attributes' ] );
+
+		// convert rgb color to hex
+		$bg_rgb_color = $this->hex2rgb( $options['colors']['bar'] );
+
+		// invalid color? use default
+		if ( $bg_rgb_color === false )
+			$bg_rgb_color = $this->hex2rgb( $cn->defaults['general']['colors']['bar'] );
+
+		// allow rgba background
+		echo str_replace( '__CN_BG_COLOR__', esc_attr( 'rgba(' . implode( ',', $bg_rgb_color ) . ',' . ( (int) $options['colors']['bar_opacity'] ) * 0.01 . ');' ), $output );
+
 	}
 
 	/**
@@ -346,6 +388,35 @@ class Cookie_Notice_Frontend {
 		$styles[] = 'display';
 
 		return $styles;
+	}
+
+	/**
+	 * Convert HEX to RGB color.
+	 *
+	 * @param string $color
+	 * @return bool|array
+	 */
+	public function hex2rgb( $color ) {
+		if ( ! is_string( $color ) )
+			return false;
+
+		// with hash?
+		if ( $color[0] === '#' )
+			$color = substr( $color, 1 );
+
+		if ( sanitize_hex_color_no_hash( $color ) !== $color )
+			return false;
+
+		// 6 hex digits?
+		if ( strlen( $color ) === 6 )
+			list( $r, $g, $b ) = [ $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] ];
+		// 3 hex digits?
+		elseif ( strlen( $color ) === 3 )
+			list( $r, $g, $b ) = [ $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] ];
+		else
+			return false;
+
+		return [ 'r' => hexdec( $r ), 'g' => hexdec( $g ), 'b' => hexdec( $b ) ];
 	}
 
 	/**

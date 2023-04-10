@@ -54,6 +54,7 @@ class Cookie_Notice_Settings {
 	public function load_defaults() {
 		$this->parameters = [
 			'page_type'			=> __( 'Page Type', 'cookie-notice' ),
+			'page'				=> __( 'Page', 'cookie-notice' ),
 			'post_type'			=> __( 'Post Type', 'cookie-notice' ),
 			'post_type_archive'	=> __( 'Post Type Archive', 'cookie-notice' ),
 			'user_type'			=> __( 'User Type', 'cookie-notice' )
@@ -1779,6 +1780,16 @@ class Cookie_Notice_Settings {
 		$html = '';
 
 		switch ( sanitize_key( $type ) ) {
+			case 'page':
+				$pages = $this->get_pages();
+
+				if ( ! empty( $pages ) ) {
+					foreach ( $pages as $page_id => $page_title ) {
+						$html .= '<option value="' . esc_attr( $page_id ) . '" ' . selected( $page_id, $selected, false ) . '>' . esc_html( $page_title ) . '</option>';
+					}
+				}
+				break;
+
 			case 'page_type':
 				$page_types = $this->get_page_types();
 
@@ -1813,8 +1824,8 @@ class Cookie_Notice_Settings {
 				$post_type_archives = $this->get_post_type_archives();
 			
 				if ( ! empty( $post_type_archives ) ) {
-					foreach ( $post_type_archives as $post_type => $label ) {
-						$html .= '<option value="' . esc_attr( $post_type ) . '" ' . selected( $post_type, $selected, false ) . '>' . esc_html( $label ) . '</option>';
+					foreach ( $post_type_archives as $post_type => $archive_name ) {
+						$html .= '<option value="' . esc_attr( $post_type ) . '" ' . selected( $post_type, $selected, false ) . '>' . esc_html( $archive_name ) . '</option>';
 					}
 				} else
 					$html .= '<option value="__none__">' . esc_html__( '-- no public archives --', 'cookie-notice' ) . '</option>';
@@ -1836,6 +1847,12 @@ class Cookie_Notice_Settings {
 			return false;
 
 		switch( $type ) {
+			case 'page':
+				$pages = $this->get_pages();
+
+				$valid_rule = ! empty( $pages[$value] );
+				break;
+
 			case 'page_type':
 				$page_types = $this->get_page_types();
 
@@ -1865,6 +1882,53 @@ class Cookie_Notice_Settings {
 		}
 
 		return $valid_rule;
+	}
+
+	/**
+	 * Get page types.
+	 *
+	 * @return array
+	 */
+	public function get_pages() {
+		$pages = [];
+
+		// default arguments
+		$args = [
+			'post_type'			=> 'page',
+			'post__not_in'		=> [],
+			'nopaging'			=> true,
+			'posts_per_page'	=> -1,
+			'orderby'			=> 'title',
+			'order'				=> 'asc',
+			'suppress_filters'	=> false,
+			'no_found_rows'		=> true,
+			'cache_results'		=> false,
+			'post_status'		=> [ 'publish', 'private', 'future' ]
+		];
+
+		// get static home pages
+		$homepage = (int) get_option( 'page_for_posts', 0 );
+		$posts_page = (int) get_option( 'page_on_front', 0 );
+
+		// check homepage
+		if ( $homepage > 0 )
+			$args['post__not_in'][] = $homepage;
+
+		// check posts page
+		if ( $posts_page > 0 )
+			$args['post__not_in'][] = $posts_page;
+
+		$query = new WP_Query( $args );
+
+		if ( ! empty( $query->posts ) ) {
+			foreach ( $query->posts as $page ) {
+				$page_id = (int) $page->ID;
+
+				$pages[$page_id] = trim( $page->post_title ) === '' ? sprintf( __( 'Untitled Page %d', 'cookie-notice' ), $page_id ) : $page->post_title;
+			}
+		}
+
+		return $pages;
 	}
 
 	/**

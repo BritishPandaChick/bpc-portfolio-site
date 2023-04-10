@@ -55,7 +55,7 @@ $separator = is_rtl() ? ' &rsaquo; ' : ' &lsaquo; ';
 <head>
     <meta http-equiv="Content-Type"
           content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>"/>
-    <title><?php echo get_bloginfo( 'name', 'display' ) . esc_html($separator) . esc_html($title); ?></title>
+    <title><?php echo get_bloginfo( 'name', 'display' ) . $separator . $title; ?></title>
 	<?php
 
 	wp_enqueue_style( 'login' );

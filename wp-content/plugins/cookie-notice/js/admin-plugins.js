@@ -17,8 +17,8 @@
 
 		// deactivation with sending data
 		$( document ).on( 'click', '.cn-deactivate-plugin-data', function( e ) {
-			var spinner = $( '#cn-deactivation-footer .spinner' ),
-				url = $( this ).attr( 'href' );
+			var spinner = $( '#cn-deactivation-footer .spinner' );
+			var url = $( this ).attr( 'href' );
 
 			// display spinner
 			spinner.addClass( 'is-active' );

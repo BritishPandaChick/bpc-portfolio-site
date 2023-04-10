@@ -30,7 +30,7 @@
 		});
 	};
 
-	$.fn.factoryBootstrap461_dropdownAndColors = function(option) {
+	$.fn.factoryBootstrap467_dropdownAndColors = function(option) {
 		// call an method
 		if( typeof option === "string" ) {
 			var data = $(this).data('factory.dropdownAndColors.control');
@@ -52,10 +52,10 @@
 		}
 	};
 
-	$.fn.factoryBootstrap461_dropdownAndColors.Constructor = dropdownAndColors;
+	$.fn.factoryBootstrap467_dropdownAndColors.Constructor = dropdownAndColors;
 
 	$(function() {
-		$(".factory-bootstrap-461 .factory-dropdown-and-colors").factoryBootstrap461_dropdownAndColors();
+		$(".factory-bootstrap-467 .factory-dropdown-and-colors").factoryBootstrap467_dropdownAndColors();
 	});
 
 }(jQuery) );

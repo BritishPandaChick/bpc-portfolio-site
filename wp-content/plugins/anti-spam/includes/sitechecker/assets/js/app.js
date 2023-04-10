@@ -214,14 +214,14 @@
             timeout = 5000;
         }
 
-        if (typeof $ === 'undefined' || typeof $.wbcr_factory_templates_112 === 'undefined') {
+        if (typeof $ === 'undefined' || typeof $.wbcr_factory_templates_116 === 'undefined') {
             return;
         }
 
-        var noticeId = $.wbcr_factory_templates_112.app.showNotice(message, type);
+        var noticeId = $.wbcr_factory_templates_116.app.showNotice(message, type);
         if (timeout > 0) {
             setTimeout(function () {
-                $.wbcr_factory_templates_112.app.hideNotice(noticeId);
+                $.wbcr_factory_templates_116.app.hideNotice(noticeId);
             }, timeout);
         }
     }

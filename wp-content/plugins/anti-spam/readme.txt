@@ -2,9 +2,9 @@
 Contributors: creativemotion
 Tags: antispam, firewall, malware scanner, security, antivirus, firewall, malware, scan, spam
 Requires at least: 5.2
-Tested up to: 6.0
+Tested up to: 6.2
 Requires PHP: 7.0
-Stable tag: 7.3.4
+Stable tag: 7.3.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -193,8 +193,9 @@ You may check out the [source code of the plugin](http://plugins.trac.wordpress.
 The plugin is pretty small and easy to read.
 
 == Changelog ==
-7.3.4 – 29.10.2022
-* Fixed: Minor bugs
+= 7.3.5 (22.03.2023) =
+* Fixed: Freemius framework conflict
+* Added: Compatibility with Wordpress 6.2
 
 7.3.3 – 17.10.2022
 * Fixed: Critical error with premium component

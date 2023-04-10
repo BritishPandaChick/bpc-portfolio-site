@@ -16,7 +16,7 @@ if( !defined('ABSPATH') ) {
  *
  * @copyright (c) 2018 Webraftic Ltd
  */
-class License extends \WBCR\Factory_Templates_112\Pages\License {
+class License extends \WBCR\Factory_Templates_116\Pages\License {
 
 	/**
 	 * {@inheritdoc}
@@ -58,12 +58,12 @@ class License extends \WBCR\Factory_Templates_112\Pages\License {
 	/**
 	 * WCL_LicensePage constructor.
 	 *
-	 * @param \Wbcr_Factory460_Plugin $plugin
+	 * @param \Wbcr_Factory466_Plugin $plugin
 	 *
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 *
 	 */
-	public function __construct(\Wbcr_Factory460_Plugin $plugin)
+	public function __construct(\Wbcr_Factory466_Plugin $plugin)
 	{
 		$this->menu_title = __('License', 'titan-security');
 		$this->page_menu_short_description = __('Product activation', 'titan-security');
@@ -126,12 +126,12 @@ class License extends \WBCR\Factory_Templates_112\Pages\License {
 	/**
 	 * {@inheritDoc}
 	 * @param                         $notices
-	 * @param \Wbcr_Factory460_Plugin $plugin
+	 * @param \Wbcr_Factory466_Plugin $plugin
 	 *
 	 * @return array
 	 * @since 6.5.2
 	 *
-	 * @see   \FactoryPages460_ImpressiveThemplate
+	 * @see   \FactoryPages466_ImpressiveThemplate
 	 */
 	/*public function getActionNotices($notices)
 	{
@@ -280,14 +280,14 @@ class License extends \WBCR\Factory_Templates_112\Pages\License {
 		if( $this->is_premium ):
 			?>
 			<p style="margin-top: 10px;">
-				<?php printf(__('<a href="%s" target="_blank" rel="noopener">Lean more</a> about the premium version and get the license key to activate it now!', 'wbcr_factory_templates_112'), $this->plugin->get_support()->get_pricing_url(true, 'license_page')); ?>
+				<?php printf(__('<a href="%s" target="_blank" rel="noopener">Lean more</a> about the premium version and get the license key to activate it now!', 'wbcr_factory_templates_116'), $this->plugin->get_support()->get_pricing_url(true, 'license_page')); ?>
 			</p>
 		<?php else: ?>
 			<p style="margin-top: 10px;">
-				<?php printf(__('Can’t find your key? Go to <a href="%s" target="_blank" rel="noopener">this page</a> and login using the e-mail address associated with your purchase.', 'wbcr_factory_templates_112'), "https://users.freemius.com/") ?>
+				<?php printf(__('Can’t find your key? Go to <a href="%s" target="_blank" rel="noopener">this page</a> and login using the e-mail address associated with your purchase.', 'wbcr_factory_templates_116'), "https://users.freemius.com/") ?>
 			</p>
 			<p style="margin-top: 10px;">
-				<?php printf(__('We use certain personal data, such as your email address. By activating the license, you confirm that you have read the <a href="https://titansitescanner.com/terms-of-use/">Terms of Service</a> and <a href="https://titansitescanner.com/privacy/">Privacy Policy (in accordance with GDPR)</a>', 'wbcr_factory_templates_112'), $this->plugin->get_support()->get_contacts_url(true, 'license_page')) ?>
+				<?php printf(__('We use certain personal data, such as your email address. By activating the license, you confirm that you have read the <a href="https://titansitescanner.com/terms-of-use/">Terms of Service</a> and <a href="https://titansitescanner.com/privacy/">Privacy Policy (in accordance with GDPR)</a>', 'wbcr_factory_templates_116'), $this->plugin->get_support()->get_contacts_url(true, 'license_page')) ?>
 			</p>
 		<?php endif;
 	}

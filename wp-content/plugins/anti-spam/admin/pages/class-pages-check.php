@@ -71,12 +71,12 @@ class Check extends Base {
 	/**
 	 * Scanner page constructor.
 	 *
-	 * @param \Wbcr_Factory460_Plugin $plugin
+	 * @param \Wbcr_Factory466_Plugin $plugin
 	 *
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 *
 	 */
-	public function __construct( \Wbcr_Factory460_Plugin $plugin ) {
+	public function __construct( \Wbcr_Factory466_Plugin $plugin ) {
 		$this->plugin = $plugin;
 
 		$this->menu_title                  = __( 'Audit', 'titan-security' );
@@ -93,12 +93,12 @@ class Check extends Base {
 	/**
 	 * {@inheritDoc}
 	 * @param                         $notices
-	 * @param \Wbcr_Factory460_Plugin $plugin
+	 * @param \Wbcr_Factory466_Plugin $plugin
 	 *
 	 * @return array
 	 * @since 6.5.2
 	 *
-	 * @see   \FactoryPages460_ImpressiveThemplate
+	 * @see   \FactoryPages466_ImpressiveThemplate
 	 */
 	public function getActionNotices( $notices ) {
 

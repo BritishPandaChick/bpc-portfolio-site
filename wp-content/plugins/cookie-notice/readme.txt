@@ -4,7 +4,7 @@ Tags: gdpr, ccpa, cookies, consent, compliance
 Requires at least: 4.7
 Requires PHP: 5.4
 Tested up to: 6.2
-Stable tag: 2.4.7
+Stable tag: 2.4.8
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 
@@ -120,6 +120,13 @@ Yes! The plugin + web appliaction version includes technical compliance features
 4. Cookie Compliance settings
 
 == Changelog ==
+
+= 2.4.8 =
+* New: Added Pages to Conditional display
+* Fix: Homepage display issue
+* Fix: Background color issue
+* Tweak: Improved WP Rocket support
+* Tweak: Improved SG Optimizer support
 
 = 2.4.7 =
 * New: Conditional display of the banner
@@ -458,6 +465,9 @@ Initial release
 
 == Upgrade Notice ==
 
-= 2.4.7 =
-* New: Conditional display of the banner
-* Tweak: Improved sanitization and validation of data
+= 2.4.8 =
+* New: Added Pages to Conditional display
+* Fix: Homepage display issue
+* Fix: Background color issue
+* Tweak: Improved WP Rocket support
+* Tweak: Improved SG Optimizer support
