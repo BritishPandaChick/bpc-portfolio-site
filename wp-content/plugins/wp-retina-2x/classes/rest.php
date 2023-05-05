@@ -51,6 +51,11 @@ class Meow_WR2X_Rest
 			'permission_callback' => array( $this->core, 'can_access_settings' ),
 			'callback' => array( $this, 'rest_easy_io_stats' )
 		) );
+		register_rest_route( $this->namespace, '/check_optimizers/', array(
+			'methods' => 'GET',
+			'permission_callback' => array( $this->core, 'can_access_settings' ),
+			'callback' => array( $this, 'rest_check_optimizers' )
+		) );
 
 		// STATS & LISTING
 		register_rest_route( $this->namespace, '/stats', array(
@@ -217,6 +222,28 @@ class Meow_WR2X_Rest
 
 	function rest_all_settings() {
 		return new WP_REST_Response( [ 'success' => true, 'data' => $this->core->get_all_options() ], 200 );
+	}
+
+	function rest_check_optimizers() {
+		if ( !function_exists('exec') ) {
+			return new WP_REST_Response( [ 'success' => true, 'data' => false ], 200 );
+		}
+		$optimizers = [
+			'jpegoptim',
+			'optipng',
+			'pngquant',
+			'svgo',
+			'gifsicle',
+			'webp',
+		];
+		$data = [];
+		foreach ( $optimizers as $optimizer ) {
+			$output = null;
+			exec('whereis ' . $optimizer, $output);
+			list($name, $value) = explode(':', $output[0]);
+			$data[$name] = $value;
+		}
+		return new WP_REST_Response( [ 'success' => true, 'data' => $data ], 200 );
 	}
 
 	function count_issues($search) {

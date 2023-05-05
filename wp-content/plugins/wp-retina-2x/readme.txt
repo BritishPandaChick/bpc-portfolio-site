@@ -3,9 +3,9 @@ Contributors: TigrouMeow
 Tags: retina, images, replace, size, thumbnail, regenerate, sizes, high-dpi
 Donate link: https://meowapps.com/donation/
 Requires at least: 5.0
-Tested up to: 6.1
+Tested up to: 6.2
 Requires PHP: 7.3
-Stable tag: 6.4.1
+Stable tag: 6.4.2
 
 Optimize and manage your images with Perfect Images. Easily replace or regenerate existing images in bulk, set custom sizes, improve performance, create retina versions, and more. Achieve perfect images for your site with ease.
 
@@ -50,9 +50,13 @@ The Pro version adds support for Retina for full-size, support for lazy-loading 
 
 == Changelog ==
 
-= 6.4.1 (2023/04/16) =
-* Update: Common libs updated, should be less issues with updates.
+= 6.4.2 (2023/04/11) =
+* Update: Better UI.
+* Add: Optimizers (check if the binaries are installed in your server).
 * Info: If you enjoy this plugin, please share some love by [writing a little review here](https://wordpress.org/support/plugin/wp-retina-2x/reviews/?rate=5#new-post). And since I read them all, don't hesitate to drop a few remarks and feature requests in those reviews. Thank you :)
+
+= 6.4.1 (2023/02/16) =
+* Update: Common libs updated, should be less issues with updates.
 
 = 6.4.0 (2023/02/03) =
 * Fix: Replace wasn't working fine.
