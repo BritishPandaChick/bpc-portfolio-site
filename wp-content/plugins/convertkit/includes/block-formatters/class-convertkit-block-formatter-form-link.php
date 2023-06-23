@@ -39,8 +39,12 @@ class ConvertKit_Block_Formatter_Form_Link extends ConvertKit_Block_Formatter {
 	 */
 	public function __construct() {
 
-		// Register this as a Gutenberg block formatter in the ConvertKit Plugin.
-		add_filter( 'convertkit_get_block_formatters', array( $this, 'register' ) );
+		// Register this as a Gutenberg block formatter in the ConvertKit Plugin,
+		// if non-inline forms exist on ConvertKit.
+		$this->forms = new ConvertKit_Resource_Forms( 'block_formatter_register' );
+		if ( $this->forms->non_inline_exist() ) {
+			add_filter( 'convertkit_get_block_formatters', array( $this, 'register' ) );
+		}
 
 		// Enqueue JS in footer if links exist in the content that have the formatter applied.
 		add_filter( 'the_content', array( $this, 'maybe_enqueue_scripts' ) );
@@ -72,10 +76,10 @@ class ConvertKit_Block_Formatter_Form_Link extends ConvertKit_Block_Formatter {
 		return array(
 			'title'          => __( 'ConvertKit Form Trigger', 'convertkit' ),
 			'description'    => __( 'Displays a modal, sticky bar or slide in form to display when the link is pressed.', 'convertkit' ),
-			'icon'           => 'resources/backend/images/block-icon-formtrigger.png',
+			'icon'           => 'resources/backend/images/block-icon-formtrigger.svg',
 
 			// Gutenberg: Block Icon in Editor.
-			'gutenberg_icon'    => file_get_contents( CONVERTKIT_PLUGIN_PATH . '/resources/backend/images/block-icon-formtrigger.svg' ), /* phpcs:ignore */
+			'gutenberg_icon' => convertkit_get_file_contents( CONVERTKIT_PLUGIN_PATH . '/resources/backend/images/block-icon-formtrigger.svg' ),
 		);
 
 	}
@@ -113,20 +117,11 @@ class ConvertKit_Block_Formatter_Form_Link extends ConvertKit_Block_Formatter {
 			return false;
 		}
 
-		// Get ConvertKit Forms.
-		$forms            = array();
-		$forms_data       = array();
-		$convertkit_forms = new ConvertKit_Resource_Forms( 'block_edit' );
-		if ( $convertkit_forms->exist() ) {
-			foreach ( $convertkit_forms->get() as $form ) {
-				// Ignore inline forms; this formatter is only for modal, slide in and sticky bar forms.
-				if ( ! array_key_exists( 'format', $form ) ) {
-					continue;
-				}
-				if ( $form['format'] === 'inline' ) {
-					continue;
-				}
-
+		// Get non-inline ConvertKit Forms.
+		$forms      = array();
+		$forms_data = array();
+		if ( $this->forms->exist() ) {
+			foreach ( $this->forms->get_non_inline() as $form ) {
 				// Add this form's necessary to the attribute arrays.
 				$forms[ absint( $form['id'] ) ]      = sanitize_text_field( $form['name'] );
 				$forms_data[ absint( $form['id'] ) ] = array(
@@ -173,9 +168,6 @@ class ConvertKit_Block_Formatter_Form_Link extends ConvertKit_Block_Formatter {
 		if ( strpos( $content, 'data-formkit-toggle' ) === false ) {
 			return $content;
 		}
-
-		// Get Forms.
-		$this->forms = new ConvertKit_Resource_Forms();
 
 		// Return content, unedited, if no Forms exist.
 		if ( ! $this->forms->exist() ) {
