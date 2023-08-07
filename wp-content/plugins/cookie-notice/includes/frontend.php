@@ -32,11 +32,19 @@ class Cookie_Notice_Frontend {
 
 		// cookie compliance initialization
 		if ( $cn->get_status() === 'active' ) {
+			// litespeed cache 3.0+ compatibility
+			if ( class_exists( 'LiteSpeed\Core' ) && defined( 'LSCWP_CUR_V' ) && version_compare( LSCWP_CUR_V, '3.0', '>=' ) )
+				include_once( COOKIE_NOTICE_PATH . 'includes/modules/litespeed-cache/litespeed-cache.php' );
+
 			// sg optimizer 5.5+ compatibility
 			global $siteground_optimizer_loader;
 
 			if ( ! empty( $siteground_optimizer_loader ) && is_object( $siteground_optimizer_loader ) && is_a( $siteground_optimizer_loader, 'SiteGround_Optimizer\Loader\Loader' ) && defined( '\SiteGround_Optimizer\VERSION' ) && version_compare( \SiteGround_Optimizer\VERSION, '5.5', '>=' ) )
 				include_once( COOKIE_NOTICE_PATH . 'includes/modules/sg-optimizer/sg-optimizer.php' );
+
+			// wp rocket 3.8+ compatibility
+			if ( function_exists( 'rocket_init' ) && defined( 'WP_ROCKET_VERSION' ) && version_compare( WP_ROCKET_VERSION, '3.8', '>=' ) )
+				include_once( COOKIE_NOTICE_PATH . 'includes/modules/wp-rocket/wp-rocket.php' );
 		}
 	}
 
@@ -259,7 +267,7 @@ class Cookie_Notice_Frontend {
 		<script type="text/javascript">
 			var huOptions = ' . wp_json_encode( $options ) . ';
 		</script>
-		<script type="text/javascript"' . ( ! $options['blocking'] ? ' async' : '' ) . ' src="' . esc_url( $cn->get_url( 'widget' ) ) . '"></script>';
+		<script type="text/javascript" src="' . esc_url( $cn->get_url( 'widget' ) ) . '"></script>';
 
 		echo apply_filters( 'cn_cookie_compliance_output', $output, $options );
 	}

@@ -2,7 +2,7 @@
 /*
 Plugin Name: Cookie Notice & Compliance for GDPR / CCPA
 Description: Cookie Notice allows you to you elegantly inform users that your site uses cookies and helps you comply with GDPR, CCPA and other data privacy laws.
-Version: 2.4.8
+Version: 2.4.9
 Author: Hu-manity.co
 Author URI: https://hu-manity.co/
 Plugin URI: https://cookie-compliance.co/
@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) )
  * Cookie Notice class.
  *
  * @class Cookie_Notice
- * @version	2.4.8
+ * @version	2.4.9
  */
 class Cookie_Notice {
 
@@ -113,7 +113,7 @@ class Cookie_Notice {
 			'script_placement'		=> 'header',
 			'translate'				=> true,
 			'deactivation_delete'	=> false,
-			'update_version'		=> 7,
+			'update_version'		=> 8,
 			'update_notice'			=> true,
 			'update_notice_diss'	=> false,
 			'update_delay_date'		=> 0,
@@ -124,7 +124,7 @@ class Cookie_Notice {
 			'subscription'			=> 'basic',
 			'threshold_exceeded'	=> false
 		],
-		'version'	=> '2.4.8'
+		'version'	=> '2.4.9'
 	];
 
 	/**
@@ -646,7 +646,7 @@ class Cookie_Notice {
 
 		$network = $this->is_network_admin();
 
-		$current_update = 8;
+		$current_update = 9;
 
 		// get current database version
 		if ( $network )
@@ -699,7 +699,7 @@ class Cookie_Notice {
 
 		// show notice, if no compliance only
 		if ( $this->options['general']['update_notice'] === true && empty( $status ) ) {
-			$this->add_notice( '<div class="cn-notice-text"><h2>' . esc_html__( 'Two new privacy laws in the United States started January 1st 2023', 'cookie-notice' ) . '</h2><p>' . esc_html__( 'As of early 2023, two regulations in the United States went into effect: the California CPRA and the Virginia VCDPA. They expand requirements already in place in the US, such as having a Privacy Policy and allowing users to opt out of the data processing for certain purposes. Click "Run Compliance Check" to check if your website has the functionality required by the US Privacy Laws.', 'cookie-notice' ) . '</p><p class="cn-notice-actions"><a href="' . esc_url( $network ? network_admin_url( 'admin.php?page=cookie-notice&welcome=1' ) : admin_url( 'admin.php?page=cookie-notice&welcome=1' ) ) . '" class="button button-primary cn-button">' . esc_html__( 'Run Compliance Check', 'cookie-notice' ) . '</a> <a href="#" class="button-link cn-notice-dismiss">' . esc_html__( 'Dismiss Notice', 'cookie-notice' ) . '</a></p></div>', 'error', 'div' );
+			$this->add_notice( '<div class="cn-notice-text"><h2>' . esc_html__( 'Facebook Tracking Pixel Illegal in EU?', 'cookie-notice' ) . '</h2><p>' . esc_html__( 'The Austrian Data Protection Authority recently declared that the use of Facebook\'s tracking pixel directly violates the GDPR. This decision could affect many websites in the European Union. To use Facebook Pixel, prior consent from visitors for tracking is required. Click "Run Compliance Check" to check if your website compliance with the latest privacy regulations.', 'cookie-notice' ) . '</p><p class="cn-notice-actions"><a href="' . esc_url( $network ? network_admin_url( 'admin.php?page=cookie-notice&welcome=1' ) : admin_url( 'admin.php?page=cookie-notice&welcome=1' ) ) . '" class="button button-primary cn-button">' . esc_html__( 'Run Compliance Check', 'cookie-notice' ) . '</a> <a href="#" class="button-link cn-notice-dismiss">' . esc_html__( 'Dismiss Notice', 'cookie-notice' ) . '</a></p></div>', 'error', 'div' );
 		}
 
 		// show threshold limit warning, compliance only
