@@ -39,7 +39,11 @@ class Meow_WR2X_Core {
 		add_filter( 'generate_rewrite_rules', array( 'Meow_WR2X_Admin', 'generate_rewrite_rules' ) );
 		add_filter( 'retina_validate_src', array( $this, 'validate_src' ) );
 		add_filter( 'wp_calculate_image_srcset', array( $this, 'calculate_image_srcset' ), 1000, 5 );
-		add_filter( 'media_row_actions', array( $this, 'add_action_link'), 10, 2 );
+
+		if ( $options['image_replace'] ) {
+			add_filter( 'media_row_actions', array( $this, 'add_action_link'), 10, 2 );
+		}
+
 		add_filter( 'attachment_fields_to_edit', array( $this, 'add_replace_image_button'), 10, 2 );
 		add_action( 'add_meta_boxes', array( $this, 'add_metabox' ) );
 
@@ -143,7 +147,7 @@ class Meow_WR2X_Core {
 	}
 
 	function add_action_link( $actions, $post ) {
-		$actions['action_link'] = '<span class="wr2x-action-link" data-id="' . $post->ID . '">Replace Image</span>';
+		$actions['wr2x-replace'] = '<span class="wr2x-action-link" data-id="' . $post->ID . '">Replace Image</span>';
 		return $actions;
 	}
 

@@ -10,7 +10,7 @@
 
 <h1>
 	<?php
-	echo sprintf(
+	printf(
 		/* translators: Type of content (download, course) */
 		esc_html__( 'Configure %s', 'convertkit' ),
 		esc_html( $this->type_label )
@@ -66,9 +66,7 @@ if ( $this->type === 'course' ) {
 					<?php
 					foreach ( $this->products->get() as $product ) {
 						?>
-						<option value="product_<?php echo esc_attr( $product['id'] ); ?>">
-							<?php echo esc_attr( $product['name'] ); ?>
-						</option>
+						<option value="product_<?php echo esc_attr( $product['id'] ); ?>"><?php echo esc_attr( $product['name'] ); ?></option>
 						<?php
 					}
 					?>

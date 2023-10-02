@@ -4,8 +4,8 @@ Tags: retina, images, replace, size, thumbnail, regenerate, sizes, high-dpi
 Donate link: https://meowapps.com/donation/
 Requires at least: 5.0
 Tested up to: 6.2
-Requires PHP: 7.3
-Stable tag: 6.4.4
+Requires PHP: 6.3
+Stable tag: 6.4.5
 
 Optimize and manage your images with Perfect Images. Easily replace or regenerate existing images in bulk, set custom sizes, improve performance, create retina versions, and more. Achieve perfect images for your site with ease.
 
@@ -16,9 +16,9 @@ Take control of your images with Perfect Images! This powerful plugin helps you 
 Here's a closer look at the main features of Perfect Images:
 
 * Manage Image Sizes
-* Replace Image & Media
+* Replace Image & Media Entries
 * Regenerate Thumbnails
-* Retina Images / HighDPI
+* Retina Images / High DPI
 * CDN (with Image Optimization by EWWW)
 * Disable Image Threshold
 
@@ -49,6 +49,9 @@ The Pro version adds support for Retina for full-size, support for lazy-loading 
 3. Check if it works! - if it doesn't, read the FAQ, the tutorial, and check the forums.
 
 == Changelog ==
+
+= 6.4.5 (2023/08/17) =
+* Fix: The Replace Media link was breaking the layout, and showing even though this feature was not enabled.
 
 = 6.4.4 (2023/07/21) =
 * Update: Refreshed the UI, better checkboxes and so on.

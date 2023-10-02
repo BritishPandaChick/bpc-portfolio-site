@@ -421,3 +421,10 @@
 0031.239 (0) There were errors in the uploads, so the 'resume' event is remaining scheduled
 0031.242 (0) No email will/can be sent - the user has not configured an email address.
 0031.243 (0) The backup has not finished; a resumption is scheduled
+4883828.159 (1) Opened log file at time: Mon, 02 Oct 2023 17:34:15 +0000 on http://localhost/bpcportfolio
+4883828.162 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.23.7 WP: 6.2.2 PHP: 8.1.4 (apache2handler, Windows NT LAPTOP-5NDR6MG6 10.0 build 22621 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 63M | 64M) multisite: N openssl: OpenSSL 1.1.1m  14 Dec 2021 mcrypt: N LANG:  ZipArchive::addFile: Y
+4883828.163 (1) Free space on disk containing Updraft's temporary directory: 96673.7 MB
+4883828.166 (1) Requesting backup semaphore lock (052980d370dd)
+4883828.171 (1) [Debug] Lock option (updraft_lock_052980d370dd, wp_options) was created in the database
+4883828.173 (1) [Info] Lock (updraft_lock_052980d370dd, wp_options) acquired after initialising the database
+4883828.174 (1) This backup task (052980d370dd) is either complete or began over 2 days ago: ending (1696268055.2471, 1691384227) (existing jobdata keys: resume_interval, job_type, jobstatus, backup_time, job_time_ms, service, split_every, maxzipbatch, job_file_entities, option_cache, uploaded_lastreset, one_shot, followsups_allowed, last_sapi, backup_database, backup_files, remote_storage_instances, runs_started, current_resumption, binzip, filecreating_substatus, files_enumerated_at, run_times, useful_checkins, sha1-plugins0, sha256-plugins0, filesize-plugins0, uploading_substatus, sha1-themes0, sha256-themes0, filesize-themes0, sha1-uploads0, sha256-uploads0, filesize-uploads0, sha1-others0, sha256-others0, filesize-others0, backup_files_array, binsqldump, dbcreating_substatus, fetch_rows, sha1-db0, sha256-db0, prune, hash_list_of_complete_pruned_files)
