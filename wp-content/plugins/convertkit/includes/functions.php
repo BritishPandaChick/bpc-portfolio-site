@@ -136,6 +136,7 @@ function convertkit_get_supported_restrict_content_post_types() {
 
 	$post_types = array(
 		'page',
+		'post',
 	);
 
 	/**
@@ -261,7 +262,7 @@ function convertkit_get_setup_wizard_plugin_link( $query_args = array() ) {
 		)
 	);
 
-	return add_query_arg( $query_args, admin_url( 'index.php' ) );
+	return add_query_arg( $query_args, admin_url( 'options.php' ) );
 
 }
 
