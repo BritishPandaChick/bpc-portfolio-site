@@ -10,7 +10,10 @@ class Meow_WR2X_Core {
 	public $method = false;
 	public $retina_sizes = array();
 	public $disabled_sizes = array();
+	public $webp_sizes = array();
+	public $webp_retina_sizes = array();
 	public $lazy = false;
+	public $admin = null;
 
 	public function __construct() {
 		global $wr2x_core;
@@ -32,6 +35,8 @@ class Meow_WR2X_Core {
 		$this->method = $options["method"];
 		$this->retina_sizes = $options['retina_sizes'] ?? array();
 		$this->disabled_sizes = $options['disabled_sizes'] ?? array();
+		$this->webp_sizes = $options['webp_sizes'] ?? array();
+		$this->webp_retina_sizes = $options['webp_retina_sizes'] ?? array();
 		$this->lazy = $options["picturefill_lazysizes"] && class_exists( 'MeowPro_WR2X_Core' );
 		add_action( 'wp_enqueue_scripts', array( $this, 'wp_enqueue_scripts' ) );
 		add_filter( 'wp_generate_attachment_metadata', array( $this, 'wp_generate_attachment_metadata' ) );
@@ -39,6 +44,7 @@ class Meow_WR2X_Core {
 		add_filter( 'generate_rewrite_rules', array( 'Meow_WR2X_Admin', 'generate_rewrite_rules' ) );
 		add_filter( 'retina_validate_src', array( $this, 'validate_src' ) );
 		add_filter( 'wp_calculate_image_srcset', array( $this, 'calculate_image_srcset' ), 1000, 5 );
+		add_action( 'after_setup_theme', array( $this, 'add_image_sizes' ) );
 
 		if ( $options['image_replace'] ) {
 			add_filter( 'media_row_actions', array( $this, 'add_action_link'), 10, 2 );
@@ -152,6 +158,10 @@ class Meow_WR2X_Core {
 	}
 
 	function add_replace_image_button( $form_fields, $post ) {
+		$show_image_button = $this->get_option( 'image_replace' );
+		if ( !$show_image_button ) {
+			return $form_fields;
+		}
 		$form_fields['replace_image'] = array(
 			'value' => '',
 			'required' => false,
@@ -164,11 +174,23 @@ class Meow_WR2X_Core {
 	}
 
 	function add_metabox() {
+		// Show nothing if the contents of the meta box are all disabled.
+		$show_image_button = $this->get_option( 'image_replace' );
+		if ( !$show_image_button ) {
+			return;
+		}
 		add_meta_box( 'wr2x-metabox', 'Perfect Image', array( $this, 'render_metabox' ), 'attachment', 'side', 'default' );
 	}
 
 	function render_metabox( $post ) {
 		echo '<div id="wr2x-metabox-item" data-id="' . $post->ID . '"></div>';
+	}
+
+	function add_image_sizes() {
+		$custom_image_sizes = $this->get_option( 'custom_image_sizes' );
+		foreach ( $custom_image_sizes as $details ) {
+			add_image_size( $details['name'], $details['width'], $details['height'], $details['crop'] );
+		}
 	}
 
 	/**
@@ -1138,7 +1160,7 @@ class Meow_WR2X_Core {
 
 		// CDN Domain
 		if ( !empty( $wr2x_easyio_domain ) ) {
-			$cdn_domain = "${wr2x_easyio_domain}";
+			$cdn_domain = "{$wr2x_easyio_domain}";
 			if ( $this->get_option( 'easyio_lossless', false ) ) {
 				$cdn_params['lossy'] = 0;
 			}
@@ -1209,13 +1231,30 @@ class Meow_WR2X_Core {
 				$needs_update = true;
 				$retina = false;
 			}
+			$webp = in_array( $s, $this->webp_sizes );
+			if ( !$enabled && $webp ) {
+				$this->webp_sizes = array_diff( $this->webp_sizes, array( $s ) );
+				$options['webp_sizes'] = $this->webp_sizes;
+				$needs_update = true;
+				$webp = false;
+			}
+			$webp_retina = in_array( $s, $this->webp_retina_sizes );
+			if ( (!$enabled || !$retina) && $webp_retina ) {
+				$this->webp_retina_sizes = array_diff( $this->webp_retina_sizes, array( $s ) );
+				$options['webp_retina_sizes'] = $this->webp_retina_sizes;
+				$needs_update = true;
+				$webp_retina = false;
+			}
 
 			$sizes[$s] = array( 
 				'width' => $width, 
 				'height' => $height, 
 				'crop' => $crop,
 				'enabled' => $enabled,
+				'retina_enabled' => $enabled && $retina,
 				'retina' => $retina,
+				'webp' => $webp,
+				'webp_retina' => $webp_retina,
 				'name' => $s,
 				'shortname' => Meow_WR2X_Core::size_shortname( $s )
 			);
@@ -1225,15 +1264,28 @@ class Meow_WR2X_Core {
 		$disabled_to_add = array();
 		foreach ( $this->disabled_sizes as $size ) {
 			$retina = in_array( $size, $this->retina_sizes );
+			$webp = in_array( $size, $this->webp_sizes );
+			$webp_retina = in_array( $size, $this->webp_retina_sizes );
 			if ( $retina ) {
 				$retina_sizes = array_diff( $this->retina_sizes, array( $size ) );
 				$options['retina_sizes'] = $retina_sizes;
+				$needs_update = true;
+			}
+			if ( $webp ) {
+				$webp_sizes = array_diff( $this->webp_sizes, array( $size ) );
+				$options['webp_sizes'] = $webp_sizes;
+				$needs_update = true;
+			}
+			if ( $webp_retina ) {
+				$webp_retina_sizes = array_diff( $this->webp_retina_sizes, array( $size ) );
+				$options['webp_retina_sizes'] = $webp_retina_sizes;
 				$needs_update = true;
 			}
 			if ( !array_key_exists( $size, $sizes ) ) {
 				$disabled_to_add[$size] = array( 
 					'enabled' => false,
 					'retina' => false,
+					'webp' => false,
 					'name' => $size,
 					'shortname' => Meow_WR2X_Core::size_shortname( $size )
 				);
@@ -1248,7 +1300,7 @@ class Meow_WR2X_Core {
 
 		if ( $output_type === ARRAY_A ) {
 			return array_values( $sizes );
-		} 
+		}
 
 		return $sizes;
 	}
@@ -1306,13 +1358,36 @@ class Meow_WR2X_Core {
 		return !!$debug;
 	}
 
-	function log( $data, $isExtra = false ) {
-		if ( !$this->is_debug() )
-			return;
-		$fh = fopen( trailingslashit( dirname(__FILE__) ) . 'wp-retina-2x.log', 'a' );
+	function get_logs_path() {
+    $path = $this->get_option( 'logs_path' );
+    if ( $path && file_exists( $path ) ) {
+      return $path;
+    }
+    $uploads_dir = wp_upload_dir();
+    $path = trailingslashit( $uploads_dir['basedir'] ) . WR2X_PREFIX . "_" . $this->random_ascii_chars() . ".log";
+		if ( !file_exists( $path ) ) {
+			touch( $path );
+		}
+    $options = $this->get_all_options();
+    $options['logs_path'] = $path;
+    $this->update_options( $options );
+    return $path;
+	}
+
+	function log( $data = null ) {
+		if ( !$this->is_debug() ) { return false; }
+		$log_file_path = $this->get_logs_path();
+		$fh = @fopen( $log_file_path, 'a' );
+		if ( !$fh ) { return false; }
 		$date = date( "Y-m-d H:i:s" );
-		fwrite( $fh, "$date: {$data}\n" );
+		if ( is_null( $data ) ) {
+			fwrite( $fh, "\n" );
+		}
+		else {
+			fwrite( $fh, "$date: {$data}\n" );
+		}
 		fclose( $fh );
+		return true;
 	}
 
 	// Based on http://wordpress.stackexchange.com/questions/6645/turn-a-url-into-an-attachment-post-id
@@ -1729,17 +1804,21 @@ class Meow_WR2X_Core {
 			'method' => 'none',
 			'retina_sizes' => [],
 			'disabled_sizes' => [],
+			'webp_sizes' => [],
+			'webp_retina_sizes' => [],
 			'picturefill_lazysizes' => false,
 			'big_image_size_threshold' => false,
 			'hide_retina_dashboard' => false,
 			'hide_retina_column' => true,
 			'hide_optimize' => true,
 			'auto_generate' => false,
+			'webp_auto_generate' => false,
 			'ignore_sizes' => [],
 			'picturefill_keep_src' => false,
 			'picturefill_css_background' => false,
 			'disable_responsive' => false,
 			'full_size' => false,
+			'webp_full_size' => false,
 			'quality' => 75,
 			'over_http_check' => false,
 			'easyio_domain' => '',
@@ -1752,7 +1831,10 @@ class Meow_WR2X_Core {
 			'module_retina_enabled' => true,
 			'module_optimize_enabled' => true,
 			'module_ui_enabled' => true,
+			'module_webp_enabled' => true,
 			'gif_thumbnails_disabled' => false,
+			'logs_path' => null,
+			'custom_image_sizes' => [],
 		);
 	}
 
@@ -1761,7 +1843,9 @@ class Meow_WR2X_Core {
 		$options = get_option( $this->option_name, null );
 		$options = $this->check_options( $options );
 		foreach ( $options as $option => $value ) {
-			if ($option === 'retina_sizes' || $option === 'disabled_sizes') {
+			if ($option === 'retina_sizes' || $option === 'disabled_sizes'
+				|| $option === 'webp_sizes' || $option === 'webp_retina_sizes'
+			) {
 				$options[$option] = array_values( $value );
 				continue;
 			}
@@ -1812,6 +1896,8 @@ class Meow_WR2X_Core {
 		$this->method = $options["method"];
 		$this->retina_sizes = $options['retina_sizes'] ?? array();
 		$this->disabled_sizes = $options['disabled_sizes'] ?? array();
+		$this->webp_sizes = $options['webp_sizes'] ?? array();
+		$this->webp_retina_sizes = $options['webp_retina_sizes'] ?? array();
 		$this->lazy = $options["picturefill_lazysizes"] && class_exists( 'MeowPro_WR2X_Core' );
 
 		$options['sizes'] = $this->get_image_sizes( ARRAY_A, $options );
@@ -1821,6 +1907,77 @@ class Meow_WR2X_Core {
 	}
 
 	// #endregion
+
+	// Custom Image Sizes
+	function get_custom_image_size_changes ( $old_options, $new_options ) {
+		$get_diff_one = function ( $name, $options ) {
+			return array_slice( array_filter( $options, function( $option ) use ( $name ) {
+				return $option['name'] === $name;
+			}), 0, 1 )[0];
+		};
+
+		// Add or delete
+		if ( count( $new_options ) !== count( $old_options ) ) {
+			$old_option_names = array_column( $old_options, 'name' );
+			$new_option_names = array_column( $new_options, 'name' );
+			return ( count( $new_option_names ) > count( $old_option_names ) )
+				? [
+					'type' => 'add',
+					'value' => $get_diff_one(
+						array_slice( array_diff( $new_option_names, $old_option_names ), 0, 1 )[0],
+						$new_options
+					)
+				]
+				:  [
+					'type' => 'delete',
+					'value' => $get_diff_one(
+						array_slice( array_diff( $old_option_names, $new_option_names ), 0, 1 )[0],
+						$old_options
+					)
+				];
+		}
+		// Update or no change
+		$diff_keys = ['width', 'height', 'crop'];
+		foreach ( $diff_keys as $diff_key ) {
+			$new_values = array_column( $new_options, $diff_key, 'name' );
+			$old_values = array_column( $old_options, $diff_key, 'name' );
+			$diff_values = array_diff( $new_values, $old_values );
+			if ( !empty( $diff_values ) ) {
+				return [
+					'type' => 'update',
+					'value' => $get_diff_one( array_keys( $diff_values )[0], $new_options )
+				];
+			}
+		}
+		return null;
+	}
+
+	function register_custom_image_size ( $type, $name, $width, $height, $crop ) {
+		if ( $type === 'delete' ) {
+			if ( !remove_image_size( $name ) ) {
+				throw new Exception( "Could not remove image size '{$name}'." );
+			}
+			return;
+		}
+		if ( in_array( $crop, ['yes', 'no'] ) ) {
+			$crop = $crop === 'yes';
+		} else {
+			$crop = explode( '-', $crop );
+		}
+		add_image_size( $name, $width, $height, $crop );
+	}
+
+	private function random_ascii_chars( $length = 8 ) {
+		$characters = array_merge( range( 'A', 'Z' ), range( 'a', 'z' ), range( '0', '9' ) );
+		$characters_length = count( $characters );
+		$random_string = '';
+
+		for ($i = 0; $i < $length; $i++) {
+			$random_string .= $characters[rand(0, $characters_length - 1)];
+		}
+
+		return $random_string;
+	}
 
 }
 

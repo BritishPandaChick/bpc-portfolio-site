@@ -230,20 +230,70 @@ class Meow_WR2X_Rest
 		}
 		$optimizers = [
 			'jpegoptim',
+			'jpegtran',
 			'optipng',
 			'pngquant',
 			'svgo',
 			'gifsicle',
-			'webp',
 		];
 		$data = [];
+		$message = '';
 		foreach ( $optimizers as $optimizer ) {
 			$output = null;
-			exec('whereis ' . $optimizer, $output);
-			list($name, $value) = explode(':', $output[0]);
-			$data[$name] = $value;
+			$result_code = null;
+			exec('whereis ' . $optimizer, $output, $result_code);
+			$exploded = explode(':', $output[0]);
+			if (count($exploded) >= 2) {
+					list($name, $value) = $exploded;
+					$data[$name]['result'] = (bool)$value;
+			} else {
+					$data[$optimizer]['result'] = false;
+			}
+			if ( $result_code === 127 ) { // 127 means command not found.
+				$message = 'Can not check some optimizers. We need "whereis" command. Please check your server configuration.';
+				$data = [];
+				break;
+			}
 		}
-		return new WP_REST_Response( [ 'success' => true, 'data' => $data ], 200 );
+		// WebP (GD or Imagick which are used to convert images to Webp by Images to WebP plugin)
+		if( ! extension_loaded( 'gd' ) && ! extension_loaded( 'imagick' ) ){
+			$data['webp']['result'] = false;
+		} else {
+			$enabled_webp = false;
+			if ( extension_loaded( 'imagick' ) ) {
+				if ( class_exists( 'Imagick' ) ) {
+					$image = new Imagick();
+					if ( in_array( 'WEBP', $image->queryFormats() ) ){
+						$enabled_webp = true;
+						$data['Imagick(webp)']['result'] = true;
+					}
+				}
+			}
+			if (
+				function_exists( 'imagecreatefromjpeg' ) &&
+				function_exists( 'imagecreatefrompng' ) &&
+				function_exists( 'imagecreatefromgif' ) &&
+				function_exists( 'imageistruecolor' ) &&
+				function_exists( 'imagepalettetotruecolor' ) &&
+				function_exists( 'imagewebp' )
+			) {
+				$enabled_webp = true;
+				$data['GD(webp)']['result'] = true;
+			}
+			if ( !$enabled_webp ) {
+				$enable_imagick = extension_loaded( 'imagick' );
+				$enable_gd = extension_loaded( 'gd' );
+				$library = $enable_imagick ? 'Imagick' : 'GD';
+				if ( $enable_imagick && $enable_gd ) {
+					$library = 'Imagick or GD';
+				}
+				$data['webp'] = [
+					'result' => false,
+					'message' => 'Needs to enable WebP in ' . $library . ' on your server.',
+				];
+			}
+		}
+		return new WP_REST_Response( [ 'success' => true, 'data' => $data, 'message' => $message ], 200 );
 	}
 
 	function count_issues($search) {
@@ -536,12 +586,36 @@ class Meow_WR2X_Rest
 		try {
 			$params = $request->get_json_params();
 			$value = $params['options'];
+
+			// Check the changes of the option, custom_image_sizes.
+			$old_options = $this->core->get_option( 'custom_image_sizes' );
+			$new_options = $value['custom_image_sizes'];
+			$custom_image_size_changes = $this->core->get_custom_image_size_changes( $old_options, $new_options );
+
 			$options = $this->core->update_options( $value );
 			$success = !!$options;
+
+			if ($success && $custom_image_size_changes !== null) {
+				$type = $custom_image_size_changes['type'];
+				$values = $custom_image_size_changes['value'];
+				$this->core->register_custom_image_size(
+					$type,
+					$values['name'],
+					$values['width'],
+					$values['height'],
+					$values['crop']
+				);
+				$options = $this->core->sanitize_options();
+			}
+
 			$message = __( $success ? 'OK' : "Could not update options.", 'wp-retina-2x' );
 			return new WP_REST_Response([ 'success' => $success, 'message' => $message, 'options' => $options ], 200 );
 		}
 		catch ( Exception $e ) {
+			if ( $custom_image_size_changes !== null ) {
+				// Rollback the options when the change was custom_image_sizes.
+				$this->core->update_options( array_merge( $value, ['custom_image_sizes' => $old_options ] ) );
+			}
 			return new WP_REST_Response([ 'success' => false, 'message' => $e->getMessage() ], 500 );
 		}
 	}
