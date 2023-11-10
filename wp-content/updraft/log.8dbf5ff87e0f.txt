@@ -421,3 +421,10 @@
 0030.984 (0) There were errors in the uploads, so the 'resume' event is remaining scheduled
 0030.987 (0) No email will/can be sent - the user has not configured an email address.
 0030.988 (0) The backup has not finished; a resumption is scheduled
+2928507.951 (1) Opened log file at time: Fri, 10 Nov 2023 21:49:16 +0000 on http://localhost/bpcportfolio
+2928507.955 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.23.11 WP: 6.3.2 PHP: 8.1.4 (apache2handler, Windows NT LAPTOP-5NDR6MG6 10.0 build 22631 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 63.1M | 64M) multisite: N openssl: OpenSSL 1.1.1m  14 Dec 2021 mcrypt: N LANG:  ZipArchive::addFile: Y
+2928507.958 (1) Free space on disk containing Updraft's temporary directory: 87342.2 MB
+2928507.961 (1) Requesting backup semaphore lock (8dbf5ff87e0f)
+2928507.966 (1) [Debug] Lock option (updraft_lock_8dbf5ff87e0f, wp_options) was created in the database
+2928507.968 (1) [Info] Lock (updraft_lock_8dbf5ff87e0f, wp_options) acquired after initialising the database
+2928507.970 (1) This backup task (8dbf5ff87e0f) is either complete or began over 2 days ago: ending (1699652956.6464, 1696724448) (existing jobdata keys: resume_interval, job_type, jobstatus, backup_time, job_time_ms, service, split_every, maxzipbatch, job_file_entities, option_cache, uploaded_lastreset, one_shot, followsups_allowed, last_sapi, backup_database, backup_files, remote_storage_instances, runs_started, current_resumption, binzip, filecreating_substatus, files_enumerated_at, run_times, useful_checkins, sha1-plugins0, sha256-plugins0, filesize-plugins0, uploading_substatus, sha1-themes0, sha256-themes0, filesize-themes0, sha1-uploads0, sha256-uploads0, filesize-uploads0, sha1-others0, sha256-others0, filesize-others0, backup_files_array, binsqldump, dbcreating_substatus, fetch_rows, sha1-db0, sha256-db0, prune, hash_list_of_complete_pruned_files, warnings)
