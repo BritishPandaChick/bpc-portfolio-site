@@ -157,8 +157,9 @@ class ConvertKit_Admin_Settings_Broadcasts extends ConvertKit_Settings_Base {
 
 		// Define description for the 'Enabled' setting.
 		// If enabled, include the next scheduled date and time the Plugin will import broadcasts.
+		// If the next scheduled timestamp is 1, the event is running now.
 		$enabled_description = '';
-		if ( $this->settings->enabled() && $posts->get_cron_event_next_scheduled() ) {
+		if ( $this->settings->enabled() && $posts->get_cron_event_next_scheduled() && $posts->get_cron_event_next_scheduled() > 1 ) {
 			$enabled_description = sprintf(
 				'%s %s',
 				esc_html__( 'Broadcasts will next import at approximately ', 'convertkit' ),
@@ -206,6 +207,19 @@ class ConvertKit_Admin_Settings_Broadcasts extends ConvertKit_Settings_Base {
 				'name'        => 'post_status',
 				'label_for'   => 'post_status',
 				'description' => __( 'The WordPress Post status to assign imported broadcasts to.', 'convertkit' ),
+			)
+		);
+
+		add_settings_field(
+			'author_id',
+			__( 'Author', 'convertkit' ),
+			array( $this, 'author_id_callback' ),
+			$this->settings_key,
+			$this->name,
+			array(
+				'name'        => 'author_id',
+				'label_for'   => 'author_id',
+				'description' => __( 'The WordPress User to set as the author for WordPress Posts created from imported broadcasts.', 'convertkit' ),
 			)
 		);
 
@@ -355,6 +369,32 @@ class ConvertKit_Admin_Settings_Broadcasts extends ConvertKit_Settings_Base {
 
 		// Output field.
 		echo '<div class="convertkit-select2-container">' . $select_field . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput
+
+	}
+
+	/**
+	 * Renders the input for the author setting.
+	 *
+	 * @since   2.3.9
+	 *
+	 * @param   array $args   Setting field arguments (name,description).
+	 */
+	public function author_id_callback( $args ) {
+
+		// Build field.
+		$select_field = wp_dropdown_users(
+			array(
+				'echo'             => false,
+				'selected'         => $this->settings->author_id(),
+				'include_selected' => true,
+				'name'             => $this->settings_key . '[' . $args['name'] . ']',
+				'id'               => $this->settings_key . '_' . $args['name'],
+				'class'            => 'enabled convertkit-select2',
+			)
+		);
+
+		// Output field.
+		echo '<div class="convertkit-select2-container">' . $select_field . '</div>' . $this->get_description( $args['description'] ); // phpcs:ignore WordPress.Security.EscapeOutput
 
 	}
 

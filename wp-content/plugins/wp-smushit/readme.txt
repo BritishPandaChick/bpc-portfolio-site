@@ -1,14 +1,14 @@
 === Smush - Optimize, Compress and Lazy Load Images ===
 Plugin Name: Smush - Lazy Load Images, Optimize & Compress Images
-Version: 3.15.0
+Version: 3.15.1
 Author: WPMU DEV
 Author URI: https://wpmudev.com/
 Contributors: WPMUDEV, alexdunae
-Tags: image optimization, optimize images, compress images, lazy load, resize images, convert webp, optimize, images, convert, webp, compress, optimization, lossless
+Tags: optimize images, convert webp, webp, image optimization, compress images, lazy load, resize images, image optimizer, image compressor, performance, reduce image size
 Requires at least: 5.3
 Tested up to: 6.4
-Stable tag: 3.15.0
-Requires PHP: 5.6
+Stable tag: 3.15.1
+Requires PHP: 7.4
 License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 Compress images & optimize images with built-in lossless compression, lazy load, WebP conversion, and resize detection to make your site load amazingly fast.
@@ -55,7 +55,7 @@ Discover the features that set Smush apart from other image optimization plugins
 - **Incorrect Image Size Detection** - Quickly locate images that are slowing down your site. 
 - **Directory Smush** - Optimize images even if they aren't in the default WordPress media library. 
 - **Automated Optimization** - Asynchronously auto-smush your attachments for super fast compression on upload. 
-- **No Monthly Limits** - Enjoy free optimization of all your images forever (no daily, monthly, or annual limits).
+- **No Monthly Limits** - Optimize all of your images (up to 5 MB in size) free forever (no daily, monthly, or annual limits).
 - **Gutenberg Block Integration** - View image compression information directly in image blocks. 
 - **Multisite Compatible** - Flexible global and subsite settings for multisite installations. 
 - **Optimize All Media Files, Not Just Images** - Smush supports optimization for PNG, JPEG, and GIF files. 
@@ -231,6 +231,9 @@ It depends what side of the pond you live on... but whether you say optimize, op
 4. Automatically resize images on upload.
 
 == Changelog ==
+
+= 3.15.1 ( 2023-11-15 ) =
+- Improvement: Code stability improvements
 
 = 3.15.0 ( 2023-10-11 ) =
 - Improvement: Image size limit increased for pro version

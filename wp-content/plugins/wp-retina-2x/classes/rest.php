@@ -3,10 +3,12 @@
 class Meow_WR2X_Rest
 {
 	private $core;
+	private $engine;
 	private $namespace = 'wp-retina-2x/v1';
 
-	public function __construct( $core ) {
+	public function __construct( $core, $engine ) {
 		$this->core = $core;
+		$this->engine = $engine;
 
 		// FOR DEBUG
 		// For experiencing the UI behavior on a slower install.
@@ -99,10 +101,20 @@ class Meow_WR2X_Rest
 			'permission_callback' => array( $this->core, 'can_access_features' ),
 			'callback' => array( $this, 'rest_get_details' )
 		) );
+		register_rest_route( $this->namespace, '/webp_details', array(
+			'methods' => 'POST',
+			'permission_callback' => array( $this->core, 'can_access_features' ),
+			'callback' => array( $this, 'rest_get_webp_details' )
+		) );
 		register_rest_route( $this->namespace, '/build_retina', array(
 			'methods' => 'POST',
 			'permission_callback' => array( $this->core, 'can_access_features' ),
 			'callback' => array( $this, 'rest_build_retina' )
+		) );
+		register_rest_route( $this->namespace, '/build_webp', array(
+			'methods' => 'POST',
+			'permission_callback' => array( $this->core, 'can_access_features' ),
+			'callback' => array( $this, 'rest_build_webp' )
 		) );
 		register_rest_route( $this->namespace, '/regenerate', array(
 			'methods' => 'POST',
@@ -118,6 +130,11 @@ class Meow_WR2X_Rest
 			'methods' => 'POST',
 			'permission_callback' => array( $this->core, 'can_access_features' ),
 			'callback' => array( $this, 'rest_delete_retina' )
+		) );
+		register_rest_route( $this->namespace, '/delete_webp', array(
+			'methods' => 'POST',
+			'permission_callback' => array( $this->core, 'can_access_features' ),
+			'callback' => array( $this, 'rest_delete_webp' )
 		) );
 		register_rest_route( $this->namespace, '/ignore', array(
 			'methods' => 'POST',
@@ -175,7 +192,9 @@ class Meow_WR2X_Rest
 		$meta = wp_get_attachment_metadata( $mediaId );
 		$current_file = get_attached_file( $mediaId );
 		do_action( 'wr2x_before_replace', $mediaId, $tmpfname );
-		$this->core->delete_attachment( $mediaId, false );
+		$this->engine->delete_retina_attachment( $mediaId, false );
+		$this->engine->delete_webp_attachment( $mediaId, false );
+		$this->engine->delete_webp_retina_attachment( $mediaId );
 		$pathinfo = pathinfo( $current_file );
 		$basepath = $pathinfo['dirname'];
 
@@ -188,6 +207,8 @@ class Meow_WR2X_Rest
 					$normal_file = trailingslashit( $basepath ) . $meta['sizes'][$name]['file'];
 					$pathinfo = pathinfo( $normal_file );
 					$retina_file = trailingslashit( $pathinfo['dirname'] ) . $pathinfo['filename'] . $this->core->retina_extension() . $pathinfo['extension'];
+					$webp_file = trailingslashit( $pathinfo['dirname'] ) . $pathinfo['filename'] . "." . $pathinfo['extension'] . $this->core->webp_extension();
+					$webp_retina_file = trailingslashit( $pathinfo['dirname'] ) . $pathinfo['filename'] . $this->core->retina_extension() . $pathinfo['extension'] . $this->core->webp_extension();
 
 					// Test if the file exists and if it is actually a file (and not a dir)
 					// Some old WordPress Media Library are sometimes broken and link to directories
@@ -195,6 +216,10 @@ class Meow_WR2X_Rest
 						unlink( $normal_file );
 					if ( file_exists( $retina_file ) && is_file( $retina_file ) )
 						unlink( $retina_file );
+					if ( file_exists( $webp_file ) && is_file( $webp_file ) )
+						unlink( $webp_file );
+					if ( file_exists( $webp_retina_file ) && is_file( $webp_retina_file ) )
+						unlink( $webp_retina_file );
 				}
 			}
 		}
@@ -208,7 +233,9 @@ class Meow_WR2X_Rest
 		// Generate the images
 		wp_update_attachment_metadata( $mediaId, wp_generate_attachment_metadata( $mediaId, $current_file ) );
 		$meta = wp_get_attachment_metadata( $mediaId );
-		$this->core->generate_images( $meta );
+		$this->engine->generate_retina_images( $meta );
+		$this->engine->generate_webp_images( $meta );
+		$this->engine->generate_webp_retina_images( $meta );
 
 		// Increase the version number
 		$this->core->increase_media_version( $mediaId );
@@ -256,7 +283,7 @@ class Meow_WR2X_Rest
 			}
 		}
 		// WebP (GD or Imagick which are used to convert images to Webp by Images to WebP plugin)
-		if( ! extension_loaded( 'gd' ) && ! extension_loaded( 'imagick' ) ){
+		if ( ! extension_loaded( 'gd' ) && ! extension_loaded( 'imagick' ) ){
 			$data['webp']['result'] = false;
 		} else {
 			$enabled_webp = false;
@@ -414,7 +441,10 @@ class Meow_WR2X_Rest
 		foreach ( $entries as $entry ) {
 			$entry->ID = (int)$entry->ID;
 			$entry->info = $this->core->retina_info( $entry->ID, ARRAY_A );
+			$entry->webp_info = $this->core->webp_info( $entry->ID, ARRAY_A );
+			$entry->webp_retina_info = $this->core->webp_retina_info( $entry->ID, ARRAY_A );
 			$entry->thumbnail_url = wp_get_attachment_thumb_url( $entry->ID );
+			$entry->url = wp_get_attachment_url( $entry->ID );
 			$entry->metadata = unserialize( $entry->metadata );
 			$entry->metadata = $this->core->postprocess_metadata( $entry->metadata );
 			$attached_file = get_attached_file( $entry->ID );
@@ -480,6 +510,19 @@ class Meow_WR2X_Rest
 		return new WP_REST_Response( [ 'success' => true, 'data' => $info ], 200 );
 	}
 
+	function rest_get_webp_details( $request ) {
+		// Check errors
+		$params = $request->get_json_params();
+		$mediaId = isset( $params['mediaId'] ) ? (int)$params['mediaId'] : null;
+		if ( empty( $mediaId ) ) {
+			return new WP_REST_Response( [ 'success' => false, 'message' => "The Media ID is required." ] );
+		}
+
+		// Prepare result
+		$info = $this->core->webp_info( $mediaId, ARRAY_A );
+		return new WP_REST_Response( [ 'success' => true, 'data' => $info ], 200 );
+	}
+
 	// Regenerate the Thumbnails
 	function regenerate_thumbnails( $mediaId ) {
 		require_once ABSPATH . 'wp-admin/includes/image.php';
@@ -500,9 +543,11 @@ class Meow_WR2X_Rest
 
 		// Build retina
 		do_action( 'wr2x_before_regenerate', $mediaId );
-		$this->core->delete_attachment( $mediaId, false );
+		$this->engine->delete_retina_attachment( $mediaId, false );
+		$this->engine->delete_webp_retina_attachment( $mediaId, false );
 		$meta = wp_get_attachment_metadata( $mediaId );
-		$this->core->generate_images( $meta );
+		$this->engine->generate_retina_images( $meta );
+		$this->engine->generate_webp_retina_images( $meta );
 		do_action( 'wr2x_regenerate', $mediaId );
 
 		// Prepare result
@@ -524,9 +569,53 @@ class Meow_WR2X_Rest
 		}
 
 		// Delete Retina
-		$this->core->delete_retina_fullsize( $mediaId );
-		$this->core->delete_attachment( $mediaId, true );
+		$this->engine->delete_retina_fullsize( $mediaId );
+		$this->engine->delete_retina_attachment( $mediaId, true );
+		$this->engine->delete_webp_retina_attachment( $mediaId, true );
 		$meta = wp_get_attachment_metadata( $mediaId );
+		$info = $this->core->get_media_status_one( $mediaId );
+		return new WP_REST_Response( [ 'success' => true, 'data' => $info  ], 200 );
+	}
+
+	function rest_build_webp( $request ) {
+		// Check errors
+		$params = $request->get_json_params();
+		$mediaId = isset( $params['mediaId'] ) ? (int)$params['mediaId'] : null;
+		if ( empty( $mediaId ) ) {
+			return new WP_REST_Response( [ 'success' => false, 'message' => "The Media ID is required." ] );
+		}
+
+		// Build WebP and WebP Retina
+		do_action( 'wr2x_before_regenerate', $mediaId );
+		$this->engine->delete_webp_attachment( $mediaId, false );
+		$this->engine->delete_webp_retina_attachment( $mediaId, false );
+		$meta = wp_get_attachment_metadata( $mediaId );
+		$this->engine->generate_webp_images( $meta );
+		$this->engine->generate_webp_retina_images( $meta );
+		do_action( 'wr2x_regenerate', $mediaId );
+
+		// Prepare result
+		$info = $this->core->get_media_status_one( $mediaId );
+		return new WP_REST_Response( [ 'success' => true, 'data' => $info  ], 200 );
+	}
+
+	function rest_delete_webp( $request ) {
+		if ( !current_user_can( 'upload_files' ) ) {
+			$this->core->log( "You do not have permission to upload files." );
+			return __( "You do not have permission to upload files.", 'wp-retina-2x' );
+		}
+		$params = $request->get_json_params();
+
+		// Check errors
+		$mediaId = isset( $params['mediaId'] ) ? (int)$params['mediaId'] : null;
+		if ( empty( $mediaId ) ) {
+			return new WP_REST_Response( [ 'success' => false, 'message' => "The Media ID is required." ] );
+		}
+
+		// Delete WebP and WebP Retina
+		$this->engine->delete_webp_fullsize( $mediaId );
+		$this->engine->delete_webp_attachment( $mediaId, true );
+		$this->engine->delete_webp_retina_attachment( $mediaId, true );
 		$info = $this->core->get_media_status_one( $mediaId );
 		return new WP_REST_Response( [ 'success' => true, 'data' => $info  ], 200 );
 	}

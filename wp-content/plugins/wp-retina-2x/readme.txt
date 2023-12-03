@@ -3,9 +3,9 @@ Contributors: TigrouMeow
 Tags: retina, images, replace, size, thumbnail, regenerate, sizes, high-dpi
 Donate link: https://meowapps.com/donation/
 Requires at least: 6.0
-Tested up to: 6.3.2
+Tested up to: 6.4
 Requires PHP: 7.4
-Stable tag: 6.4.7
+Stable tag: 6.4.9
 
 Optimize and manage your images with Perfect Images. Easily replace or regenerate existing images in bulk, set custom sizes, improve performance, create retina versions, and more. Achieve perfect images for your site with ease.
 
@@ -50,14 +50,17 @@ The Pro version adds support for Retina for full-size, support for lazy-loading 
 
 == Changelog ==
 
+= 6.4.9 (2023/11/29) =
+* Update: Improved thumbnail viewing and metadata display for a more user-friendly experience.
+* Add: Added and refined features for handling WebP images, including creation, deletion, and status updates.
+* Update: Updates to ESLint, error handling, and API connections for improved performance and stability.
+* Info: If you enjoy this plugin, please share some love by [writing a little review here](https://wordpress.org/support/plugin/wp-retina-2x/reviews/?rate=5#new-post). And since I read them all, don't hesitate to drop a few remarks and feature requests in those reviews. Thank you :)
+
 = 6.4.7 (2023/10/19) =
 * Add: Custom Image Sizes.
 * Fix: Logs will be only enabled if the option is checked.
 * Update: Many enhancements in the code in preparation for new features.
-
-= 6.4.6 (2023/10/10) =
 * Update: For better confidentiality, the logs file is now randomly generated.
-* Info: If you enjoy this plugin, please share some love by [writing a little review here](https://wordpress.org/support/plugin/wp-retina-2x/reviews/?rate=5#new-post). And since I read them all, don't hesitate to drop a few remarks and feature requests in those reviews. Thank you :)
 
 = 6.4.5 (2023/08/17) =
 * Fix: The Replace Media link was breaking the layout, and showing even though this feature was not enabled.

@@ -429,3 +429,236 @@
 0030.971 (0) There were errors in the uploads, so the 'resume' event is remaining scheduled
 0030.975 (0) No email will/can be sent - the user has not configured an email address.
 0030.977 (0) The backup has not finished; a resumption is scheduled
+0300.520 (1) Opened log file at time: Fri, 10 Nov 2023 21:55:38 +0000 on http://localhost/bpcportfolio
+0300.523 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.23.12 WP: 6.4.1 PHP: 8.1.4 (apache2handler, Windows NT LAPTOP-5NDR6MG6 10.0 build 22631 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 64M | 66M) multisite: N openssl: OpenSSL 1.1.1m  14 Dec 2021 mcrypt: N LANG:  ZipArchive::addFile: Y
+0300.525 (1) Free space on disk containing Updraft's temporary directory: 87205.5 MB
+0300.528 (1) Requesting backup semaphore lock (295869f61a24)
+0300.533 (1) [Debug] Lock option (updraft_lock_295869f61a24, wp_options) was created in the database
+0300.535 (1) [Info] Lock (updraft_lock_295869f61a24, wp_options) acquired after initialising the database
+0300.540 (1) Backup run: resumption=1, nonce=295869f61a24, file_nonce=295869f61a24 begun at=1699653037 (301s ago), job type=backup, previous check-in=30.94s
+0300.544 (1) Scheduling a resumption (2) after 300 seconds (1699653638) in case this run gets aborted
+0300.555 (1) Checking if we have a zip executable available
+0300.558 (1) Creation of backups of directories: already finished
+0300.560 (1) Saving backup status to database (elements: 8)
+0300.570 (1) Database dump (WordPress DB): Creation was completed already
+0300.572 (1) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+0300.582 (1) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0300.585 (1) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0300.587 (1) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0300.589 (1) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-others.zip: others: This file has not yet been successfully uploaded: will queue
+0300.590 (1) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-db.gz: db: This file has not yet been successfully uploaded: will queue
+0300.593 (1) Saving backup history. Total backup size: 57.6 MB
+0300.598 (1) Requesting upload of the files that have not yet been successfully uploaded (5)
+0300.602 (1) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0300.604 (1) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+0300.795 (1) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+0300.797 (1) An error condition has occurred for the first time during this job
+0300.802 (1) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+0300.804 (1) Number of backup sets in history: 5; groups (db): 1
+0300.806 (1) Examining (for databases) backup set with group_id=0, nonce=295869f61a24, datestamp=1699653037 (Nov 10 2023 21:50:37)
+0300.808 (1) This backup set is the backup set just made, so will not be deleted.
+0300.808 (1) Examining (for databases) backup set with group_id=0, nonce=8dbf5ff87e0f, datestamp=1696724448 (Oct 08 2023 00:20:48)
+0300.808 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0300.810 (1) Examining (for databases) backup set with group_id=0, nonce=2b6d06e92d00, datestamp=1696637130 (Oct 07 2023 00:05:30)
+0300.810 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0300.810 (1) Examining (for databases) backup set with group_id=0, nonce=617b71a91e7b, datestamp=1696371283 (Oct 03 2023 22:14:43)
+0300.810 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0300.810 (1) Examining (for databases) backup set with group_id=0, nonce=231b24661f8a, datestamp=1696268281 (Oct 02 2023 17:38:01)
+0300.810 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0300.811 (1) Number of backup sets in history: 5; groups (files): 1
+0300.812 (1) Examining (for files) backup set with nonce=295869f61a24, datestamp=1699653037 (Nov 10 2023 21:50:37)
+0300.812 (1) This backup set is the backup set just made, so will not be deleted.
+0300.814 (1) This backup set is the backup set just made, so will not be deleted.
+0300.814 (1) This backup set is the backup set just made, so will not be deleted.
+0300.814 (1) This backup set is the backup set just made, so will not be deleted.
+0300.814 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0300.816 (1) Examining (for files) backup set with nonce=8dbf5ff87e0f, datestamp=1696724448 (Oct 08 2023 00:20:48)
+0300.816 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0300.816 (1) Examining (for files) backup set with nonce=2b6d06e92d00, datestamp=1696637130 (Oct 07 2023 00:05:30)
+0300.816 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0300.816 (1) Examining (for files) backup set with nonce=617b71a91e7b, datestamp=1696371283 (Oct 03 2023 22:14:43)
+0300.816 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0300.816 (1) Examining (for files) backup set with nonce=231b24661f8a, datestamp=1696268281 (Oct 02 2023 17:38:01)
+0300.816 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0300.816 (1) Retain: saving new backup history (sets now: 5) and finishing retain operation
+0300.821 (1) Resume backup (295869f61a24, 1): finish run
+0300.824 (1) [Info] Lock option (updraft_lock_295869f61a24, wp_options) released
+0300.826 (1) There were errors in the uploads, so the 'resume' event is remaining scheduled
+0300.829 (1) No email will/can be sent - the user has not configured an email address.
+0300.830 (1) The backup has not finished; a resumption is scheduled
+0637.747 (2) Opened log file at time: Fri, 10 Nov 2023 22:01:15 +0000 on http://localhost/bpcportfolio
+0637.750 (2) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.23.12 WP: 6.4.1 PHP: 8.1.4 (apache2handler, Windows NT LAPTOP-5NDR6MG6 10.0 build 22631 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 64M | 86M) multisite: N openssl: OpenSSL 1.1.1m  14 Dec 2021 mcrypt: N LANG:  ZipArchive::addFile: Y
+0637.752 (2) Free space on disk containing Updraft's temporary directory: 87152.4 MB
+0637.755 (2) Requesting backup semaphore lock (295869f61a24)
+0637.758 (2) [Info] Lock (updraft_lock_295869f61a24, wp_options) acquired
+0637.761 (2) Backup run: resumption=2, nonce=295869f61a24, file_nonce=295869f61a24 begun at=1699653037 (638s ago), job type=backup
+0637.765 (2) Scheduling a resumption (3) after 300 seconds (1699653975) in case this run gets aborted
+0637.778 (2) Checking if we have a zip executable available
+0637.781 (2) Creation of backups of directories: already finished
+0637.785 (2) Saving backup status to database (elements: 8)
+0637.797 (2) Database dump (WordPress DB): Creation was completed already
+0637.799 (2) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+0637.810 (2) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0637.812 (2) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0637.814 (2) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0637.816 (2) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-others.zip: others: This file has not yet been successfully uploaded: will queue
+0637.817 (2) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-db.gz: db: This file has not yet been successfully uploaded: will queue
+0637.819 (2) Saving backup history. Total backup size: 57.6 MB
+0637.825 (2) Requesting upload of the files that have not yet been successfully uploaded (5)
+0637.829 (2) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0637.831 (2) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+0639.067 (2) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+0639.071 (2) An error condition has occurred for the first time during this job
+0639.076 (2) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+0639.079 (2) Number of backup sets in history: 5; groups (db): 1
+0639.081 (2) Examining (for databases) backup set with group_id=0, nonce=295869f61a24, datestamp=1699653037 (Nov 10 2023 21:50:37)
+0639.150 (2) This backup set is the backup set just made, so will not be deleted.
+0639.150 (2) Examining (for databases) backup set with group_id=0, nonce=8dbf5ff87e0f, datestamp=1696724448 (Oct 08 2023 00:20:48)
+0639.150 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0639.153 (2) Examining (for databases) backup set with group_id=0, nonce=2b6d06e92d00, datestamp=1696637130 (Oct 07 2023 00:05:30)
+0639.153 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0639.153 (2) Examining (for databases) backup set with group_id=0, nonce=617b71a91e7b, datestamp=1696371283 (Oct 03 2023 22:14:43)
+0639.153 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0639.153 (2) Examining (for databases) backup set with group_id=0, nonce=231b24661f8a, datestamp=1696268281 (Oct 02 2023 17:38:01)
+0639.153 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0639.153 (2) Number of backup sets in history: 5; groups (files): 1
+0639.156 (2) Examining (for files) backup set with nonce=295869f61a24, datestamp=1699653037 (Nov 10 2023 21:50:37)
+0639.156 (2) This backup set is the backup set just made, so will not be deleted.
+0639.157 (2) This backup set is the backup set just made, so will not be deleted.
+0639.157 (2) This backup set is the backup set just made, so will not be deleted.
+0639.158 (2) This backup set is the backup set just made, so will not be deleted.
+0639.158 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0639.160 (2) Examining (for files) backup set with nonce=8dbf5ff87e0f, datestamp=1696724448 (Oct 08 2023 00:20:48)
+0639.160 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0639.160 (2) Examining (for files) backup set with nonce=2b6d06e92d00, datestamp=1696637130 (Oct 07 2023 00:05:30)
+0639.160 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0639.160 (2) Examining (for files) backup set with nonce=617b71a91e7b, datestamp=1696371283 (Oct 03 2023 22:14:43)
+0639.160 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0639.160 (2) Examining (for files) backup set with nonce=231b24661f8a, datestamp=1696268281 (Oct 02 2023 17:38:01)
+0639.160 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0639.160 (2) Retain: saving new backup history (sets now: 5) and finishing retain operation
+0639.165 (2) Resume backup (295869f61a24, 2): finish run
+0639.168 (2) [Info] Lock option (updraft_lock_295869f61a24, wp_options) released
+0639.171 (2) There were errors in the uploads, so the 'resume' event is remaining scheduled
+0639.175 (2) No email will/can be sent - the user has not configured an email address.
+0639.177 (2) The backup has not finished; a resumption is scheduled
+68382.075 (3) Opened log file at time: Sat, 11 Nov 2023 16:50:19 +0000 on http://localhost/bpcportfolio
+68382.078 (3) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.23.12 WP: 6.4.1 PHP: 8.1.4 (apache2handler, Windows NT LAPTOP-5NDR6MG6 10.0 build 22631 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 64M | 66M) multisite: N openssl: OpenSSL 1.1.1m  14 Dec 2021 mcrypt: N LANG:  ZipArchive::addFile: Y
+68382.081 (3) Free space on disk containing Updraft's temporary directory: 85956.8 MB
+68382.084 (3) Requesting backup semaphore lock (295869f61a24)
+68382.089 (3) [Info] Lock (updraft_lock_295869f61a24, wp_options) acquired
+68382.093 (3) Backup run: resumption=3, nonce=295869f61a24, file_nonce=295869f61a24 begun at=1699653037 (68382s ago), job type=backup
+68382.094 (3) Long time past since expected resumption time: approx expected=1699653975.4, now=1699721419.8, diff=67444.3
+68382.098 (3) [Warning] Your website is visited infrequently and UpdraftPlus is not getting the resources it hoped for; please read this page: https://updraftplus.com/faqs/why-am-i-getting-warnings-about-my-site-not-having-enough-visitors/
+68382.101 (3) Scheduling a resumption (4) after 300 seconds (1699721719) in case this run gets aborted
+68382.114 (3) Checking if we have a zip executable available
+68382.116 (3) Creation of backups of directories: already finished
+68382.119 (3) Saving backup status to database (elements: 8)
+68382.132 (3) Database dump (WordPress DB): Creation was completed already
+68382.134 (3) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+68382.146 (3) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+68382.148 (3) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+68382.150 (3) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+68382.152 (3) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-others.zip: others: This file has not yet been successfully uploaded: will queue
+68382.154 (3) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-db.gz: db: This file has not yet been successfully uploaded: will queue
+68382.155 (3) Saving backup history. Total backup size: 57.6 MB
+68382.160 (3) Requesting upload of the files that have not yet been successfully uploaded (5)
+68382.164 (3) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+68382.166 (3) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+68382.452 (3) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+68382.455 (3) An error condition has occurred for the first time during this job
+68382.461 (3) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+68382.464 (3) Number of backup sets in history: 5; groups (db): 1
+68382.466 (3) Examining (for databases) backup set with group_id=0, nonce=295869f61a24, datestamp=1699653037 (Nov 10 2023 21:50:37)
+68382.468 (3) This backup set is the backup set just made, so will not be deleted.
+68382.468 (3) Examining (for databases) backup set with group_id=0, nonce=8dbf5ff87e0f, datestamp=1696724448 (Oct 08 2023 00:20:48)
+68382.468 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+68382.471 (3) Examining (for databases) backup set with group_id=0, nonce=2b6d06e92d00, datestamp=1696637130 (Oct 07 2023 00:05:30)
+68382.471 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+68382.471 (3) Examining (for databases) backup set with group_id=0, nonce=617b71a91e7b, datestamp=1696371283 (Oct 03 2023 22:14:43)
+68382.472 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+68382.472 (3) Examining (for databases) backup set with group_id=0, nonce=231b24661f8a, datestamp=1696268281 (Oct 02 2023 17:38:01)
+68382.472 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+68382.472 (3) Number of backup sets in history: 5; groups (files): 1
+68382.474 (3) Examining (for files) backup set with nonce=295869f61a24, datestamp=1699653037 (Nov 10 2023 21:50:37)
+68382.474 (3) This backup set is the backup set just made, so will not be deleted.
+68382.476 (3) This backup set is the backup set just made, so will not be deleted.
+68382.476 (3) This backup set is the backup set just made, so will not be deleted.
+68382.476 (3) This backup set is the backup set just made, so will not be deleted.
+68382.477 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+68382.479 (3) Examining (for files) backup set with nonce=8dbf5ff87e0f, datestamp=1696724448 (Oct 08 2023 00:20:48)
+68382.479 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+68382.479 (3) Examining (for files) backup set with nonce=2b6d06e92d00, datestamp=1696637130 (Oct 07 2023 00:05:30)
+68382.479 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+68382.479 (3) Examining (for files) backup set with nonce=617b71a91e7b, datestamp=1696371283 (Oct 03 2023 22:14:43)
+68382.479 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+68382.479 (3) Examining (for files) backup set with nonce=231b24661f8a, datestamp=1696268281 (Oct 02 2023 17:38:01)
+68382.479 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+68382.479 (3) Retain: saving new backup history (sets now: 5) and finishing retain operation
+68382.485 (3) Resume backup (295869f61a24, 3): finish run
+68382.490 (3) [Info] Lock option (updraft_lock_295869f61a24, wp_options) released
+68382.493 (3) There were errors in the uploads, so the 'resume' event is remaining scheduled
+68382.498 (3) No email will/can be sent - the user has not configured an email address.
+68382.500 (3) The backup has not finished; a resumption is scheduled
+68719.625 (4) Opened log file at time: Sat, 11 Nov 2023 16:55:57 +0000 on http://localhost/bpcportfolio
+68719.630 (4) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.23.12 WP: 6.4.1 PHP: 8.1.4 (apache2handler, Windows NT LAPTOP-5NDR6MG6 10.0 build 22631 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 64M | 66M) multisite: N openssl: OpenSSL 1.1.1m  14 Dec 2021 mcrypt: N LANG:  ZipArchive::addFile: Y
+68719.633 (4) Free space on disk containing Updraft's temporary directory: 86086.3 MB
+68719.637 (4) Requesting backup semaphore lock (295869f61a24)
+68719.643 (4) [Info] Lock (updraft_lock_295869f61a24, wp_options) acquired
+68719.649 (4) Backup run: resumption=4, nonce=295869f61a24, file_nonce=295869f61a24 begun at=1699653037 (68720s ago), job type=backup
+68719.656 (4) Scheduling a resumption (5) after 300 seconds (1699722057) in case this run gets aborted
+68719.679 (4) Checking if we have a zip executable available
+68719.681 (4) Creation of backups of directories: already finished
+68719.686 (4) Saving backup status to database (elements: 8)
+68719.704 (4) Database dump (WordPress DB): Creation was completed already
+68719.708 (4) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+68719.729 (4) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+68719.732 (4) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+68719.737 (4) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+68719.741 (4) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-others.zip: others: This file has not yet been successfully uploaded: will queue
+68719.745 (4) backup_2023-11-10-1650_Sarah_Bartley_295869f61a24-db.gz: db: This file has not yet been successfully uploaded: will queue
+68719.748 (4) Saving backup history. Total backup size: 57.6 MB
+68719.758 (4) Requesting upload of the files that have not yet been successfully uploaded (5)
+68719.766 (4) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+68719.769 (4) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+68720.323 (4) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+68720.327 (4) An error condition has occurred for the first time during this job
+68720.333 (4) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+68720.338 (4) Number of backup sets in history: 5; groups (db): 1
+68720.342 (4) Examining (for databases) backup set with group_id=0, nonce=6c6a662fde50, datestamp=1699721420 (Nov 11 2023 16:50:20)
+68720.344 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+68720.347 (4) Examining (for databases) backup set with group_id=0, nonce=295869f61a24, datestamp=1699653037 (Nov 10 2023 21:50:37)
+68720.347 (4) This backup set is the backup set just made, so will not be deleted.
+68720.347 (4) Examining (for databases) backup set with group_id=0, nonce=8dbf5ff87e0f, datestamp=1696724448 (Oct 08 2023 00:20:48)
+68720.347 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+68720.347 (4) Examining (for databases) backup set with group_id=0, nonce=2b6d06e92d00, datestamp=1696637130 (Oct 07 2023 00:05:30)
+68720.347 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+68720.348 (4) Examining (for databases) backup set with group_id=0, nonce=617b71a91e7b, datestamp=1696371283 (Oct 03 2023 22:14:43)
+68720.348 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+68720.348 (4) Number of backup sets in history: 5; groups (files): 1
+68720.350 (4) Examining (for files) backup set with nonce=6c6a662fde50, datestamp=1699721420 (Nov 11 2023 16:50:20)
+68720.350 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+68720.352 (4) Examining (for files) backup set with nonce=295869f61a24, datestamp=1699653037 (Nov 10 2023 21:50:37)
+68720.352 (4) This backup set is the backup set just made, so will not be deleted.
+68720.354 (4) This backup set is the backup set just made, so will not be deleted.
+68720.355 (4) This backup set is the backup set just made, so will not be deleted.
+68720.355 (4) This backup set is the backup set just made, so will not be deleted.
+68720.355 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+68720.357 (4) Examining (for files) backup set with nonce=8dbf5ff87e0f, datestamp=1696724448 (Oct 08 2023 00:20:48)
+68720.357 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+68720.358 (4) Examining (for files) backup set with nonce=2b6d06e92d00, datestamp=1696637130 (Oct 07 2023 00:05:30)
+68720.358 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+68720.358 (4) Examining (for files) backup set with nonce=617b71a91e7b, datestamp=1696371283 (Oct 03 2023 22:14:43)
+68720.358 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+68720.358 (4) Retain: saving new backup history (sets now: 5) and finishing retain operation
+68720.367 (4) Resume backup (295869f61a24, 4): finish run
+68720.373 (4) [Info] Lock option (updraft_lock_295869f61a24, wp_options) released
+68720.378 (4) There were errors in the uploads, so the 'resume' event is remaining scheduled
+68720.383 (4) No email will/can be sent - the user has not configured an email address.
+68720.386 (4) The backup has not finished; a resumption is scheduled
+1979102.962 (5) Opened log file at time: Sun, 03 Dec 2023 19:35:40 +0000 on http://localhost/bpcportfolio
+1979102.965 (5) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.23.12 WP: 6.4.1 PHP: 8.1.4 (apache2handler, Windows NT LAPTOP-5NDR6MG6 10.0 build 22631 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 64.1M | 66M) multisite: N openssl: OpenSSL 1.1.1m  14 Dec 2021 mcrypt: N LANG:  ZipArchive::addFile: Y
+1979102.967 (5) Free space on disk containing Updraft's temporary directory: 78436.1 MB
+1979102.971 (5) Requesting backup semaphore lock (295869f61a24)
+1979102.974 (5) [Info] Lock (updraft_lock_295869f61a24, wp_options) acquired
+1979102.975 (5) This backup task (295869f61a24) is either complete or began over 2 days ago: ending (1701632140.6338, 1699653037) (existing jobdata keys: resume_interval, job_type, jobstatus, backup_time, job_time_ms, service, split_every, maxzipbatch, job_file_entities, option_cache, uploaded_lastreset, one_shot, followsups_allowed, last_sapi, backup_database, backup_files, remote_storage_instances, runs_started, current_resumption, binzip, filecreating_substatus, files_enumerated_at, run_times, useful_checkins, sha1-plugins0, sha256-plugins0, filesize-plugins0, uploading_substatus, sha1-themes0, sha256-themes0, filesize-themes0, sha1-uploads0, sha256-uploads0, filesize-uploads0, sha1-others0, sha256-others0, filesize-others0, backup_files_array, binsqldump, dbcreating_substatus, fetch_rows, sha1-db0, sha256-db0, prune, hash_list_of_complete_pruned_files, warnings)
