@@ -1606,7 +1606,9 @@ class Meow_WR2X_Core {
 				) {
 					$normal_file = trailingslashit( $basepath ) . $meta['sizes'][$name]['file'];
 					$pathinfo = pathinfo( $normal_file ) ;
-					$webp_file = trailingslashit( $pathinfo['dirname'] ) . $pathinfo['filename'] . '.' . $pathinfo['extension'] . $this->webp_extension();
+					
+					$new_webp_ext = $pathinfo['extension'] === 'webp' ? '' : $this->webp_extension();
+					$webp_file = trailingslashit( $pathinfo['dirname'] ) . $pathinfo['filename'] . '.' . $pathinfo['extension'] . $new_webp_ext;
 				}
 				// None of the file exist
 				else {
@@ -1690,7 +1692,8 @@ class Meow_WR2X_Core {
 				) {
 					$normal_file = trailingslashit( $basepath ) . $meta['sizes'][$name]['file'];
 					$pathinfo = pathinfo( $normal_file ) ;
-					$webp_retina_file = trailingslashit( $pathinfo['dirname'] ) . $pathinfo['filename'] . $this->retina_extension() . $pathinfo['extension'] . $this->webp_extension();
+					$new_webp_ext = $pathinfo['extension'] === 'webp' ? '' : $this->webp_extension();
+					$webp_retina_file = trailingslashit( $pathinfo['dirname'] ) . $pathinfo['filename'] . $this->retina_extension() . $pathinfo['extension'] . $new_webp_ext;
 				}
 				// None of the file exist
 				else {
@@ -1902,8 +1905,10 @@ class Meow_WR2X_Core {
 		$hasChanges = false;
 		foreach ( $plugin_options as $option => $default ) {
 			// The option already exists
-			if ( isset( $options[$option] ) ) {
+			if ( array_key_exists( $option, $options ) ) {
 				continue;
+			}else{
+				error_log( '[PERFECT IMAGES] ⚙️ Option does not exist: ' . $option . '. Adding it.' );
 			}
 			// The option does not exist, so we need to add it.
 			// Let's use the old value if any, or the default value.

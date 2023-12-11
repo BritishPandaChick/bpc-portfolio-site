@@ -281,7 +281,9 @@ class Meow_WR2X_Engine {
 			if ( isset( $meta['sizes'][$name] ) && isset( $meta['sizes'][$name]['file'] ) ) {
 				$normal_file = trailingslashit( $basepath ) . $meta['sizes'][$name]['file'];
 				$pathinfo = pathinfo( $normal_file ) ;
-				$webp_file = trailingslashit( $pathinfo['dirname'] ) . $pathinfo['filename'] . "." . $pathinfo['extension'] . $this->core->webp_extension();
+
+				$new_webp_ext = $pathinfo['extension'] === 'webp' ? '' : $this->core->webp_extension();
+				$webp_file = trailingslashit( $pathinfo['dirname'] ) . $pathinfo['filename'] . "." . $pathinfo['extension'] . $new_webp_ext;
 			}
 
 			if ( $webp_file && file_exists( $webp_file ) ) {
@@ -395,7 +397,9 @@ class Meow_WR2X_Engine {
 			if ( isset( $meta['sizes'][$name] ) && isset( $meta['sizes'][$name]['file'] ) ) {
 				$normal_file = trailingslashit( $basepath ) . $meta['sizes'][$name]['file'];
 				$pathinfo = pathinfo( $normal_file ) ;
-				$webp_retina_file = trailingslashit( $pathinfo['dirname'] ) . $pathinfo['filename'] . $this->core->retina_extension() . $pathinfo['extension'] . $this->core->webp_extension();
+
+				$new_webp_ext = $pathinfo['extension'] === 'webp' ? '' : $this->core->webp_extension();
+				$webp_retina_file = trailingslashit( $pathinfo['dirname'] ) . $pathinfo['filename'] . $this->core->retina_extension() . $pathinfo['extension'] . $new_webp_ext;
 			}
 
 			if ( $webp_retina_file && file_exists( $webp_retina_file ) ) {
