@@ -5,7 +5,7 @@ Donate link: https://meowapps.com/donation/
 Requires at least: 6.0
 Tested up to: 6.4
 Requires PHP: 7.4
-Stable tag: 6.5.0
+Stable tag: 6.5.1
 
 Optimize and manage your images with Perfect Images. Easily replace or regenerate existing images in bulk, set custom sizes, improve performance, create retina versions, and more. Achieve perfect images for your site with ease.
 
@@ -50,11 +50,14 @@ The Pro version adds support for Retina for full-size, support for lazy-loading 
 
 == Changelog ==
 
+= 6.5.1 (2023/12/25) =
+* Update: Enhanced thumbnail check before regeneration to process only when necessary.
+* 🌲✨ If you enjoy this plugin, please share some love by [writing a little review here](https://wordpress.org/support/plugin/wp-retina-2x/reviews/?rate=5#new-post). Don't hesitate to drop a few remarks and feature requests with the review. Thank you! 💖
+
 = 6.5.0 (2023/12/04) =
 * Update: Improved thumbnail viewing and metadata display for a more user-friendly experience.
 * Add: Added and refined features for handling WebP images, including creation, deletion, and status updates.
 * Update: Updates to ESLint, error handling, and API connections for improved performance and stability.
-* Info: If you enjoy this plugin, please share some love by [writing a little review here](https://wordpress.org/support/plugin/wp-retina-2x/reviews/?rate=5#new-post). And since I read them all, don't hesitate to drop a few remarks and feature requests in those reviews. Thank you :)
 
 = 6.4.7 (2023/10/19) =
 * Add: Custom Image Sizes.

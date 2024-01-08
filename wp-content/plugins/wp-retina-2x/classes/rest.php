@@ -525,10 +525,32 @@ class Meow_WR2X_Rest
 
 	// Regenerate the Thumbnails
 	function regenerate_thumbnails( $mediaId ) {
+		$this->core->log( "Regenerating thumbnails for $mediaId");
 		require_once ABSPATH . 'wp-admin/includes/image.php';
 		do_action( 'wr2x_before_generate_thumbnails', $mediaId );
 		$file = get_attached_file( $mediaId );
-		$meta = wp_generate_attachment_metadata( $mediaId, $file );
+		$meta = wp_get_attachment_metadata( $mediaId );
+
+		// Get the current image sizes
+		$current_sizes = get_intermediate_image_sizes();
+
+		// Check for sizes in metadata that don't exist in current sizes and delete them
+		foreach ( $meta['sizes'] as $size => $size_info ) {
+			if ( !in_array( $size, $current_sizes ) ) {
+				unset( $meta['sizes'][$size] );
+			}
+		}
+
+		// Check for sizes in current sizes that don't exist in metadata and generate them
+		foreach ( $current_sizes as $size ) {
+			if ( !isset($meta['sizes'][$size] ) ) {
+				$resized = image_make_intermediate_size( $file, $size_info['width'], $size_info['height'], true );
+				if ($resized) {
+					$meta['sizes'][$size] = $resized;
+				}
+			}
+		}
+
 		wp_update_attachment_metadata( $mediaId, $meta );
 		do_action( 'wr2x_generate_thumbnails', $mediaId );
 	}

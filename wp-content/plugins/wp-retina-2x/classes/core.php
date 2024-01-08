@@ -1436,6 +1436,7 @@ class Meow_WR2X_Core {
 		}
 		else {
 			fwrite( $fh, "$date: {$data}\n" );
+			error_log( $data );
 		}
 		fclose( $fh );
 		return true;
