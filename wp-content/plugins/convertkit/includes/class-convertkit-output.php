@@ -161,6 +161,21 @@ class ConvertKit_Output {
 		// Replace the favicon with the WordPress site's favicon, if specified.
 		$landing_page = $this->landing_pages->replace_favicon( $landing_page );
 
+		/**
+		 * Perform any actions immediately prior to outputting the Landing Page.
+		 *
+		 * Caching and minification Plugins may need to hook here to prevent
+		 * CSS / JS minification and lazy loading images, which can interfere
+		 * with Landing Pages.
+		 *
+		 * @since   2.4.4
+		 *
+		 * @param   string  $landing_page       ConvertKit Landing Page HTML.
+		 * @param   int     $landing_page_id    ConvertKit Landing Page ID.
+		 * @param   int     $post_id            WordPress Page ID.
+		 */
+		do_action( 'convertkit_output_landing_page_before', $landing_page, $landing_page_id, $post_id );
+
 		// Output Landing Page.
 		// Output is supplied from ConvertKit's API, which is already sanitized.
 		echo $landing_page; // phpcs:ignore WordPress.Security.EscapeOutput
@@ -467,6 +482,14 @@ class ConvertKit_Output {
 		// Define array of scripts.
 		$scripts = array();
 
+		// Define data attributes to apply to all scripts.
+		// These are typically to prevent third party performance / caching Plugins interfering with ConvertKit scripts,
+		// which may result in non-inline forms displaying twice.
+		$data_attributes = array(
+			'data-jetpack-boost' => 'ignore', // Jetpack Boost.
+			'data-no-defer'      => '1', // LiteSpeed Cache.
+		);
+
 		/**
 		 * Define an array of scripts to output in the footer of the WordPress site.
 		 *
@@ -486,8 +509,18 @@ class ConvertKit_Output {
 
 		// Iterate through scripts, building the <script> tag for each.
 		foreach ( $scripts as $script ) {
-			$output = '<script';
+			// Prevent Siteground Speed Optimizer Plugin from attempting to combine this JS file with others.
+			add_filter(
+				'sgo_javascript_combine_excluded_external_paths',
+				function ( $excluded_paths ) use ( $script ) {
 
+					$excluded_paths[] = esc_url( $script['src'] );
+					return $excluded_paths;
+
+				}
+			);
+
+			$output = '<script';
 			foreach ( $script as $attribute => $value ) {
 				// If the value is true, just output the attribute.
 				if ( $value === true ) {
@@ -498,6 +531,12 @@ class ConvertKit_Output {
 				// Output the attribute and value.
 				$output .= ' ' . esc_attr( $attribute ) . '="' . esc_attr( $value ) . '"';
 			}
+
+			// Append data attributes.
+			foreach ( $data_attributes as $attribute => $value ) {
+				$output .= ' ' . esc_attr( $attribute ) . '="' . esc_attr( $value ) . '"';
+			}
+
 			$output .= '></script>';
 
 			// Add to array.
