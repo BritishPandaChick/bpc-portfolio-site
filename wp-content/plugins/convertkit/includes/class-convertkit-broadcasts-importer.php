@@ -63,13 +63,20 @@ class ConvertKit_Broadcasts_Importer {
 			return;
 		}
 
-		// Bail if the Plugin API keys have not been configured.
-		if ( ! $settings->has_api_key_and_secret() ) {
+		// Bail if the Plugin Access Token has not been configured.
+		if ( ! $settings->has_access_and_refresh_token() ) {
 			return;
 		}
 
 		// Initialize the API.
-		$api = new ConvertKit_API( $settings->get_api_key(), $settings->get_api_secret(), $settings->debug_enabled() );
+		$api = new ConvertKit_API_V4(
+			CONVERTKIT_OAUTH_CLIENT_ID,
+			CONVERTKIT_OAUTH_CLIENT_REDIRECT_URI,
+			$settings->get_access_token(),
+			$settings->get_refresh_token(),
+			$settings->debug_enabled(),
+			'broadcasts_importer'
+		);
 
 		// Check that we're using the ConvertKit WordPress Libraries 1.3.8 or higher.
 		// If another ConvertKit Plugin is active and out of date, its libraries might
@@ -307,8 +314,13 @@ class ConvertKit_Broadcasts_Importer {
 		}
 
 		// Remove ck-hide-in-public-posts and their contents.
-		// This includesthe unsubscribe section.
+		// This includes the unsubscribe section.
 		foreach ( $xpath->query( '//div[contains(@class, "ck-hide-in-public-posts")]' ) as $node ) {
+			$node->parentNode->removeChild( $node ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		}
+
+		// Remove ck-poll, as interacting with these results in an error.
+		foreach ( $xpath->query( '//table[contains(@class, "ck-poll")]' ) as $node ) {
 			$node->parentNode->removeChild( $node ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		}
 
