@@ -1,0 +1,839 @@
+0000.001 (0) Opened log file at time: Fri, 09 May 2025 15:30:10 +0000 on http://localhost/bpcportfolio
+0000.005 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.25.5 WP: 6.8.1 PHP: 8.1.4 (apache2handler, Windows NT LAPTOP-5NDR6MG6 10.0 build 26100 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 76M | 78M) multisite: N openssl: OpenSSL 1.1.1m  14 Dec 2021 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: Y
+0000.010 (0) Free space on disk containing Updraft's temporary directory: 100535.5 MB
+0000.016 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0000.018 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.029 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1746294687, seconds_ago=509923)
+0000.039 (0) Set semaphore last lock (fd) time to 2025-05-09 15:30:10
+0000.043 (0) Semaphore lock (fd) complete
+0000.052 (0) Backup run: resumption=0, nonce=65e6172aace9, file_nonce=65e6172aace9 begun at=1746804610 (0s ago), job type=backup
+0000.059 (0) Scheduling a resumption (1) after 300 seconds (1746804910) in case this run gets aborted
+0000.088 (0) Checking if we have a zip executable available
+0000.097 (0) Creation of backups of directories: beginning
+0000.110 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0007.572 (0) Total entities for the zip file: 1063 directories, 5302 files (0 skipped as non-modified), 81.1 MB
+0007.600 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0007.905 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 100 files added (on-disk size: 179.9 KB)
+0008.062 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 200 files added (on-disk size: 179.9 KB)
+0008.259 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 300 files added (on-disk size: 179.9 KB)
+0008.475 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 400 files added (on-disk size: 179.9 KB)
+0008.620 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 500 files added (on-disk size: 179.9 KB)
+0008.752 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 600 files added (on-disk size: 179.9 KB)
+0008.917 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 700 files added (on-disk size: 179.9 KB)
+0009.094 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 800 files added (on-disk size: 179.9 KB)
+0009.283 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 900 files added (on-disk size: 179.9 KB)
+0009.454 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 1000 files added (on-disk size: 179.9 KB)
+0009.459 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (10.9 MB, 5302 files batched, 1001 (1002) added so far); re-opening (prior size: 179.9 KB)
+0012.244 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 1100 files added (on-disk size: 4787 KB)
+0012.403 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 1200 files added (on-disk size: 4787 KB)
+0012.553 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 1300 files added (on-disk size: 4787 KB)
+0012.668 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 1400 files added (on-disk size: 4787 KB)
+0012.792 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 1500 files added (on-disk size: 4787 KB)
+0012.902 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 1600 files added (on-disk size: 4787 KB)
+0013.005 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 1700 files added (on-disk size: 4787 KB)
+0013.111 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 1800 files added (on-disk size: 4787 KB)
+0013.256 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 1900 files added (on-disk size: 4787 KB)
+0013.433 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 2000 files added (on-disk size: 4787 KB)
+0013.439 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (24 MB, 5302 files batched, 1001 (2003) added so far); re-opening (prior size: 4787 KB)
+0018.397 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 2100 files added (on-disk size: 11847.1 KB)
+0018.495 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 2200 files added (on-disk size: 11847.1 KB)
+0018.605 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 2300 files added (on-disk size: 11847.1 KB)
+0018.692 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 2400 files added (on-disk size: 11847.1 KB)
+0018.779 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 2500 files added (on-disk size: 11847.1 KB)
+0018.860 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 2600 files added (on-disk size: 11847.1 KB)
+0018.950 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 2700 files added (on-disk size: 11847.1 KB)
+0019.040 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 2800 files added (on-disk size: 11847.1 KB)
+0019.109 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 2900 files added (on-disk size: 11847.1 KB)
+0019.180 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 3000 files added (on-disk size: 11847.1 KB)
+0019.186 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (19.3 MB, 5302 files batched, 1001 (3004) added so far); re-opening (prior size: 11847.1 KB)
+0028.461 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 3100 files added (on-disk size: 20309 KB)
+0028.526 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 3200 files added (on-disk size: 20309 KB)
+0028.587 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 3300 files added (on-disk size: 20309 KB)
+0028.651 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 3400 files added (on-disk size: 20309 KB)
+0028.716 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 3500 files added (on-disk size: 20309 KB)
+0028.776 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 3600 files added (on-disk size: 20309 KB)
+0028.838 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 3700 files added (on-disk size: 20309 KB)
+0028.902 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 3800 files added (on-disk size: 20309 KB)
+0029.002 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 3900 files added (on-disk size: 20309 KB)
+0029.127 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 4000 files added (on-disk size: 20309 KB)
+0029.142 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (11.4 MB, 5302 files batched, 1001 (4005) added so far); re-opening (prior size: 20309 KB)
+0031.560 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 4100 files added (on-disk size: 23990.3 KB)
+0031.652 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 4200 files added (on-disk size: 23990.3 KB)
+0031.771 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 4300 files added (on-disk size: 23990.3 KB)
+0031.848 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 4400 files added (on-disk size: 23990.3 KB)
+0031.913 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 4500 files added (on-disk size: 23990.3 KB)
+0031.989 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 4600 files added (on-disk size: 23990.3 KB)
+0032.047 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 4700 files added (on-disk size: 23990.3 KB)
+0032.129 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 4800 files added (on-disk size: 23990.3 KB)
+0032.200 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 4900 files added (on-disk size: 23990.3 KB)
+0032.293 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 5000 files added (on-disk size: 23990.3 KB)
+0032.298 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (13.6 MB, 5302 files batched, 1001 (5006) added so far); re-opening (prior size: 23990.3 KB)
+0034.723 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 5100 files added (on-disk size: 28972.7 KB)
+0034.797 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 5200 files added (on-disk size: 28972.7 KB)
+0034.858 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.tmp: 5300 files added (on-disk size: 28972.7 KB)
+0035.541 (0) Creating zip file manifest (backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip.list-temp.tmp)
+0035.583 (0) Successfully created zip file manifest (size: 430976)
+0036.029 (0) Created plugins zip (0) - 29531.4 KB in 35.8 s (824.1 KB/s) (sha1: da18ea3e52fe6f61d64ce3d4baa46000483f75c3, sha256: 4ca2a268cf2eb3b341a4e044e7c6c2376d1273eb0c41f5417e29380632c77a89)
+0036.044 (0) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0036.047 (0) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+0036.354 (0) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+0036.357 (0) An error condition has occurred for the first time during this job
+0036.382 (0) Beginning creation of dump of themes (split every: 400 MB)
+0036.936 (0) Total entities for the zip file: 110 directories, 600 files (0 skipped as non-modified), 14.4 MB
+0037.074 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0037.261 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0037.446 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0037.628 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+0037.789 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-themes.zip.tmp: 500 files added (on-disk size: 0 KB)
+0037.935 (0) Zip: backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-themes.zip.tmp: 600 files added (on-disk size: 0 KB)
+0039.501 (0) Creating zip file manifest (backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-themes.zip.list-temp.tmp)
+0039.511 (0) Successfully created zip file manifest (size: 38660)
+0039.678 (0) Created themes zip (0) - 10384.6 KB in 3.2 s (3210.2 KB/s) (sha1: 9ffbe367e05915e0f93bae3dfd737100e8a9fafb, sha256: c42b326a444bb05b0c49037f07b92e70df7fb3403a4fe52b9a59e955a47c8606)
+0039.686 (0) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0039.689 (0) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+0039.874 (0) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+0039.884 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0039.886 (0) Looking for candidates to backup in: C:\xampp\htdocs\bpcportfolio/wp-content/uploads
+0039.888 (0) finding files: .htaccess: adding to list (1)
+0039.890 (0) finding files: 2020: adding to list (2)
+0039.891 (0) finding files: 2021: adding to list (3)
+0039.893 (0) finding files: 2022: adding to list (4)
+0039.898 (0) finding files: 2023: adding to list (5)
+0039.900 (0) finding files: 2024: adding to list (6)
+0039.901 (0) finding files: 2025: adding to list (7)
+0039.903 (0) finding files: elementor: adding to list (8)
+0039.905 (0) finding files: useanyfont: adding to list (9)
+0039.907 (0) finding files: wtitan-logger: adding to list (10)
+0039.909 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0040.032 (0) Total entities for the zip file: 46 directories, 82 files (0 skipped as non-modified), 18.8 MB
+0040.291 (0) Creating zip file manifest (backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-uploads.zip.list-temp.tmp)
+0040.295 (0) Successfully created zip file manifest (size: 4445)
+0040.543 (0) Created uploads zip (0) - 19224 KB in 0.6 s (31748.3 KB/s) (sha1: 1eb2be96199903715c9945dd20460c6f2f1c651f, sha256: bac32c06a553b4991cb22e107efd64712cac908342a2b9913a7270ce9d307fc8)
+0040.553 (0) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0040.555 (0) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+0040.732 (0) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+0040.740 (0) Beginning creation of dump of mu-plugins (split every: 400 MB)
+0040.742 (0) Does not exist: C:\xampp\htdocs\bpcportfolio/wp-content/mu-plugins
+0040.746 (0) There are no mu-plugins to backup. Will not raise an error.
+0040.748 (0) mu-plugins: create_zip returned an error
+0040.752 (0) Beginning backup of other directories found in the content directory (index: 0)
+0040.753 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0040.755 (0) Looking for candidates to backup in: C:\xampp\htdocs\bpcportfolio/wp-content
+0040.757 (0) finding files: index.php: adding to list (1)
+0040.759 (0) finding files: plugins: skipping: this is the plugins directory
+0040.763 (0) finding files: themes: skipping: this is the themes directory
+0040.766 (0) finding files: updraft: skipping: this is the updraft directory
+0040.768 (0) finding files: upgrade: skipping: excluded by options
+0040.770 (0) finding files: upgrade-temp-backup: adding to list (2)
+0040.771 (0) finding files: uploads: skipping: this is the uploads directory
+0040.773 (0) finding files: wflogs: adding to list (3)
+0040.802 (0) Total entities for the zip file: 2 directories, 11 files (0 skipped as non-modified), 9.8 MB
+0048.618 (0) Creating zip file manifest (backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-others.zip.list-temp.tmp)
+0048.622 (0) Successfully created zip file manifest (size: 366)
+0048.698 (0) Created others zip (0) - 4753.4 KB in 7.9 s (601.4 KB/s) (sha1: e2e7a883c377f4c32741a48bb37ed23ecd6a717a, sha256: daf955e55df2e0691383568cdb7b7f56fcd70152d95d62a8061c76840360bc27)
+0048.706 (0) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0048.708 (0) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+0048.878 (0) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+0048.921 (0) Saving backup status to database (elements: 8)
+0048.941 (0) Beginning creation of database dump (WordPress DB)
+0048.945 (0) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+0049.037 (0) Table wp_options: Total expected rows (via COUNT): 373
+0049.039 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0049.049 (0) Table wp_options: Rows added in this batch (next record: 5803): 369 (uncompressed bytes in this segment=81120) in 0.02 seconds
+0049.063 (0) Table wp_options: finishing file(s) (2, 20.6 KB)
+0049.076 (0) Table wp_users: Total expected rows (via COUNT): 1
+0049.078 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0049.084 (0) Table wp_users: Rows added in this batch (next record: 2): 1 (uncompressed bytes in this segment=1377) in 0.01 seconds
+0049.094 (0) Table wp_users: finishing file(s) (2, 0.6 KB)
+0049.111 (0) Table wp_usermeta: Total expected rows (via COUNT): 40
+0049.113 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0049.118 (0) Table wp_usermeta: Rows added in this batch (next record: 277): 40 (uncompressed bytes in this segment=3986) in 0.02 seconds
+0049.128 (0) Table wp_usermeta: finishing file(s) (2, 1.7 KB)
+0049.143 (0) Table wp_commentmeta: Total expected rows (via COUNT): 0
+0049.147 (0) Table wp_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=684) in 0.01 seconds
+0049.158 (0) Table wp_commentmeta: finishing file(s) (2, 0.4 KB)
+0049.170 (0) Table wp_comments: Total expected rows (via COUNT): 0
+0049.175 (0) Table wp_comments: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1678) in 0.01 seconds
+0049.186 (0) Table wp_comments: finishing file(s) (2, 0.5 KB)
+0049.208 (0) Table wp_links: Total expected rows (via COUNT): 0
+0049.211 (0) Table wp_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1266) in 0.01 seconds
+0049.221 (0) Table wp_links: finishing file(s) (2, 0.5 KB)
+0049.242 (0) Table wp_postmeta: Total expected rows (via COUNT): 218
+0049.243 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0049.252 (0) Table wp_postmeta: Rows added in this batch (next record: 11774): 218 (uncompressed bytes in this segment=88538) in 0.02 seconds
+0049.264 (0) Table wp_postmeta: finishing file(s) (2, 10 KB)
+0049.293 (0) Table wp_posts: Total expected rows (via COUNT): 112
+0049.294 (0) Table is relatively small; fetch_rows will thus be: 200 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0049.319 (0) Table wp_posts: Rows added in this batch (next record: 208): 112 (uncompressed bytes in this segment=815245) in 0.05 seconds
+0049.329 (0) Table wp_posts: finishing file(s) (2, 39.3 KB)
+0049.340 (0) Table wp_term_relationships: Total expected rows (approximate): 6
+0049.346 (0) Table wp_term_relationships: Rows added in this batch (next record: 100000): 6 (uncompressed bytes in this segment=760) in 0.01 seconds
+0049.356 (0) Table wp_term_relationships: finishing file(s) (2, 0.4 KB)
+0049.370 (0) Table wp_term_taxonomy: Total expected rows (via COUNT): 2
+0049.373 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0049.377 (0) Table wp_term_taxonomy: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=939) in 0.02 seconds
+0049.389 (0) Table wp_term_taxonomy: finishing file(s) (2, 0.5 KB)
+0049.407 (0) Table wp_termmeta: Total expected rows (via COUNT): 0
+0049.411 (0) Table wp_termmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=657) in 0.01 seconds
+0049.423 (0) Table wp_termmeta: finishing file(s) (2, 0.4 KB)
+0049.435 (0) Table wp_terms: Total expected rows (via COUNT): 2
+0049.438 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0049.443 (0) Table wp_terms: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=757) in 0.01 seconds
+0049.453 (0) Table wp_terms: finishing file(s) (2, 0.4 KB)
+0049.466 (0) Table wp_convertkit_user_history: Total expected rows (via COUNT): 0
+0049.473 (0) Table wp_convertkit_user_history: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=656) in 0.01 seconds
+0049.484 (0) Table wp_convertkit_user_history: finishing file(s) (2, 0.3 KB)
+0049.499 (0) Table wp_smush_dir_images: Total expected rows (via COUNT): 0
+0049.501 (0) Table wp_smush_dir_images: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1078) in 0.01 seconds
+0049.513 (0) Table wp_smush_dir_images: finishing file(s) (2, 0.5 KB)
+0049.530 (0) Table wp_wfauditevents: Total expected rows (via COUNT): 0
+0049.533 (0) Table wp_wfauditevents: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=709) in 0.01 seconds
+0049.544 (0) Table wp_wfauditevents: finishing file(s) (2, 0.4 KB)
+0049.560 (0) Table wp_wfblockediplog: Total expected rows (approximate): 1
+0049.562 (0) Table wp_wfblockediplog: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=627) in 0.01 seconds
+0049.573 (0) Table wp_wfblockediplog: finishing file(s) (2, 0.4 KB)
+0049.587 (0) Table wp_wfblocks7: Total expected rows (via COUNT): 0
+0049.591 (0) Table wp_wfblocks7: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=833) in 0.01 seconds
+0049.601 (0) Table wp_wfblocks7: finishing file(s) (2, 0.4 KB)
+0049.613 (0) Table wp_wfconfig: Total expected rows (approximate): 285
+0049.869 (0) Table wp_wfconfig: Rows added in this batch (next record: 1000): 288 (uncompressed bytes in this segment=2911629) in 0.26 seconds
+0049.902 (0) Table wp_wfconfig: finishing file(s) (2, 1577.5 KB)
+0049.924 (0) Table wp_wfcrawlers: Total expected rows (approximate): 0
+0049.927 (0) Table wp_wfcrawlers: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=552) in 0.01 seconds
+0049.939 (0) Table wp_wfcrawlers: finishing file(s) (2, 0.3 KB)
+0049.955 (0) Table wp_wffilechanges: Total expected rows (approximate): 0
+0049.958 (0) Table wp_wffilechanges: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=452) in 0.01 seconds
+0049.971 (0) Table wp_wffilechanges: finishing file(s) (2, 0.3 KB)
+0049.987 (0) Table wp_wffilemods: Total expected rows (approximate): 7945
+0050.396 (0) Table wp_wffilemods: Rows added in this batch (next record: 8000): 7940 (uncompressed bytes in this segment=2903803) in 0.41 seconds
+0050.409 (0) Table wp_wffilemods: finishing file(s) (2, 877.9 KB)
+0050.426 (0) Table wp_wfhits: Total expected rows (via COUNT): 4
+0050.428 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0050.436 (0) Table wp_wfhits: Rows added in this batch (next record: 290): 4 (uncompressed bytes in this segment=2514) in 0.02 seconds
+0050.449 (0) Table wp_wfhits: finishing file(s) (2, 0.8 KB)
+0050.472 (0) Table wp_wfhoover: Total expected rows (via COUNT): 0
+0050.476 (0) Table wp_wfhoover: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=515) in 0.01 seconds
+0050.488 (0) Table wp_wfhoover: finishing file(s) (2, 0.3 KB)
+0050.507 (0) Table wp_wfissues: Total expected rows (via COUNT): 0
+0050.510 (0) Table wp_wfissues: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=849) in 0.01 seconds
+0050.520 (0) Table wp_wfissues: finishing file(s) (2, 0.4 KB)
+0050.537 (0) Table wp_wfknownfilelist: Total expected rows (approximate): 8120
+0050.663 (0) Table wp_wfknownfilelist: Rows added in this batch (next record: 8268): 8268 (uncompressed bytes in this segment=1507034) in 0.13 seconds
+0050.678 (0) Table wp_wfknownfilelist: finishing file(s) (2, 123.2 KB)
+0050.691 (0) Table wp_wflivetraffichuman: Total expected rows (approximate): 0
+0050.695 (0) Table wp_wflivetraffichuman: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=648) in 0.01 seconds
+0050.708 (0) Table wp_wflivetraffichuman: finishing file(s) (2, 0.3 KB)
+0050.732 (0) Table wp_wflocs: Total expected rows (approximate): 0
+0050.735 (0) Table wp_wflocs: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=678) in 0.01 seconds
+0050.748 (0) Table wp_wflocs: finishing file(s) (2, 0.4 KB)
+0050.761 (0) Table wp_wflogins: Total expected rows (via COUNT): 280
+0050.763 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0050.780 (0) Table wp_wflogins: Rows added in this batch (next record: 280): 280 (uncompressed bytes in this segment=61838) in 0.02 seconds
+0050.791 (0) Table wp_wflogins: finishing file(s) (2, 5.4 KB)
+0050.806 (0) Table wp_wfls_2fa_secrets: Total expected rows (via COUNT): 0
+0050.811 (0) Table wp_wfls_2fa_secrets: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=681) in 0.01 seconds
+0050.822 (0) Table wp_wfls_2fa_secrets: finishing file(s) (2, 0.4 KB)
+0050.835 (0) Table wp_wfls_role_counts: Total expected rows (approximate): 0
+0050.839 (0) Table wp_wfls_role_counts: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=563) in 0.01 seconds
+0050.850 (0) Table wp_wfls_role_counts: finishing file(s) (2, 0.4 KB)
+0050.862 (0) Table wp_wfls_settings: Total expected rows (approximate): 30
+0050.866 (0) Table wp_wfls_settings: Rows added in this batch (next record: 1000): 30 (uncompressed bytes in this segment=2064) in 0.01 seconds
+0050.878 (0) Table wp_wfls_settings: finishing file(s) (2, 0.9 KB)
+0050.891 (0) Table wp_wfnotifications: Total expected rows (approximate): 71
+0050.896 (0) Table wp_wfnotifications: Rows added in this batch (next record: 1000): 75 (uncompressed bytes in this segment=15664) in 0.01 seconds
+0050.908 (0) Table wp_wfnotifications: finishing file(s) (2, 2.1 KB)
+0050.926 (0) Table wp_wfpendingissues: Total expected rows (via COUNT): 683
+0050.968 (0) Table wp_wfpendingissues: Rows added in this batch (next record: 683): 683 (uncompressed bytes in this segment=755289) in 0.05 seconds
+0050.979 (0) Table wp_wfpendingissues: finishing file(s) (2, 53.8 KB)
+0050.994 (0) Table wp_wfreversecache: Total expected rows (approximate): 0
+0050.996 (0) Table wp_wfreversecache: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=497) in 0.01 seconds
+0051.009 (0) Table wp_wfreversecache: finishing file(s) (2, 0.3 KB)
+0051.021 (0) Table wp_wfsecurityevents: Total expected rows (via COUNT): 0
+0051.023 (0) Table wp_wfsecurityevents: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=682) in 0.01 seconds
+0051.033 (0) Table wp_wfsecurityevents: finishing file(s) (2, 0.4 KB)
+0051.044 (0) Table wp_wfsnipcache: Total expected rows (via COUNT): 1
+0051.047 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0051.051 (0) Table wp_wfsnipcache: Rows added in this batch (next record: 19): 1 (uncompressed bytes in this segment=800) in 0.01 seconds
+0051.060 (0) Table wp_wfsnipcache: finishing file(s) (2, 0.4 KB)
+0051.079 (0) Table wp_wfstatus: Total expected rows (via COUNT): 1004
+0051.100 (0) Table wp_wfstatus: Rows added in this batch (next record: 4594): 1004 (uncompressed bytes in this segment=98786) in 0.03 seconds
+0051.111 (0) Table wp_wfstatus: finishing file(s) (2, 17.8 KB)
+0051.122 (0) Table wp_wftrafficrates: Total expected rows (approximate): 0
+0051.125 (0) Table wp_wftrafficrates: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=566) in 0.01 seconds
+0051.134 (0) Table wp_wftrafficrates: finishing file(s) (2, 0.3 KB)
+0051.160 (0) Table wp_wfwaffailures: Total expected rows (via COUNT): 0
+0051.162 (0) Table wp_wfwaffailures: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=529) in 0.01 seconds
+0051.173 (0) Table wp_wfwaffailures: finishing file(s) (2, 0.3 KB)
+0051.190 (0) Table wp_yoast_indexable: Total expected rows (via COUNT): 15
+0051.191 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0051.195 (0) Table wp_yoast_indexable: Rows added in this batch (next record: 90): 15 (uncompressed bytes in this segment=11295) in 0.02 seconds
+0051.213 (0) Table wp_yoast_indexable: finishing file(s) (2, 2.3 KB)
+0051.231 (0) Table wp_yoast_indexable_hierarchy: Total expected rows (approximate): 12
+0051.237 (0) Table wp_yoast_indexable_hierarchy: Rows added in this batch (next record: 1000): 12 (uncompressed bytes in this segment=984) in 0.01 seconds
+0051.245 (0) Table wp_yoast_indexable_hierarchy: finishing file(s) (2, 0.4 KB)
+0051.259 (0) Table wp_yoast_migrations: Total expected rows (via COUNT): 24
+0051.261 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0051.266 (0) Table wp_yoast_migrations: Rows added in this batch (next record: 24): 24 (uncompressed bytes in this segment=1257) in 0.01 seconds
+0051.276 (0) Table wp_yoast_migrations: finishing file(s) (2, 0.6 KB)
+0051.291 (0) Table wp_yoast_primary_term: Total expected rows (via COUNT): 0
+0051.294 (0) Table wp_yoast_primary_term: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=852) in 0.01 seconds
+0051.305 (0) Table wp_yoast_primary_term: finishing file(s) (2, 0.4 KB)
+0051.315 (0) Table wp_yoast_seo_links: Total expected rows (via COUNT): 40
+0051.317 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0051.321 (0) Table wp_yoast_seo_links: Rows added in this batch (next record: 306): 40 (uncompressed bytes in this segment=6766) in 0.01 seconds
+0051.330 (0) Table wp_yoast_seo_links: finishing file(s) (2, 0.9 KB)
+0051.332 (0) PHP event: code E_WARNING: filemtime(): stat failed for C:\xampp\htdocs\bpcportfolio/wp-content/updraft/backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db.gz (line 1923, C:\xampp\htdocs\bpcportfolio\wp-content\plugins\updraftplus\backup.php)
+0051.337 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_options.table.tmpr5804.gz (1/44/fopen): adding to final database dump
+0051.340 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_options.table.gz (2/44/fopen): adding to final database dump
+0051.341 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_users.table.tmpr3.gz (3/44/fopen): adding to final database dump
+0051.343 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_users.table.gz (4/44/fopen): adding to final database dump
+0051.345 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_usermeta.table.tmpr278.gz (5/44/fopen): adding to final database dump
+0051.348 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_usermeta.table.gz (6/44/fopen): adding to final database dump
+0051.350 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_commentmeta.table.tmpr0.gz (7/44/fopen): adding to final database dump
+0051.351 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_commentmeta.table.gz (8/44/fopen): adding to final database dump
+0051.353 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_comments.table.tmpr0.gz (9/44/fopen): adding to final database dump
+0051.355 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_comments.table.gz (10/44/fopen): adding to final database dump
+0051.357 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_links.table.tmpr0.gz (11/44/fopen): adding to final database dump
+0051.359 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_links.table.gz (12/44/fopen): adding to final database dump
+0051.360 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_postmeta.table.tmpr11775.gz (13/44/fopen): adding to final database dump
+0051.363 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_postmeta.table.gz (14/44/fopen): adding to final database dump
+0051.365 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_posts.table.tmpr209.gz (15/44/fopen): adding to final database dump
+0051.369 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_posts.table.gz (16/44/fopen): adding to final database dump
+0051.371 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_term_relationships.table.tmpr100001.gz (17/44/fopen): adding to final database dump
+0051.373 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_term_relationships.table.gz (18/44/fopen): adding to final database dump
+0051.375 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_term_taxonomy.table.tmpr3.gz (19/44/fopen): adding to final database dump
+0051.377 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_term_taxonomy.table.gz (20/44/fopen): adding to final database dump
+0051.379 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_termmeta.table.tmpr0.gz (21/44/fopen): adding to final database dump
+0051.381 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_termmeta.table.gz (22/44/fopen): adding to final database dump
+0051.383 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_terms.table.tmpr3.gz (23/44/fopen): adding to final database dump
+0051.384 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_terms.table.gz (24/44/fopen): adding to final database dump
+0051.386 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_convertkit_user_history.table.tmpr0.gz (25/44/fopen): adding to final database dump
+0051.388 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_convertkit_user_history.table.gz (26/44/fopen): adding to final database dump
+0051.390 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_smush_dir_images.table.tmpr0.gz (27/44/fopen): adding to final database dump
+0051.392 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_smush_dir_images.table.gz (28/44/fopen): adding to final database dump
+0051.393 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfauditevents.table.tmpr0.gz (29/44/fopen): adding to final database dump
+0051.395 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfauditevents.table.gz (30/44/fopen): adding to final database dump
+0051.397 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfblockediplog.table.tmpr1.gz (31/44/fopen): adding to final database dump
+0051.400 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfblockediplog.table.gz (32/44/fopen): adding to final database dump
+0051.402 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfblocks7.table.tmpr0.gz (33/44/fopen): adding to final database dump
+0051.404 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfblocks7.table.gz (34/44/fopen): adding to final database dump
+0051.406 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfconfig.table.tmpr1001.gz (35/44/fopen): adding to final database dump
+0051.460 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfconfig.table.gz (36/44/fopen): adding to final database dump
+0051.462 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfcrawlers.table.tmpr1.gz (37/44/fopen): adding to final database dump
+0051.465 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfcrawlers.table.gz (38/44/fopen): adding to final database dump
+0051.468 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wffilechanges.table.tmpr1.gz (39/44/fopen): adding to final database dump
+0051.471 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wffilechanges.table.gz (40/44/fopen): adding to final database dump
+0051.474 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wffilemods.table.tmpr8001.gz (41/44/fopen): adding to final database dump
+0051.524 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wffilemods.table.gz (42/44/fopen): adding to final database dump
+0051.526 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfhits.table.tmpr291.gz (43/44/fopen): adding to final database dump
+0051.527 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfhits.table.gz (44/44/fopen): adding to final database dump
+0051.530 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfhoover.table.tmpr0.gz (45/44/fopen): adding to final database dump
+0051.532 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfhoover.table.gz (46/44/fopen): adding to final database dump
+0051.535 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfissues.table.tmpr0.gz (47/44/fopen): adding to final database dump
+0051.538 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfissues.table.gz (48/44/fopen): adding to final database dump
+0051.540 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfknownfilelist.table.tmpr8269.gz (49/44/fopen): adding to final database dump
+0051.547 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfknownfilelist.table.gz (50/44/fopen): adding to final database dump
+0051.549 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wflivetraffichuman.table.tmpr1.gz (51/44/fopen): adding to final database dump
+0051.551 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wflivetraffichuman.table.gz (52/44/fopen): adding to final database dump
+0051.553 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wflocs.table.tmpr1.gz (53/44/fopen): adding to final database dump
+0051.555 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wflocs.table.gz (54/44/fopen): adding to final database dump
+0051.557 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wflogins.table.tmpr281.gz (55/44/fopen): adding to final database dump
+0051.559 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wflogins.table.gz (56/44/fopen): adding to final database dump
+0051.560 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfls_2fa_secrets.table.tmpr0.gz (57/44/fopen): adding to final database dump
+0051.569 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfls_2fa_secrets.table.gz (58/44/fopen): adding to final database dump
+0051.573 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfls_role_counts.table.tmpr1.gz (59/44/fopen): adding to final database dump
+0051.576 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfls_role_counts.table.gz (60/44/fopen): adding to final database dump
+0051.579 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfls_settings.table.tmpr1001.gz (61/44/fopen): adding to final database dump
+0051.581 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfls_settings.table.gz (62/44/fopen): adding to final database dump
+0051.583 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfnotifications.table.tmpr1001.gz (63/44/fopen): adding to final database dump
+0051.585 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfnotifications.table.gz (64/44/fopen): adding to final database dump
+0051.587 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfpendingissues.table.tmpr684.gz (65/44/fopen): adding to final database dump
+0051.591 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfpendingissues.table.gz (66/44/fopen): adding to final database dump
+0051.592 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfreversecache.table.tmpr1.gz (67/44/fopen): adding to final database dump
+0051.595 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfreversecache.table.gz (68/44/fopen): adding to final database dump
+0051.597 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfsecurityevents.table.tmpr0.gz (69/44/fopen): adding to final database dump
+0051.600 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfsecurityevents.table.gz (70/44/fopen): adding to final database dump
+0051.603 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfsnipcache.table.tmpr20.gz (71/44/fopen): adding to final database dump
+0051.605 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfsnipcache.table.gz (72/44/fopen): adding to final database dump
+0051.607 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfstatus.table.tmpr4595.gz (73/44/fopen): adding to final database dump
+0051.611 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfstatus.table.gz (74/44/fopen): adding to final database dump
+0051.614 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wftrafficrates.table.tmpr1.gz (75/44/fopen): adding to final database dump
+0051.616 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wftrafficrates.table.gz (76/44/fopen): adding to final database dump
+0051.618 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfwaffailures.table.tmpr0.gz (77/44/fopen): adding to final database dump
+0051.620 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_wfwaffailures.table.gz (78/44/fopen): adding to final database dump
+0051.621 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_yoast_indexable.table.tmpr91.gz (79/44/fopen): adding to final database dump
+0051.623 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_yoast_indexable.table.gz (80/44/fopen): adding to final database dump
+0051.625 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_yoast_indexable_hierarchy.table.tmpr1001.gz (81/44/fopen): adding to final database dump
+0051.627 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_yoast_indexable_hierarchy.table.gz (82/44/fopen): adding to final database dump
+0051.628 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_yoast_migrations.table.tmpr25.gz (83/44/fopen): adding to final database dump
+0051.630 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_yoast_migrations.table.gz (84/44/fopen): adding to final database dump
+0051.633 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_yoast_primary_term.table.tmpr0.gz (85/44/fopen): adding to final database dump
+0051.635 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_yoast_primary_term.table.gz (86/44/fopen): adding to final database dump
+0051.638 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_yoast_seo_links.table.tmpr307.gz (87/44/fopen): adding to final database dump
+0051.640 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db-table-wp_yoast_seo_links.table.gz (88/44/fopen): adding to final database dump
+0051.656 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db.gz: finished writing out complete database file (2745.6 KB)
+0051.723 (0) Total database tables backed up: 44 (backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db.gz, size: 2811634, sha1: 6247b900dc0c09e5598979058eb22b8a6b05c0d6, sha256: 183c11dbf029fc8de9db56a53e05045e54f7fe9549bc904e221ff08724cc8655)
+0051.737 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0051.738 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0051.740 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0051.742 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-others.zip: others: This file has not yet been successfully uploaded: will queue
+0051.743 (0) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db.gz: db: This file has not yet been successfully uploaded: will queue
+0051.744 (0) Saving backup history. Total backup size: 65.1 MB
+0051.750 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0051.755 (0) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0051.756 (0) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+0051.945 (0) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+0051.950 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+0051.954 (0) Number of backup sets in history: 6; groups (db): 1
+0051.956 (0) Examining (for databases) backup set with group_id=0, nonce=65e6172aace9, datestamp=1746804610 (May 09 2025 15:30:10)
+0051.958 (0) This backup set is the backup set just made, so will not be deleted.
+0051.958 (0) Examining (for databases) backup set with group_id=0, nonce=92892c3f0c02, datestamp=1746294687 (May 03 2025 17:51:27)
+0051.958 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0051.961 (0) Examining (for databases) backup set with group_id=0, nonce=8603436c59ad, datestamp=1739118812 (Feb 09 2025 16:33:32)
+0051.961 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0051.961 (0) Examining (for databases) backup set with group_id=0, nonce=374929f2aabc, datestamp=1730682791 (Nov 04 2024 01:13:11)
+0051.961 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0051.961 (0) Examining (for databases) backup set with group_id=0, nonce=921ffac22927, datestamp=1712867634 (Apr 11 2024 20:33:54)
+0051.961 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0051.961 (0) Examining (for databases) backup set with group_id=0, nonce=608a7206b282, datestamp=1711228150 (Mar 23 2024 21:09:10)
+0051.961 (0) 1711228150: db: this set includes a database (backup_2024-03-23-1709_Sarah_Bartley_608a7206b282-db.gz); db count is now 5
+0051.961 (0) 1711228150: db: over retain limit (5); will delete this database
+0051.961 (0) Delete file: backup_2024-03-23-1709_Sarah_Bartley_608a7206b282-db.gz, service=googledrive
+0051.963 (0) Deleting local copy (backup_2024-03-23-1709_Sarah_Bartley_608a7206b282-db.gz)
+0052.148 (0) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+0052.150 (0) Google Drive: delete: failed due to storage error: no_refresh_token (Invalid request (refresh token not present).)
+0052.157 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0052.158 (0) Number of backup sets in history: 6; groups (files): 1
+0052.159 (0) Examining (for files) backup set with nonce=65e6172aace9, datestamp=1746804610 (May 09 2025 15:30:10)
+0052.159 (0) This backup set is the backup set just made, so will not be deleted.
+0052.161 (0) This backup set is the backup set just made, so will not be deleted.
+0052.161 (0) This backup set is the backup set just made, so will not be deleted.
+0052.161 (0) This backup set is the backup set just made, so will not be deleted.
+0052.161 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0052.163 (0) Examining (for files) backup set with nonce=92892c3f0c02, datestamp=1746294687 (May 03 2025 17:51:27)
+0052.163 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0052.163 (0) Examining (for files) backup set with nonce=8603436c59ad, datestamp=1739118812 (Feb 09 2025 16:33:32)
+0052.163 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0052.163 (0) Examining (for files) backup set with nonce=374929f2aabc, datestamp=1730682791 (Nov 04 2024 01:13:11)
+0052.163 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0052.163 (0) Examining (for files) backup set with nonce=921ffac22927, datestamp=1712867634 (Apr 11 2024 20:33:54)
+0052.164 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0052.164 (0) Examining (for files) backup set with nonce=608a7206b282, datestamp=1711228150 (Mar 23 2024 21:09:10)
+0052.164 (0) plugins: over retain limit (5); will delete this file entity
+0052.164 (0) themes: over retain limit (5); will delete this file entity
+0052.164 (0) uploads: over retain limit (5); will delete this file entity
+0052.164 (0) others: over retain limit (5); will delete this file entity
+0052.165 (0) Delete file: backup_2024-03-23-1709_Sarah_Bartley_608a7206b282-plugins.zip, service=googledrive
+0052.167 (0) Deleting local copy (backup_2024-03-23-1709_Sarah_Bartley_608a7206b282-plugins.zip)
+0052.170 (0) Delete file: backup_2024-03-23-1709_Sarah_Bartley_608a7206b282-themes.zip, service=googledrive
+0052.172 (0) Deleting local copy (backup_2024-03-23-1709_Sarah_Bartley_608a7206b282-themes.zip)
+0052.175 (0) Delete file: backup_2024-03-23-1709_Sarah_Bartley_608a7206b282-uploads.zip, service=googledrive
+0052.177 (0) Deleting local copy (backup_2024-03-23-1709_Sarah_Bartley_608a7206b282-uploads.zip)
+0052.181 (0) Delete file: backup_2024-03-23-1709_Sarah_Bartley_608a7206b282-others.zip, service=googledrive
+0052.182 (0) Deleting local copy (backup_2024-03-23-1709_Sarah_Bartley_608a7206b282-others.zip)
+0052.351 (0) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+0052.353 (0) Google Drive: delete: failed due to storage error: no_refresh_token (Invalid request (refresh token not present).)
+0052.360 (0) This backup set is now empty; will remove from history
+0052.362 (0) Corresponding log file (log.608a7206b282.txt) not found - must have already been deleted
+0052.365 (0) Retain: saving new backup history (sets now: 5) and finishing retain operation
+0052.373 (0) Resume backup (65e6172aace9, 0): finish run
+0052.378 (0) Decremented the semaphore (fd) by 1
+0052.382 (0) Semaphore (fd) unlocked
+0052.388 (0) There were errors in the uploads, so the 'resume' event is remaining scheduled
+0052.392 (0) No email will/can be sent - the user has not configured an email address.
+0052.394 (0) The backup has not finished; a resumption is scheduled
+0310.284 (1) Opened log file at time: Fri, 09 May 2025 15:35:20 +0000 on http://localhost/bpcportfolio
+0310.287 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.25.5 WP: 6.8.1 PHP: 8.1.4 (apache2handler, Windows NT LAPTOP-5NDR6MG6 10.0 build 26100 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 71.7M | 98M) multisite: N openssl: OpenSSL 1.1.1m  14 Dec 2021 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: Y
+0310.289 (1) Free space on disk containing Updraft's temporary directory: 100590.4 MB
+0310.292 (1) Requesting backup semaphore lock (65e6172aace9)
+0310.297 (1) [Debug] Lock option (updraft_lock_65e6172aace9, wp_options) was created in the database
+0310.298 (1) [Info] Lock (updraft_lock_65e6172aace9, wp_options) acquired after initialising the database
+0310.303 (1) Backup run: resumption=1, nonce=65e6172aace9, file_nonce=65e6172aace9 begun at=1746804610 (310s ago), job type=backup, previous check-in=52.36s
+0310.308 (1) Scheduling a resumption (2) after 300 seconds (1746805220) in case this run gets aborted
+0310.323 (1) Checking if we have a zip executable available
+0310.325 (1) Creation of backups of directories: already finished
+0310.328 (1) Saving backup status to database (elements: 8)
+0310.344 (1) Database dump (WordPress DB): Creation was completed already
+0310.347 (1) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+0310.358 (1) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0310.360 (1) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0310.362 (1) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0310.364 (1) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-others.zip: others: This file has not yet been successfully uploaded: will queue
+0310.366 (1) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db.gz: db: This file has not yet been successfully uploaded: will queue
+0310.368 (1) Saving backup history. Total backup size: 65.1 MB
+0310.375 (1) Requesting upload of the files that have not yet been successfully uploaded (5)
+0310.379 (1) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0310.382 (1) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+0310.576 (1) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+0310.578 (1) An error condition has occurred for the first time during this job
+0310.582 (1) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+0310.585 (1) Number of backup sets in history: 5; groups (db): 1
+0310.587 (1) Examining (for databases) backup set with group_id=0, nonce=65e6172aace9, datestamp=1746804610 (May 09 2025 15:30:10)
+0310.588 (1) This backup set is the backup set just made, so will not be deleted.
+0310.588 (1) Examining (for databases) backup set with group_id=0, nonce=92892c3f0c02, datestamp=1746294687 (May 03 2025 17:51:27)
+0310.588 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0310.590 (1) Examining (for databases) backup set with group_id=0, nonce=8603436c59ad, datestamp=1739118812 (Feb 09 2025 16:33:32)
+0310.590 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0310.590 (1) Examining (for databases) backup set with group_id=0, nonce=374929f2aabc, datestamp=1730682791 (Nov 04 2024 01:13:11)
+0310.590 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0310.590 (1) Examining (for databases) backup set with group_id=0, nonce=921ffac22927, datestamp=1712867634 (Apr 11 2024 20:33:54)
+0310.590 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0310.590 (1) Number of backup sets in history: 5; groups (files): 1
+0310.592 (1) Examining (for files) backup set with nonce=65e6172aace9, datestamp=1746804610 (May 09 2025 15:30:10)
+0310.592 (1) This backup set is the backup set just made, so will not be deleted.
+0310.594 (1) This backup set is the backup set just made, so will not be deleted.
+0310.594 (1) This backup set is the backup set just made, so will not be deleted.
+0310.594 (1) This backup set is the backup set just made, so will not be deleted.
+0310.594 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0310.595 (1) Examining (for files) backup set with nonce=92892c3f0c02, datestamp=1746294687 (May 03 2025 17:51:27)
+0310.596 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0310.596 (1) Examining (for files) backup set with nonce=8603436c59ad, datestamp=1739118812 (Feb 09 2025 16:33:32)
+0310.596 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0310.596 (1) Examining (for files) backup set with nonce=374929f2aabc, datestamp=1730682791 (Nov 04 2024 01:13:11)
+0310.596 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0310.596 (1) Examining (for files) backup set with nonce=921ffac22927, datestamp=1712867634 (Apr 11 2024 20:33:54)
+0310.596 (1) This backup set remains non-empty (f=1/d=1); will retain in history
+0310.596 (1) Retain: saving new backup history (sets now: 5) and finishing retain operation
+0310.601 (1) Resume backup (65e6172aace9, 1): finish run
+0310.606 (1) [Info] Lock option (updraft_lock_65e6172aace9, wp_options) released
+0310.610 (1) There were errors in the uploads, so the 'resume' event is remaining scheduled
+0310.614 (1) No email will/can be sent - the user has not configured an email address.
+0310.616 (1) The backup has not finished; a resumption is scheduled
+0613.408 (2) Opened log file at time: Fri, 09 May 2025 15:40:23 +0000 on http://localhost/bpcportfolio
+0613.411 (2) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.25.5 WP: 6.8.1 PHP: 8.1.4 (apache2handler, Windows NT LAPTOP-5NDR6MG6 10.0 build 26100 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 71.7M | 94M) multisite: N openssl: OpenSSL 1.1.1m  14 Dec 2021 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: Y
+0613.413 (2) Free space on disk containing Updraft's temporary directory: 100502.3 MB
+0613.416 (2) Requesting backup semaphore lock (65e6172aace9)
+0613.419 (2) [Info] Lock (updraft_lock_65e6172aace9, wp_options) acquired
+0613.425 (2) Backup run: resumption=2, nonce=65e6172aace9, file_nonce=65e6172aace9 begun at=1746804610 (613s ago), job type=backup
+0613.430 (2) Scheduling a resumption (3) after 300 seconds (1746805523) in case this run gets aborted
+0613.450 (2) Checking if we have a zip executable available
+0613.453 (2) Creation of backups of directories: already finished
+0613.456 (2) Saving backup status to database (elements: 8)
+0613.476 (2) Database dump (WordPress DB): Creation was completed already
+0613.478 (2) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+0613.490 (2) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0613.492 (2) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0613.494 (2) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0613.496 (2) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-others.zip: others: This file has not yet been successfully uploaded: will queue
+0613.498 (2) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db.gz: db: This file has not yet been successfully uploaded: will queue
+0613.501 (2) Saving backup history. Total backup size: 65.1 MB
+0613.508 (2) Requesting upload of the files that have not yet been successfully uploaded (5)
+0613.513 (2) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0613.516 (2) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+0613.867 (2) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+0613.880 (2) An error condition has occurred for the first time during this job
+0613.887 (2) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+0613.891 (2) Number of backup sets in history: 5; groups (db): 1
+0613.894 (2) Examining (for databases) backup set with group_id=0, nonce=65e6172aace9, datestamp=1746804610 (May 09 2025 15:30:10)
+0613.896 (2) This backup set is the backup set just made, so will not be deleted.
+0613.896 (2) Examining (for databases) backup set with group_id=0, nonce=92892c3f0c02, datestamp=1746294687 (May 03 2025 17:51:27)
+0613.896 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0613.898 (2) Examining (for databases) backup set with group_id=0, nonce=8603436c59ad, datestamp=1739118812 (Feb 09 2025 16:33:32)
+0613.898 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0613.898 (2) Examining (for databases) backup set with group_id=0, nonce=374929f2aabc, datestamp=1730682791 (Nov 04 2024 01:13:11)
+0613.898 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0613.898 (2) Examining (for databases) backup set with group_id=0, nonce=921ffac22927, datestamp=1712867634 (Apr 11 2024 20:33:54)
+0613.898 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0613.899 (2) Number of backup sets in history: 5; groups (files): 1
+0613.901 (2) Examining (for files) backup set with nonce=65e6172aace9, datestamp=1746804610 (May 09 2025 15:30:10)
+0613.901 (2) This backup set is the backup set just made, so will not be deleted.
+0613.904 (2) This backup set is the backup set just made, so will not be deleted.
+0613.904 (2) This backup set is the backup set just made, so will not be deleted.
+0613.904 (2) This backup set is the backup set just made, so will not be deleted.
+0613.904 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0613.907 (2) Examining (for files) backup set with nonce=92892c3f0c02, datestamp=1746294687 (May 03 2025 17:51:27)
+0613.907 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0613.907 (2) Examining (for files) backup set with nonce=8603436c59ad, datestamp=1739118812 (Feb 09 2025 16:33:32)
+0613.907 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0613.907 (2) Examining (for files) backup set with nonce=374929f2aabc, datestamp=1730682791 (Nov 04 2024 01:13:11)
+0613.907 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0613.907 (2) Examining (for files) backup set with nonce=921ffac22927, datestamp=1712867634 (Apr 11 2024 20:33:54)
+0613.907 (2) This backup set remains non-empty (f=1/d=1); will retain in history
+0613.907 (2) Retain: saving new backup history (sets now: 5) and finishing retain operation
+0613.913 (2) Resume backup (65e6172aace9, 2): finish run
+0613.916 (2) [Info] Lock option (updraft_lock_65e6172aace9, wp_options) released
+0613.919 (2) There were errors in the uploads, so the 'resume' event is remaining scheduled
+0613.925 (2) No email will/can be sent - the user has not configured an email address.
+0613.927 (2) The backup has not finished; a resumption is scheduled
+0913.399 (3) Opened log file at time: Fri, 09 May 2025 15:45:23 +0000 on http://localhost/bpcportfolio
+0913.402 (3) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.25.5 WP: 6.8.1 PHP: 8.1.4 (apache2handler, Windows NT LAPTOP-5NDR6MG6 10.0 build 26100 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 71.7M | 92M) multisite: N openssl: OpenSSL 1.1.1m  14 Dec 2021 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: Y
+0913.405 (3) Free space on disk containing Updraft's temporary directory: 100486.1 MB
+0913.407 (3) Requesting backup semaphore lock (65e6172aace9)
+0913.411 (3) [Info] Lock (updraft_lock_65e6172aace9, wp_options) acquired
+0913.415 (3) Backup run: resumption=3, nonce=65e6172aace9, file_nonce=65e6172aace9 begun at=1746804610 (913s ago), job type=backup
+0913.419 (3) Scheduling a resumption (4) after 300 seconds (1746805823) in case this run gets aborted
+0913.431 (3) Checking if we have a zip executable available
+0913.433 (3) Creation of backups of directories: already finished
+0913.435 (3) Saving backup status to database (elements: 8)
+0913.449 (3) Database dump (WordPress DB): Creation was completed already
+0913.450 (3) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+0913.459 (3) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0913.461 (3) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0913.462 (3) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0913.464 (3) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-others.zip: others: This file has not yet been successfully uploaded: will queue
+0913.465 (3) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db.gz: db: This file has not yet been successfully uploaded: will queue
+0913.467 (3) Saving backup history. Total backup size: 65.1 MB
+0913.472 (3) Requesting upload of the files that have not yet been successfully uploaded (5)
+0913.477 (3) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0913.480 (3) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+0913.802 (3) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+0913.815 (3) An error condition has occurred for the first time during this job
+0913.821 (3) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+0913.825 (3) Number of backup sets in history: 5; groups (db): 1
+0913.827 (3) Examining (for databases) backup set with group_id=0, nonce=65e6172aace9, datestamp=1746804610 (May 09 2025 15:30:10)
+0913.830 (3) This backup set is the backup set just made, so will not be deleted.
+0913.830 (3) Examining (for databases) backup set with group_id=0, nonce=92892c3f0c02, datestamp=1746294687 (May 03 2025 17:51:27)
+0913.830 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+0913.832 (3) Examining (for databases) backup set with group_id=0, nonce=8603436c59ad, datestamp=1739118812 (Feb 09 2025 16:33:32)
+0913.833 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+0913.833 (3) Examining (for databases) backup set with group_id=0, nonce=374929f2aabc, datestamp=1730682791 (Nov 04 2024 01:13:11)
+0913.833 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+0913.833 (3) Examining (for databases) backup set with group_id=0, nonce=921ffac22927, datestamp=1712867634 (Apr 11 2024 20:33:54)
+0913.833 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+0913.833 (3) Number of backup sets in history: 5; groups (files): 1
+0913.835 (3) Examining (for files) backup set with nonce=65e6172aace9, datestamp=1746804610 (May 09 2025 15:30:10)
+0913.835 (3) This backup set is the backup set just made, so will not be deleted.
+0913.837 (3) This backup set is the backup set just made, so will not be deleted.
+0913.838 (3) This backup set is the backup set just made, so will not be deleted.
+0913.838 (3) This backup set is the backup set just made, so will not be deleted.
+0913.838 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+0913.840 (3) Examining (for files) backup set with nonce=92892c3f0c02, datestamp=1746294687 (May 03 2025 17:51:27)
+0913.840 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+0913.841 (3) Examining (for files) backup set with nonce=8603436c59ad, datestamp=1739118812 (Feb 09 2025 16:33:32)
+0913.841 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+0913.841 (3) Examining (for files) backup set with nonce=374929f2aabc, datestamp=1730682791 (Nov 04 2024 01:13:11)
+0913.841 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+0913.841 (3) Examining (for files) backup set with nonce=921ffac22927, datestamp=1712867634 (Apr 11 2024 20:33:54)
+0913.841 (3) This backup set remains non-empty (f=1/d=1); will retain in history
+0913.841 (3) Retain: saving new backup history (sets now: 5) and finishing retain operation
+0913.848 (3) Resume backup (65e6172aace9, 3): finish run
+0913.851 (3) [Info] Lock option (updraft_lock_65e6172aace9, wp_options) released
+0913.855 (3) There were errors in the uploads, so the 'resume' event is remaining scheduled
+0913.862 (3) No email will/can be sent - the user has not configured an email address.
+0913.865 (3) The backup has not finished; a resumption is scheduled
+1228.366 (4) Opened log file at time: Fri, 09 May 2025 15:50:38 +0000 on http://localhost/bpcportfolio
+1228.369 (4) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.25.5 WP: 6.8.1 PHP: 8.1.4 (apache2handler, Windows NT LAPTOP-5NDR6MG6 10.0 build 26100 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 71.7M | 74M) multisite: N openssl: OpenSSL 1.1.1m  14 Dec 2021 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: Y
+1228.371 (4) Free space on disk containing Updraft's temporary directory: 100487.7 MB
+1228.374 (4) Requesting backup semaphore lock (65e6172aace9)
+1228.378 (4) [Info] Lock (updraft_lock_65e6172aace9, wp_options) acquired
+1228.383 (4) Backup run: resumption=4, nonce=65e6172aace9, file_nonce=65e6172aace9 begun at=1746804610 (1228s ago), job type=backup
+1228.387 (4) Scheduling a resumption (5) after 300 seconds (1746806138) in case this run gets aborted
+1228.404 (4) Checking if we have a zip executable available
+1228.406 (4) Creation of backups of directories: already finished
+1228.409 (4) Saving backup status to database (elements: 8)
+1228.424 (4) Database dump (WordPress DB): Creation was completed already
+1228.426 (4) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+1228.439 (4) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+1228.441 (4) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+1228.443 (4) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+1228.445 (4) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-others.zip: others: This file has not yet been successfully uploaded: will queue
+1228.447 (4) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db.gz: db: This file has not yet been successfully uploaded: will queue
+1228.450 (4) Saving backup history. Total backup size: 65.1 MB
+1228.455 (4) Requesting upload of the files that have not yet been successfully uploaded (5)
+1228.460 (4) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+1228.462 (4) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+1228.765 (4) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+1228.767 (4) An error condition has occurred for the first time during this job
+1228.772 (4) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+1228.775 (4) Number of backup sets in history: 5; groups (db): 1
+1228.777 (4) Examining (for databases) backup set with group_id=0, nonce=65e6172aace9, datestamp=1746804610 (May 09 2025 15:30:10)
+1228.779 (4) This backup set is the backup set just made, so will not be deleted.
+1228.779 (4) Examining (for databases) backup set with group_id=0, nonce=92892c3f0c02, datestamp=1746294687 (May 03 2025 17:51:27)
+1228.779 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+1228.782 (4) Examining (for databases) backup set with group_id=0, nonce=8603436c59ad, datestamp=1739118812 (Feb 09 2025 16:33:32)
+1228.782 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+1228.782 (4) Examining (for databases) backup set with group_id=0, nonce=374929f2aabc, datestamp=1730682791 (Nov 04 2024 01:13:11)
+1228.782 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+1228.783 (4) Examining (for databases) backup set with group_id=0, nonce=921ffac22927, datestamp=1712867634 (Apr 11 2024 20:33:54)
+1228.783 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+1228.783 (4) Number of backup sets in history: 5; groups (files): 1
+1228.785 (4) Examining (for files) backup set with nonce=65e6172aace9, datestamp=1746804610 (May 09 2025 15:30:10)
+1228.785 (4) This backup set is the backup set just made, so will not be deleted.
+1228.787 (4) This backup set is the backup set just made, so will not be deleted.
+1228.787 (4) This backup set is the backup set just made, so will not be deleted.
+1228.787 (4) This backup set is the backup set just made, so will not be deleted.
+1228.787 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+1228.789 (4) Examining (for files) backup set with nonce=92892c3f0c02, datestamp=1746294687 (May 03 2025 17:51:27)
+1228.789 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+1228.790 (4) Examining (for files) backup set with nonce=8603436c59ad, datestamp=1739118812 (Feb 09 2025 16:33:32)
+1228.790 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+1228.790 (4) Examining (for files) backup set with nonce=374929f2aabc, datestamp=1730682791 (Nov 04 2024 01:13:11)
+1228.790 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+1228.790 (4) Examining (for files) backup set with nonce=921ffac22927, datestamp=1712867634 (Apr 11 2024 20:33:54)
+1228.790 (4) This backup set remains non-empty (f=1/d=1); will retain in history
+1228.790 (4) Retain: saving new backup history (sets now: 5) and finishing retain operation
+1228.795 (4) Resume backup (65e6172aace9, 4): finish run
+1228.797 (4) [Info] Lock option (updraft_lock_65e6172aace9, wp_options) released
+1228.800 (4) There were errors in the uploads, so the 'resume' event is remaining scheduled
+1228.804 (4) No email will/can be sent - the user has not configured an email address.
+1228.806 (4) The backup has not finished; a resumption is scheduled
+7139.410 (5) Opened log file at time: Fri, 09 May 2025 17:29:09 +0000 on http://localhost/bpcportfolio
+7139.414 (5) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.25.5 WP: 6.8.1 PHP: 8.1.4 (apache2handler, Windows NT LAPTOP-5NDR6MG6 10.0 build 26100 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 71.7M | 74M) multisite: N openssl: OpenSSL 1.1.1m  14 Dec 2021 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: Y
+7139.417 (5) Free space on disk containing Updraft's temporary directory: 100633.9 MB
+7139.423 (5) Requesting backup semaphore lock (65e6172aace9)
+7139.427 (5) [Info] Lock (updraft_lock_65e6172aace9, wp_options) acquired
+7139.433 (5) Backup run: resumption=5, nonce=65e6172aace9, file_nonce=65e6172aace9 begun at=1746804610 (7139s ago), job type=backup
+7139.436 (5) Long time past since expected resumption time: approx expected=1746806138.7, now=1746811749.8, diff=5611
+7139.442 (5) [Warning] Your website is visited infrequently and UpdraftPlus is not getting the resources it hoped for; please read this page: https://updraftplus.com/faqs/why-am-i-getting-warnings-about-my-site-not-having-enough-visitors/
+7139.449 (5) Scheduling a resumption (6) after 300 seconds (1746812049) in case this run gets aborted
+7139.479 (5) Checking if we have a zip executable available
+7139.481 (5) Creation of backups of directories: already finished
+7139.486 (5) Saving backup status to database (elements: 8)
+7139.507 (5) Database dump (WordPress DB): Creation was completed already
+7139.510 (5) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+7139.528 (5) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+7139.531 (5) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+7139.535 (5) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+7139.538 (5) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-others.zip: others: This file has not yet been successfully uploaded: will queue
+7139.541 (5) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db.gz: db: This file has not yet been successfully uploaded: will queue
+7139.543 (5) Saving backup history. Total backup size: 65.1 MB
+7139.551 (5) Requesting upload of the files that have not yet been successfully uploaded (5)
+7139.556 (5) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+7139.559 (5) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+7139.896 (5) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+7139.900 (5) An error condition has occurred for the first time during this job
+7139.906 (5) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+7139.910 (5) Number of backup sets in history: 5; groups (db): 1
+7139.913 (5) Examining (for databases) backup set with group_id=0, nonce=65e6172aace9, datestamp=1746804610 (May 09 2025 15:30:10)
+7139.917 (5) This backup set is the backup set just made, so will not be deleted.
+7139.917 (5) Examining (for databases) backup set with group_id=0, nonce=92892c3f0c02, datestamp=1746294687 (May 03 2025 17:51:27)
+7139.917 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+7139.920 (5) Examining (for databases) backup set with group_id=0, nonce=8603436c59ad, datestamp=1739118812 (Feb 09 2025 16:33:32)
+7139.920 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+7139.920 (5) Examining (for databases) backup set with group_id=0, nonce=374929f2aabc, datestamp=1730682791 (Nov 04 2024 01:13:11)
+7139.920 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+7139.920 (5) Examining (for databases) backup set with group_id=0, nonce=921ffac22927, datestamp=1712867634 (Apr 11 2024 20:33:54)
+7139.921 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+7139.921 (5) Number of backup sets in history: 5; groups (files): 1
+7139.926 (5) Examining (for files) backup set with nonce=65e6172aace9, datestamp=1746804610 (May 09 2025 15:30:10)
+7139.926 (5) This backup set is the backup set just made, so will not be deleted.
+7139.929 (5) This backup set is the backup set just made, so will not be deleted.
+7139.930 (5) This backup set is the backup set just made, so will not be deleted.
+7139.930 (5) This backup set is the backup set just made, so will not be deleted.
+7139.930 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+7139.933 (5) Examining (for files) backup set with nonce=92892c3f0c02, datestamp=1746294687 (May 03 2025 17:51:27)
+7139.933 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+7139.933 (5) Examining (for files) backup set with nonce=8603436c59ad, datestamp=1739118812 (Feb 09 2025 16:33:32)
+7139.934 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+7139.934 (5) Examining (for files) backup set with nonce=374929f2aabc, datestamp=1730682791 (Nov 04 2024 01:13:11)
+7139.934 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+7139.934 (5) Examining (for files) backup set with nonce=921ffac22927, datestamp=1712867634 (Apr 11 2024 20:33:54)
+7139.934 (5) This backup set remains non-empty (f=1/d=1); will retain in history
+7139.934 (5) Retain: saving new backup history (sets now: 5) and finishing retain operation
+7139.950 (5) Resume backup (65e6172aace9, 5): finish run
+7139.958 (5) [Info] Lock option (updraft_lock_65e6172aace9, wp_options) released
+7139.962 (5) There were errors in the uploads, so the 'resume' event is remaining scheduled
+7139.970 (5) No email will/can be sent - the user has not configured an email address.
+7139.973 (5) The backup has not finished; a resumption is scheduled
+7448.089 (6) Opened log file at time: Fri, 09 May 2025 17:34:18 +0000 on http://localhost/bpcportfolio
+7448.092 (6) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.25.5 WP: 6.8.1 PHP: 8.1.4 (apache2handler, Windows NT LAPTOP-5NDR6MG6 10.0 build 26100 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 71.7M | 84M) multisite: N openssl: OpenSSL 1.1.1m  14 Dec 2021 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: Y
+7448.094 (6) Free space on disk containing Updraft's temporary directory: 100623.2 MB
+7448.096 (6) Requesting backup semaphore lock (65e6172aace9)
+7448.099 (6) [Info] Lock (updraft_lock_65e6172aace9, wp_options) acquired
+7448.104 (6) Backup run: resumption=6, nonce=65e6172aace9, file_nonce=65e6172aace9 begun at=1746804610 (7448s ago), job type=backup
+7448.109 (6) Scheduling a resumption (7) after 300 seconds (1746812358) in case this run gets aborted
+7448.122 (6) Checking if we have a zip executable available
+7448.124 (6) Creation of backups of directories: already finished
+7448.128 (6) Saving backup status to database (elements: 8)
+7448.137 (6) Database dump (WordPress DB): Creation was completed already
+7448.140 (6) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+7448.150 (6) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+7448.152 (6) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+7448.154 (6) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+7448.156 (6) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-others.zip: others: This file has not yet been successfully uploaded: will queue
+7448.157 (6) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db.gz: db: This file has not yet been successfully uploaded: will queue
+7448.159 (6) Saving backup history. Total backup size: 65.1 MB
+7448.165 (6) Requesting upload of the files that have not yet been successfully uploaded (5)
+7448.169 (6) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+7448.171 (6) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+7448.465 (6) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+7448.469 (6) An error condition has occurred for the first time during this job
+7448.476 (6) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+7448.481 (6) Number of backup sets in history: 5; groups (db): 1
+7448.484 (6) Examining (for databases) backup set with group_id=0, nonce=65e6172aace9, datestamp=1746804610 (May 09 2025 15:30:10)
+7448.486 (6) This backup set is the backup set just made, so will not be deleted.
+7448.486 (6) Examining (for databases) backup set with group_id=0, nonce=92892c3f0c02, datestamp=1746294687 (May 03 2025 17:51:27)
+7448.486 (6) This backup set remains non-empty (f=1/d=1); will retain in history
+7448.488 (6) Examining (for databases) backup set with group_id=0, nonce=8603436c59ad, datestamp=1739118812 (Feb 09 2025 16:33:32)
+7448.488 (6) This backup set remains non-empty (f=1/d=1); will retain in history
+7448.488 (6) Examining (for databases) backup set with group_id=0, nonce=374929f2aabc, datestamp=1730682791 (Nov 04 2024 01:13:11)
+7448.488 (6) This backup set remains non-empty (f=1/d=1); will retain in history
+7448.489 (6) Examining (for databases) backup set with group_id=0, nonce=921ffac22927, datestamp=1712867634 (Apr 11 2024 20:33:54)
+7448.489 (6) This backup set remains non-empty (f=1/d=1); will retain in history
+7448.489 (6) Number of backup sets in history: 5; groups (files): 1
+7448.490 (6) Examining (for files) backup set with nonce=65e6172aace9, datestamp=1746804610 (May 09 2025 15:30:10)
+7448.491 (6) This backup set is the backup set just made, so will not be deleted.
+7448.493 (6) This backup set is the backup set just made, so will not be deleted.
+7448.493 (6) This backup set is the backup set just made, so will not be deleted.
+7448.493 (6) This backup set is the backup set just made, so will not be deleted.
+7448.494 (6) This backup set remains non-empty (f=1/d=1); will retain in history
+7448.496 (6) Examining (for files) backup set with nonce=92892c3f0c02, datestamp=1746294687 (May 03 2025 17:51:27)
+7448.496 (6) This backup set remains non-empty (f=1/d=1); will retain in history
+7448.496 (6) Examining (for files) backup set with nonce=8603436c59ad, datestamp=1739118812 (Feb 09 2025 16:33:32)
+7448.496 (6) This backup set remains non-empty (f=1/d=1); will retain in history
+7448.496 (6) Examining (for files) backup set with nonce=374929f2aabc, datestamp=1730682791 (Nov 04 2024 01:13:11)
+7448.496 (6) This backup set remains non-empty (f=1/d=1); will retain in history
+7448.496 (6) Examining (for files) backup set with nonce=921ffac22927, datestamp=1712867634 (Apr 11 2024 20:33:54)
+7448.496 (6) This backup set remains non-empty (f=1/d=1); will retain in history
+7448.496 (6) Retain: saving new backup history (sets now: 5) and finishing retain operation
+7448.501 (6) Resume backup (65e6172aace9, 6): finish run
+7448.505 (6) [Info] Lock option (updraft_lock_65e6172aace9, wp_options) released
+7448.508 (6) There were errors in the uploads, so the 'resume' event is remaining scheduled
+7448.512 (6) No email will/can be sent - the user has not configured an email address.
+7448.514 (6) The backup has not finished; a resumption is scheduled
+7768.316 (7) Opened log file at time: Fri, 09 May 2025 17:39:38 +0000 on http://localhost/bpcportfolio
+7768.319 (7) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.25.5 WP: 6.8.1 PHP: 8.1.4 (apache2handler, Windows NT LAPTOP-5NDR6MG6 10.0 build 26100 (Windows 11) AMD64) MySQL: 10.4.24-MariaDB (max packet size=1048576) WPLANG: en_US Server: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/8.1.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 71.7M | 80M) multisite: N openssl: OpenSSL 1.1.1m  14 Dec 2021 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: Y
+7768.321 (7) Free space on disk containing Updraft's temporary directory: 100614.1 MB
+7768.324 (7) Requesting backup semaphore lock (65e6172aace9)
+7768.328 (7) [Info] Lock (updraft_lock_65e6172aace9, wp_options) acquired
+7768.334 (7) Backup run: resumption=7, nonce=65e6172aace9, file_nonce=65e6172aace9 begun at=1746804610 (7768s ago), job type=backup
+7768.338 (7) Scheduling a resumption (8) after 300 seconds (1746812678) in case this run gets aborted
+7768.352 (7) Checking if we have a zip executable available
+7768.354 (7) Creation of backups of directories: already finished
+7768.357 (7) Saving backup status to database (elements: 8)
+7768.368 (7) Database dump (WordPress DB): Creation was completed already
+7768.370 (7) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+7768.380 (7) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+7768.382 (7) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+7768.384 (7) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+7768.386 (7) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-others.zip: others: This file has not yet been successfully uploaded: will queue
+7768.388 (7) backup_2025-05-09-1130_Sarah_Bartley_65e6172aace9-db.gz: db: This file has not yet been successfully uploaded: will queue
+7768.390 (7) Saving backup history. Total backup size: 65.1 MB
+7768.394 (7) Requesting upload of the files that have not yet been successfully uploaded (5)
+7768.400 (7) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+7768.402 (7) Beginning dispatch of backup to remote (googledrive) (instance identifier s-5b143f28229f430026e4c719d3c840c0)
+7768.721 (7) Google Drive: ERROR: Have not yet obtained an access token from Google (has the user authorised?) (Invalid request (refresh token not present).) (no_refresh_token)
+7768.733 (7) An error condition has occurred for the first time during this job
+7768.737 (7) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+7768.740 (7) Number of backup sets in history: 5; groups (db): 1
+7768.748 (7) Examining (for databases) backup set with group_id=0, nonce=65e6172aace9, datestamp=1746804610 (May 09 2025 15:30:10)
+7768.758 (7) This backup set is the backup set just made, so will not be deleted.
+7768.758 (7) Examining (for databases) backup set with group_id=0, nonce=92892c3f0c02, datestamp=1746294687 (May 03 2025 17:51:27)
+7768.758 (7) This backup set remains non-empty (f=1/d=1); will retain in history
+7768.761 (7) Examining (for databases) backup set with group_id=0, nonce=8603436c59ad, datestamp=1739118812 (Feb 09 2025 16:33:32)
+7768.762 (7) This backup set remains non-empty (f=1/d=1); will retain in history
+7768.762 (7) Examining (for databases) backup set with group_id=0, nonce=374929f2aabc, datestamp=1730682791 (Nov 04 2024 01:13:11)
+7768.762 (7) This backup set remains non-empty (f=1/d=1); will retain in history
+7768.762 (7) Examining (for databases) backup set with group_id=0, nonce=921ffac22927, datestamp=1712867634 (Apr 11 2024 20:33:54)
+7768.762 (7) This backup set remains non-empty (f=1/d=1); will retain in history
+7768.762 (7) Number of backup sets in history: 5; groups (files): 1
+7768.765 (7) Examining (for files) backup set with nonce=65e6172aace9, datestamp=1746804610 (May 09 2025 15:30:10)
+7768.765 (7) This backup set is the backup set just made, so will not be deleted.
+7768.767 (7) This backup set is the backup set just made, so will not be deleted.
+7768.767 (7) This backup set is the backup set just made, so will not be deleted.
+7768.767 (7) This backup set is the backup set just made, so will not be deleted.
+7768.767 (7) This backup set remains non-empty (f=1/d=1); will retain in history
+7768.769 (7) Examining (for files) backup set with nonce=92892c3f0c02, datestamp=1746294687 (May 03 2025 17:51:27)
+7768.769 (7) This backup set remains non-empty (f=1/d=1); will retain in history
+7768.769 (7) Examining (for files) backup set with nonce=8603436c59ad, datestamp=1739118812 (Feb 09 2025 16:33:32)
+7768.769 (7) This backup set remains non-empty (f=1/d=1); will retain in history
+7768.770 (7) Examining (for files) backup set with nonce=374929f2aabc, datestamp=1730682791 (Nov 04 2024 01:13:11)
+7768.770 (7) This backup set remains non-empty (f=1/d=1); will retain in history
+7768.770 (7) Examining (for files) backup set with nonce=921ffac22927, datestamp=1712867634 (Apr 11 2024 20:33:54)
+7768.770 (7) This backup set remains non-empty (f=1/d=1); will retain in history
+7768.770 (7) Retain: saving new backup history (sets now: 5) and finishing retain operation
+7768.775 (7) Resume backup (65e6172aace9, 7): finish run
+7768.777 (7) [Info] Lock option (updraft_lock_65e6172aace9, wp_options) released
+7768.780 (7) There were errors in the uploads, so the 'resume' event is remaining scheduled
+7768.784 (7) No email will/can be sent - the user has not configured an email address.
+7768.786 (7) The backup has not finished; a resumption is scheduled
