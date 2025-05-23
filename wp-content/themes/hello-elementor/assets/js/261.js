@@ -10,7 +10,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1609);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _elementor_ui_SvgIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(691);
+/* harmony import */ var _elementor_ui_SvgIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5422);
 
 
 

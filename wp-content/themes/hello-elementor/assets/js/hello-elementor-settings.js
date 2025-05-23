@@ -2243,7 +2243,6 @@ const SettingsProvider = _ref => {
       return;
     }
     setIsLoading(true);
-    console.log(themeSettings);
     (0, _apiFetch.default)({
       path: '/elementor-hello-elementor/v1/theme-settings',
       method: 'POST',

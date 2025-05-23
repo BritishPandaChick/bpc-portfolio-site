@@ -402,29 +402,6 @@ function formatMuiErrorMessage(code) {
 
 /***/ }),
 
-/***/ 691:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (/* binding */ SvgIcon_default)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1609);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _mui_material_SvgIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4623);
-
-
-
-const SvgIcon = react__WEBPACK_IMPORTED_MODULE_0___default().forwardRef((props, ref) => {
-  return /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_SvgIcon__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A, { ...props, ref });
-});
-var SvgIcon_default = SvgIcon;
-
-
-
-
-/***/ }),
-
 /***/ 717:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -3264,7 +3241,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1609);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _elementor_ui_SvgIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(691);
+/* harmony import */ var _elementor_ui_SvgIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5422);
 
 
 
@@ -5054,7 +5031,7 @@ const LinkWithIconAndTitle = _ref => {
   }, /*#__PURE__*/React.createElement(_dynamicIcon.default, {
     componentName: icon,
     fontSize: "tiny",
-    color: "secondary",
+    color: "text.primary",
     sx: {
       pt: 0.2
     }
@@ -5062,10 +5039,7 @@ const LinkWithIconAndTitle = _ref => {
     direction: "column"
   }, /*#__PURE__*/React.createElement(_Typography.default, {
     variant: "subtitle1",
-    color: "text.primary",
-    sx: {
-      fontWeight: 400
-    }
+    color: "text.primary"
   }, /*#__PURE__*/React.createElement(_Link.default, {
     color: "inherit",
     underline: "hover",
@@ -5073,7 +5047,8 @@ const LinkWithIconAndTitle = _ref => {
     href: link,
     target: target,
     sx: {
-      lineHeight: 'initial'
+      lineHeight: 'initial',
+      fontWeight: 'normal'
     }
   }, (0, _htmlEntities.decode)(title)))));
 };
@@ -7253,143 +7228,6 @@ function merge(acc, item) {
 
 /***/ }),
 
-/***/ 4623:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(8168);
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8587);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1609);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(4164);
-/* harmony import */ var _mui_utils_composeClasses__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5659);
-/* harmony import */ var _utils_capitalize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9966);
-/* harmony import */ var _styles_useThemeProps__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(3541);
-/* harmony import */ var _styles_styled__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1848);
-/* harmony import */ var _svgIconClasses__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5099);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4848);
-'use client';
-
-
-
-const _excluded = ["children", "className", "color", "component", "fontSize", "htmlColor", "inheritViewBox", "titleAccess", "viewBox"];
-
-
-
-
-
-
-
-
-
-
-const useUtilityClasses = ownerState => {
-  const {
-    color,
-    fontSize,
-    classes
-  } = ownerState;
-  const slots = {
-    root: ['root', color !== 'inherit' && `color${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A)(color)}`, `fontSize${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A)(fontSize)}`]
-  };
-  return (0,_mui_utils_composeClasses__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .A)(slots, _svgIconClasses__WEBPACK_IMPORTED_MODULE_4__/* .getSvgIconUtilityClass */ .E, classes);
-};
-const SvgIconRoot = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Ay)('svg', {
-  name: 'MuiSvgIcon',
-  slot: 'Root',
-  overridesResolver: (props, styles) => {
-    const {
-      ownerState
-    } = props;
-    return [styles.root, ownerState.color !== 'inherit' && styles[`color${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A)(ownerState.color)}`], styles[`fontSize${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A)(ownerState.fontSize)}`]];
-  }
-})(({
-  theme,
-  ownerState
-}) => {
-  var _theme$transitions, _theme$transitions$cr, _theme$transitions2, _theme$typography, _theme$typography$pxT, _theme$typography2, _theme$typography2$px, _theme$typography3, _theme$typography3$px, _palette$ownerState$c, _palette, _palette2, _palette3;
-  return {
-    userSelect: 'none',
-    width: '1em',
-    height: '1em',
-    display: 'inline-block',
-    // the <svg> will define the property that has `currentColor`
-    // for example heroicons uses fill="none" and stroke="currentColor"
-    fill: ownerState.hasSvgAsChild ? undefined : 'currentColor',
-    flexShrink: 0,
-    transition: (_theme$transitions = theme.transitions) == null || (_theme$transitions$cr = _theme$transitions.create) == null ? void 0 : _theme$transitions$cr.call(_theme$transitions, 'fill', {
-      duration: (_theme$transitions2 = theme.transitions) == null || (_theme$transitions2 = _theme$transitions2.duration) == null ? void 0 : _theme$transitions2.shorter
-    }),
-    fontSize: {
-      inherit: 'inherit',
-      small: ((_theme$typography = theme.typography) == null || (_theme$typography$pxT = _theme$typography.pxToRem) == null ? void 0 : _theme$typography$pxT.call(_theme$typography, 20)) || '1.25rem',
-      medium: ((_theme$typography2 = theme.typography) == null || (_theme$typography2$px = _theme$typography2.pxToRem) == null ? void 0 : _theme$typography2$px.call(_theme$typography2, 24)) || '1.5rem',
-      large: ((_theme$typography3 = theme.typography) == null || (_theme$typography3$px = _theme$typography3.pxToRem) == null ? void 0 : _theme$typography3$px.call(_theme$typography3, 35)) || '2.1875rem'
-    }[ownerState.fontSize],
-    // TODO v5 deprecate, v6 remove for sx
-    color: (_palette$ownerState$c = (_palette = (theme.vars || theme).palette) == null || (_palette = _palette[ownerState.color]) == null ? void 0 : _palette.main) != null ? _palette$ownerState$c : {
-      action: (_palette2 = (theme.vars || theme).palette) == null || (_palette2 = _palette2.action) == null ? void 0 : _palette2.active,
-      disabled: (_palette3 = (theme.vars || theme).palette) == null || (_palette3 = _palette3.action) == null ? void 0 : _palette3.disabled,
-      inherit: undefined
-    }[ownerState.color]
-  };
-});
-const SvgIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function SvgIcon(inProps, ref) {
-  const props = (0,_styles_useThemeProps__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .A)({
-    props: inProps,
-    name: 'MuiSvgIcon'
-  });
-  const {
-      children,
-      className,
-      color = 'inherit',
-      component = 'svg',
-      fontSize = 'medium',
-      htmlColor,
-      inheritViewBox = false,
-      titleAccess,
-      viewBox = '0 0 24 24'
-    } = props,
-    other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .A)(props, _excluded);
-  const hasSvgAsChild = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.isValidElement(children) && children.type === 'svg';
-  const ownerState = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .A)({}, props, {
-    color,
-    component,
-    fontSize,
-    instanceFontSize: inProps.fontSize,
-    inheritViewBox,
-    viewBox,
-    hasSvgAsChild
-  });
-  const more = {};
-  if (!inheritViewBox) {
-    more.viewBox = viewBox;
-  }
-  const classes = useUtilityClasses(ownerState);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(SvgIconRoot, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .A)({
-    as: component,
-    className: (0,clsx__WEBPACK_IMPORTED_MODULE_9__/* ["default"] */ .A)(classes.root, className),
-    focusable: "false",
-    color: htmlColor,
-    "aria-hidden": titleAccess ? undefined : true,
-    role: titleAccess ? 'img' : undefined,
-    ref: ref
-  }, more, other, hasSvgAsChild && children.props, {
-    ownerState: ownerState,
-    children: [hasSvgAsChild ? children.props.children : children, titleAccess ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("title", {
-      children: titleAccess
-    }) : null]
-  }));
-});
- false ? 0 : void 0;
-SvgIcon.muiName = 'SvgIcon';
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SvgIcon);
-
-/***/ }),
-
 /***/ 4634:
 /***/ ((module) => {
 
@@ -7517,8 +7355,8 @@ function _interopRequireWildcard(e, t) {
   })(e, t);
 }
 const componentMap = {
-  BrandYoutubeIcon: () => __webpack_require__.e(/* import() */ 87).then(__webpack_require__.bind(__webpack_require__, 5087)),
-  BrandElementorIcon: () => __webpack_require__.e(/* import() */ 235).then(__webpack_require__.bind(__webpack_require__, 1235)),
+  BrandYoutubeIcon: () => __webpack_require__.e(/* import() */ 519).then(__webpack_require__.bind(__webpack_require__, 7519)),
+  BrandElementorIcon: () => __webpack_require__.e(/* import() */ 219).then(__webpack_require__.bind(__webpack_require__, 7219)),
   ThemeBuilderIcon: () => __webpack_require__.e(/* import() */ 706).then(__webpack_require__.bind(__webpack_require__, 7706)),
   SettingsIcon: () => __webpack_require__.e(/* import() */ 923).then(__webpack_require__.bind(__webpack_require__, 2923)),
   BrandFacebookIcon: () => __webpack_require__.e(/* import() */ 359).then(__webpack_require__.bind(__webpack_require__, 1359)),
@@ -8136,26 +7974,6 @@ exports.MuiInput = MuiInput;
 
 /***/ }),
 
-/***/ 5099:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   E: () => (/* binding */ getSvgIconUtilityClass)
-/* harmony export */ });
-/* harmony import */ var _mui_utils_generateUtilityClasses__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8413);
-/* harmony import */ var _mui_utils_generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3990);
-
-
-function getSvgIconUtilityClass(slot) {
-  return (0,_mui_utils_generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Ay)('MuiSvgIcon', slot);
-}
-const svgIconClasses = (0,_mui_utils_generateUtilityClasses__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A)('MuiSvgIcon', ['root', 'colorPrimary', 'colorSecondary', 'colorAction', 'colorError', 'colorDisabled', 'fontSizeInherit', 'fontSizeSmall', 'fontSizeMedium', 'fontSizeLarge']);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (svgIconClasses);
-
-/***/ }),
-
 /***/ 5132:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -8432,7 +8250,8 @@ const QuickLinks = () => {
   }, (0, _i18n.__)('Quick Links', 'hello-elementor')), /*#__PURE__*/React.createElement(_Typography.default, {
     variant: "body2",
     sx: {
-      mb: 3
+      mb: 3,
+      color: 'text.secondary'
     }
   }, (0, _i18n.__)('These quick actions will get your site airborne in a flash.', 'hello-elementor')), /*#__PURE__*/React.createElement(_Stack.default, {
     direction: "row",
@@ -8723,6 +8542,178 @@ const stackClasses = (0,generateUtilityClasses/* default */.A)('MuiStack', ['roo
 /* harmony default export */ const Stack_stackClasses = (stackClasses);
 ;// ./node_modules/@mui/material/Stack/index.js
 'use client';
+
+
+
+
+/***/ }),
+
+/***/ 5422:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  A: () => (/* binding */ SvgIcon_default)
+});
+
+// EXTERNAL MODULE: external "React"
+var external_React_ = __webpack_require__(1609);
+var external_React_default = /*#__PURE__*/__webpack_require__.n(external_React_);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
+var esm_extends = __webpack_require__(8168);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+var objectWithoutPropertiesLoose = __webpack_require__(8587);
+// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.mjs
+var clsx = __webpack_require__(4164);
+// EXTERNAL MODULE: ./node_modules/@mui/utils/esm/composeClasses/composeClasses.js
+var composeClasses = __webpack_require__(5659);
+// EXTERNAL MODULE: ./node_modules/@mui/material/utils/capitalize.js + 1 modules
+var capitalize = __webpack_require__(9966);
+// EXTERNAL MODULE: ./node_modules/@mui/material/styles/useThemeProps.js
+var useThemeProps = __webpack_require__(3541);
+// EXTERNAL MODULE: ./node_modules/@mui/material/styles/styled.js
+var styled = __webpack_require__(1848);
+// EXTERNAL MODULE: ./node_modules/@mui/utils/esm/generateUtilityClasses/generateUtilityClasses.js
+var generateUtilityClasses = __webpack_require__(8413);
+// EXTERNAL MODULE: ./node_modules/@mui/utils/esm/generateUtilityClass/generateUtilityClass.js
+var generateUtilityClass = __webpack_require__(3990);
+;// ./node_modules/@mui/material/SvgIcon/svgIconClasses.js
+
+
+function getSvgIconUtilityClass(slot) {
+  return (0,generateUtilityClass/* default */.Ay)('MuiSvgIcon', slot);
+}
+const svgIconClasses = (0,generateUtilityClasses/* default */.A)('MuiSvgIcon', ['root', 'colorPrimary', 'colorSecondary', 'colorAction', 'colorError', 'colorDisabled', 'fontSizeInherit', 'fontSizeSmall', 'fontSizeMedium', 'fontSizeLarge']);
+/* harmony default export */ const SvgIcon_svgIconClasses = ((/* unused pure expression or super */ null && (svgIconClasses)));
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(4848);
+;// ./node_modules/@mui/material/SvgIcon/SvgIcon.js
+'use client';
+
+
+
+const _excluded = ["children", "className", "color", "component", "fontSize", "htmlColor", "inheritViewBox", "titleAccess", "viewBox"];
+
+
+
+
+
+
+
+
+
+
+const useUtilityClasses = ownerState => {
+  const {
+    color,
+    fontSize,
+    classes
+  } = ownerState;
+  const slots = {
+    root: ['root', color !== 'inherit' && `color${(0,capitalize/* default */.A)(color)}`, `fontSize${(0,capitalize/* default */.A)(fontSize)}`]
+  };
+  return (0,composeClasses/* default */.A)(slots, getSvgIconUtilityClass, classes);
+};
+const SvgIconRoot = (0,styled/* default */.Ay)('svg', {
+  name: 'MuiSvgIcon',
+  slot: 'Root',
+  overridesResolver: (props, styles) => {
+    const {
+      ownerState
+    } = props;
+    return [styles.root, ownerState.color !== 'inherit' && styles[`color${(0,capitalize/* default */.A)(ownerState.color)}`], styles[`fontSize${(0,capitalize/* default */.A)(ownerState.fontSize)}`]];
+  }
+})(({
+  theme,
+  ownerState
+}) => {
+  var _theme$transitions, _theme$transitions$cr, _theme$transitions2, _theme$typography, _theme$typography$pxT, _theme$typography2, _theme$typography2$px, _theme$typography3, _theme$typography3$px, _palette$ownerState$c, _palette, _palette2, _palette3;
+  return {
+    userSelect: 'none',
+    width: '1em',
+    height: '1em',
+    display: 'inline-block',
+    // the <svg> will define the property that has `currentColor`
+    // for example heroicons uses fill="none" and stroke="currentColor"
+    fill: ownerState.hasSvgAsChild ? undefined : 'currentColor',
+    flexShrink: 0,
+    transition: (_theme$transitions = theme.transitions) == null || (_theme$transitions$cr = _theme$transitions.create) == null ? void 0 : _theme$transitions$cr.call(_theme$transitions, 'fill', {
+      duration: (_theme$transitions2 = theme.transitions) == null || (_theme$transitions2 = _theme$transitions2.duration) == null ? void 0 : _theme$transitions2.shorter
+    }),
+    fontSize: {
+      inherit: 'inherit',
+      small: ((_theme$typography = theme.typography) == null || (_theme$typography$pxT = _theme$typography.pxToRem) == null ? void 0 : _theme$typography$pxT.call(_theme$typography, 20)) || '1.25rem',
+      medium: ((_theme$typography2 = theme.typography) == null || (_theme$typography2$px = _theme$typography2.pxToRem) == null ? void 0 : _theme$typography2$px.call(_theme$typography2, 24)) || '1.5rem',
+      large: ((_theme$typography3 = theme.typography) == null || (_theme$typography3$px = _theme$typography3.pxToRem) == null ? void 0 : _theme$typography3$px.call(_theme$typography3, 35)) || '2.1875rem'
+    }[ownerState.fontSize],
+    // TODO v5 deprecate, v6 remove for sx
+    color: (_palette$ownerState$c = (_palette = (theme.vars || theme).palette) == null || (_palette = _palette[ownerState.color]) == null ? void 0 : _palette.main) != null ? _palette$ownerState$c : {
+      action: (_palette2 = (theme.vars || theme).palette) == null || (_palette2 = _palette2.action) == null ? void 0 : _palette2.active,
+      disabled: (_palette3 = (theme.vars || theme).palette) == null || (_palette3 = _palette3.action) == null ? void 0 : _palette3.disabled,
+      inherit: undefined
+    }[ownerState.color]
+  };
+});
+const SvgIcon = /*#__PURE__*/external_React_.forwardRef(function SvgIcon(inProps, ref) {
+  const props = (0,useThemeProps/* default */.A)({
+    props: inProps,
+    name: 'MuiSvgIcon'
+  });
+  const {
+      children,
+      className,
+      color = 'inherit',
+      component = 'svg',
+      fontSize = 'medium',
+      htmlColor,
+      inheritViewBox = false,
+      titleAccess,
+      viewBox = '0 0 24 24'
+    } = props,
+    other = (0,objectWithoutPropertiesLoose/* default */.A)(props, _excluded);
+  const hasSvgAsChild = /*#__PURE__*/external_React_.isValidElement(children) && children.type === 'svg';
+  const ownerState = (0,esm_extends/* default */.A)({}, props, {
+    color,
+    component,
+    fontSize,
+    instanceFontSize: inProps.fontSize,
+    inheritViewBox,
+    viewBox,
+    hasSvgAsChild
+  });
+  const more = {};
+  if (!inheritViewBox) {
+    more.viewBox = viewBox;
+  }
+  const classes = useUtilityClasses(ownerState);
+  return /*#__PURE__*/(0,jsx_runtime.jsxs)(SvgIconRoot, (0,esm_extends/* default */.A)({
+    as: component,
+    className: (0,clsx/* default */.A)(classes.root, className),
+    focusable: "false",
+    color: htmlColor,
+    "aria-hidden": titleAccess ? undefined : true,
+    role: titleAccess ? 'img' : undefined,
+    ref: ref
+  }, more, other, hasSvgAsChild && children.props, {
+    ownerState: ownerState,
+    children: [hasSvgAsChild ? children.props.children : children, titleAccess ? /*#__PURE__*/(0,jsx_runtime.jsx)("title", {
+      children: titleAccess
+    }) : null]
+  }));
+});
+ false ? 0 : void 0;
+SvgIcon.muiName = 'SvgIcon';
+/* harmony default export */ const SvgIcon_SvgIcon = (SvgIcon);
+;// ./node_modules/@elementor/ui/SvgIcon/SvgIcon.js
+
+
+
+const SvgIcon_SvgIcon_SvgIcon = external_React_default().forwardRef((props, ref) => {
+  return /* @__PURE__ */ external_React_default().createElement(SvgIcon_SvgIcon, { ...props, ref });
+});
+var SvgIcon_default = SvgIcon_SvgIcon_SvgIcon;
 
 
 
@@ -14609,7 +14600,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1609);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _elementor_ui_SvgIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(691);
+/* harmony import */ var _elementor_ui_SvgIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5422);
 
 
 
